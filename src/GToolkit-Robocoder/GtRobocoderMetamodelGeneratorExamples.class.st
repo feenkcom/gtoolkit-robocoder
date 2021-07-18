@@ -47,6 +47,7 @@ GtRobocoderMetamodelGeneratorExamples >> forManyWithChildParent [
 { #category : #examples }
 GtRobocoderMetamodelGeneratorExamples >> forManyWithParentChildren [
 	<gtExample>
+	<noTest>
 	| theCodeDefinitions foldersMetamodelWithDefinition folderMetamodelWithDefinition |
 
 	theCodeDefinitions := GtRobocoderMetamodelGenerator generateDefinitionsFrom: 'folder(s){ @derive children }'.
