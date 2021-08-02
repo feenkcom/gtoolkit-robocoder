@@ -4,11 +4,12 @@ Class {
 	#category : #BaselineOfGToolkitRobocoder
 }
 
-{ #category : #accessing }
+{ #category : #baseline }
 BaselineOfGToolkitRobocoder >> baseline: spec [
 	<baseline>
-	spec for: #common do: [
+	spec for: #'common' do: [
 		spec baseline: 'GToolkitInspector' with: [
-			spec repository: 'github://feenkcom/gtoolkit-inspector/src'].
-		spec package: 'GToolkit-Robocoder']
+				spec repository: 'github://feenkcom/gtoolkit-inspector:main/src' ].
+		spec package: 'GToolkit-Robocoder'. ].
+
 ]
