@@ -9,7 +9,7 @@ BaselineOfGToolkitRobocoder >> baseline: spec [
 	<baseline>
 	spec for: #'common' do: [
 		spec baseline: 'GToolkitInspector' with: [
-				spec repository: 'github://feenkcom/gtoolkit-inspector:v0.8.490/src' ].
+				spec repository: 'github://feenkcom/gtoolkit-inspector:v0.8.491/src' ].
 		spec package: 'GToolkit-Robocoder'. ].
 
 ]
