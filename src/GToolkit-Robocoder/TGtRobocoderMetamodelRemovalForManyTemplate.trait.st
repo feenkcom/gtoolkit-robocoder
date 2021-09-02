@@ -1,9 +1,9 @@
 Trait {
-	#name : #TGtRobocoderMetamodelRemovalForManyTemplate,
-	#category : #'GToolkit-Robocoder-Templates'
+	#name : 'TGtRobocoderMetamodelRemovalForManyTemplate',
+	#category : 'GToolkit-Robocoder-Templates'
 }
 
-{ #category : #templates }
+{ #category : 'templates' }
 TGtRobocoderMetamodelRemovalForManyTemplate >> notifyObjectRemovedTemplate [
 	<gtMethodTemplate>
 	<generatedFrom: #'GtRobocoderTemplateMethod class>>#storageMethodTemplate'>
@@ -20,7 +20,7 @@ TGtRobocoderMetamodelRemovalForManyTemplate >> notifyObjectRemovedTemplate [
 		storageMethod: thisContext method
 ]
 
-{ #category : #templates }
+{ #category : 'templates' }
 TGtRobocoderMetamodelRemovalForManyTemplate >> objectRemovedHookTemplate [
 	<gtMethodTemplate>
 	<generatedFrom: #'GtRobocoderTemplateMethod class>>#storageMethodTemplate'>
@@ -35,7 +35,7 @@ TGtRobocoderMetamodelRemovalForManyTemplate >> objectRemovedHookTemplate [
 		storageMethod: thisContext method
 ]
 
-{ #category : #templates }
+{ #category : 'templates' }
 TGtRobocoderMetamodelRemovalForManyTemplate >> onRemovedEventHanderTemplate [
 	<gtMethodTemplate>
 	<generatedFrom: #'GtRobocoderTemplateMethod class>>#storageMethodTemplate'>
@@ -60,7 +60,7 @@ TGtRobocoderMetamodelRemovalForManyTemplate >> onRemovedEventHanderTemplate [
 		storageMethod: thisContext method
 ]
 
-{ #category : #templates }
+{ #category : 'templates' }
 TGtRobocoderMetamodelRemovalForManyTemplate >> primitiveRemoveTemplate [
 	<gtMethodTemplate>
 	<generatedFrom: #'GtRobocoderTemplateMethod class>>#storageMethodTemplate'>
@@ -74,7 +74,7 @@ TGtRobocoderMetamodelRemovalForManyTemplate >> primitiveRemoveTemplate [
 		storageMethod: thisContext method
 ]
 
-{ #category : #templates }
+{ #category : 'templates' }
 TGtRobocoderMetamodelRemovalForManyTemplate >> removeDelegateTemplate [
 	<gtMethodTemplate>
 	<generatedFrom: #'GtRobocoderTemplateMethod class>>#storageMethodTemplate'>
@@ -91,7 +91,7 @@ TGtRobocoderMetamodelRemovalForManyTemplate >> removeDelegateTemplate [
 		storageMethod: thisContext method
 ]
 
-{ #category : #templates }
+{ #category : 'templates' }
 TGtRobocoderMetamodelRemovalForManyTemplate >> removeObjectTemplate [
 	<gtMethodTemplate>
 	<generatedFrom: #'GtRobocoderTemplateMethod class>>#storageMethodTemplate'>
@@ -117,7 +117,7 @@ TGtRobocoderMetamodelRemovalForManyTemplate >> removeObjectTemplate [
 		storageMethod: thisContext method
 ]
 
-{ #category : #templates }
+{ #category : 'templates' }
 TGtRobocoderMetamodelRemovalForManyTemplate >> traitTemplate [
 	<gtTraitTemplate>
 	<generatedFrom: #'GtRobocoderTemplateTrait class>>#storageMethodTemplate'>

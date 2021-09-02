@@ -1,20 +1,20 @@
 Class {
-	#name : #GtRobocoderTemplateMethodCoder,
-	#superclass : #GtPharoSourceCoder,
+	#name : 'GtRobocoderTemplateMethodCoder',
+	#superclass : 'GtPharoSourceCoder',
 	#instVars : [
 		'templateMethod',
 		'bindings',
 		'shouldEmbedGeneratedFromPragma'
 	],
-	#category : #'GToolkit-Robocoder-Coder - Template method'
+	#category : 'GToolkit-Robocoder-Coder - Template method'
 }
 
-{ #category : #converting }
+{ #category : 'converting' }
 GtRobocoderTemplateMethodCoder >> asCoderUIModel [
 	^ GtRobocoderTemplateMethodCoderViewModel new coderModel: self
 ]
 
-{ #category : #'api - actions' }
+{ #category : 'api - actions' }
 GtRobocoderTemplateMethodCoder >> compileInContext: aGtPharoSourceCoderEvaluationContext [
 	"Try to compile the current source code and return true if it was successful, false otherwise"
 	<return: #Boolean>
@@ -35,14 +35,14 @@ GtRobocoderTemplateMethodCoder >> compileInContext: aGtPharoSourceCoderEvaluatio
 		ifAbsent: [ false ]
 ]
 
-{ #category : #'api - ast' }
+{ #category : 'api - ast' }
 GtRobocoderTemplateMethodCoder >> computeAst: theSourceString [
 	^ GtPharoTemplateParser
 		parseWithErrors: theSourceString
 		startingAt: GtPharoTemplateParser startingStateForMethod
 ]
 
-{ #category : #'private - actions' }
+{ #category : 'private - actions' }
 GtRobocoderTemplateMethodCoder >> createCompileMethodChangeIn: aBehavior inContext: aGtPharoSourceCoderEvaluationContext [
 	<return: #RBAddMethodChange>
 	| aSourceString |
@@ -77,17 +77,17 @@ GtRobocoderTemplateMethodCoder >> createCompileMethodChangeIn: aBehavior inConte
 				for: aGtPharoSourceCoderEvaluationContext ]
 ]
 
-{ #category : #'api - accessing' }
+{ #category : 'api - accessing' }
 GtRobocoderTemplateMethodCoder >> doNotEmbedGeneratedFromPragma [
 	shouldEmbedGeneratedFromPragma := false
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 GtRobocoderTemplateMethodCoder >> forCompiledMethod: aCompiledMethod [
 	self forMethod: aCompiledMethod
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 GtRobocoderTemplateMethodCoder >> forMethod: aCompiledMethod [
 	| aTemplateMethod |
 	aTemplateMethod := aCompiledMethod methodClass isClassSide
@@ -100,12 +100,12 @@ GtRobocoderTemplateMethodCoder >> forMethod: aCompiledMethod [
 	self forTemplateMethod: aTemplateMethod
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 GtRobocoderTemplateMethodCoder >> forSource: aString [	
 	self forTemplateMethod: (GtRobocoderTemplateMethod new sourceCode: aString)
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 GtRobocoderTemplateMethodCoder >> forTemplateBehavior: aBehavior selector: aTemplateSelector [
 	| aTemplateString |
 
@@ -119,13 +119,13 @@ GtRobocoderTemplateMethodCoder >> forTemplateBehavior: aBehavior selector: aTemp
 		storageBehavior: aBehavior selector: aTemplateSelector)
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 GtRobocoderTemplateMethodCoder >> forTemplateMethod: aGtPharoTemplateMethod [
 	templateMethod := aGtPharoTemplateMethod.
 	self sourceCode: (GtCoderExplicitSourceCode new source: templateMethod sourceCode)
 ]
 
-{ #category : #'private - actions' }
+{ #category : 'private - actions' }
 GtRobocoderTemplateMethodCoder >> handleCompilerErrorsDuring: aBlock [
 	^ [
 			aBlock value.
@@ -138,11 +138,11 @@ GtRobocoderTemplateMethodCoder >> handleCompilerErrorsDuring: aBlock [
 			ex return: false ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtRobocoderTemplateMethodCoder >> highlighter: anObject [
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 GtRobocoderTemplateMethodCoder >> initialize [
 	super initialize.
 	
@@ -152,7 +152,7 @@ GtRobocoderTemplateMethodCoder >> initialize [
 		sourceCode: ''
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 GtRobocoderTemplateMethodCoder >> initializeAddOns: addOns [
 	super initializeAddOns: addOns.
 
@@ -188,9 +188,9 @@ GtRobocoderTemplateMethodCoder >> initializeAddOns: addOns [
 				vFitContent.
 			GtPhlowColumnedListView new
 				column: 'Name'
-					item: [ :each | each key asSymbol printString asRopedText ];
+					text: [ :each | each key asSymbol printString asRopedText ];
 				column: 'Value'
-					item: [ :each | each value printString ];
+					text: [ :each | each value printString ];
 				items: [ bindings asDictionary associations sorted: [ :a :b | a key < b key ] ];
 				asElementDo: [ :aList | aContainer addChild: aList ].
 			aContainer ].
@@ -201,17 +201,17 @@ GtRobocoderTemplateMethodCoder >> initializeAddOns: addOns [
 		action: [ :aCoderUIModel :anEvent | self notifyObjectSpawn: aCoderUIModel ].
 ]
 
-{ #category : #testing }
+{ #category : 'testing' }
 GtRobocoderTemplateMethodCoder >> isForClass [
 	^ false
 ]
 
-{ #category : #testing }
+{ #category : 'testing' }
 GtRobocoderTemplateMethodCoder >> isForMethod [
 	^ true
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtRobocoderTemplateMethodCoder >> isForMethod: aCompiledMethod [
 	templateMethod storageBehavior realBehaviorDo: [ :aBehavior |
 		^ aBehavior = aCompiledMethod methodClass
@@ -219,27 +219,27 @@ GtRobocoderTemplateMethodCoder >> isForMethod: aCompiledMethod [
 	^ false
 ]
 
-{ #category : #testing }
+{ #category : 'testing' }
 GtRobocoderTemplateMethodCoder >> isForPackage [
 	^ false
 ]
 
-{ #category : #testing }
+{ #category : 'testing' }
 GtRobocoderTemplateMethodCoder >> isForPackageTag [
 	^ false
 ]
 
-{ #category : #'api - accessing' }
+{ #category : 'api - accessing' }
 GtRobocoderTemplateMethodCoder >> map: aVariableName to: anObject [
 	bindings at: aVariableName put: anObject
 ]
 
-{ #category : #'api - accessing' }
+{ #category : 'api - accessing' }
 GtRobocoderTemplateMethodCoder >> mappings: aCollectionOfAssociations [
 	aCollectionOfAssociations do: [ :each | self map: each key to: each value ]
 ]
 
-{ #category : #'private - actions' }
+{ #category : 'private - actions' }
 GtRobocoderTemplateMethodCoder >> primitiveEvaluate: aSourceString inContext: aGtPharoSourceCoderEvaluationContext onFailDo: anEvaluationFailBlock [
 	| aTranslatedMethodCode |
 
@@ -253,7 +253,7 @@ GtRobocoderTemplateMethodCoder >> primitiveEvaluate: aSourceString inContext: aG
 		ifFalse: [ aTranslatedMethodCode ]
 ]
 
-{ #category : #'private - actions' }
+{ #category : 'private - actions' }
 GtRobocoderTemplateMethodCoder >> privateEmbedGeneratedFromPragma: aTranslatedMethodCode [
 	| aTranslatedAst  aTranslatedMethodCodeWithPragma |
 
@@ -309,7 +309,7 @@ GtRobocoderTemplateMethodCoder >> privateEmbedGeneratedFromPragma: aTranslatedMe
 	^ aTranslatedMethodCodeWithPragma
 ]
 
-{ #category : #'api - accessing' }
+{ #category : 'api - accessing' }
 GtRobocoderTemplateMethodCoder >> protocol [
 	"Return a generated method protocol name, the returned protocol is never nil.
 	The default value is `generated`"
@@ -321,7 +321,7 @@ GtRobocoderTemplateMethodCoder >> protocol [
 		translate: (templateMethod protocol ifNil: [ 'generated' ])
 ]
 
-{ #category : #'api - actions' }
+{ #category : 'api - actions' }
 GtRobocoderTemplateMethodCoder >> saveInContext: aGtPharoSourceCoderEvaluationContext [
 	"Try to save the current method validating syntax and return `true` if save was succesful, false otherwise"
 	<return: #Boolean>
@@ -332,7 +332,7 @@ GtRobocoderTemplateMethodCoder >> saveInContext: aGtPharoSourceCoderEvaluationCo
 	^ true
 ]
 
-{ #category : #testing }
+{ #category : 'testing' }
 GtRobocoderTemplateMethodCoder >> shouldBeAddedToBehavior [
 	^ templateMethod condition
 		ifNil: [ true ]
@@ -349,14 +349,14 @@ GtRobocoderTemplateMethodCoder >> shouldBeAddedToBehavior [
 			aTemplateResult value = true ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtRobocoderTemplateMethodCoder >> theClass [
 	^ templateMethod storageBehavior
 		realBehaviorDo: [ :aBehavior | aBehavior ]
 		ifAbsent: [ UndefinedObject ]
 ]
 
-{ #category : #'api - actions' }
+{ #category : 'api - actions' }
 GtRobocoderTemplateMethodCoder >> translate [
 	<return: #String>
 	

@@ -1,25 +1,25 @@
 Class {
-	#name : #GtRobocoderMetamodelFullDefinitionNode,
-	#superclass : #GtRobocoderMetamodelProgramNode,
+	#name : 'GtRobocoderMetamodelFullDefinitionNode',
+	#superclass : 'GtRobocoderMetamodelProgramNode',
 	#instVars : [
 		'hierarchies',
 		'settings',
 		'definitions'
 	],
-	#category : #'GToolkit-Robocoder-Ast - Metamodel'
+	#category : 'GToolkit-Robocoder-Ast - Metamodel'
 }
 
-{ #category : #generated }
+{ #category : 'generated' }
 GtRobocoderMetamodelFullDefinitionNode >> acceptVisitor: aProgramVisitor [
 	^ aProgramVisitor visitFullDefinition: self
 ]
 
-{ #category : #generated }
+{ #category : 'generated' }
 GtRobocoderMetamodelFullDefinitionNode >> definitions [
 	^ definitions
 ]
 
-{ #category : #generated }
+{ #category : 'generated' }
 GtRobocoderMetamodelFullDefinitionNode >> definitions: aGtRobocoderMetamodelDefinitionsNode [
 	self definitions notNil
 		ifTrue: [ self definitions parent: nil ].
@@ -28,12 +28,12 @@ GtRobocoderMetamodelFullDefinitionNode >> definitions: aGtRobocoderMetamodelDefi
 		ifTrue: [ self definitions parent: self ]
 ]
 
-{ #category : #generated }
+{ #category : 'generated' }
 GtRobocoderMetamodelFullDefinitionNode >> hierarchies [
 	^ hierarchies
 ]
 
-{ #category : #generated }
+{ #category : 'generated' }
 GtRobocoderMetamodelFullDefinitionNode >> hierarchies: aGtRobocoderMetamodelHierarchiesNode [
 	self hierarchies notNil
 		ifTrue: [ self hierarchies parent: nil ].
@@ -42,17 +42,17 @@ GtRobocoderMetamodelFullDefinitionNode >> hierarchies: aGtRobocoderMetamodelHier
 		ifTrue: [ self hierarchies parent: self ]
 ]
 
-{ #category : #generated }
+{ #category : 'generated' }
 GtRobocoderMetamodelFullDefinitionNode >> nodeVariables [
 	^ #(#definitions #settings #hierarchies)
 ]
 
-{ #category : #generated }
+{ #category : 'generated' }
 GtRobocoderMetamodelFullDefinitionNode >> settings [
 	^ settings
 ]
 
-{ #category : #generated }
+{ #category : 'generated' }
 GtRobocoderMetamodelFullDefinitionNode >> settings: aGtRobocoderMetamodelSettingsNode [
 	self settings notNil
 		ifTrue: [ self settings parent: nil ].

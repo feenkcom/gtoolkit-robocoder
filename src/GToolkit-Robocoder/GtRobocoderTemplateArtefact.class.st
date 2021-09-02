@@ -1,15 +1,15 @@
 Class {
-	#name : #GtRobocoderTemplateArtefact,
-	#superclass : #Object,
+	#name : 'GtRobocoderTemplateArtefact',
+	#superclass : 'Object',
 	#instVars : [
 		'storageBehavior',
 		'storageSelector',
 		'storageProtocol'
 	],
-	#category : #'GToolkit-Robocoder-Model'
+	#category : 'GToolkit-Robocoder-Model'
 }
 
-{ #category : #initialize }
+{ #category : 'initialize' }
 GtRobocoderTemplateArtefact >> initialize [
 	super initialize.
 
@@ -18,35 +18,35 @@ GtRobocoderTemplateArtefact >> initialize [
 	storageProtocol := 'templates'
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtRobocoderTemplateArtefact >> storageBehavior [
 	^ storageBehavior
 ]
 
-{ #category : #initialize }
+{ #category : 'initialize' }
 GtRobocoderTemplateArtefact >> storageBehavior: aBehavior selector: aSelector [
 	storageBehavior := GtPharoCoderBehavior explicit: aBehavior.
 	storageSelector := aSelector
 ]
 
-{ #category : #initialize }
+{ #category : 'initialize' }
 GtRobocoderTemplateArtefact >> storageMethod: aCompiledMethod [
 	storageSelector := aCompiledMethod selector.
 	storageBehavior := GtPharoCoderBehavior explicit: aCompiledMethod methodClass.
 	storageProtocol := aCompiledMethod protocol
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtRobocoderTemplateArtefact >> storageProtocol [
 	^ storageProtocol
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtRobocoderTemplateArtefact >> storageProtocol: anObject [
 	storageProtocol := anObject
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtRobocoderTemplateArtefact >> storageSelector [
 	^ storageSelector
 ]

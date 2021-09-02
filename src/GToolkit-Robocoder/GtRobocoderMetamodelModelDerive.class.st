@@ -1,32 +1,32 @@
 Class {
-	#name : #GtRobocoderMetamodelModelDerive,
-	#superclass : #GtRobocoderMetamodelDerive,
+	#name : 'GtRobocoderMetamodelModelDerive',
+	#superclass : 'GtRobocoderMetamodelDerive',
 	#instVars : [
 		'name',
 		'api',
 		'type'
 	],
-	#category : #'GToolkit-Robocoder-Metamodel - Derives'
+	#category : 'GToolkit-Robocoder-Metamodel - Derives'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtRobocoderMetamodelModelDerive class >> label [
 	^ 'model'
 ]
 
-{ #category : #'accessing - methods' }
+{ #category : 'accessing - methods' }
 GtRobocoderMetamodelModelDerive class >> modelGetterMethodIn: aGtRobocoderMetamodelWithCodeDefinition [
 	^ GtRobocoderMetamodelWithCodeDefinition
 		anyMethodWithPragmaNamedOrNil: self modelGetterPragma
 		inFullClass: aGtRobocoderMetamodelWithCodeDefinition definition
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtRobocoderMetamodelModelDerive class >> modelGetterPragma [
 	^ (self pragmaName, #Getter:) asSymbol
 ]
 
-{ #category : #'accessing - selectors' }
+{ #category : 'accessing - selectors' }
 GtRobocoderMetamodelModelDerive class >> modelGetterSelectorIn: aGtRobocoderMetamodelWithCodeDefinition [
 	<return: #Symbol or: nil>
 
@@ -34,7 +34,7 @@ GtRobocoderMetamodelModelDerive class >> modelGetterSelectorIn: aGtRobocoderMeta
 		ifNotNil: [ :aMethod | aMethod selector ]
 ]
 
-{ #category : #'accessing - methods' }
+{ #category : 'accessing - methods' }
 GtRobocoderMetamodelModelDerive class >> modelNameIn: aGtRobocoderMetamodelWithCodeDefinition [
 	^ (self modelGetterMethodIn: aGtRobocoderMetamodelWithCodeDefinition)
 		ifNotNil: [ :aMethod |
@@ -42,19 +42,19 @@ GtRobocoderMetamodelModelDerive class >> modelNameIn: aGtRobocoderMetamodelWithC
 				ifNotNil: [ :aPragma | aPragma argumentAt: 1 ] ]
 ]
 
-{ #category : #'accessing - methods' }
+{ #category : 'accessing - methods' }
 GtRobocoderMetamodelModelDerive class >> modelSetterMethodIn: aGtRobocoderMetamodelWithCodeDefinition [
 	^ GtRobocoderMetamodelWithCodeDefinition
 		anyMethodWithPragmaNamedOrNil: self modelSetterPragma
 		inFullClass: aGtRobocoderMetamodelWithCodeDefinition definition
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtRobocoderMetamodelModelDerive class >> modelSetterPragma [
 	^ (self pragmaName, #Setter:) asSymbol
 ]
 
-{ #category : #'accessing - selectors' }
+{ #category : 'accessing - selectors' }
 GtRobocoderMetamodelModelDerive class >> modelSetterSelectorIn: aGtRobocoderMetamodelWithCodeDefinition [
 	<return: #Symbol or: nil>
 
@@ -62,19 +62,19 @@ GtRobocoderMetamodelModelDerive class >> modelSetterSelectorIn: aGtRobocoderMeta
 		ifNotNil: [ :aMethod | aMethod selector ]
 ]
 
-{ #category : #'accessing - methods' }
+{ #category : 'accessing - methods' }
 GtRobocoderMetamodelModelDerive class >> modelSubscriberMethodIn: aGtRobocoderMetamodelWithCodeDefinition [
 	^ GtRobocoderMetamodelWithCodeDefinition
 		anyMethodWithPragmaNamedOrNil: self modelSubscriberPragma
 		inFullClass: aGtRobocoderMetamodelWithCodeDefinition definition
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtRobocoderMetamodelModelDerive class >> modelSubscriberPragma [
 	^ (self pragmaName, #Subscriber:) asSymbol
 ]
 
-{ #category : #'accessing - selectors' }
+{ #category : 'accessing - selectors' }
 GtRobocoderMetamodelModelDerive class >> modelSubscriberSelectorIn: aGtRobocoderMetamodelWithCodeDefinition [
 	<return: #Symbol or: nil>
 
@@ -82,19 +82,19 @@ GtRobocoderMetamodelModelDerive class >> modelSubscriberSelectorIn: aGtRobocoder
 		ifNotNil: [ :aMethod | aMethod selector ]
 ]
 
-{ #category : #'accessing - methods' }
+{ #category : 'accessing - methods' }
 GtRobocoderMetamodelModelDerive class >> modelUnsubscriberMethodIn: aGtRobocoderMetamodelWithCodeDefinition [
 	^ GtRobocoderMetamodelWithCodeDefinition
 		anyMethodWithPragmaNamedOrNil: self modelUnsubscriberPragma
 		inFullClass: aGtRobocoderMetamodelWithCodeDefinition definition
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtRobocoderMetamodelModelDerive class >> modelUnsubscriberPragma [
 	^ (self pragmaName, #Unsubscriber:) asSymbol
 ]
 
-{ #category : #'accessing - selectors' }
+{ #category : 'accessing - selectors' }
 GtRobocoderMetamodelModelDerive class >> modelUnsubscriberSelectorIn: aGtRobocoderMetamodelWithCodeDefinition [
 	<return: #Symbol or: nil>
 
@@ -102,17 +102,17 @@ GtRobocoderMetamodelModelDerive class >> modelUnsubscriberSelectorIn: aGtRobocod
 		ifNotNil: [ :aMethod | aMethod selector ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtRobocoderMetamodelModelDerive class >> pragmaName [
 	^ 'model'
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtRobocoderMetamodelModelDerive >> api [
 	^ api
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtRobocoderMetamodelModelDerive >> api: anObject [
 	name
 		ifNotNil: [ self error: 'Either name or api trait must be used' ].
@@ -120,7 +120,7 @@ GtRobocoderMetamodelModelDerive >> api: anObject [
 	api := anObject
 ]
 
-{ #category : #private }
+{ #category : 'private' }
 GtRobocoderMetamodelModelDerive >> apiTrait [
 	self api
 		ifNil: [ ^ nil ].
@@ -134,7 +134,7 @@ GtRobocoderMetamodelModelDerive >> apiTrait [
 		ifAbsent: [ nil ]
 ]
 
-{ #category : #'api - generation' }
+{ #category : 'api - generation' }
 GtRobocoderMetamodelModelDerive >> applyOnMetamodelsWithCodeDefinitions: aGtRobocoderMetamodelsWithCodeDefinitions [
 	aGtRobocoderMetamodelsWithCodeDefinitions metamodelsWithCodeDefinitionDo: [ :eachMetamodelWithCodeDefinition |
 		api ifNotNil: [
@@ -164,19 +164,19 @@ GtRobocoderMetamodelModelDerive >> applyOnMetamodelsWithCodeDefinitions: aGtRobo
 			aMetamodel mergeBehaviorDefinition: aDomainModelTraitDefinition into: eachMetamodelWithCodeDefinition definition ] ]
 ]
 
-{ #category : #private }
+{ #category : 'private' }
 GtRobocoderMetamodelModelDerive >> fallbackModelNameFor: aRobocoderMetamodel [
 	"If name is not specified explicitly, use this one instead"
 
 	^ aRobocoderMetamodel name, 'Model'
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtRobocoderMetamodelModelDerive >> name [
 	^ name
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtRobocoderMetamodelModelDerive >> name: anObject [
 	api
 		ifNotNil: [ self error: 'Either name or api trait must be used' ].
@@ -184,12 +184,12 @@ GtRobocoderMetamodelModelDerive >> name: anObject [
 	name := anObject
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtRobocoderMetamodelModelDerive >> type [
 	^ type
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtRobocoderMetamodelModelDerive >> type: aSymbol [
 	type := aSymbol
 ]

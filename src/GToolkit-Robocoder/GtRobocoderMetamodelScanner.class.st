@@ -1,10 +1,10 @@
 Class {
-	#name : #GtRobocoderMetamodelScanner,
-	#superclass : #SmaCCScanner,
-	#category : #'GToolkit-Robocoder-Ast - Metamodel'
+	#name : 'GtRobocoderMetamodelScanner',
+	#superclass : 'SmaCCScanner',
+	#category : 'GToolkit-Robocoder-Ast - Metamodel'
 }
 
-{ #category : #'generated-initialization' }
+{ #category : 'generated-initialization' }
 GtRobocoderMetamodelScanner class >> initializeKeywordMap [
 	keywordMap := Dictionary new.
 	#(#(3 'and' 13) #(3 'false' 17) #(3 'items' 14) #(3 'true' 16))
@@ -15,27 +15,27 @@ GtRobocoderMetamodelScanner class >> initializeKeywordMap [
 	^ keywordMap
 ]
 
-{ #category : #generated }
+{ #category : 'generated' }
 GtRobocoderMetamodelScanner >> andId [
 	^ 13
 ]
 
-{ #category : #generated }
+{ #category : 'generated' }
 GtRobocoderMetamodelScanner >> emptySymbolTokenId [
 	^ 51
 ]
 
-{ #category : #generated }
+{ #category : 'generated' }
 GtRobocoderMetamodelScanner >> errorTokenId [
 	^ 52
 ]
 
-{ #category : #generated }
+{ #category : 'generated' }
 GtRobocoderMetamodelScanner >> followsId [
 	^ 4
 ]
 
-{ #category : #generated }
+{ #category : 'generated' }
 GtRobocoderMetamodelScanner >> scan1 [
 	self step.
 	currentCharacter == $#
@@ -47,7 +47,7 @@ GtRobocoderMetamodelScanner >> scan1 [
 	^ self scan1X2
 ]
 
-{ #category : #generated }
+{ #category : 'generated' }
 GtRobocoderMetamodelScanner >> scan10 [
 	self step.
 	currentCharacter == $>
@@ -55,7 +55,7 @@ GtRobocoderMetamodelScanner >> scan10 [
 	^ self reportLastMatch
 ]
 
-{ #category : #generated }
+{ #category : 'generated' }
 GtRobocoderMetamodelScanner >> scan11 [
 	[ self step.
 	currentCharacter == $#
@@ -89,7 +89,7 @@ GtRobocoderMetamodelScanner >> scan11 [
 	^ self reportLastMatch
 ]
 
-{ #category : #generated }
+{ #category : 'generated' }
 GtRobocoderMetamodelScanner >> scan12 [
 	[ self step.
 	currentCharacter == $'
@@ -101,7 +101,7 @@ GtRobocoderMetamodelScanner >> scan12 [
 	true ] whileTrue
 ]
 
-{ #category : #generated }
+{ #category : 'generated' }
 GtRobocoderMetamodelScanner >> scan13 [
 	[ self recordMatch: #(18).
 	self step.
@@ -118,7 +118,7 @@ GtRobocoderMetamodelScanner >> scan13 [
 	^ self reportLastMatch
 ]
 
-{ #category : #generated }
+{ #category : 'generated' }
 GtRobocoderMetamodelScanner >> scan14 [
 	self step.
 	(currentCharacter isLetter or: [ currentCharacter == $_ ])
@@ -134,7 +134,7 @@ GtRobocoderMetamodelScanner >> scan14 [
 	^ self reportLastMatch
 ]
 
-{ #category : #generated }
+{ #category : 'generated' }
 GtRobocoderMetamodelScanner >> scan15 [
 	[ self step.
 	currentCharacter == $:
@@ -148,7 +148,7 @@ GtRobocoderMetamodelScanner >> scan15 [
 	^ self reportLastMatch
 ]
 
-{ #category : #generated }
+{ #category : 'generated' }
 GtRobocoderMetamodelScanner >> scan1X1 [
 	[ self recordMatch: #(5).
 	self step.
@@ -158,7 +158,7 @@ GtRobocoderMetamodelScanner >> scan1X1 [
 	^ self reportLastMatch
 ]
 
-{ #category : #generated }
+{ #category : 'generated' }
 GtRobocoderMetamodelScanner >> scan1X2 [
 	currentCharacter == $)
 		ifTrue: [ ^ self recordAndReportMatch: #(6) ].
@@ -186,7 +186,7 @@ GtRobocoderMetamodelScanner >> scan1X2 [
 	^ self reportLastMatch
 ]
 
-{ #category : #generated }
+{ #category : 'generated' }
 GtRobocoderMetamodelScanner >> scan2 [
 	self step.
 	currentCharacter == $#
@@ -214,7 +214,7 @@ GtRobocoderMetamodelScanner >> scan2 [
 	^ self reportLastMatch
 ]
 
-{ #category : #generated }
+{ #category : 'generated' }
 GtRobocoderMetamodelScanner >> scan3 [
 	[ self step.
 	currentCharacter == $'
@@ -226,7 +226,7 @@ GtRobocoderMetamodelScanner >> scan3 [
 	true ] whileTrue
 ]
 
-{ #category : #generated }
+{ #category : 'generated' }
 GtRobocoderMetamodelScanner >> scan4 [
 	[ self recordMatch: #(11).
 	self step.
@@ -243,7 +243,7 @@ GtRobocoderMetamodelScanner >> scan4 [
 	^ self reportLastMatch
 ]
 
-{ #category : #generated }
+{ #category : 'generated' }
 GtRobocoderMetamodelScanner >> scan5 [
 	self step.
 	(currentCharacter isLetter or: [ currentCharacter == $_ ])
@@ -259,7 +259,7 @@ GtRobocoderMetamodelScanner >> scan5 [
 	^ self reportLastMatch
 ]
 
-{ #category : #generated }
+{ #category : 'generated' }
 GtRobocoderMetamodelScanner >> scan6 [
 	[ self step.
 	currentCharacter == $:
@@ -273,7 +273,7 @@ GtRobocoderMetamodelScanner >> scan6 [
 	^ self reportLastMatch
 ]
 
-{ #category : #generated }
+{ #category : 'generated' }
 GtRobocoderMetamodelScanner >> scan7 [
 	[ self step.
 	currentCharacter == $'
@@ -285,7 +285,7 @@ GtRobocoderMetamodelScanner >> scan7 [
 	true ] whileTrue
 ]
 
-{ #category : #generated }
+{ #category : 'generated' }
 GtRobocoderMetamodelScanner >> scan8 [
 	self step.
 	currentCharacter == $>
@@ -293,7 +293,7 @@ GtRobocoderMetamodelScanner >> scan8 [
 	^ self reportLastMatch
 ]
 
-{ #category : #generated }
+{ #category : 'generated' }
 GtRobocoderMetamodelScanner >> scan9 [
 	[ self recordMatch: #(3).
 	self step.
@@ -323,7 +323,7 @@ GtRobocoderMetamodelScanner >> scan9 [
 	^ self reportLastMatch
 ]
 
-{ #category : #generated }
+{ #category : 'generated' }
 GtRobocoderMetamodelScanner >> scanForToken [
 	scope == #literalArray
 		ifTrue:
@@ -333,7 +333,7 @@ GtRobocoderMetamodelScanner >> scanForToken [
 	^ self reportLastMatch
 ]
 
-{ #category : #generated }
+{ #category : 'generated' }
 GtRobocoderMetamodelScanner >> scanForTokenX1 [
 	self step.
 	currentCharacter == $#
@@ -367,7 +367,7 @@ GtRobocoderMetamodelScanner >> scanForTokenX1 [
 	^ self reportLastMatch
 ]
 
-{ #category : #generated }
+{ #category : 'generated' }
 GtRobocoderMetamodelScanner >> tokenActions [
 	^ #(nil nil nil nil #whitespace)
 ]

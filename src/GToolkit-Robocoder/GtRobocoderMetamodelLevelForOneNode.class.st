@@ -1,10 +1,10 @@
 Class {
-	#name : #GtRobocoderMetamodelLevelForOneNode,
-	#superclass : #GtRobocoderMetamodelSimpleLevelNode,
-	#category : #'GToolkit-Robocoder-Ast - Metamodel'
+	#name : 'GtRobocoderMetamodelLevelForOneNode',
+	#superclass : 'GtRobocoderMetamodelSimpleLevelNode',
+	#category : 'GToolkit-Robocoder-Ast - Metamodel'
 }
 
-{ #category : #generated }
+{ #category : 'generated' }
 GtRobocoderMetamodelLevelForOneNode >> acceptVisitor: aProgramVisitor [
 	^ aProgramVisitor visitLevelForOne: self
 ]

@@ -1,10 +1,10 @@
 Class {
-	#name : #GtRobocoderMetamodelAnnouncementTemplate,
-	#superclass : #Object,
-	#category : #'GToolkit-Robocoder-Templates'
+	#name : 'GtRobocoderMetamodelAnnouncementTemplate',
+	#superclass : 'Object',
+	#category : 'GToolkit-Robocoder-Templates'
 }
 
-{ #category : #templates }
+{ #category : 'templates' }
 GtRobocoderMetamodelAnnouncementTemplate >> objectGetterTemplate [
 	<gtMethodTemplate>
 	<generatedFrom: #'GtRobocoderTemplateMethod class>>#storageMethodTemplate'>
@@ -17,7 +17,7 @@ GtRobocoderMetamodelAnnouncementTemplate >> objectGetterTemplate [
 		storageMethod: thisContext method
 ]
 
-{ #category : #templates }
+{ #category : 'templates' }
 GtRobocoderMetamodelAnnouncementTemplate >> objectSetterTemplate [
 	<gtMethodTemplate>
 	<generatedFrom: #'GtRobocoderTemplateMethod class>>#storageMethodTemplate'>
@@ -30,7 +30,7 @@ GtRobocoderMetamodelAnnouncementTemplate >> objectSetterTemplate [
 		storageMethod: thisContext method
 ]
 
-{ #category : #templates }
+{ #category : 'templates' }
 GtRobocoderMetamodelAnnouncementTemplate >> templateClass [
 	<gtClassTemplate>
 	<generatedFrom: #'GtRobocoderTemplateClass class>>#storageMethodTemplate'>

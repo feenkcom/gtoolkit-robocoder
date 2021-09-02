@@ -1,9 +1,9 @@
 Trait {
-	#name : #TGtRobocoderMetamodelAdditionForManyTemplate,
-	#category : #'GToolkit-Robocoder-Templates'
+	#name : 'TGtRobocoderMetamodelAdditionForManyTemplate',
+	#category : 'GToolkit-Robocoder-Templates'
 }
 
-{ #category : #templates }
+{ #category : 'templates' }
 TGtRobocoderMetamodelAdditionForManyTemplate >> addDelegateTemplate [
 	<gtMethodTemplate>
 	<generatedFrom: #'GtRobocoderTemplateMethod class>>#storageMethodTemplate'>
@@ -20,7 +20,7 @@ TGtRobocoderMetamodelAdditionForManyTemplate >> addDelegateTemplate [
 		storageMethod: thisContext method
 ]
 
-{ #category : #templates }
+{ #category : 'templates' }
 TGtRobocoderMetamodelAdditionForManyTemplate >> addObjectTemplate [
 	<gtMethodTemplate>
 	<generatedFrom: #'GtRobocoderTemplateMethod class>>#storageMethodTemplate'>
@@ -44,7 +44,7 @@ TGtRobocoderMetamodelAdditionForManyTemplate >> addObjectTemplate [
 		storageMethod: thisContext method
 ]
 
-{ #category : #templates }
+{ #category : 'templates' }
 TGtRobocoderMetamodelAdditionForManyTemplate >> notifyObjectAddedTemplate [
 	<gtMethodTemplate>
 	<generatedFrom: #'GtRobocoderTemplateMethod class>>#storageMethodTemplate'>
@@ -61,7 +61,7 @@ TGtRobocoderMetamodelAdditionForManyTemplate >> notifyObjectAddedTemplate [
 		storageMethod: thisContext method
 ]
 
-{ #category : #templates }
+{ #category : 'templates' }
 TGtRobocoderMetamodelAdditionForManyTemplate >> objectAddedHookTemplate [
 	<gtMethodTemplate>
 	<generatedFrom: #'GtRobocoderTemplateMethod class>>#storageMethodTemplate'>
@@ -76,7 +76,7 @@ TGtRobocoderMetamodelAdditionForManyTemplate >> objectAddedHookTemplate [
 		storageMethod: thisContext method
 ]
 
-{ #category : #templates }
+{ #category : 'templates' }
 TGtRobocoderMetamodelAdditionForManyTemplate >> onAddedEventHanderTemplate [
 	<gtMethodTemplate>
 	<generatedFrom: #'GtRobocoderTemplateMethod class>>#storageMethodTemplate'>
@@ -96,7 +96,7 @@ TGtRobocoderMetamodelAdditionForManyTemplate >> onAddedEventHanderTemplate [
 		storageMethod: thisContext method
 ]
 
-{ #category : #templates }
+{ #category : 'templates' }
 TGtRobocoderMetamodelAdditionForManyTemplate >> primitiveAddTemplate [
 	<gtMethodTemplate>
 	<generatedFrom: #'GtRobocoderTemplateMethod class>>#storageMethodTemplate'>
@@ -110,7 +110,7 @@ TGtRobocoderMetamodelAdditionForManyTemplate >> primitiveAddTemplate [
 		storageMethod: thisContext method
 ]
 
-{ #category : #templates }
+{ #category : 'templates' }
 TGtRobocoderMetamodelAdditionForManyTemplate >> traitTemplate [
 	<gtTraitTemplate>
 	<generatedFrom: #'GtRobocoderTemplateTrait class>>#storageMethodTemplate'>

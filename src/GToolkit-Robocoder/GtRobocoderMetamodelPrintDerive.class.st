@@ -1,15 +1,15 @@
 Class {
-	#name : #GtRobocoderMetamodelPrintDerive,
-	#superclass : #GtRobocoderMetamodelDerive,
-	#category : #'GToolkit-Robocoder-Metamodel - Derives'
+	#name : 'GtRobocoderMetamodelPrintDerive',
+	#superclass : 'GtRobocoderMetamodelDerive',
+	#category : 'GToolkit-Robocoder-Metamodel - Derives'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtRobocoderMetamodelPrintDerive class >> label [
 	^ 'print'
 ]
 
-{ #category : #'api - generation' }
+{ #category : 'api - generation' }
 GtRobocoderMetamodelPrintDerive >> applyOnMetamodelsWithCodeDefinitions: aGtRobocoderMetamodelsWithCodeDefinitions [
 	aGtRobocoderMetamodelsWithCodeDefinitions metamodelsWithCodeDefinitionDo: [ :eachMetamodelWithCodeDefinition |		
 		| eachNameMethodSourceCode |
@@ -24,7 +24,7 @@ GtRobocoderMetamodelPrintDerive >> applyOnMetamodelsWithCodeDefinitions: aGtRobo
 			protocol: 'printing' ]
 ]
 
-{ #category : #templates }
+{ #category : 'templates' }
 GtRobocoderMetamodelPrintDerive >> printOnTemplate [
 	<gtMethodTemplate>
 	<generatedFrom: #'GtRobocoderTemplateMethod class>>#storageMethodTemplate'>

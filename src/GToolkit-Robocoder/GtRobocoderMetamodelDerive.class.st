@@ -1,10 +1,10 @@
 Class {
-	#name : #GtRobocoderMetamodelDerive,
-	#superclass : #Object,
-	#category : #'GToolkit-Robocoder-Metamodel - Derives'
+	#name : 'GtRobocoderMetamodelDerive',
+	#superclass : 'Object',
+	#category : 'GToolkit-Robocoder-Metamodel - Derives'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtRobocoderMetamodelDerive class >> deriveNamed: aDeriveName ifFound: aBlock [
 	(self allSubclasses
 		select: [ :eachClass | eachClass isAbstract not ])
@@ -12,28 +12,28 @@ GtRobocoderMetamodelDerive class >> deriveNamed: aDeriveName ifFound: aBlock [
 			ifFound: aBlock
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtRobocoderMetamodelDerive class >> label [
 	^ self subclassResponsibility
 ]
 
-{ #category : #comparing }
+{ #category : 'comparing' }
 GtRobocoderMetamodelDerive >> = anObject [
 	self == anObject ifTrue: [ ^ true ].
 	^ self class = anObject class
 ]
 
-{ #category : #'api - generation' }
+{ #category : 'api - generation' }
 GtRobocoderMetamodelDerive >> applyOnMetamodelsWithCodeDefinitions: aGtRobocoderMetamodelsWithCodeDefinitions [
 	self subclassResponsibility
 ]
 
-{ #category : #'api - generation' }
+{ #category : 'api - generation' }
 GtRobocoderMetamodelDerive >> applyOnViewModelModelWithCodeDefinition: aGtViewModelModelWithCodeDefinition [
 	self applyOnMetamodelsWithCodeDefinitions: (GtRobocoderMetamodelsWithCodeDefinitions new metamodelsWithCodeDefinition: { aGtViewModelModelWithCodeDefinition })
 ]
 
-{ #category : #comparing }
+{ #category : 'comparing' }
 GtRobocoderMetamodelDerive >> hash [
 	^ self class hash
 ]

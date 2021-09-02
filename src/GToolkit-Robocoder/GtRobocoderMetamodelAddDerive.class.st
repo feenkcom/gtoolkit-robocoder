@@ -1,22 +1,22 @@
 Class {
-	#name : #GtRobocoderMetamodelAddDerive,
-	#superclass : #GtRobocoderMetamodelDerive,
+	#name : 'GtRobocoderMetamodelAddDerive',
+	#superclass : 'GtRobocoderMetamodelDerive',
 	#instVars : [
 		'delegate',
 		'subscription',
 		'primitive'
 	],
-	#category : #'GToolkit-Robocoder-Metamodel - Derives'
+	#category : 'GToolkit-Robocoder-Metamodel - Derives'
 }
 
-{ #category : #'api - classes' }
+{ #category : 'api - classes' }
 GtRobocoderMetamodelAddDerive class >> announcementClassIn: aGtRobocoderMetamodelWithCodeDefinition [
 	<return: #GtFullClassDefinition or: nil>
 
 	^ aGtRobocoderMetamodelWithCodeDefinition extraDefinitionNamed: (self announcementNameFor: aGtRobocoderMetamodelWithCodeDefinition)
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtRobocoderMetamodelAddDerive class >> announcementNameFor: aGtRobocoderMetamodelWithCodeDefinition [
 	^ '{prefix}{project}{name}{suffix}AddedAnnouncement'
 		format: {
@@ -29,12 +29,12 @@ GtRobocoderMetamodelAddDerive class >> announcementNameFor: aGtRobocoderMetamode
 		} asDictionary
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtRobocoderMetamodelAddDerive class >> label [
 	^ 'add'
 ]
 
-{ #category : #'api - generation' }
+{ #category : 'api - generation' }
 GtRobocoderMetamodelAddDerive >> applyOnMetamodelsWithCodeDefinitions: aGtRobocoderMetamodelsWithCodeDefinitions [
 	aGtRobocoderMetamodelsWithCodeDefinitions metamodelsWithCodeDefinitionDo: [ :eachMetamodelWithCodeDefinition |
 		eachMetamodelWithCodeDefinition isForMany
@@ -47,17 +47,17 @@ GtRobocoderMetamodelAddDerive >> applyOnMetamodelsWithCodeDefinitions: aGtRoboco
 			ifFalse: [  ] ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtRobocoderMetamodelAddDerive >> delegate [
 	^ delegate
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtRobocoderMetamodelAddDerive >> delegate: aSymbol [
 	delegate := aSymbol
 ]
 
-{ #category : #'private - generation' }
+{ #category : 'private - generation' }
 GtRobocoderMetamodelAddDerive >> generateAdditionForMany: aGtRobocoderMetamodelWithCodeDefinition [
 	| anAnnouncementDefinition aModelAnnouncementDefinition |
 
@@ -119,7 +119,7 @@ GtRobocoderMetamodelAddDerive >> generateAdditionForMany: aGtRobocoderMetamodelW
 					send: anEventHandler ]
 ]
 
-{ #category : #'private - generation' }
+{ #category : 'private - generation' }
 GtRobocoderMetamodelAddDerive >> generateAnnouncementForMany: aRobocoderMetamodelWithCodeDefinition [
 	| aDefinition |
 
@@ -140,7 +140,7 @@ GtRobocoderMetamodelAddDerive >> generateAnnouncementForMany: aRobocoderMetamode
 	^ aDefinition
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 GtRobocoderMetamodelAddDerive >> initialize [
 	super initialize.
 
@@ -149,22 +149,22 @@ GtRobocoderMetamodelAddDerive >> initialize [
 	primitive := false
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtRobocoderMetamodelAddDerive >> primitive [
 	^ primitive
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtRobocoderMetamodelAddDerive >> primitive: anObject [
 	primitive := anObject
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtRobocoderMetamodelAddDerive >> subscribe: anAnnouncementName [
 	subscription := anAnnouncementName
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtRobocoderMetamodelAddDerive >> subscription [
 	^ subscription
 ]

@@ -9,11 +9,11 @@ A few of the most useful api methods are:
  - ${method:__View_model_class__>>#notify__Object____Status_not__}$ sends an announcement (${class:__Status_not_announcement__}$) indicating that the child view model is no more the property value in the parent view model (${method:__Parent_view_model_class__>>#__parent_property_getter__}$). At this point ${method:__View_model_class__>>#is__Status____Object__}$ returns ==false==.
 "
 Trait {
-	#name : #TGtRobocoderMetamodelPropertyForChildTemplate,
-	#category : #'GToolkit-Robocoder-Templates'
+	#name : 'TGtRobocoderMetamodelPropertyForChildTemplate',
+	#category : 'GToolkit-Robocoder-Templates'
 }
 
-{ #category : #templates }
+{ #category : 'templates' }
 TGtRobocoderMetamodelPropertyForChildTemplate >> hasOtherPropertyTesterTemplate [
 	<gtMethodTemplate>
 	<generatedFrom: #'GtRobocoderTemplateMethod class>>#storageMethodTemplate'>
@@ -29,7 +29,7 @@ TGtRobocoderMetamodelPropertyForChildTemplate >> hasOtherPropertyTesterTemplate 
 		storageMethod: thisContext method
 ]
 
-{ #category : #templates }
+{ #category : 'templates' }
 TGtRobocoderMetamodelPropertyForChildTemplate >> notifyPropertySetTemplate [
 	<gtMethodTemplate>
 	<generatedFrom: #'GtRobocoderTemplateMethod class>>#storageMethodTemplate'>
@@ -43,7 +43,7 @@ TGtRobocoderMetamodelPropertyForChildTemplate >> notifyPropertySetTemplate [
 		storageMethod: thisContext method
 ]
 
-{ #category : #templates }
+{ #category : 'templates' }
 TGtRobocoderMetamodelPropertyForChildTemplate >> notifyPropertyUnsetTemplate [
 	<gtMethodTemplate>
 	<generatedFrom: #'GtRobocoderTemplateMethod class>>#storageMethodTemplate'>
@@ -57,7 +57,7 @@ TGtRobocoderMetamodelPropertyForChildTemplate >> notifyPropertyUnsetTemplate [
 		storageMethod: thisContext method
 ]
 
-{ #category : #templates }
+{ #category : 'templates' }
 TGtRobocoderMetamodelPropertyForChildTemplate >> onlyPropertyStatusTesterTemplate [
 	<gtMethodTemplate>
 	<generatedFrom: #'GtRobocoderTemplateMethod class>>#storageMethodTemplate'>
@@ -72,7 +72,7 @@ TGtRobocoderMetamodelPropertyForChildTemplate >> onlyPropertyStatusTesterTemplat
 		storageMethod: thisContext method
 ]
 
-{ #category : #templates }
+{ #category : 'templates' }
 TGtRobocoderMetamodelPropertyForChildTemplate >> propertyStatusTesterTemplate [
 	<gtMethodTemplate>
 	<generatedFrom: #'GtRobocoderTemplateMethod class>>#storageMethodTemplate'>
@@ -88,7 +88,7 @@ TGtRobocoderMetamodelPropertyForChildTemplate >> propertyStatusTesterTemplate [
 		storageMethod: thisContext method
 ]
 
-{ #category : #templates }
+{ #category : 'templates' }
 TGtRobocoderMetamodelPropertyForChildTemplate >> setObjectTemplate [
 	<gtMethodTemplate>
 	<generatedFrom: #'GtRobocoderTemplateMethod class>>#storageMethodTemplate'>
@@ -104,7 +104,7 @@ TGtRobocoderMetamodelPropertyForChildTemplate >> setObjectTemplate [
 		storageMethod: thisContext method
 ]
 
-{ #category : #templates }
+{ #category : 'templates' }
 TGtRobocoderMetamodelPropertyForChildTemplate >> setObjectWithoutOtherEntitiesTemplate [
 	<gtMethodTemplate>
 	<generatedFrom: #'GtRobocoderTemplateMethod class>>#storageMethodTemplate'>
@@ -119,7 +119,7 @@ TGtRobocoderMetamodelPropertyForChildTemplate >> setObjectWithoutOtherEntitiesTe
 		storageMethod: thisContext method
 ]
 
-{ #category : #templates }
+{ #category : 'templates' }
 TGtRobocoderMetamodelPropertyForChildTemplate >> traitTemplate [
 	<gtTraitTemplate>
 	<generatedFrom: #'GtRobocoderTemplateTrait class>>#storageMethodTemplate'>

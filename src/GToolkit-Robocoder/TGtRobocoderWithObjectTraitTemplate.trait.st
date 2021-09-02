@@ -14,11 +14,11 @@ A template of an api trait for domain models or view models.
 
 "
 Trait {
-	#name : #TGtRobocoderWithObjectTraitTemplate,
-	#category : #'GToolkit-Robocoder-Templates'
+	#name : 'TGtRobocoderWithObjectTraitTemplate',
+	#category : 'GToolkit-Robocoder-Templates'
 }
 
-{ #category : #templates }
+{ #category : 'templates' }
 TGtRobocoderWithObjectTraitTemplate >> hasObjectTemplate [
 	<gtMethodTemplate>
 	<generatedFrom: #'GtRobocoderTemplateMethod class>>#storageMethodTemplate'>
@@ -34,7 +34,7 @@ TGtRobocoderWithObjectTraitTemplate >> hasObjectTemplate [
 		storageMethod: thisContext method
 ]
 
-{ #category : #templates }
+{ #category : 'templates' }
 TGtRobocoderWithObjectTraitTemplate >> objectGetterTemplate [
 	<gtMethodTemplate>
 	<generatedFrom: #'GtRobocoderTemplateMethod class>>#storageMethodTemplate'>
@@ -52,7 +52,7 @@ TGtRobocoderWithObjectTraitTemplate >> objectGetterTemplate [
 		storageMethod: thisContext method
 ]
 
-{ #category : #templates }
+{ #category : 'templates' }
 TGtRobocoderWithObjectTraitTemplate >> objectSetterTemplate [
 	<gtMethodTemplate>
 	<generatedFrom: #'GtRobocoderTemplateMethod class>>#storageMethodTemplate'>
@@ -78,7 +78,7 @@ TGtRobocoderWithObjectTraitTemplate >> objectSetterTemplate [
 		storageMethod: thisContext method
 ]
 
-{ #category : #templates }
+{ #category : 'templates' }
 TGtRobocoderWithObjectTraitTemplate >> onObjectChangedTemplate [
 	<gtMethodTemplate>
 	<generatedFrom: #'GtRobocoderTemplateMethod class>>#storageMethodTemplate'>
@@ -94,7 +94,7 @@ TGtRobocoderWithObjectTraitTemplate >> onObjectChangedTemplate [
 		storageMethod: thisContext method
 ]
 
-{ #category : #templates }
+{ #category : 'templates' }
 TGtRobocoderWithObjectTraitTemplate >> onPostObjectChangedTemplate [
 	<gtMethodTemplate>
 	<generatedFrom: #'GtRobocoderTemplateMethod class>>#storageMethodTemplate'>
@@ -108,7 +108,7 @@ TGtRobocoderWithObjectTraitTemplate >> onPostObjectChangedTemplate [
 		storageMethod: thisContext method
 ]
 
-{ #category : #templates }
+{ #category : 'templates' }
 TGtRobocoderWithObjectTraitTemplate >> subscribeToObjectTemplate [
 	<gtMethodTemplate>
 	<generatedFrom: #'GtRobocoderTemplateMethod class>>#storageMethodTemplate'>
@@ -123,7 +123,7 @@ TGtRobocoderWithObjectTraitTemplate >> subscribeToObjectTemplate [
 		storageMethod: thisContext method
 ]
 
-{ #category : #templates }
+{ #category : 'templates' }
 TGtRobocoderWithObjectTraitTemplate >> traitTemplate [
 	<gtTraitTemplate>
 	<generatedFrom: #'GtRobocoderTemplateTrait class>>#storageMethodTemplate'>
@@ -133,7 +133,7 @@ TGtRobocoderWithObjectTraitTemplate >> traitTemplate [
 		storageMethod: thisContext method
 ]
 
-{ #category : #templates }
+{ #category : 'templates' }
 TGtRobocoderWithObjectTraitTemplate >> unsubscribeFromObjectTemplate [
 	<gtMethodTemplate>
 	<generatedFrom: #'GtRobocoderTemplateMethod class>>#storageMethodTemplate'>

@@ -1,15 +1,15 @@
 Class {
-	#name : #GtRobocoderMetamodelLevelNode,
-	#superclass : #GtRobocoderMetamodelProgramNode,
-	#category : #'GToolkit-Robocoder-Ast - Metamodel'
+	#name : 'GtRobocoderMetamodelLevelNode',
+	#superclass : 'GtRobocoderMetamodelProgramNode',
+	#category : 'GToolkit-Robocoder-Ast - Metamodel'
 }
 
-{ #category : #generated }
+{ #category : 'generated' }
 GtRobocoderMetamodelLevelNode >> acceptVisitor: aProgramVisitor [
 	^ aProgramVisitor visitLevel: self
 ]
 
-{ #category : #testing }
+{ #category : 'testing' }
 GtRobocoderMetamodelLevelNode >> isCompositeLevel [
 	^ false
 ]

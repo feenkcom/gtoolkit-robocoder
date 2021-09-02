@@ -1,41 +1,41 @@
 Class {
-	#name : #GtRobocoderMetamodelWithCodeDefinitionParent,
-	#superclass : #Object,
+	#name : 'GtRobocoderMetamodelWithCodeDefinitionParent',
+	#superclass : 'Object',
 	#instVars : [
 		'child',
 		'parent'
 	],
-	#category : #'GToolkit-Robocoder-Metamodel'
+	#category : 'GToolkit-Robocoder-Metamodel'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtRobocoderMetamodelWithCodeDefinitionParent >> child [
 	^ child
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtRobocoderMetamodelWithCodeDefinitionParent >> child: anObject [
 	child := anObject
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtRobocoderMetamodelWithCodeDefinitionParent >> getter [
 	^ GtRobocoderMetamodelParentDerive
 		parentObjectGetterSelectorIn: self child
 		parentMetamodel: self parent
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtRobocoderMetamodelWithCodeDefinitionParent >> parent [
 	^ parent
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtRobocoderMetamodelWithCodeDefinitionParent >> parent: anObject [
 	parent := anObject
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtRobocoderMetamodelWithCodeDefinitionParent >> tester [
 	^ GtRobocoderMetamodelParentDerive
 		parentObjectTesterSelectorIn: self child

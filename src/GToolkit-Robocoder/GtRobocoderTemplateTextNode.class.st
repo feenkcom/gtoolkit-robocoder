@@ -1,10 +1,10 @@
 Class {
-	#name : #GtRobocoderTemplateTextNode,
-	#superclass : #GtRobocoderTemplateContentNode,
-	#category : #'GToolkit-Robocoder-Ast - Template'
+	#name : 'GtRobocoderTemplateTextNode',
+	#superclass : 'GtRobocoderTemplateContentNode',
+	#category : 'GToolkit-Robocoder-Ast - Template'
 }
 
-{ #category : #generated }
+{ #category : 'generated' }
 GtRobocoderTemplateTextNode >> acceptVisitor: aProgramVisitor [
 	^ aProgramVisitor visitText: self
 ]

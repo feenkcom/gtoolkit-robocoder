@@ -1,10 +1,10 @@
 Class {
-	#name : #GtRobocoderMetamodelHierarchyErrorNode,
-	#superclass : #GtRobocoderMetamodelHierarchyNode,
-	#category : #'GToolkit-Robocoder-Ast - Metamodel'
+	#name : 'GtRobocoderMetamodelHierarchyErrorNode',
+	#superclass : 'GtRobocoderMetamodelHierarchyNode',
+	#category : 'GToolkit-Robocoder-Ast - Metamodel'
 }
 
-{ #category : #generated }
+{ #category : 'generated' }
 GtRobocoderMetamodelHierarchyErrorNode >> acceptVisitor: aProgramVisitor [
 	^ aProgramVisitor visitHierarchyError: self
 ]

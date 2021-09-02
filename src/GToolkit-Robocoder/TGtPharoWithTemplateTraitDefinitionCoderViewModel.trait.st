@@ -24,14 +24,14 @@ Internal Representation and Key Implementation Points.
     Implementation Points
 "
 Trait {
-	#name : #TGtPharoWithTemplateTraitDefinitionCoderViewModel,
+	#name : 'TGtPharoWithTemplateTraitDefinitionCoderViewModel',
 	#instVars : [
 		'templateTraitDefinitionCoderViewModel'
 	],
-	#category : #'GToolkit-Robocoder-Coder - Behavior template'
+	#category : 'GToolkit-Robocoder-Coder - Behavior template'
 }
 
-{ #category : #'api - template trait definition coder view model' }
+{ #category : 'api - template trait definition coder view model' }
 TGtPharoWithTemplateTraitDefinitionCoderViewModel >> hasTemplateTraitDefinitionCoderViewModel [
 	"Return a true if templateTraitDefinitionCoder view model is assigned to the receiver element, false otherwise"
 	<return: #Boolean>
@@ -39,14 +39,14 @@ TGtPharoWithTemplateTraitDefinitionCoderViewModel >> hasTemplateTraitDefinitionC
 	^ templateTraitDefinitionCoderViewModel notNil
 ]
 
-{ #category : #'api - template trait definition coder view model' }
+{ #category : 'api - template trait definition coder view model' }
 TGtPharoWithTemplateTraitDefinitionCoderViewModel >> onPostTemplateTraitDefinitionCoderViewModelChanged [
 	"I am an optional hook method that is sent after #subscribeToTemplateTraitDefinitionCoderViewModel.
 	I do nothing by default but allow users to perform update operations when a receiver object is already
 	subscribed to announcements."
 ]
 
-{ #category : #'api - template trait definition coder view model' }
+{ #category : 'api - template trait definition coder view model' }
 TGtPharoWithTemplateTraitDefinitionCoderViewModel >> onTemplateTraitDefinitionCoderViewModelChanged [
 	"Is sent when a new templateTraitDefinitionCoder view model is assigned to the element.
 	Note: #onTemplateTraitDefinitionCoderViewModelChanged is sent before #subscribeToTemplateTraitDefinitionCoderViewModel
@@ -57,14 +57,14 @@ TGtPharoWithTemplateTraitDefinitionCoderViewModel >> onTemplateTraitDefinitionCo
 	self explicitRequirement
 ]
 
-{ #category : #'api - template trait definition coder view model' }
+{ #category : 'api - template trait definition coder view model' }
 TGtPharoWithTemplateTraitDefinitionCoderViewModel >> subscribeToTemplateTraitDefinitionCoderViewModel [
 	"Is sent after a new templateTraitDefinitionCoder view model is assigned to the element.
 	It is required to unsubscribe from the view model or domain model by implementing
 	#unsubscribeFromTemplateTraitDefinitionCoderViewModel if elements subscribe to them"
 ]
 
-{ #category : #'api - template trait definition coder view model' }
+{ #category : 'api - template trait definition coder view model' }
 TGtPharoWithTemplateTraitDefinitionCoderViewModel >> templateTraitDefinitionCoderViewModel [
 	"Return a not-null templateTraitDefinitionCoder view model assigned to the receiver element"
 	self
@@ -74,7 +74,7 @@ TGtPharoWithTemplateTraitDefinitionCoderViewModel >> templateTraitDefinitionCode
 	^ templateTraitDefinitionCoderViewModel
 ]
 
-{ #category : #'api - template trait definition coder view model' }
+{ #category : 'api - template trait definition coder view model' }
 TGtPharoWithTemplateTraitDefinitionCoderViewModel >> templateTraitDefinitionCoderViewModel: aTemplateTraitDefinitionCoderViewModel [
 	"Set a not-null templateTraitDefinitionCoder view model assigned to the receiver element"
 	<viewModelSetter>
@@ -93,7 +93,7 @@ TGtPharoWithTemplateTraitDefinitionCoderViewModel >> templateTraitDefinitionCode
 	self onPostTemplateTraitDefinitionCoderViewModelChanged
 ]
 
-{ #category : #'api - template trait definition coder view model' }
+{ #category : 'api - template trait definition coder view model' }
 TGtPharoWithTemplateTraitDefinitionCoderViewModel >> unsubscribeFromTemplateTraitDefinitionCoderViewModel [
 	"Is sent before a new templateTraitDefinitionCoder view model is assigned to the element.
 	Elements that subscribe to templateTraitDefinitionCoder view model in domain model are required to implement this methods."

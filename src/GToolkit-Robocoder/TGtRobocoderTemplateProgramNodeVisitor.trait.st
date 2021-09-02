@@ -1,56 +1,56 @@
 Trait {
-	#name : #TGtRobocoderTemplateProgramNodeVisitor,
+	#name : 'TGtRobocoderTemplateProgramNodeVisitor',
 	#traits : 'TSmaCCParseNodeVisitor',
 	#classTraits : 'TSmaCCParseNodeVisitor classTrait',
-	#category : #'GToolkit-Robocoder-Ast - Template'
+	#category : 'GToolkit-Robocoder-Ast - Template'
 }
 
-{ #category : #generated }
+{ #category : 'generated' }
 TGtRobocoderTemplateProgramNodeVisitor >> visitContent: aContent [
 	^ self visitProgram: aContent
 ]
 
-{ #category : #generated }
+{ #category : 'generated' }
 TGtRobocoderTemplateProgramNodeVisitor >> visitPart: aPart [
 	^ self visitProgram: aPart
 ]
 
-{ #category : #generated }
+{ #category : 'generated' }
 TGtRobocoderTemplateProgramNodeVisitor >> visitPlain: aPlain [
 	^ self visitPart: aPlain
 ]
 
-{ #category : #generated }
+{ #category : 'generated' }
 TGtRobocoderTemplateProgramNodeVisitor >> visitProgram: aProgram [
 	^ self visitSmaCCParseNode: aProgram
 ]
 
-{ #category : #generated }
+{ #category : 'generated' }
 TGtRobocoderTemplateProgramNodeVisitor >> visitString: aString [
 	^ self visitPart: aString
 ]
 
-{ #category : #generated }
+{ #category : 'generated' }
 TGtRobocoderTemplateProgramNodeVisitor >> visitTemplate: aTemplate [
 	^ self visitPart: aTemplate
 ]
 
-{ #category : #generated }
+{ #category : 'generated' }
 TGtRobocoderTemplateProgramNodeVisitor >> visitTemplateCode: aTemplateCode [
 	^ self visitPlain: aTemplateCode
 ]
 
-{ #category : #generated }
+{ #category : 'generated' }
 TGtRobocoderTemplateProgramNodeVisitor >> visitTemplateContent: aTemplateContent [
 	^ self visitContent: aTemplateContent
 ]
 
-{ #category : #generated }
+{ #category : 'generated' }
 TGtRobocoderTemplateProgramNodeVisitor >> visitText: aText [
 	^ self visitContent: aText
 ]
 
-{ #category : #generated }
+{ #category : 'generated' }
 TGtRobocoderTemplateProgramNodeVisitor >> visitTextSegment: aTextSegment [
 	^ self visitPlain: aTextSegment
 ]

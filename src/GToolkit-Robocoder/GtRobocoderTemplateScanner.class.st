@@ -1,25 +1,25 @@
 Class {
-	#name : #GtRobocoderTemplateScanner,
-	#superclass : #SmaCCScanner,
+	#name : 'GtRobocoderTemplateScanner',
+	#superclass : 'SmaCCScanner',
 	#instVars : [
 		'templateDepth',
 		'leftBraceDepth',
 		'rightBraceDepth'
 	],
-	#category : #'GToolkit-Robocoder-Ast - Template'
+	#category : 'GToolkit-Robocoder-Ast - Template'
 }
 
-{ #category : #generated }
+{ #category : 'generated' }
 GtRobocoderTemplateScanner >> emptySymbolTokenId [
 	^ 20
 ]
 
-{ #category : #generated }
+{ #category : 'generated' }
 GtRobocoderTemplateScanner >> errorTokenId [
 	^ 21
 ]
 
-{ #category : #'initialize-release' }
+{ #category : 'initialize-release' }
 GtRobocoderTemplateScanner >> initialize [
 	super initialize.
 	
@@ -28,7 +28,7 @@ GtRobocoderTemplateScanner >> initialize [
 	templateDepth := 0
 ]
 
-{ #category : #actions }
+{ #category : 'actions' }
 GtRobocoderTemplateScanner >> leftBrace [
 	| aNextToken |
 
@@ -75,7 +75,7 @@ GtRobocoderTemplateScanner >> leftBrace [
 	^ aNextToken
 ]
 
-{ #category : #actions }
+{ #category : 'actions' }
 GtRobocoderTemplateScanner >> rightBrace [
 	| aNextToken |
 
@@ -123,7 +123,7 @@ GtRobocoderTemplateScanner >> rightBrace [
 	^ aNextToken
 ]
 
-{ #category : #generated }
+{ #category : 'generated' }
 GtRobocoderTemplateScanner >> scan1 [
 	[ self step.
 	currentCharacter == $'
@@ -135,7 +135,7 @@ GtRobocoderTemplateScanner >> scan1 [
 	true ] whileTrue
 ]
 
-{ #category : #generated }
+{ #category : 'generated' }
 GtRobocoderTemplateScanner >> scanForToken [
 	scope == #template
 		ifTrue: [ self step.
@@ -168,7 +168,7 @@ GtRobocoderTemplateScanner >> scanForToken [
 	^ self reportLastMatch
 ]
 
-{ #category : #generated }
+{ #category : 'generated' }
 GtRobocoderTemplateScanner >> tokenActions [
 	^ #(#leftBrace #rightBrace)
 ]

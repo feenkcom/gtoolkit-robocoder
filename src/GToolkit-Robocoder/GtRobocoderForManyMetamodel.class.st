@@ -1,14 +1,14 @@
 Class {
-	#name : #GtRobocoderForManyMetamodel,
-	#superclass : #GtRobocoderMetamodel,
+	#name : 'GtRobocoderForManyMetamodel',
+	#superclass : 'GtRobocoderMetamodel',
 	#instVars : [
 		'forOneModel',
 		'parents'
 	],
-	#category : #'GToolkit-Robocoder-Metamodel'
+	#category : 'GToolkit-Robocoder-Metamodel'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtRobocoderForManyMetamodel >> addParent: aGtViewModelModel [
 	(parents includes: aGtViewModelModel)
 		ifTrue: [ ^ self ].
@@ -16,52 +16,52 @@ GtRobocoderForManyMetamodel >> addParent: aGtViewModelModel [
 	parents add: aGtViewModelModel
 ]
 
-{ #category : #'api - accessing' }
+{ #category : 'api - accessing' }
 GtRobocoderForManyMetamodel >> childViewModelsName [
 	^ self generateChildObjectGetterSelectorFor: self forOneModel
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtRobocoderForManyMetamodel >> children [
 	^ { self forOneModel }
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtRobocoderForManyMetamodel >> forOneModel [
 	^ forOneModel
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtRobocoderForManyMetamodel >> forOneModel: anObject [
 	forOneModel := anObject.
 	forOneModel parent: self
 ]
 
-{ #category : #testing }
+{ #category : 'testing' }
 GtRobocoderForManyMetamodel >> hasParents [
 	^ self parents notEmpty
 ]
 
-{ #category : #initialize }
+{ #category : 'initialize' }
 GtRobocoderForManyMetamodel >> initialize [
 	super initialize.
 
 	parents := OrderedCollection new
 ]
 
-{ #category : #'api - accessing' }
+{ #category : 'api - accessing' }
 GtRobocoderForManyMetamodel >> itemsAccessorSelector [
 	^ properties
 		at: #items
 		ifAbsent: [ #yourself ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtRobocoderForManyMetamodel >> parents [
 	^ parents
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtRobocoderForManyMetamodel >> parents: anObject [
 	parents := anObject asOrderedCollection
 ]

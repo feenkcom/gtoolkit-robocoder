@@ -1,6 +1,6 @@
-Extension { #name : #GtClassMethodsCoder }
+Extension { #name : 'GtClassMethodsCoder' }
 
-{ #category : #'*GToolkit-Robocoder' }
+{ #category : '*GToolkit-Robocoder' }
 GtClassMethodsCoder >> postCopyGenerator: aView methodsCoderViewModel: aMethodsCoderViewModel [
 	<gtCodeGenerator>
 
@@ -82,7 +82,7 @@ GtClassMethodsCoder >> postCopyGenerator: aView methodsCoderViewModel: aMethodsC
 			 ].
 ]
 
-{ #category : #'*GToolkit-Robocoder' }
+{ #category : '*GToolkit-Robocoder' }
 GtClassMethodsCoder >> storeOnGenerator: aView methodsCoderViewModel: aMethodsCoderViewModel [
 	<gtCodeGenerator>
 

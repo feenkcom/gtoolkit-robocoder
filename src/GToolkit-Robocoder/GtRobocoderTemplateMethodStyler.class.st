@@ -1,10 +1,10 @@
 Class {
-	#name : #GtRobocoderTemplateMethodStyler,
-	#superclass : #GtPharoStyler,
-	#category : #'GToolkit-Robocoder-Coder - Template method'
+	#name : 'GtRobocoderTemplateMethodStyler',
+	#superclass : 'GtPharoStyler',
+	#category : 'GToolkit-Robocoder-Coder - Template method'
 }
 
-{ #category : #'visiting - variables' }
+{ #category : 'visiting - variables' }
 GtRobocoderTemplateMethodStyler >> visitUndeclaredVariable: aVariableNode [
 
 	aVariableNode allParents

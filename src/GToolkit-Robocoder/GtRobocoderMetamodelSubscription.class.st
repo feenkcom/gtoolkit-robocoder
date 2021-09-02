@@ -1,15 +1,15 @@
 Class {
-	#name : #GtRobocoderMetamodelSubscription,
-	#superclass : #Object,
+	#name : 'GtRobocoderMetamodelSubscription',
+	#superclass : 'Object',
 	#instVars : [
 		'announcerSelector',
 		'handlerSelector',
 		'announcementName'
 	],
-	#category : #'GToolkit-Robocoder-Metamodel'
+	#category : 'GToolkit-Robocoder-Metamodel'
 }
 
-{ #category : #comparing }
+{ #category : 'comparing' }
 GtRobocoderMetamodelSubscription >> = anObject [
 	"Answer whether the receiver and anObject represent the same object."
 
@@ -22,27 +22,27 @@ GtRobocoderMetamodelSubscription >> = anObject [
 				and: [ announcerSelector = anObject announcerSelector ] ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtRobocoderMetamodelSubscription >> announcementName [
 	^ announcementName
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtRobocoderMetamodelSubscription >> announcementName: anObject [
 	announcementName := anObject
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtRobocoderMetamodelSubscription >> announcerSelector [
 	^ announcerSelector
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtRobocoderMetamodelSubscription >> announcerSelector: anObject [
 	announcerSelector := anObject
 ]
 
-{ #category : #converting }
+{ #category : 'converting' }
 GtRobocoderMetamodelSubscription >> asSubscribeSourceString [
 	^ 'self {model} when: {announcement} send: #{handler} to: self.' format: {
 			#model -> self announcerSelector.
@@ -51,23 +51,23 @@ GtRobocoderMetamodelSubscription >> asSubscribeSourceString [
 		} asDictionary
 ]
 
-{ #category : #converting }
+{ #category : 'converting' }
 GtRobocoderMetamodelSubscription >> asUnsubscribeSourceString [
 	^ 'self {model} unsubsccribe: self.'
 		format: { #model -> self announcerSelector } asDictionary
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtRobocoderMetamodelSubscription >> handlerSelector [
 	^ handlerSelector
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtRobocoderMetamodelSubscription >> handlerSelector: anObject [
 	handlerSelector := anObject
 ]
 
-{ #category : #comparing }
+{ #category : 'comparing' }
 GtRobocoderMetamodelSubscription >> hash [
 	"Answer an integer value that is related to the identity of the receiver."
 

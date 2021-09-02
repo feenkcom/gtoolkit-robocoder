@@ -1,10 +1,10 @@
 Class {
-	#name : #GtRobocoderMetamodelGeneratorExamples,
-	#superclass : #Object,
-	#category : #'GToolkit-Robocoder-Examples'
+	#name : 'GtRobocoderMetamodelGeneratorExamples',
+	#superclass : 'Object',
+	#category : 'GToolkit-Robocoder-Examples'
 }
 
-{ #category : #examples }
+{ #category : 'examples' }
 GtRobocoderMetamodelGeneratorExamples >> forManyWithChildParent [
 	<gtExample>
 	| theCodeDefinitions foldersMetamodelWithDefinition folderMetamodelWithDefinition |
@@ -44,7 +44,7 @@ GtRobocoderMetamodelGeneratorExamples >> forManyWithChildParent [
 	^ theCodeDefinitions
 ]
 
-{ #category : #examples }
+{ #category : 'examples' }
 GtRobocoderMetamodelGeneratorExamples >> forManyWithParentChildren [
 	<gtExample>
 	<noTest>
@@ -84,7 +84,7 @@ GtRobocoderMetamodelGeneratorExamples >> forManyWithParentChildren [
 	^ theCodeDefinitions
 ]
 
-{ #category : #examples }
+{ #category : 'examples' }
 GtRobocoderMetamodelGeneratorExamples >> forManyWithParentChildrenAndModel [
 	<gtExample>
 	| theCodeDefinitions foldersMetamodelWithDefinition folderMetamodelWithDefinition |
@@ -123,7 +123,7 @@ GtRobocoderMetamodelGeneratorExamples >> forManyWithParentChildrenAndModel [
 	^ theCodeDefinitions
 ]
 
-{ #category : #examples }
+{ #category : 'examples' }
 GtRobocoderMetamodelGeneratorExamples >> forManyWithoutModel [
 	<gtExample>
 	| theCodeDefinitions foldersMetamodelWithDefinition folderMetamodelWithDefinition |
