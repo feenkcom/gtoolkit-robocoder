@@ -1,10 +1,10 @@
 Class {
-	#name : #GtRobocoderBrowseTemplateMethodStyler,
-	#superclass : #GtGenericPharoStyler,
-	#category : #'GToolkit-Robocoder-Coder - Template method'
+	#name : 'GtRobocoderBrowseTemplateMethodStyler',
+	#superclass : 'GtGenericPharoStyler',
+	#category : 'GToolkit-Robocoder-Coder - Template method'
 }
 
-{ #category : #generated }
+{ #category : 'generated' }
 GtRobocoderBrowseTemplateMethodStyler >> visitPragma: aPragma [
 	| aCompiledMethod |
 

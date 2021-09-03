@@ -1,10 +1,10 @@
 Class {
-	#name : #GtRobocoderMetamodelGenericPropertyNode,
-	#superclass : #GtRobocoderMetamodelPropertyNode,
-	#category : #'GToolkit-Robocoder-Ast - Metamodel'
+	#name : 'GtRobocoderMetamodelGenericPropertyNode',
+	#superclass : 'GtRobocoderMetamodelPropertyNode',
+	#category : 'GToolkit-Robocoder-Ast - Metamodel'
 }
 
-{ #category : #generated }
+{ #category : 'generated' }
 GtRobocoderMetamodelGenericPropertyNode >> acceptVisitor: aProgramVisitor [
 	^ aProgramVisitor visitGenericProperty: self
 ]

@@ -1,15 +1,15 @@
 Class {
-	#name : #GtRobocoderMetamodelSnippet,
-	#superclass : #GtCodeSnippet,
+	#name : 'GtRobocoderMetamodelSnippet',
+	#superclass : 'GtCodeSnippet',
 	#instVars : [
 		'coder',
 		'shouldSpawn',
 		'coderViewModel'
 	],
-	#category : #'GToolkit-Robocoder-Coder - Metamodel'
+	#category : 'GToolkit-Robocoder-Coder - Metamodel'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtRobocoderMetamodelSnippet class >> typeName [
 	"Return a playground snippet type name.
 	It should be an unique name among all playground snippet types."
@@ -18,34 +18,34 @@ GtRobocoderMetamodelSnippet class >> typeName [
 	^ 'metamodel'
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtRobocoderMetamodelSnippet class >> xdocSnippetMappingFor: aNeoJSONMapper [
 	aNeoJSONMapper 
 		for: self do: [ :mapping | 
 			(mapping mapAccessor: #sourceCode to: #source_code) ]
 ]
 
-{ #category : #visitor }
+{ #category : 'visitor' }
 GtRobocoderMetamodelSnippet >> accept: aVisitor [
 	^ aVisitor visitViewModdelSnippet: self
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtRobocoderMetamodelSnippet >> allImplicitVariables: aCollection [
 	
 ]
 
-{ #category : #'private - text' }
+{ #category : 'private - text' }
 GtRobocoderMetamodelSnippet >> appendDotCharacter [
 	self text insertString: '.' at: self text size
 ]
 
-{ #category : #'private - text' }
+{ #category : 'private - text' }
 GtRobocoderMetamodelSnippet >> appendNewLine [
 	self text insertString: String cr at: self text size.
 ]
 
-{ #category : #'private - text' }
+{ #category : 'private - text' }
 GtRobocoderMetamodelSnippet >> appendText: aNewText [
 	| aLastNonSeparatorCharacterIndex |
 	aLastNonSeparatorCharacterIndex := self text finder
@@ -60,7 +60,7 @@ GtRobocoderMetamodelSnippet >> appendText: aNewText [
 	self text append: aNewText
 ]
 
-{ #category : #ui }
+{ #category : 'ui' }
 GtRobocoderMetamodelSnippet >> asElement [
 	| aCoderElement |
 	
@@ -79,16 +79,16 @@ GtRobocoderMetamodelSnippet >> asElement [
 		addChild: aCoderElement
 ]
 
-{ #category : #converting }
+{ #category : 'converting' }
 GtRobocoderMetamodelSnippet >> asStencilBuilder [
 	^ self
 ]
 
-{ #category : #ui }
+{ #category : 'ui' }
 GtRobocoderMetamodelSnippet >> bind: aSnippet to: aSnippetElement [
 ]
 
-{ #category : #private }
+{ #category : 'private' }
 GtRobocoderMetamodelSnippet >> codeEvaluated: anEvaluationAnnouncement [
 	self
 		notifyAboutResult: anEvaluationAnnouncement evaluationResult
@@ -96,36 +96,36 @@ GtRobocoderMetamodelSnippet >> codeEvaluated: anEvaluationAnnouncement [
 		spawn: shouldSpawn
 ]
 
-{ #category : #private }
+{ #category : 'private' }
 GtRobocoderMetamodelSnippet >> codeModified: aCoderTextModifiedAnnouncement [
 	self announce: (GtPageSnippetChangedAnnouncement new snippet: self)
 ]
 
-{ #category : #'api - cursor' }
+{ #category : 'api - cursor' }
 GtRobocoderMetamodelSnippet >> focusAndPlaceCursorAtBeginning [
 	self flag: 'self textEditor moveCursorTo: 0.'.
 	self requestSnippetFocus
 ]
 
-{ #category : #'api - cursor' }
+{ #category : 'api - cursor' }
 GtRobocoderMetamodelSnippet >> focusAndPlaceCursorAtEnd [
 	self flag: 'self textEditor moveCursorTo: self textEditor text size.'.
 	self requestSnippetFocus
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtRobocoderMetamodelSnippet >> gtKeybindingsFor: aView [
 	<gtView>
 	^ (coder gtViewKeybindingsFor: aView)
 		priority: 60
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtRobocoderMetamodelSnippet >> implicitLocalVariables [
 	^ #()
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 GtRobocoderMetamodelSnippet >> initialize [
 	coder := GtRobocoderMetamodelCoder new.
 	super initialize.
@@ -157,7 +157,7 @@ GtRobocoderMetamodelSnippet >> initialize [
 	self initializeCoderAddOns
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 GtRobocoderMetamodelSnippet >> initializeCoderAddOns [
 	coder addOns
 		addShortcut:
@@ -186,7 +186,7 @@ GtRobocoderMetamodelSnippet >> initializeCoderAddOns [
 				action: [ :aShortcutEvent | self moveDown: aShortcutEvent currentTarget ])
 ]
 
-{ #category : #'api - modification' }
+{ #category : 'api - modification' }
 GtRobocoderMetamodelSnippet >> mergeWith: aSnippet [
 	"Subclasses can define merging mechanism"
 
@@ -197,7 +197,7 @@ GtRobocoderMetamodelSnippet >> mergeWith: aSnippet [
 	self requestSnippetFocus.
 ]
 
-{ #category : #actions }
+{ #category : 'actions' }
 GtRobocoderMetamodelSnippet >> moveDown: anElement [
 	| textEditor position |
 	textEditor := anElement editor.
@@ -214,7 +214,7 @@ GtRobocoderMetamodelSnippet >> moveDown: anElement [
 						direction: #down) ]
 ]
 
-{ #category : #actions }
+{ #category : 'actions' }
 GtRobocoderMetamodelSnippet >> moveLeft: anElement [
 	| textEditor |
 	textEditor := anElement editor.
@@ -229,7 +229,7 @@ GtRobocoderMetamodelSnippet >> moveLeft: anElement [
 			textEditor navigator moveLeft apply ]
 ]
 
-{ #category : #actions }
+{ #category : 'actions' }
 GtRobocoderMetamodelSnippet >> moveRight: anElement [
 	| textEditor |
 	textEditor := anElement editor.
@@ -245,7 +245,7 @@ GtRobocoderMetamodelSnippet >> moveRight: anElement [
 			textEditor navigator moveRight apply ]
 ]
 
-{ #category : #actions }
+{ #category : 'actions' }
 GtRobocoderMetamodelSnippet >> moveUp: anElement [
 	| textEditor position |
 	textEditor := anElement editor.
@@ -262,17 +262,17 @@ GtRobocoderMetamodelSnippet >> moveUp: anElement [
 						direction: #up) ]
 ]
 
-{ #category : #actions }
+{ #category : 'actions' }
 GtRobocoderMetamodelSnippet >> playAll [
 	^ coder doItAll
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtRobocoderMetamodelSnippet >> receiver: anObject [
 	
 ]
 
-{ #category : #'private - requests' }
+{ #category : 'private - requests' }
 GtRobocoderMetamodelSnippet >> requestNewSnippetWith: aNewText [
 	| aNewSnippet |
 	aNewSnippet := self class new.
@@ -282,12 +282,12 @@ GtRobocoderMetamodelSnippet >> requestNewSnippetWith: aNewText [
 		second: aNewSnippet).
 ]
 
-{ #category : #'api - requests' }
+{ #category : 'api - requests' }
 GtRobocoderMetamodelSnippet >> requestSnippetMerge [
 	self announce: (GtSnippetMergeRequestedAnnouncement snippet: self)
 ]
 
-{ #category : #actions }
+{ #category : 'actions' }
 GtRobocoderMetamodelSnippet >> requestSnippetSplit [
 	| positions |
 	self deprecated: 'use #requestSnippetSplitInEditor:'.
@@ -296,7 +296,7 @@ GtRobocoderMetamodelSnippet >> requestSnippetSplit [
 	self editor moveCursorTo: self editor text size
 ]
 
-{ #category : #'api - requests' }
+{ #category : 'api - requests' }
 GtRobocoderMetamodelSnippet >> requestSnippetSplitInEditor: aTextEditor [
 	| positions |
 	positions := (aTextEditor cursors cursors
@@ -309,27 +309,27 @@ GtRobocoderMetamodelSnippet >> requestSnippetSplitInEditor: aTextEditor [
 	aTextEditor moveCursorTo: aTextEditor text size
 ]
 
-{ #category : #'api - requests' }
+{ #category : 'api - requests' }
 GtRobocoderMetamodelSnippet >> requestStyleText [
 	coder requestStyleSourceText
 ]
 
-{ #category : #private }
+{ #category : 'private' }
 GtRobocoderMetamodelSnippet >> snippetType [
 	^ GtCoderSnippetType of: self
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtRobocoderMetamodelSnippet >> sourceCode [
 	^ self text asString
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtRobocoderMetamodelSnippet >> sourceCode: aString [
 	coder currentSourceString: aString
 ]
 
-{ #category : #'private - text' }
+{ #category : 'private - text' }
 GtRobocoderMetamodelSnippet >> splitTextAt: aSplitIndex [
 	"Return a part that is deleted"
 	| aDeletedPart anUpdatedText |
@@ -347,34 +347,34 @@ GtRobocoderMetamodelSnippet >> splitTextAt: aSplitIndex [
 	^ aDeletedPart
 ]
 
-{ #category : #converting }
+{ #category : 'converting' }
 GtRobocoderMetamodelSnippet >> stencilBuilderClass [
 	"Return a stencil builder class that knows how to display a snippet in Bloc"
 	<return: #GtSnippetStencilBuilder>
 	^ nil
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtRobocoderMetamodelSnippet >> text [
 	<return: #BlText>
 	^ coder sourceCode sourceText
 ]
 
-{ #category : #private }
+{ #category : 'private' }
 GtRobocoderMetamodelSnippet >> textEditor [
 	^ coder sourceEditor
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtRobocoderMetamodelSnippet >> variableBindings [
 	^ GtNoBindings uniqueInstance
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtRobocoderMetamodelSnippet >> variableBindings: aGtPlaygroundBindings [
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : 'as yet unclassified' }
 GtRobocoderMetamodelSnippet >> xDocLoadSavedContent [
 	"Load the saved content from the XdKeyDocumentStore"
 ]

@@ -1,35 +1,35 @@
 Class {
-	#name : #GtRobocoderMetamodelDefinitionsNode,
-	#superclass : #GtRobocoderMetamodelProgramNode,
+	#name : 'GtRobocoderMetamodelDefinitionsNode',
+	#superclass : 'GtRobocoderMetamodelProgramNode',
 	#instVars : [
 		'definitions'
 	],
-	#category : #'GToolkit-Robocoder-Ast - Metamodel'
+	#category : 'GToolkit-Robocoder-Ast - Metamodel'
 }
 
-{ #category : #generated }
+{ #category : 'generated' }
 GtRobocoderMetamodelDefinitionsNode >> acceptVisitor: aProgramVisitor [
 	^ aProgramVisitor visitDefinitions: self
 ]
 
-{ #category : #generated }
+{ #category : 'generated' }
 GtRobocoderMetamodelDefinitionsNode >> compositeNodeVariables [
 	^ #(#definitions)
 ]
 
-{ #category : #generated }
+{ #category : 'generated' }
 GtRobocoderMetamodelDefinitionsNode >> definitions [
 	^ definitions
 ]
 
-{ #category : #generated }
+{ #category : 'generated' }
 GtRobocoderMetamodelDefinitionsNode >> definitions: anOrderedCollection [
 	self setParents: self definitions to: nil.
 	definitions := anOrderedCollection.
 	self setParents: self definitions to: self
 ]
 
-{ #category : #'generated-initialize-release' }
+{ #category : 'generated-initialize-release' }
 GtRobocoderMetamodelDefinitionsNode >> initialize [
 	super initialize.
 	definitions := OrderedCollection new: 2.

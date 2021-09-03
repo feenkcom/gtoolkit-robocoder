@@ -1,6 +1,6 @@
 Class {
-	#name : #GtRobocoderMetamodelWithSimplePropertyDerive,
-	#superclass : #GtRobocoderMetamodelWithPropertyDerive,
+	#name : 'GtRobocoderMetamodelWithSimplePropertyDerive',
+	#superclass : 'GtRobocoderMetamodelWithPropertyDerive',
 	#instVars : [
 		'name',
 		'getter',
@@ -9,15 +9,15 @@ Class {
 		'type',
 		'comparator'
 	],
-	#category : #'GToolkit-Robocoder-Metamodel - Derives'
+	#category : 'GToolkit-Robocoder-Metamodel - Derives'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtRobocoderMetamodelWithSimplePropertyDerive class >> label [
 	^ 'property'
 ]
 
-{ #category : #'api - generation' }
+{ #category : 'api - generation' }
 GtRobocoderMetamodelWithSimplePropertyDerive >> applyOnMetamodelsWithCodeDefinitions: aGtRobocoderMetamodelsWithCodeDefinitions [
 	aGtRobocoderMetamodelsWithCodeDefinitions metamodelsWithCodeDefinitionDo: [ :eachMetamodelWithCodeDefinition |
 		| aDefinition |
@@ -41,37 +41,37 @@ GtRobocoderMetamodelWithSimplePropertyDerive >> applyOnMetamodelsWithCodeDefinit
 		self generatePropertyChangedNotifierMethodFor: eachMetamodelWithCodeDefinition ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtRobocoderMetamodelWithSimplePropertyDerive >> comparator [
 	^ comparator
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtRobocoderMetamodelWithSimplePropertyDerive >> comparator: anObject [
 	comparator := anObject
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtRobocoderMetamodelWithSimplePropertyDerive >> getter [
 	^ getter ifNil: [ self name ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtRobocoderMetamodelWithSimplePropertyDerive >> getter: anObject [
 	getter := anObject
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtRobocoderMetamodelWithSimplePropertyDerive >> name [
 	^ name
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtRobocoderMetamodelWithSimplePropertyDerive >> name: anObject [
 	name := anObject
 ]
 
-{ #category : #'private - class names' }
+{ #category : 'private - class names' }
 GtRobocoderMetamodelWithSimplePropertyDerive >> propertyChangedAnnouncementClassNameFor: aViewModelModel [
 	<return: #Symbol>
 
@@ -83,37 +83,37 @@ GtRobocoderMetamodelWithSimplePropertyDerive >> propertyChangedAnnouncementClass
 		} asDictionary) capitalized asSymbol
 ]
 
-{ #category : #'private - accessing' }
+{ #category : 'private - accessing' }
 GtRobocoderMetamodelWithSimplePropertyDerive >> propertyNameFor: aViewModelModel [
 	^ self name
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtRobocoderMetamodelWithSimplePropertyDerive >> setter [
 	^ setter ifNil: [ self name ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtRobocoderMetamodelWithSimplePropertyDerive >> setter: anObject [
 	setter := anObject
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtRobocoderMetamodelWithSimplePropertyDerive >> type [
 	^ type ifNil: [ #Object ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtRobocoderMetamodelWithSimplePropertyDerive >> type: anObject [
 	type := anObject
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtRobocoderMetamodelWithSimplePropertyDerive >> unsetter [
 	^ unsetter ifNil: [ 'unset', self name capitalized ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtRobocoderMetamodelWithSimplePropertyDerive >> unsetter: anObject [
 	unsetter := anObject
 ]

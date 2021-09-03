@@ -1,15 +1,15 @@
 Class {
-	#name : #GtRobocoderTemplateMethod,
-	#superclass : #GtRobocoderTemplateArtefact,
+	#name : 'GtRobocoderTemplateMethod',
+	#superclass : 'GtRobocoderTemplateArtefact',
 	#instVars : [
 		'sourceCode',
 		'protocol',
 		'condition'
 	],
-	#category : #'GToolkit-Robocoder-Model'
+	#category : 'GToolkit-Robocoder-Model'
 }
 
-{ #category : #template }
+{ #category : 'template' }
 GtRobocoderTemplateMethod class >> storageMethodTemplate [
 	<gtMethodTemplate>
 	<generatedFrom: #'GtRobocoderTemplateMethod class>>#storageMethodTemplate'>
@@ -31,19 +31,19 @@ GtRobocoderTemplateMethod class >> storageMethodTemplate [
 		storageMethod: thisContext method
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtRobocoderTemplateMethod >> condition [
 	<return: #String>
 
 	^ condition
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtRobocoderTemplateMethod >> condition: aBlock [
 	condition := aBlock
 ]
 
-{ #category : #initialize }
+{ #category : 'initialize' }
 GtRobocoderTemplateMethod >> initialize [
 	super initialize.
 	
@@ -51,22 +51,22 @@ GtRobocoderTemplateMethod >> initialize [
 	protocol := nil
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtRobocoderTemplateMethod >> protocol [
 	^ protocol
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtRobocoderTemplateMethod >> protocol: anObject [
 	protocol := anObject
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtRobocoderTemplateMethod >> sourceCode [
 	^ sourceCode
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtRobocoderTemplateMethod >> sourceCode: anObject [
 	sourceCode := anObject
 ]

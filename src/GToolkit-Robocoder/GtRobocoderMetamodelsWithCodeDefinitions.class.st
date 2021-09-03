@@ -1,20 +1,20 @@
 Class {
-	#name : #GtRobocoderMetamodelsWithCodeDefinitions,
-	#superclass : #Object,
+	#name : 'GtRobocoderMetamodelsWithCodeDefinitions',
+	#superclass : 'Object',
 	#instVars : [
 		'viewModelModels',
 		'metamodelsWithCodeDefinition'
 	],
-	#category : #'GToolkit-Robocoder-Metamodel'
+	#category : 'GToolkit-Robocoder-Metamodel'
 }
 
-{ #category : #enumerating }
+{ #category : 'enumerating' }
 GtRobocoderMetamodelsWithCodeDefinitions >> extraAndViewModelCodeDefinitionsDo: aBlock [
 	self metamodelsWithCodeDefinition do: [ :eachViewModelCodeDefinition | eachViewModelCodeDefinition extraDefinitions do: aBlock ].
 	self viewModelModelsWithNewCodeDefinitionDo: [ :eachViewModelCodeDefinition | aBlock value: eachViewModelCodeDefinition definition ]
 ]
 
-{ #category : #'api - generation' }
+{ #category : 'api - generation' }
 GtRobocoderMetamodelsWithCodeDefinitions >> generateChanges [
 	| theChanges |
 	theChanges := RBCompositeRefactoryChange named: 'Generate view models'.
@@ -25,7 +25,7 @@ GtRobocoderMetamodelsWithCodeDefinitions >> generateChanges [
 	^ theChanges
 ]
 
-{ #category : #'gt-extensions' }
+{ #category : 'gt-extensions' }
 GtRobocoderMetamodelsWithCodeDefinitions >> gtChangesFor: aView [
 	<gtView>
 	
@@ -36,7 +36,7 @@ GtRobocoderMetamodelsWithCodeDefinitions >> gtChangesFor: aView [
 		view: #gtChangesFor:
 ]
 
-{ #category : #'gt-extensions' }
+{ #category : 'gt-extensions' }
 GtRobocoderMetamodelsWithCodeDefinitions >> gtModelsFor: aView [
 	<gtView>
 	
@@ -46,47 +46,47 @@ GtRobocoderMetamodelsWithCodeDefinitions >> gtModelsFor: aView [
 		items: [ self viewModelModels models ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtRobocoderMetamodelsWithCodeDefinitions >> metamodelsWithCodeDefinition [
 	<return: #Collection of: #GtRobocoderMetamodelWithCodeDefinition>
 
 	^ metamodelsWithCodeDefinition
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtRobocoderMetamodelsWithCodeDefinitions >> metamodelsWithCodeDefinition: anObject [
 	metamodelsWithCodeDefinition := anObject
 ]
 
-{ #category : #enumerating }
+{ #category : 'enumerating' }
 GtRobocoderMetamodelsWithCodeDefinitions >> metamodelsWithCodeDefinitionDo: aBlock [
 	"Evaluate a given block with each ${class:GtRobocoderMetamodelWithCodeDefinition}$"
 
 	self metamodelsWithCodeDefinition do: aBlock
 ]
 
-{ #category : #copying }
+{ #category : 'copying' }
 GtRobocoderMetamodelsWithCodeDefinitions >> postCopy [
 	metamodelsWithCodeDefinition := metamodelsWithCodeDefinition collect: [ :eachDefinition | eachDefinition copy ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtRobocoderMetamodelsWithCodeDefinitions >> viewModelModelWithCodeDefinitionFor: aViewModelModel [
 	^ self metamodelsWithCodeDefinition
 		detect: [ :eachViewModelModelWithCodeDefinition | eachViewModelModelWithCodeDefinition metamodel = aViewModelModel ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtRobocoderMetamodelsWithCodeDefinitions >> viewModelModels [
 	^ viewModelModels
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtRobocoderMetamodelsWithCodeDefinitions >> viewModelModels: anObject [
 	viewModelModels := anObject
 ]
 
-{ #category : #enumerating }
+{ #category : 'enumerating' }
 GtRobocoderMetamodelsWithCodeDefinitions >> viewModelModelsWithNewCodeDefinitionDo: aBlock [
 	"Evaluate a given block with each ${class:GtViewModelModelWithCodeDefinition}$"
 

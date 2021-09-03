@@ -3,8 +3,8 @@
 Given a metamodel declaration source code, the metamodel generator parses (using ${class:GtViewModelParser}$) and creates models (${class:GtViewModelModels}$) of the declated view-models.
 "
 Class {
-	#name : #GtRobocoderMetamodelGenerator,
-	#superclass : #Object,
+	#name : 'GtRobocoderMetamodelGenerator',
+	#superclass : 'Object',
 	#traits : 'TGtRobocoderMetamodelProgramNodeVisitor',
 	#classTraits : 'TGtRobocoderMetamodelProgramNodeVisitor classTrait',
 	#instVars : [
@@ -13,22 +13,22 @@ Class {
 		'derives',
 		'metamodels'
 	],
-	#category : #'GToolkit-Robocoder-Coder - Metamodel'
+	#category : 'GToolkit-Robocoder-Coder - Metamodel'
 }
 
-{ #category : #generation }
+{ #category : 'generation' }
 GtRobocoderMetamodelGenerator class >> generateDefinitionsFrom: aSourceCode [
 	^ (self generateFrom: aSourceCode) generateCodeDefinitions
 ]
 
-{ #category : #generation }
+{ #category : 'generation' }
 GtRobocoderMetamodelGenerator class >> generateFrom: aSourceCode [
 	^ self new
 		sourceCode: aSourceCode;
 		generate
 ]
 
-{ #category : #private }
+{ #category : 'private' }
 GtRobocoderMetamodelGenerator >> createDeriveFrom: aDeriveSetting thenDo: aBlock [
 	GtRobocoderMetamodelDerive
 		deriveNamed: aDeriveSetting literalValue
@@ -45,7 +45,7 @@ GtRobocoderMetamodelGenerator >> createDeriveFrom: aDeriveSetting thenDo: aBlock
 			aBlock value: aDerive ].
 ]
 
-{ #category : #private }
+{ #category : 'private' }
 GtRobocoderMetamodelGenerator >> ensureViewModelForManyExists: aNameString [
 	^ self
 		viewModelNamed: aNameString
@@ -59,7 +59,7 @@ GtRobocoderMetamodelGenerator >> ensureViewModelForManyExists: aNameString [
 			aNewViewModel ].
 ]
 
-{ #category : #private }
+{ #category : 'private' }
 GtRobocoderMetamodelGenerator >> ensureViewModelForOneExists: aNameString [
 	^ self
 		viewModelNamed: aNameString
@@ -73,7 +73,7 @@ GtRobocoderMetamodelGenerator >> ensureViewModelForOneExists: aNameString [
 			aNewViewModel ]
 ]
 
-{ #category : #translating }
+{ #category : 'translating' }
 GtRobocoderMetamodelGenerator >> generate [
 	<return: #GtRobocoderMetamodels>
 	| anAst |
@@ -98,7 +98,7 @@ GtRobocoderMetamodelGenerator >> generate [
 		yourself
 ]
 
-{ #category : #'gt-extension' }
+{ #category : 'gt-extension' }
 GtRobocoderMetamodelGenerator >> gtTreeFor: aView [
 	<gtView>
 	
@@ -111,22 +111,22 @@ GtRobocoderMetamodelGenerator >> gtTreeFor: aView [
 		view: #gtTreeFor:
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtRobocoderMetamodelGenerator >> hierarchy [
 	^ sourceCode
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtRobocoderMetamodelGenerator >> sourceCode [
 	^ sourceCode
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtRobocoderMetamodelGenerator >> sourceCode: aSting [
 	sourceCode := aSting
 ]
 
-{ #category : #private }
+{ #category : 'private' }
 GtRobocoderMetamodelGenerator >> viewModelForProperty: aPropertyNode ifFound: aBlock [
 	| aName |
 
@@ -136,17 +136,17 @@ GtRobocoderMetamodelGenerator >> viewModelForProperty: aPropertyNode ifFound: aB
 	^ self viewModelNamed: aName ifFound: aBlock
 ]
 
-{ #category : #private }
+{ #category : 'private' }
 GtRobocoderMetamodelGenerator >> viewModelNamed: aFullName ifAbsent: aBlock [
 	^ metamodels detect: [ :each | each name = aFullName ] ifNone: aBlock
 ]
 
-{ #category : #private }
+{ #category : 'private' }
 GtRobocoderMetamodelGenerator >> viewModelNamed: aFullName ifFound: aBlock [
 	^ metamodels detect: [ :each | each name = aFullName ] ifFound: aBlock
 ]
 
-{ #category : #generated }
+{ #category : 'generated' }
 GtRobocoderMetamodelGenerator >> visitGlobalSetting: aGlobalSetting [
 	self visitSetting: aGlobalSetting.
 	
@@ -162,7 +162,7 @@ GtRobocoderMetamodelGenerator >> visitGlobalSetting: aGlobalSetting [
 		put: aGlobalSetting literalValue
 ]
 
-{ #category : #generated }
+{ #category : 'generated' }
 GtRobocoderMetamodelGenerator >> visitLevelForMany: aLevelForMany [
 	| aParentModel aChildModel |
 
@@ -172,12 +172,12 @@ GtRobocoderMetamodelGenerator >> visitLevelForMany: aLevelForMany [
 	aParentModel forOneModel: aChildModel
 ]
 
-{ #category : #generated }
+{ #category : 'generated' }
 GtRobocoderMetamodelGenerator >> visitLevelForOne: aLevelForOne [
 	self ensureViewModelForOneExists: aLevelForOne fullNameString
 ]
 
-{ #category : #generated }
+{ #category : 'generated' }
 GtRobocoderMetamodelGenerator >> visitLocalSetting: aLocalSetting [
 	self viewModelForProperty: aLocalSetting ifFound: [ :aViewModelModel |
 		aLocalSetting nameString = 'derive'
@@ -187,7 +187,7 @@ GtRobocoderMetamodelGenerator >> visitLocalSetting: aLocalSetting [
 				^ self ] ].
 ]
 
-{ #category : #generated }
+{ #category : 'generated' }
 GtRobocoderMetamodelGenerator >> visitNestedLevel: aNestedLevel [
 	| aParentViewModel aChildLevel theChildNames | 
 	self visitLevel: aNestedLevel.
@@ -208,7 +208,7 @@ GtRobocoderMetamodelGenerator >> visitNestedLevel: aNestedLevel [
 			ifFound: [ :eachChildModel | aParentViewModel addChild: eachChildModel ] ].
 ]
 
-{ #category : #generated }
+{ #category : 'generated' }
 GtRobocoderMetamodelGenerator >> visitProperty: aProperty [
 	self
 		viewModelForProperty: aProperty

@@ -1,6 +1,6 @@
-Extension { #name : #Behavior }
+Extension { #name : 'Behavior' }
 
-{ #category : #'*GToolkit-Robocoder' }
+{ #category : '*GToolkit-Robocoder' }
 Behavior >> gtCoderTemplateMethodsFor: aView context: aPhlowContext [
 	<gtClassView>
 	| aMethodsCoderUIModel |

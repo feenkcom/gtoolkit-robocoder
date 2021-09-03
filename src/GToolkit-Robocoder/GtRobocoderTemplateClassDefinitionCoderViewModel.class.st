@@ -1,22 +1,22 @@
 Class {
-	#name : #GtRobocoderTemplateClassDefinitionCoderViewModel,
-	#superclass : #GtBehaviorDefinitionCoderUIModel,
+	#name : 'GtRobocoderTemplateClassDefinitionCoderViewModel',
+	#superclass : 'GtBehaviorDefinitionCoderUIModel',
 	#traits : 'TGtPharoWithTemplateClassBehaviorCoderModel',
 	#classTraits : 'TGtPharoWithTemplateClassBehaviorCoderModel classTrait',
-	#category : #'GToolkit-Robocoder-Coder - Behavior template'
+	#category : 'GToolkit-Robocoder-Coder - Behavior template'
 }
 
-{ #category : #converting }
+{ #category : 'converting' }
 GtRobocoderTemplateClassDefinitionCoderViewModel >> asElement [
 	^ GtRobocoderTemplateClassDefinitionCoderElement new templateClassDefinitionCoderViewModel: self
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtRobocoderTemplateClassDefinitionCoderViewModel >> definition [
 	^ self templateClassBehaviorCoderModel definition
 ]
 
-{ #category : #actions }
+{ #category : 'actions' }
 GtRobocoderTemplateClassDefinitionCoderViewModel >> save [
 	self templateClassBehaviorCoderModel save
 ]

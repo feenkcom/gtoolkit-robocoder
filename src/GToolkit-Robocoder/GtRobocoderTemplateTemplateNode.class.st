@@ -1,25 +1,25 @@
 Class {
-	#name : #GtRobocoderTemplateTemplateNode,
-	#superclass : #GtRobocoderTemplatePartNode,
+	#name : 'GtRobocoderTemplateTemplateNode',
+	#superclass : 'GtRobocoderTemplatePartNode',
 	#instVars : [
 		'leftBrace',
 		'content',
 		'rightBrace'
 	],
-	#category : #'GToolkit-Robocoder-Ast - Template'
+	#category : 'GToolkit-Robocoder-Ast - Template'
 }
 
-{ #category : #generated }
+{ #category : 'generated' }
 GtRobocoderTemplateTemplateNode >> acceptVisitor: aProgramVisitor [
 	^ aProgramVisitor visitTemplate: self
 ]
 
-{ #category : #generated }
+{ #category : 'generated' }
 GtRobocoderTemplateTemplateNode >> content [
 	^ content
 ]
 
-{ #category : #generated }
+{ #category : 'generated' }
 GtRobocoderTemplateTemplateNode >> content: aGtRobocoderTemplateTemplateContentNode [
 	self content notNil
 		ifTrue: [ self content parent: nil ].
@@ -28,32 +28,32 @@ GtRobocoderTemplateTemplateNode >> content: aGtRobocoderTemplateTemplateContentN
 		ifTrue: [ self content parent: self ]
 ]
 
-{ #category : #generated }
+{ #category : 'generated' }
 GtRobocoderTemplateTemplateNode >> leftBrace [
 	^ leftBrace
 ]
 
-{ #category : #generated }
+{ #category : 'generated' }
 GtRobocoderTemplateTemplateNode >> leftBrace: aSmaCCToken [
 	leftBrace := aSmaCCToken
 ]
 
-{ #category : #generated }
+{ #category : 'generated' }
 GtRobocoderTemplateTemplateNode >> nodeVariables [
 	^ #(#content)
 ]
 
-{ #category : #generated }
+{ #category : 'generated' }
 GtRobocoderTemplateTemplateNode >> rightBrace [
 	^ rightBrace
 ]
 
-{ #category : #generated }
+{ #category : 'generated' }
 GtRobocoderTemplateTemplateNode >> rightBrace: aSmaCCToken [
 	rightBrace := aSmaCCToken
 ]
 
-{ #category : #generated }
+{ #category : 'generated' }
 GtRobocoderTemplateTemplateNode >> tokenVariables [
 	^ #(#leftBrace #rightBrace)
 ]

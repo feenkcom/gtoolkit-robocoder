@@ -1,15 +1,15 @@
 Class {
-	#name : #GtRobocoderMetamodelNameDerive,
-	#superclass : #GtRobocoderMetamodelDerive,
-	#category : #'GToolkit-Robocoder-Metamodel - Derives'
+	#name : 'GtRobocoderMetamodelNameDerive',
+	#superclass : 'GtRobocoderMetamodelDerive',
+	#category : 'GToolkit-Robocoder-Metamodel - Derives'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtRobocoderMetamodelNameDerive class >> label [
 	^ 'name'
 ]
 
-{ #category : #'api - generation' }
+{ #category : 'api - generation' }
 GtRobocoderMetamodelNameDerive >> applyOnMetamodelsWithCodeDefinitions: aGtRobocoderMetamodelsWithCodeDefinitions [
 	aGtRobocoderMetamodelsWithCodeDefinitions metamodelsWithCodeDefinitionDo: [ :eachMetamodelWithCodeDefinition |
 		| eachNameMethodSourceCode |
@@ -24,7 +24,7 @@ GtRobocoderMetamodelNameDerive >> applyOnMetamodelsWithCodeDefinitions: aGtRoboc
 			protocol: 'api - accessing' ]
 ]
 
-{ #category : #templates }
+{ #category : 'templates' }
 GtRobocoderMetamodelNameDerive >> objectNameTemplate [
 	<gtMethodTemplate>
 	<generatedFrom: #'GtRobocoderTemplateMethod class>>#storageMethodTemplate'>

@@ -1,15 +1,15 @@
 Class {
-	#name : #GtRobocoderMetamodelTypeTestDerive,
-	#superclass : #GtRobocoderMetamodelDerive,
-	#category : #'GToolkit-Robocoder-Metamodel - Derives'
+	#name : 'GtRobocoderMetamodelTypeTestDerive',
+	#superclass : 'GtRobocoderMetamodelDerive',
+	#category : 'GToolkit-Robocoder-Metamodel - Derives'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtRobocoderMetamodelTypeTestDerive class >> label [
 	^ 'typeTest'
 ]
 
-{ #category : #'api - generation' }
+{ #category : 'api - generation' }
 GtRobocoderMetamodelTypeTestDerive >> applyOnMetamodelsWithCodeDefinitions: aGtRobocoderMetamodelsWithCodeDefinitions [
 	aGtRobocoderMetamodelsWithCodeDefinitions metamodelsWithCodeDefinitionDo: [ :thisMetamodelWithCodeDefinition |
 		aGtRobocoderMetamodelsWithCodeDefinitions metamodelsWithCodeDefinitionDo: [ :anotherMetamodelWithCodeDefinition |
@@ -24,7 +24,7 @@ GtRobocoderMetamodelTypeTestDerive >> applyOnMetamodelsWithCodeDefinitions: aGtR
 				protocol: 'api - testing' ] ]
 ]
 
-{ #category : #'private - generation' }
+{ #category : 'private - generation' }
 GtRobocoderMetamodelTypeTestDerive >> generateTypeTesterFor: aMetamodel and: anotherMetamodel [		
 	^ GtRobocoderTemplateMethodCoder new
 		forMethod: self class >> #typeTesterTemplate;
@@ -34,7 +34,7 @@ GtRobocoderMetamodelTypeTestDerive >> generateTypeTesterFor: aMetamodel and: ano
 		translate
 ]
 
-{ #category : #templates }
+{ #category : 'templates' }
 GtRobocoderMetamodelTypeTestDerive >> typeTesterTemplate [
 	<gtMethodTemplate>
 	<generatedFrom: #'GtRobocoderTemplateMethod class>>#storageMethodTemplate'>

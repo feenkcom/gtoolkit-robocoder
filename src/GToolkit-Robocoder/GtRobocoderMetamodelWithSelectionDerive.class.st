@@ -1,15 +1,15 @@
 Class {
-	#name : #GtRobocoderMetamodelWithSelectionDerive,
-	#superclass : #GtRobocoderMetamodelWithChoicePropertyFromManyDerive,
-	#category : #'GToolkit-Robocoder-Metamodel - Derives'
+	#name : 'GtRobocoderMetamodelWithSelectionDerive',
+	#superclass : 'GtRobocoderMetamodelWithChoicePropertyFromManyDerive',
+	#category : 'GToolkit-Robocoder-Metamodel - Derives'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtRobocoderMetamodelWithSelectionDerive class >> label [
 	^ 'selection'
 ]
 
-{ #category : #'api - generation' }
+{ #category : 'api - generation' }
 GtRobocoderMetamodelWithSelectionDerive >> applyOnMetamodelsWithCodeDefinitions: aGtRobocoderMetamodelsWithCodeDefinitions [
 	"The generation of the selection behavior requires three passes:
 	 - first we generate the template code which is independent for each view model
@@ -52,7 +52,7 @@ GtRobocoderMetamodelWithSelectionDerive >> applyOnMetamodelsWithCodeDefinitions:
 
 ]
 
-{ #category : #'private - generate' }
+{ #category : 'private - generate' }
 GtRobocoderMetamodelWithSelectionDerive >> generateDeselectedAnnouncementFor: aRobocoderMetamodelWithCodeDefinition [
 	| aDefinition |
 	
@@ -77,7 +77,7 @@ GtRobocoderMetamodelWithSelectionDerive >> generateDeselectedAnnouncementFor: aR
 	^ aDefinition
 ]
 
-{ #category : #'private - generate' }
+{ #category : 'private - generate' }
 GtRobocoderMetamodelWithSelectionDerive >> generateHasOtherSelectedEntitiesMethodFor: aViewModelModelWithCodeDefinition [
 	| aViewModelModel theChildrenForMany aMethodDefinition methodSourceCode |
 
@@ -123,7 +123,7 @@ GtRobocoderMetamodelWithSelectionDerive >> generateHasOtherSelectedEntitiesMetho
 	aMethodDefinition sourceCode: methodSourceCode
 ]
 
-{ #category : #'private - generate' }
+{ #category : 'private - generate' }
 GtRobocoderMetamodelWithSelectionDerive >> generateSelectableChildAccessorsDefinitionFor: aGtRobocoderMetamodelWithCodeDefinition [
 	| aSelectedAnnouncementDefinition aDeselectedAnnouncementDefinition aDefinition |
 
@@ -172,7 +172,7 @@ GtRobocoderMetamodelWithSelectionDerive >> generateSelectableChildAccessorsDefin
 		into: aGtRobocoderMetamodelWithCodeDefinition definition
 ]
 
-{ #category : #'private - generate' }
+{ #category : 'private - generate' }
 GtRobocoderMetamodelWithSelectionDerive >> generateSelectableChildAccessorsFor: aViewModelModeWithCodeDefinition [
 	| aViewModelModel |
 
@@ -187,7 +187,7 @@ GtRobocoderMetamodelWithSelectionDerive >> generateSelectableChildAccessorsFor: 
 	self generateSelectableChildAccessorsDefinitionFor: aViewModelModeWithCodeDefinition
 ]
 
-{ #category : #'private - generate' }
+{ #category : 'private - generate' }
 GtRobocoderMetamodelWithSelectionDerive >> generateSelectableParentAccessorsDefinitionFor: aGtRobocoderMetamodelWithCodeDefinition [
 	| aDefinition theParentPathsWithSelection |
 	
@@ -215,7 +215,7 @@ GtRobocoderMetamodelWithSelectionDerive >> generateSelectableParentAccessorsDefi
 		into: aGtRobocoderMetamodelWithCodeDefinition definition
 ]
 
-{ #category : #'private - generate' }
+{ #category : 'private - generate' }
 GtRobocoderMetamodelWithSelectionDerive >> generateSelectedAnnouncementFor: aRobocoderMetamodelWithCodeDefinition [
 	| aDefinition |
 	
@@ -240,7 +240,7 @@ GtRobocoderMetamodelWithSelectionDerive >> generateSelectedAnnouncementFor: aRob
 	^ aDefinition
 ]
 
-{ #category : #'private - generate' }
+{ #category : 'private - generate' }
 GtRobocoderMetamodelWithSelectionDerive >> generateSelectionSetHookMethodTo: aViewModelModelWithCodeDefinition [
 	| aMethodDefinition methodSourceCode aArgumentName |
 
@@ -284,7 +284,7 @@ GtRobocoderMetamodelWithSelectionDerive >> generateSelectionSetHookMethodTo: aVi
 		protocol: aMethodDefinition protocol
 ]
 
-{ #category : #'private - generate' }
+{ #category : 'private - generate' }
 GtRobocoderMetamodelWithSelectionDerive >> generateSelectionUnsetHookMethodTo: aViewModelModelWithCodeDefinition [
 	| aMethodDefinition methodSourceCode aArgumentName |
 
@@ -313,7 +313,7 @@ GtRobocoderMetamodelWithSelectionDerive >> generateSelectionUnsetHookMethodTo: a
 		protocol: aMethodDefinition protocol
 ]
 
-{ #category : #'private - generate' }
+{ #category : 'private - generate' }
 GtRobocoderMetamodelWithSelectionDerive >> generateWithSelectedPropertyTraitFor: aGtRobocoderMetamodelWithCodeDefinition [
 	| aMetamodel aCodeDefinition aPropertyTraitDefinition |
 
@@ -341,12 +341,12 @@ GtRobocoderMetamodelWithSelectionDerive >> generateWithSelectedPropertyTraitFor:
 		addExtraDefinition: aPropertyTraitDefinition
 ]
 
-{ #category : #'api - accessors' }
+{ #category : 'api - accessors' }
 GtRobocoderMetamodelWithSelectionDerive >> propertyAppliedStatusName [
 	^ 'selected'
 ]
 
-{ #category : #'private - accessors' }
+{ #category : 'private - accessors' }
 GtRobocoderMetamodelWithSelectionDerive >> propertyNameFor: aViewModelModel [
 	| aName |
 
@@ -357,12 +357,12 @@ GtRobocoderMetamodelWithSelectionDerive >> propertyNameFor: aViewModelModel [
 	^ 'selected', aName capitalized , aViewModelModel suffix capitalized
 ]
 
-{ #category : #'api - accessors' }
+{ #category : 'api - accessors' }
 GtRobocoderMetamodelWithSelectionDerive >> propertyUnappliedStatusName [
 	^ 'deselected'
 ]
 
-{ #category : #'private - class names' }
+{ #category : 'private - class names' }
 GtRobocoderMetamodelWithSelectionDerive >> viewModelDeselectedAnnouncementNameFor: aViewModelModel [
 	^ '{prefix}{project}{name}{suffix}Deselected'
 		format: { 
@@ -373,7 +373,7 @@ GtRobocoderMetamodelWithSelectionDerive >> viewModelDeselectedAnnouncementNameFo
 		} asDictionary
 ]
 
-{ #category : #'private - class names' }
+{ #category : 'private - class names' }
 GtRobocoderMetamodelWithSelectionDerive >> viewModelSelectedAnnouncementNameFor: aViewModelModel [
 	^ '{prefix}{project}{name}{suffix}Selected'
 		format: { 

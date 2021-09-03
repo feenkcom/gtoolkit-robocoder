@@ -1,19 +1,19 @@
 Class {
-	#name : #GtRobocoderMetamodelWithPropertyDerive,
-	#superclass : #GtRobocoderMetamodelDerive,
+	#name : 'GtRobocoderMetamodelWithPropertyDerive',
+	#superclass : 'GtRobocoderMetamodelDerive',
 	#instVars : [
 		'announcement',
 		'notifier'
 	],
-	#category : #'GToolkit-Robocoder-Metamodel - Derives'
+	#category : 'GToolkit-Robocoder-Metamodel - Derives'
 }
 
-{ #category : #testing }
+{ #category : 'testing' }
 GtRobocoderMetamodelWithPropertyDerive class >> isAbstract [
 	^ self = GtRobocoderMetamodelWithPropertyDerive
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtRobocoderMetamodelWithPropertyDerive class >> propertyAnnouncementNameIn: aGtRobocoderMetamodelWithCodeDefinition property: aPropertyName [
 	^ (self propertySetterMethodIn: aGtRobocoderMetamodelWithCodeDefinition property: aPropertyName)
 		ifNotNil: [ :aMethod |
@@ -21,7 +21,7 @@ GtRobocoderMetamodelWithPropertyDerive class >> propertyAnnouncementNameIn: aGtR
 				ifNotNil: [ :aPragma | aPragma argumentAt: 1 ] ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtRobocoderMetamodelWithPropertyDerive class >> propertyGetterMethodIn: aGtRobocoderMetamodelWithCodeDefinition property: aPropertyName [
 	^ GtRobocoderMetamodelWithCodeDefinition
 		anyMethodWithPragmaNamedOrNil: #propertyGetter:
@@ -29,13 +29,13 @@ GtRobocoderMetamodelWithPropertyDerive class >> propertyGetterMethodIn: aGtRoboc
 		inFullClass: aGtRobocoderMetamodelWithCodeDefinition definition
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtRobocoderMetamodelWithPropertyDerive class >> propertyGetterSelectorIn: aGtRobocoderMetamodelWithCodeDefinition property: aPropertyName [
 	^ (self propertyGetterMethodIn: aGtRobocoderMetamodelWithCodeDefinition property: aPropertyName)
 		ifNotNil: [ :aMethod | aMethod selector ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtRobocoderMetamodelWithPropertyDerive class >> propertySetterMethodIn: aGtRobocoderMetamodelWithCodeDefinition property: aPropertyName [
 	^ GtRobocoderMetamodelWithCodeDefinition
 		anyMethodWithPragmaNamedOrNil: #propertySetter:
@@ -43,13 +43,13 @@ GtRobocoderMetamodelWithPropertyDerive class >> propertySetterMethodIn: aGtRoboc
 		inFullClass: aGtRobocoderMetamodelWithCodeDefinition definition
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtRobocoderMetamodelWithPropertyDerive class >> propertySetterSelectorIn: aGtRobocoderMetamodelWithCodeDefinition property: aPropertyName [
 	^ (self propertySetterMethodIn: aGtRobocoderMetamodelWithCodeDefinition property: aPropertyName)
 		ifNotNil: [ :aMethod | aMethod selector ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtRobocoderMetamodelWithPropertyDerive class >> propertyTypeIn: aGtRobocoderMetamodelWithCodeDefinition property: aPropertyName [
 	^ (self propertyGetterMethodIn: aGtRobocoderMetamodelWithCodeDefinition property: aPropertyName)
 		ifNotNil: [ :aMethod |
@@ -57,17 +57,17 @@ GtRobocoderMetamodelWithPropertyDerive class >> propertyTypeIn: aGtRobocoderMeta
 				ifNotNil: [ :aPragma | aPragma argumentAt: 1 ] ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtRobocoderMetamodelWithPropertyDerive >> announcement [
 	^ announcement
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtRobocoderMetamodelWithPropertyDerive >> announcement: anObject [
 	announcement := anObject
 ]
 
-{ #category : #'private - generation' }
+{ #category : 'private - generation' }
 GtRobocoderMetamodelWithPropertyDerive >> generatePropertyChangedAnnouncementFor: aRobocoderMetamodelWithCodeDefinition [
 	| aDefinition |
 	
@@ -88,7 +88,7 @@ GtRobocoderMetamodelWithPropertyDerive >> generatePropertyChangedAnnouncementFor
 	aRobocoderMetamodelWithCodeDefinition addExtraDefinition: aDefinition
 ]
 
-{ #category : #'private - generation' }
+{ #category : 'private - generation' }
 GtRobocoderMetamodelWithPropertyDerive >> generatePropertyChangedNotifierMethodFor: aGtRobocoderMetamodelWithCodeDefinition [
 	| aMethodDefinition methodSourceCode anAnnouncementName anAnnouncementDefinition |
 
@@ -115,7 +115,7 @@ GtRobocoderMetamodelWithPropertyDerive >> generatePropertyChangedNotifierMethodF
 		id: anAnnouncementName
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 GtRobocoderMetamodelWithPropertyDerive >> initialize [
 	super initialize.
 	
@@ -123,17 +123,17 @@ GtRobocoderMetamodelWithPropertyDerive >> initialize [
 	notifier := GtRobocoderMetamodelWithPropertyDerive >> #notifyChangeTemplate
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtRobocoderMetamodelWithPropertyDerive >> notifier [
 	^ notifier
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtRobocoderMetamodelWithPropertyDerive >> notifier: anObject [
 	notifier := anObject
 ]
 
-{ #category : #'private - templates' }
+{ #category : 'private - templates' }
 GtRobocoderMetamodelWithPropertyDerive >> notifyChangeTemplate [
 	<gtMethodTemplate>
 	<generatedFrom: #'GtRobocoderTemplateMethod class>>#storageMethodTemplate'>
@@ -144,14 +144,14 @@ GtRobocoderMetamodelWithPropertyDerive >> notifyChangeTemplate [
 		storageMethod: thisContext method
 ]
 
-{ #category : #'private - methods' }
+{ #category : 'private - methods' }
 GtRobocoderMetamodelWithPropertyDerive >> propertyChangeNotifierMethodOf: aViewModelModelWithCodeDefinition [
 	^ self
 		propertyMethodOfType: #propertyChangeNotifier:
 		inViewModelModelWithCodeDefinition: aViewModelModelWithCodeDefinition
 ]
 
-{ #category : #'private - class names' }
+{ #category : 'private - class names' }
 GtRobocoderMetamodelWithPropertyDerive >> propertyChangedAnnouncementClassNameFor: aViewModelModel [
 	<return: #Symbol>
 
@@ -164,14 +164,14 @@ GtRobocoderMetamodelWithPropertyDerive >> propertyChangedAnnouncementClassNameFo
 		} asDictionary) capitalized asSymbol
 ]
 
-{ #category : #'private - methods' }
+{ #category : 'private - methods' }
 GtRobocoderMetamodelWithPropertyDerive >> propertyGetterMethodOf: aViewModelModelWithCodeDefinition [
 	^ (self
 		propertyMethodOfType: #propertyGetter:
 		inViewModelModelWithCodeDefinition: aViewModelModelWithCodeDefinition)
 ]
 
-{ #category : #'private - selectors' }
+{ #category : 'private - selectors' }
 GtRobocoderMetamodelWithPropertyDerive >> propertyGetterSelectorOf: aGtRobocoderMetamodelWithCodeDefinition [
 	<return: #Symbol or: nil>
 
@@ -180,7 +180,7 @@ GtRobocoderMetamodelWithPropertyDerive >> propertyGetterSelectorOf: aGtRobocoder
 		property: (self propertyNameFor: aGtRobocoderMetamodelWithCodeDefinition)
 ]
 
-{ #category : #'private - methods' }
+{ #category : 'private - methods' }
 GtRobocoderMetamodelWithPropertyDerive >> propertyMethodOfType: aMethodType inViewModelModelWithCodeDefinition: aViewModelModelWithCodeDefinition [
 	^ aViewModelModelWithCodeDefinition metamodel
 		propertyMethodFor: (self propertyNameFor: aViewModelModelWithCodeDefinition metamodel)
@@ -188,26 +188,26 @@ GtRobocoderMetamodelWithPropertyDerive >> propertyMethodOfType: aMethodType inVi
 		inViewModelBehavior: aViewModelModelWithCodeDefinition definition
 ]
 
-{ #category : #'private - accessing' }
+{ #category : 'private - accessing' }
 GtRobocoderMetamodelWithPropertyDerive >> propertyNameFor: aViewModelModel [
 	^ self subclassResponsibility
 ]
 
-{ #category : #'private - methods' }
+{ #category : 'private - methods' }
 GtRobocoderMetamodelWithPropertyDerive >> propertySetHookMethodOf: aViewModelModelWithCodeDefinition [
 	^ self
 		propertyMethodOfType: #propertySetHook:
 		inViewModelModelWithCodeDefinition: aViewModelModelWithCodeDefinition
 ]
 
-{ #category : #'private - methods' }
+{ #category : 'private - methods' }
 GtRobocoderMetamodelWithPropertyDerive >> propertySetterMethodOf: aViewModelModelWithCodeDefinition [
 	^ (self
 		propertyMethodOfType: #propertySetter:
 		inViewModelModelWithCodeDefinition: aViewModelModelWithCodeDefinition)
 ]
 
-{ #category : #'private - selectors' }
+{ #category : 'private - selectors' }
 GtRobocoderMetamodelWithPropertyDerive >> propertySetterSelectorOf: aGtRobocoderMetamodelWithCodeDefinition [
 	<return: #Symbol or: nil>
 
@@ -216,14 +216,14 @@ GtRobocoderMetamodelWithPropertyDerive >> propertySetterSelectorOf: aGtRobocoder
 		property: (self propertyNameFor: aGtRobocoderMetamodelWithCodeDefinition)
 ]
 
-{ #category : #'private - methods' }
+{ #category : 'private - methods' }
 GtRobocoderMetamodelWithPropertyDerive >> propertyTesterMethodOf: aViewModelModelWithCodeDefinition [
 	^ (self
 		propertyMethodOfType: #propertyTester:
 		inViewModelModelWithCodeDefinition: aViewModelModelWithCodeDefinition)
 ]
 
-{ #category : #'private - selectors' }
+{ #category : 'private - selectors' }
 GtRobocoderMetamodelWithPropertyDerive >> propertyTesterSelectorOf: aViewModelModelWithCodeDefinition [
 	<return: #Symbol>
 
@@ -231,21 +231,21 @@ GtRobocoderMetamodelWithPropertyDerive >> propertyTesterSelectorOf: aViewModelMo
 		ifNotNil: [ :aMethod | aMethod selector ]
 ]
 
-{ #category : #'private - methods' }
+{ #category : 'private - methods' }
 GtRobocoderMetamodelWithPropertyDerive >> propertyUnsetHookMethodOf: aViewModelModelWithCodeDefinition [
 	^ self
 		propertyMethodOfType: #propertyUnsetHook:
 		inViewModelModelWithCodeDefinition: aViewModelModelWithCodeDefinition
 ]
 
-{ #category : #'private - methods' }
+{ #category : 'private - methods' }
 GtRobocoderMetamodelWithPropertyDerive >> propertyUnsetterMethodOf: aViewModelModelWithCodeDefinition [
 	^ (self
 		propertyMethodOfType: #propertyUnsetter:
 		inViewModelModelWithCodeDefinition: aViewModelModelWithCodeDefinition)
 ]
 
-{ #category : #'private - accessors' }
+{ #category : 'private - accessors' }
 GtRobocoderMetamodelWithPropertyDerive >> propertyUnsetterSelectorOf: aViewModelModelWithCodeDefinition [
 	<return: #Symbol>
 

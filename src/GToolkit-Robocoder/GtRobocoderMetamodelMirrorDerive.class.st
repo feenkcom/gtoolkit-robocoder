@@ -1,46 +1,46 @@
 Class {
-	#name : #GtRobocoderMetamodelMirrorDerive,
-	#superclass : #GtRobocoderMetamodelDerive,
+	#name : 'GtRobocoderMetamodelMirrorDerive',
+	#superclass : 'GtRobocoderMetamodelDerive',
 	#instVars : [
 		'name',
 		'delegate',
 		'behavior'
 	],
-	#category : #'GToolkit-Robocoder-Metamodel - Derives'
+	#category : 'GToolkit-Robocoder-Metamodel - Derives'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtRobocoderMetamodelMirrorDerive class >> label [
 	^ 'mirror'
 ]
 
-{ #category : #'api - generation' }
+{ #category : 'api - generation' }
 GtRobocoderMetamodelMirrorDerive >> applyOnMetamodelsWithCodeDefinitions: aGtRobocoderMetamodelsWithCodeDefinitions [
 	aGtRobocoderMetamodelsWithCodeDefinitions metamodelsWithCodeDefinitionDo: [ :eachMetamodelWithCodeDefinition |
 		self generateMirrorPropertyFor: eachMetamodelWithCodeDefinition ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtRobocoderMetamodelMirrorDerive >> behavior [
 	^ behavior
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtRobocoderMetamodelMirrorDerive >> behavior: aBehaviorName [
 	behavior := aBehaviorName asSymbol
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtRobocoderMetamodelMirrorDerive >> delegate [
 	^ delegate
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtRobocoderMetamodelMirrorDerive >> delegate: anObject [
 	delegate := anObject
 ]
 
-{ #category : #'api - generation' }
+{ #category : 'api - generation' }
 GtRobocoderMetamodelMirrorDerive >> generateMirrorPropertyFor: aGtRobocoderMetamodelWithCodeDefinition [
 	| behaviorDefinition modelGetter modelName propertyName propertyGetter propertySetter propertyType propertyAnnouncement |
 
@@ -98,12 +98,12 @@ GtRobocoderMetamodelMirrorDerive >> generateMirrorPropertyFor: aGtRobocoderMetam
 					send: anEventHandler ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtRobocoderMetamodelMirrorDerive >> name [
 	^ name
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtRobocoderMetamodelMirrorDerive >> name: anObject [
 	name := anObject
 ]

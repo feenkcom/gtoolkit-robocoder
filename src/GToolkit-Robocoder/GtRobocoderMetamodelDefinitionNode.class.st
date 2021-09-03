@@ -1,29 +1,29 @@
 Class {
-	#name : #GtRobocoderMetamodelDefinitionNode,
-	#superclass : #GtRobocoderMetamodelProgramNode,
+	#name : 'GtRobocoderMetamodelDefinitionNode',
+	#superclass : 'GtRobocoderMetamodelProgramNode',
 	#instVars : [
 		'level',
 		'properties'
 	],
-	#category : #'GToolkit-Robocoder-Ast - Metamodel'
+	#category : 'GToolkit-Robocoder-Ast - Metamodel'
 }
 
-{ #category : #generated }
+{ #category : 'generated' }
 GtRobocoderMetamodelDefinitionNode >> acceptVisitor: aProgramVisitor [
 	^ aProgramVisitor visitDefinition: self
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtRobocoderMetamodelDefinitionNode >> fullNameString [
 	^ self level fullNameString
 ]
 
-{ #category : #generated }
+{ #category : 'generated' }
 GtRobocoderMetamodelDefinitionNode >> level [
 	^ level
 ]
 
-{ #category : #generated }
+{ #category : 'generated' }
 GtRobocoderMetamodelDefinitionNode >> level: aGtRobocoderMetamodelLevelNode [
 	self level notNil
 		ifTrue: [ self level parent: nil ].
@@ -32,17 +32,17 @@ GtRobocoderMetamodelDefinitionNode >> level: aGtRobocoderMetamodelLevelNode [
 		ifTrue: [ self level parent: self ]
 ]
 
-{ #category : #generated }
+{ #category : 'generated' }
 GtRobocoderMetamodelDefinitionNode >> nodeVariables [
 	^ #(#level #properties)
 ]
 
-{ #category : #generated }
+{ #category : 'generated' }
 GtRobocoderMetamodelDefinitionNode >> properties [
 	^ properties
 ]
 
-{ #category : #generated }
+{ #category : 'generated' }
 GtRobocoderMetamodelDefinitionNode >> properties: aGtRobocoderMetamodelPropertiesNode [
 	self properties notNil
 		ifTrue: [ self properties parent: nil ].

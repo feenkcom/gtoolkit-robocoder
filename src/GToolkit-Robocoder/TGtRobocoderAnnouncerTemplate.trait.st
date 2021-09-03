@@ -1,9 +1,9 @@
 Trait {
-	#name : #TGtRobocoderAnnouncerTemplate,
-	#category : #'GToolkit-Robocoder-Templates'
+	#name : 'TGtRobocoderAnnouncerTemplate',
+	#category : 'GToolkit-Robocoder-Templates'
 }
 
-{ #category : #templates }
+{ #category : 'templates' }
 TGtRobocoderAnnouncerTemplate >> announceTemplate [
 	<gtMethodTemplate>
 	<generatedFrom: #'GtRobocoderTemplateMethod class>>#storageMethodTemplate'>
@@ -15,7 +15,7 @@ TGtRobocoderAnnouncerTemplate >> announceTemplate [
 		storageMethod: thisContext method
 ]
 
-{ #category : #templates }
+{ #category : 'templates' }
 TGtRobocoderAnnouncerTemplate >> traitTemplate [
 	<gtTraitTemplate>
 	<generatedFrom: #'GtRobocoderTemplateTrait class>>#storageMethodTemplate'>
@@ -25,7 +25,7 @@ TGtRobocoderAnnouncerTemplate >> traitTemplate [
 		storageMethod: thisContext method
 ]
 
-{ #category : #templates }
+{ #category : 'templates' }
 TGtRobocoderAnnouncerTemplate >> unsubscribeTemplate [
 	<gtMethodTemplate>
 	<generatedFrom: #'GtRobocoderTemplateMethod class>>#storageMethodTemplate'>
@@ -39,7 +39,7 @@ TGtRobocoderAnnouncerTemplate >> unsubscribeTemplate [
 		storageMethod: thisContext method
 ]
 
-{ #category : #templates }
+{ #category : 'templates' }
 TGtRobocoderAnnouncerTemplate >> whenDoTemplate [
 	<gtMethodTemplate>
 	<generatedFrom: #'GtRobocoderTemplateMethod class>>#storageMethodTemplate'>
@@ -52,7 +52,7 @@ TGtRobocoderAnnouncerTemplate >> whenDoTemplate [
 		storageMethod: thisContext method
 ]
 
-{ #category : #templates }
+{ #category : 'templates' }
 TGtRobocoderAnnouncerTemplate >> whenSendToTemplate [
 	<gtMethodTemplate>
 	<generatedFrom: #'GtRobocoderTemplateMethod class>>#storageMethodTemplate'>

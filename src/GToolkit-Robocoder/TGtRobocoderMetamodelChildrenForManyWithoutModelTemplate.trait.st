@@ -1,9 +1,9 @@
 Trait {
-	#name : #TGtRobocoderMetamodelChildrenForManyWithoutModelTemplate,
-	#category : #'GToolkit-Robocoder-Templates'
+	#name : 'TGtRobocoderMetamodelChildrenForManyWithoutModelTemplate',
+	#category : 'GToolkit-Robocoder-Templates'
 }
 
-{ #category : #templates }
+{ #category : 'templates' }
 TGtRobocoderMetamodelChildrenForManyWithoutModelTemplate >> childObjectsGetterTemplate [
 	<gtMethodTemplate>
 	<generatedFrom: #'GtRobocoderTemplateMethod class>>#storageMethodTemplate'>
@@ -20,7 +20,7 @@ TGtRobocoderMetamodelChildrenForManyWithoutModelTemplate >> childObjectsGetterTe
 		storageMethod: thisContext method
 ]
 
-{ #category : #templates }
+{ #category : 'templates' }
 TGtRobocoderMetamodelChildrenForManyWithoutModelTemplate >> childObjectsSetterTemplate [
 	<gtMethodTemplate>
 	<generatedFrom: #'GtRobocoderTemplateMethod class>>#storageMethodTemplate'>
@@ -38,7 +38,7 @@ TGtRobocoderMetamodelChildrenForManyWithoutModelTemplate >> childObjectsSetterTe
 		storageMethod: thisContext method
 ]
 
-{ #category : #templates }
+{ #category : 'templates' }
 TGtRobocoderMetamodelChildrenForManyWithoutModelTemplate >> includesObjectTemplate [
 	<gtMethodTemplate>
 	<generatedFrom: #'GtRobocoderTemplateMethod class>>#storageMethodTemplate'>
@@ -56,7 +56,7 @@ TGtRobocoderMetamodelChildrenForManyWithoutModelTemplate >> includesObjectTempla
 		storageMethod: thisContext method
 ]
 
-{ #category : #templates }
+{ #category : 'templates' }
 TGtRobocoderMetamodelChildrenForManyWithoutModelTemplate >> traitTemplate [
 	<gtTraitTemplate>
 	<generatedFrom: #'GtRobocoderTemplateTrait class>>#storageMethodTemplate'>

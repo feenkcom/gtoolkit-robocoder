@@ -1,15 +1,15 @@
 Class {
-	#name : #GtRobocoderMetamodelPhlowListViewDerive,
-	#superclass : #GtRobocoderMetamodelDerive,
-	#category : #'GToolkit-Robocoder-Metamodel - Derives'
+	#name : 'GtRobocoderMetamodelPhlowListViewDerive',
+	#superclass : 'GtRobocoderMetamodelDerive',
+	#category : 'GToolkit-Robocoder-Metamodel - Derives'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtRobocoderMetamodelPhlowListViewDerive class >> label [
 	^ 'phlowList'
 ]
 
-{ #category : #'api - generation' }
+{ #category : 'api - generation' }
 GtRobocoderMetamodelPhlowListViewDerive >> applyOnMetamodelsWithCodeDefinitions: aGtRobocoderMetamodelsWithCodeDefinitions [
 	aGtRobocoderMetamodelsWithCodeDefinitions metamodelsWithCodeDefinitionDo: [ :eachMetamodelWithCodeDefinition |		
 		eachMetamodelWithCodeDefinition isForMany
@@ -17,7 +17,7 @@ GtRobocoderMetamodelPhlowListViewDerive >> applyOnMetamodelsWithCodeDefinitions:
 			ifFalse: [ self generatePhlowListViewForOneMethodFor: eachMetamodelWithCodeDefinition ] ]
 ]
 
-{ #category : #'private - generation' }
+{ #category : 'private - generation' }
 GtRobocoderMetamodelPhlowListViewDerive >> generatePhlowListViewForManyMethodFor: aMetamodelWithCodeDefinition [	
 	aMetamodelWithCodeDefinition children do: [ :eachChildMetamodelWithCodeDefinition |
 		(GtRobocoderMetamodelChildrenDerive
@@ -37,7 +37,7 @@ GtRobocoderMetamodelPhlowListViewDerive >> generatePhlowListViewForManyMethodFor
 						protocol: 'gt-extentions' ] ]
 ]
 
-{ #category : #'private - generation' }
+{ #category : 'private - generation' }
 GtRobocoderMetamodelPhlowListViewDerive >> generatePhlowListViewForOneMethodFor: aMetamodelWithCodeDefinition [
 	aMetamodelWithCodeDefinition children
 		select: [ :eachChildMetamodelWithCodeDefinition | eachChildMetamodelWithCodeDefinition isForMany ]
@@ -64,7 +64,7 @@ GtRobocoderMetamodelPhlowListViewDerive >> generatePhlowListViewForOneMethodFor:
 									protocol: 'gt-extentions' ] ] ]
 ]
 
-{ #category : #templates }
+{ #category : 'templates' }
 GtRobocoderMetamodelPhlowListViewDerive >> listForManyTemplate [
 	<gtMethodTemplate>
 	<generatedFrom: #'GtRobocoderTemplateMethod class>>#storageMethodTemplate'>
@@ -80,7 +80,7 @@ GtRobocoderMetamodelPhlowListViewDerive >> listForManyTemplate [
 		storageMethod: thisContext method
 ]
 
-{ #category : #templates }
+{ #category : 'templates' }
 GtRobocoderMetamodelPhlowListViewDerive >> listForOneTemplate [
 	<gtMethodTemplate>
 	<generatedFrom: #'GtRobocoderTemplateMethod class>>#storageMethodTemplate'>

@@ -1,18 +1,18 @@
 Class {
-	#name : #GtRobocoderMetamodelAsElementDerive,
-	#superclass : #GtRobocoderMetamodelDerive,
+	#name : 'GtRobocoderMetamodelAsElementDerive',
+	#superclass : 'GtRobocoderMetamodelDerive',
 	#instVars : [
 		'name'
 	],
-	#category : #'GToolkit-Robocoder-Metamodel - Derives'
+	#category : 'GToolkit-Robocoder-Metamodel - Derives'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtRobocoderMetamodelAsElementDerive class >> label [
 	^ 'asElement'
 ]
 
-{ #category : #'api - generation' }
+{ #category : 'api - generation' }
 GtRobocoderMetamodelAsElementDerive >> applyOnMetamodelsWithCodeDefinitions: aGtRobocoderMetamodelsWithCodeDefinitions [
 	aGtRobocoderMetamodelsWithCodeDefinitions metamodelsWithCodeDefinitionDo: [ :eachMetamodelWithCodeDefinition |
 		| eachNameMethodSourceCode |
@@ -33,7 +33,7 @@ GtRobocoderMetamodelAsElementDerive >> applyOnMetamodelsWithCodeDefinitions: aGt
 			protocol: 'api - accessing'" ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtRobocoderMetamodelAsElementDerive >> asElementTemplate [
 	<gtMethodTemplate>
 	<generatedFrom: #'GtPharoTemplateMethod class>>#storageMethodTemplate'>
@@ -46,12 +46,12 @@ GtRobocoderMetamodelAsElementDerive >> asElementTemplate [
 		storageMethod: thisContext method
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtRobocoderMetamodelAsElementDerive >> name [
 	^ name
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtRobocoderMetamodelAsElementDerive >> name: anObject [
 	name := anObject
 ]

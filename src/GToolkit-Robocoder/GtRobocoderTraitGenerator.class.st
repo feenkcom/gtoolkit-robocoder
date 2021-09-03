@@ -12,27 +12,27 @@ Usage example:
 
 "
 Class {
-	#name : #GtRobocoderTraitGenerator,
-	#superclass : #Object,
+	#name : 'GtRobocoderTraitGenerator',
+	#superclass : 'Object',
 	#instVars : [
 		'environment',
 		'templateTrait',
 		'mappings'
 	],
-	#category : #'GToolkit-Robocoder-Generators'
+	#category : 'GToolkit-Robocoder-Generators'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtRobocoderTraitGenerator >> environment [
 	^ environment
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtRobocoderTraitGenerator >> environment: anEnvironment [
 	environment := anEnvironment
 ]
 
-{ #category : #generation }
+{ #category : 'generation' }
 GtRobocoderTraitGenerator >> generate [
 	|  aTraitHeaderMethod theTraitMethods generatedTrait |
 	<return: #Trait>
@@ -69,34 +69,34 @@ GtRobocoderTraitGenerator >> generate [
 	^ generatedTrait
 ]
 
-{ #category : #generation }
+{ #category : 'generation' }
 GtRobocoderTraitGenerator >> generateChanges [
 	^ self generate createChange
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 GtRobocoderTraitGenerator >> initialize [
 	super initialize.
 	
 	mappings := {  }
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtRobocoderTraitGenerator >> mappings [
 	^ mappings
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtRobocoderTraitGenerator >> mappings: aCollectionOfAssociations [
 	mappings := aCollectionOfAssociations
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtRobocoderTraitGenerator >> templateTrait [
 	^ templateTrait
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtRobocoderTraitGenerator >> templateTrait: aTrait [
 	templateTrait := aTrait
 ]

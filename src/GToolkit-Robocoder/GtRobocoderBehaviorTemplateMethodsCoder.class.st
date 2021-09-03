@@ -1,29 +1,29 @@
 Class {
-	#name : #GtRobocoderBehaviorTemplateMethodsCoder,
-	#superclass : #GtFilteredMethodsCoder,
+	#name : 'GtRobocoderBehaviorTemplateMethodsCoder',
+	#superclass : 'GtFilteredMethodsCoder',
 	#instVars : [
 		'class',
 		'object',
 		'filteredClasses'
 	],
-	#category : #'GToolkit-Robocoder-Coder - Template method'
+	#category : 'GToolkit-Robocoder-Coder - Template method'
 }
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 GtRobocoderBehaviorTemplateMethodsCoder class >> forClass: aBehavior [
 	^ self new
 		forClass: aBehavior;
 		yourself
 ]
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 GtRobocoderBehaviorTemplateMethodsCoder class >> forObject: anObject [
 	^ self new
 		forObject: anObject;
 		yourself
 ]
 
-{ #category : #actions }
+{ #category : 'actions' }
 GtRobocoderBehaviorTemplateMethodsCoder >> addMethodsForClass: aClass [
 	(filteredClasses includes: aClass)
 		ifTrue: [ ^ self ].
@@ -32,7 +32,7 @@ GtRobocoderBehaviorTemplateMethodsCoder >> addMethodsForClass: aClass [
 	self updateCoders
 ]
 
-{ #category : #actions }
+{ #category : 'actions' }
 GtRobocoderBehaviorTemplateMethodsCoder >> addNewCoderSelector: aSelector protocol: aProtocol [
 	| aCoder |
 	aCoder := GtRobocoderTemplateMethodCoder new
@@ -46,17 +46,17 @@ GtRobocoderBehaviorTemplateMethodsCoder >> addNewCoderSelector: aSelector protoc
 	^ aCoder
 ]
 
-{ #category : #converting }
+{ #category : 'converting' }
 GtRobocoderBehaviorTemplateMethodsCoder >> asCoderUIModel [
 	^ GtRobocoderBehaviorTemplateMethodsCoderViewModel new coder: self
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtRobocoderBehaviorTemplateMethodsCoder >> classOrMetaClass [
 	^ class
 ]
 
-{ #category : #private }
+{ #category : 'private' }
 GtRobocoderBehaviorTemplateMethodsCoder >> classesFilter [
 	| filter |
 	filter := nil.
@@ -70,7 +70,7 @@ GtRobocoderBehaviorTemplateMethodsCoder >> classesFilter [
 	^ filter
 ]
 
-{ #category : #private }
+{ #category : 'private' }
 GtRobocoderBehaviorTemplateMethodsCoder >> combinedFilter [
 	| combined |
 	combined := super combinedFilter.
@@ -80,7 +80,7 @@ GtRobocoderBehaviorTemplateMethodsCoder >> combinedFilter [
 			[ :filter | combined ifNil: [ filter ] ifNotNil: [ filter & combined ] ]
 ]
 
-{ #category : #elements }
+{ #category : 'elements' }
 GtRobocoderBehaviorTemplateMethodsCoder >> filterTypes [
 	^ GtPhlowViewsCollector new
 		fromObject: self;
@@ -88,12 +88,12 @@ GtRobocoderBehaviorTemplateMethodsCoder >> filterTypes [
 		collect
 ]
 
-{ #category : #testing }
+{ #category : 'testing' }
 GtRobocoderBehaviorTemplateMethodsCoder >> filteredClass: aBehavior [
 	^ filteredClasses includes: aBehavior
 ]
 
-{ #category : #initialize }
+{ #category : 'initialize' }
 GtRobocoderBehaviorTemplateMethodsCoder >> forClass: aBehavior [
 	class := aBehavior.
 	filteredClasses := Set with: aBehavior.
@@ -101,18 +101,18 @@ GtRobocoderBehaviorTemplateMethodsCoder >> forClass: aBehavior [
 		forFilter: (GtRobocoderTemplateMethodsFilter forClass: class))
 ]
 
-{ #category : #initialize }
+{ #category : 'initialize' }
 GtRobocoderBehaviorTemplateMethodsCoder >> forObject: anObject [
 	object := anObject.
 	self forClass: anObject class
 ]
 
-{ #category : #printing }
+{ #category : 'printing' }
 GtRobocoderBehaviorTemplateMethodsCoder >> gtDisplayString [
 	^ class name , ' methods'
 ]
 
-{ #category : #'gt-extensions' }
+{ #category : 'gt-extensions' }
 GtRobocoderBehaviorTemplateMethodsCoder >> gtSpotterMethodsFor: aStep [
 	<gtSearch>
 	aStep listProcessor
@@ -124,23 +124,23 @@ GtRobocoderBehaviorTemplateMethodsCoder >> gtSpotterMethodsFor: aStep [
 		filter: GtFilterSubstring
 ]
 
-{ #category : #testing }
+{ #category : 'testing' }
 GtRobocoderBehaviorTemplateMethodsCoder >> hasFilter [
 	^ filteredClasses notEmpty
 ]
 
-{ #category : #initialize }
+{ #category : 'initialize' }
 GtRobocoderBehaviorTemplateMethodsCoder >> initialize [
 	super initialize.
 	filteredClasses := Set new
 ]
 
-{ #category : #testing }
+{ #category : 'testing' }
 GtRobocoderBehaviorTemplateMethodsCoder >> isForClass [
 	^ true
 ]
 
-{ #category : #private }
+{ #category : 'private' }
 GtRobocoderBehaviorTemplateMethodsCoder >> newCoderFor: aMethod [
 	| coder |
 	coder := GtRobocoderTemplateMethodCoder new forCompiledMethod: aMethod.
@@ -148,7 +148,7 @@ GtRobocoderBehaviorTemplateMethodsCoder >> newCoderFor: aMethod [
 	^ coder
 ]
 
-{ #category : #private }
+{ #category : 'private' }
 GtRobocoderBehaviorTemplateMethodsCoder >> newMethodClass [
 	| methodClass |
 	methodClass := filteredClasses anyOne.
@@ -159,12 +159,12 @@ GtRobocoderBehaviorTemplateMethodsCoder >> newMethodClass [
 	^ methodClass
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtRobocoderBehaviorTemplateMethodsCoder >> object [
 	^ object
 ]
 
-{ #category : #actions }
+{ #category : 'actions' }
 GtRobocoderBehaviorTemplateMethodsCoder >> removeMethodsForClass: aClass [
 	(filteredClasses includes: aClass)
 		ifFalse: [ ^ self ].
@@ -182,7 +182,7 @@ GtRobocoderBehaviorTemplateMethodsCoder >> removeMethodsForClass: aClass [
 				yourself)
 ]
 
-{ #category : #private }
+{ #category : 'private' }
 GtRobocoderBehaviorTemplateMethodsCoder >> shouldSort: a before: b [
 	a selector isNil
 		ifTrue: [ ^ b selector notNil
