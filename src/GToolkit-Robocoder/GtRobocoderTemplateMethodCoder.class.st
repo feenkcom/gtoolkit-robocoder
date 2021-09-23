@@ -35,6 +35,18 @@ GtRobocoderTemplateMethodCoder >> compileInContext: aGtPharoSourceCoderEvaluatio
 		ifAbsent: [ false ]
 ]
 
+{ #category : 'private - actions' }
+GtRobocoderTemplateMethodCoder >> compositeVariableBindings [
+	| theBindings |
+
+	theBindings := GtCompositeVariablesBindings new.
+	theBindings addBindings: GtReservedVariablesBindings new.
+	theBindings addBindings: GtGlobalVariablesBindings new.
+	theBindings addBindings: bindings.
+
+	^ theBindings
+]
+
 { #category : 'api - ast' }
 GtRobocoderTemplateMethodCoder >> computeAst: theSourceString [
 	^ GtPharoTemplateParser
@@ -147,7 +159,7 @@ GtRobocoderTemplateMethodCoder >> initialize [
 	super initialize.
 	
 	shouldEmbedGeneratedFromPragma := true.
-	bindings := GtSnippetBindings new.
+	bindings := GtLocalVariablesBindings new.
 	templateMethod := GtRobocoderTemplateMethod new
 		sourceCode: ''
 ]
@@ -231,7 +243,7 @@ GtRobocoderTemplateMethodCoder >> isForPackageTag [
 
 { #category : 'api - accessing' }
 GtRobocoderTemplateMethodCoder >> map: aVariableName to: anObject [
-	bindings at: aVariableName put: anObject
+	bindings localAt: aVariableName put: anObject
 ]
 
 { #category : 'api - accessing' }
@@ -245,7 +257,7 @@ GtRobocoderTemplateMethodCoder >> primitiveEvaluate: aSourceString inContext: aG
 
 	aTranslatedMethodCode := GtRobocoderTemplateTranslator new
 		evaluationContext: aGtPharoSourceCoderEvaluationContext;
-		bindings: bindings;
+		bindings: self compositeVariableBindings;
 		translate: aSourceString.
 		
 	^ shouldEmbedGeneratedFromPragma
@@ -317,7 +329,7 @@ GtRobocoderTemplateMethodCoder >> protocol [
 
 	^ GtRobocoderTemplateTranslator new
 		evaluationContext: self evaluationContext;
-		bindings: bindings;
+		bindings: self compositeVariableBindings;
 		translate: (templateMethod protocol ifNil: [ 'generated' ])
 ]
 
@@ -340,7 +352,7 @@ GtRobocoderTemplateMethodCoder >> shouldBeAddedToBehavior [
 			| aSnippetCoder aTemplateResult |
 	
 			aSnippetCoder := GtPharoSnippetCoder forSource: aString.
-			aTemplateResult := aSnippetCoder doItInContext: (self evaluationContext bindingStrategy: (GtSnippetBindingStrategy new bindings: bindings)).
+			aTemplateResult := aSnippetCoder doItInContext: (self evaluationContext bindingStrategy:  self compositeVariableBindings).
 
 			aTemplateResult isSuccess
 				ifFalse: [ self error: 'Failed to generate a template' ].

@@ -18,14 +18,13 @@ GtRobocoderTemplateTranslator >> bindings [
 GtRobocoderTemplateTranslator >> bindings: theBindings [
 	| aCopyOfBindings |
 	
-	aCopyOfBindings := GtSnippetBindings new.
+	aCopyOfBindings := GtCompositeVariablesBindings new.
+	aCopyOfBindings addBindings: theBindings.
+	aCopyOfBindings addBindings: (GtLocalVariablesBindings new
+		localAt: #'__external_bindings__'
+		put: theBindings).
 	
-	theBindings asDictionary keysAndValuesDo: [ :eachKey :eachValue |
-		aCopyOfBindings at: eachKey put: eachValue ].
-
-	aCopyOfBindings at: #'__external_bindings__' put: aCopyOfBindings.
-	
-	self evaluationContext bindingStrategy: (GtHighlightingBindingStrategy new bindings: aCopyOfBindings)
+	self evaluationContext bindingStrategy: aCopyOfBindings
 ]
 
 { #category : 'translate' }
