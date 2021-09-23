@@ -11,7 +11,7 @@ Class {
 
 { #category : 'accessing' }
 GtRobocoderTemplateTranslator >> bindings [
-	^ self evaluationContext bindingStrategy bindings
+	^ self evaluationContext bindingStrategy
 ]
 
 { #category : 'accessing' }
@@ -54,7 +54,7 @@ GtRobocoderTemplateTranslator >> evaluationContext [
 { #category : 'accessing' }
 GtRobocoderTemplateTranslator >> evaluationContext: anObject [
 	evaluationContext := anObject.
-	self bindings: evaluationContext bindingStrategy bindings
+	self bindings: evaluationContext bindingStrategy
 ]
 
 { #category : 'private - replacement' }
