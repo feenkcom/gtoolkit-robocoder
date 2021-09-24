@@ -168,7 +168,7 @@ GtRobocoderTemplateClassDefinitionCoder >> forTemplateClass: aGtPharoTemplateCla
 GtRobocoderTemplateClassDefinitionCoder >> initialize [
 	super initialize.
 	
-	bindings := GtSnippetBindings new.
+	bindings := GtLocalVariablesBindings new.
 ]
 
 { #category : 'api - accessing' }

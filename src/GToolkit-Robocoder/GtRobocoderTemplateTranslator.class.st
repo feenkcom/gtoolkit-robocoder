@@ -87,7 +87,7 @@ GtRobocoderTemplateTranslator >> initialize [
 	super initialize.
 
 	evaluationContext := GtPharoSourceCoderEvaluationContext new.
-	self bindings: GtSnippetBindings new
+	self bindings: GtLocalVariablesBindings new
 ]
 
 { #category : 'accessing' }
