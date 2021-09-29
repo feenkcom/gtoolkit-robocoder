@@ -1,15 +1,16 @@
 Class {
-	#name : #BaselineOfGToolkitRobocoder,
-	#superclass : #BaselineOf,
-	#category : #BaselineOfGToolkitRobocoder
+	#name : 'BaselineOfGToolkitRobocoder',
+	#superclass : 'BaselineOf',
+	#category : 'BaselineOfGToolkitRobocoder'
 }
 
-{ #category : #baseline }
+{ #category : 'baselines' }
 BaselineOfGToolkitRobocoder >> baseline: spec [
 	<baseline>
-	spec for: #'common' do: [
-		spec baseline: 'GToolkitInspector' with: [
-				spec repository: 'github://feenkcom/gtoolkit-inspector:main/src' ].
-		spec package: 'GToolkit-Robocoder'. ].
 
+	spec for: #common do: [ 
+		spec package: 'GToolkit-Robocoder'.
+		spec
+			package: 'GToolkit-Robocoder-Lepiter'
+			with: [ spec requires: #( 'GToolkit-Robocoder' ) ] ]
 ]

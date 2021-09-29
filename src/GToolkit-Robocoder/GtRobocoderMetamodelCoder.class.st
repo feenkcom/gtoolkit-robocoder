@@ -61,23 +61,23 @@ GtRobocoderMetamodelCoder >> initializeAddOns: addOns [
 	addOns
 		addMainAction: 'Inspect' translated
 		icon: BrGlamorousVectorIcons playinspect
-		action: [ :aCoderUIModel :anEvent | 
+		action: [ :aCoderUIModel :anElement | 
 			GtCoderCodeExecutor doItAndGo
 				coderUIModel: aCoderUIModel;
-				event: anEvent;
+				element: anElement;
 				execute ]
 		id: GtSourceCoderDoItAndGoActionId.
 	
 	addOns
 		addMainAction: 'Profile' translated
 		icon: BrGlamorousVectorIcons performance
-		action: [ :aCoderUIModel :anEvent | self notifyObjectSpawn: (self profileWithMessageTally) ]
+		action: [ :aCoderUIModel :anElement | self notifyObjectSpawn: (self profileWithMessageTally) ]
 		id: GtSourceCoderProfileActionId.
 	
 	addOns
 		addMainAction: 'Inspect UI Model' translated
 		icon: BrGlamorousVectorIcons inspect
-		action: [ :aCoderUIModel :anEvent | self notifyObjectSpawn: aCoderUIModel ].
+		action: [ :aCoderUIModel :anElement | self notifyObjectSpawn: aCoderUIModel ].
 ]
 
 { #category : 'instance creation' }
