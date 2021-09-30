@@ -1,10 +1,10 @@
 Class {
-	#name : 'GtRobocoderTemplateTextSegmentNode',
-	#superclass : 'GtRobocoderTemplatePlainNode',
+	#name : #GtRobocoderTemplateTextSegmentNode,
+	#superclass : #GtRobocoderTemplatePlainNode,
 	#category : 'GToolkit-Robocoder-Ast - Template'
 }
 
-{ #category : 'generated' }
+{ #category : #generated }
 GtRobocoderTemplateTextSegmentNode >> acceptVisitor: aProgramVisitor [
 	^ aProgramVisitor visitTextSegment: self
 ]

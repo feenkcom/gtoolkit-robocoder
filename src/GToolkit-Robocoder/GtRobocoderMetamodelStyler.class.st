@@ -1,19 +1,19 @@
 Class {
-	#name : 'GtRobocoderMetamodelStyler',
-	#superclass : 'GtCoderAstStyler',
+	#name : #GtRobocoderMetamodelStyler,
+	#superclass : #GtCoderAstStyler,
 	#traits : 'TGtRobocoderMetamodelProgramNodeVisitor',
 	#classTraits : 'TGtRobocoderMetamodelProgramNodeVisitor classTrait',
 	#category : 'GToolkit-Robocoder-Coder - Metamodel'
 }
 
-{ #category : 'api - styling' }
+{ #category : #'api - styling' }
 GtRobocoderMetamodelStyler >> style: aText ast: theAst [
 	text := aText.
 	[ self accept: theAst ]
 		ensure: [ text := nil ]
 ]
 
-{ #category : 'generated' }
+{ #category : #generated }
 GtRobocoderMetamodelStyler >> visitGlobalPropertyValue: aGlobalPropertyValue [
 	self visitPropertyValue: aGlobalPropertyValue.
 	
@@ -23,7 +23,7 @@ GtRobocoderMetamodelStyler >> visitGlobalPropertyValue: aGlobalPropertyValue [
 		to: aGlobalPropertyValue stopPosition
 ]
 
-{ #category : 'generated' }
+{ #category : #generated }
 GtRobocoderMetamodelStyler >> visitItemsProperty: anItemsProperty [
 	self visitProperty: anItemsProperty.
 	
@@ -33,7 +33,7 @@ GtRobocoderMetamodelStyler >> visitItemsProperty: anItemsProperty [
 		to: anItemsProperty name stopPosition
 ]
 
-{ #category : 'generated' }
+{ #category : #generated }
 GtRobocoderMetamodelStyler >> visitLevelForMany: aLevelForMany [
 	self visitSimpleLevel: aLevelForMany.
 	
@@ -46,7 +46,7 @@ GtRobocoderMetamodelStyler >> visitLevelForMany: aLevelForMany [
 		to: aLevelForMany suffix stopPosition
 ]
 
-{ #category : 'generated' }
+{ #category : #generated }
 GtRobocoderMetamodelStyler >> visitNestedLevel: aNestedLevel [
 	self visitLevel: aNestedLevel.
 	
@@ -56,7 +56,7 @@ GtRobocoderMetamodelStyler >> visitNestedLevel: aNestedLevel [
 		to: aNestedLevel follows stopPosition
 ]
 
-{ #category : 'generated' }
+{ #category : #generated }
 GtRobocoderMetamodelStyler >> visitSetting: aSetting [
 	self visitProgram: aSetting.
 	
@@ -66,7 +66,7 @@ GtRobocoderMetamodelStyler >> visitSetting: aSetting [
 		to: aSetting stopPosition
 ]
 
-{ #category : 'generated' }
+{ #category : #generated }
 GtRobocoderMetamodelStyler >> visitSimpleLevel: aSimpleLevel [
 	self visitLevel: aSimpleLevel.
 	
@@ -79,7 +79,7 @@ GtRobocoderMetamodelStyler >> visitSimpleLevel: aSimpleLevel [
 		to: aSimpleLevel name stopPosition
 ]
 
-{ #category : 'generated' }
+{ #category : #generated }
 GtRobocoderMetamodelStyler >> visitSymbolPropertyValue: aSymbolPropertyValue [
 	self visitPropertyValue: aSymbolPropertyValue.
 	

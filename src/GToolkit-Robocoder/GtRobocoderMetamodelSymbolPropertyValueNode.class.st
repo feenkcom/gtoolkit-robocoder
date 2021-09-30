@@ -1,15 +1,15 @@
 Class {
-	#name : 'GtRobocoderMetamodelSymbolPropertyValueNode',
-	#superclass : 'GtRobocoderMetamodelPropertyValueNode',
+	#name : #GtRobocoderMetamodelSymbolPropertyValueNode,
+	#superclass : #GtRobocoderMetamodelPropertyValueNode,
 	#category : 'GToolkit-Robocoder-Ast - Metamodel'
 }
 
-{ #category : 'generated' }
+{ #category : #generated }
 GtRobocoderMetamodelSymbolPropertyValueNode >> acceptVisitor: aProgramVisitor [
 	^ aProgramVisitor visitSymbolPropertyValue: self
 ]
 
-{ #category : 'converting' }
+{ #category : #converting }
 GtRobocoderMetamodelSymbolPropertyValueNode >> asSymbol [
 	| name |
 	name := self value source.
@@ -20,7 +20,7 @@ GtRobocoderMetamodelSymbolPropertyValueNode >> asSymbol [
 	^ name asSymbol
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtRobocoderMetamodelSymbolPropertyValueNode >> literalValue [
 	^ self asSymbol
 ]

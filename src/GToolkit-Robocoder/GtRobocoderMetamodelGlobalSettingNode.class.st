@@ -1,15 +1,15 @@
 Class {
-	#name : 'GtRobocoderMetamodelGlobalSettingNode',
-	#superclass : 'GtRobocoderMetamodelSettingNode',
+	#name : #GtRobocoderMetamodelGlobalSettingNode,
+	#superclass : #GtRobocoderMetamodelSettingNode,
 	#category : 'GToolkit-Robocoder-Ast - Metamodel'
 }
 
-{ #category : 'generated' }
+{ #category : #generated }
 GtRobocoderMetamodelGlobalSettingNode >> acceptVisitor: aProgramVisitor [
 	^ aProgramVisitor visitGlobalSetting: self
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtRobocoderMetamodelGlobalSettingNode >> literalValue [
 	^ super literalValue asSymbol
 ]

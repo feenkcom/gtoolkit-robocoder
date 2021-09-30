@@ -1,6 +1,6 @@
-Extension { #name : 'CompiledMethod' }
+Extension { #name : #CompiledMethod }
 
-{ #category : '*GToolkit-Robocoder' }
+{ #category : #'*GToolkit-Robocoder' }
 CompiledMethod >> gtTemplateMethodFor: aView [
 	<gtView>
 	

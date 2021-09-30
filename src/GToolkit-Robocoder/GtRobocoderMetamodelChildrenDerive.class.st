@@ -1,20 +1,20 @@
 Class {
-	#name : 'GtRobocoderMetamodelChildrenDerive',
-	#superclass : 'GtRobocoderMetamodelDerive',
+	#name : #GtRobocoderMetamodelChildrenDerive,
+	#superclass : #GtRobocoderMetamodelDerive,
 	#instVars : [
 		'name'
 	],
 	#category : 'GToolkit-Robocoder-Metamodel - Derives'
 }
 
-{ #category : 'accessing - methods' }
+{ #category : #'accessing - methods' }
 GtRobocoderMetamodelChildrenDerive class >> childObjectCreatorMethodIn: aMetamodelWithDefinition childMetamodel: aChildMetamodel [
 	^ aMetamodelWithDefinition
 		anyMethodWithPragmaNamedOrNil: #childObjectCreator:
 		andValue: aChildMetamodel name
 ]
 
-{ #category : 'accessing - selectors' }
+{ #category : #'accessing - selectors' }
 GtRobocoderMetamodelChildrenDerive class >> childObjectCreatorSelectorIn: aMetamodelWithDefinition childMetamodel: aChildMetamodel [
 	<return: #Symbol or: nil>
 
@@ -22,14 +22,14 @@ GtRobocoderMetamodelChildrenDerive class >> childObjectCreatorSelectorIn: aMetam
 		ifNotNil: [ :aMethod | aMethod selector ]
 ]
 
-{ #category : 'accessing - methods' }
+{ #category : #'accessing - methods' }
 GtRobocoderMetamodelChildrenDerive class >> childObjectDetectorMethodIn: aMetamodelWithDefinition childMetamodel: aChildMetamodel [
 	^ aMetamodelWithDefinition
 		anyMethodWithPragmaNamedOrNil: #childObjectDetector:
 		andValue: aChildMetamodel name
 ]
 
-{ #category : 'accessing - selectors' }
+{ #category : #'accessing - selectors' }
 GtRobocoderMetamodelChildrenDerive class >> childObjectDetectorSelectorIn: aMetamodelWithDefinition childMetamodel: aChildMetamodel [
 	<return: #Symbol or: nil>
 
@@ -37,14 +37,14 @@ GtRobocoderMetamodelChildrenDerive class >> childObjectDetectorSelectorIn: aMeta
 		ifNotNil: [ :aMethod | aMethod selector ]
 ]
 
-{ #category : 'accessing - methods' }
+{ #category : #'accessing - methods' }
 GtRobocoderMetamodelChildrenDerive class >> childObjectFinderMethodIn: aMetamodelWithDefinition childMetamodel: aChildMetamodel [
 	^ aMetamodelWithDefinition
 		anyMethodWithPragmaNamedOrNil: #childObjectFinder:
 		andValue: aChildMetamodel name
 ]
 
-{ #category : 'accessing - selectors' }
+{ #category : #'accessing - selectors' }
 GtRobocoderMetamodelChildrenDerive class >> childObjectFinderSelectorIn: aMetamodelWithDefinition childMetamodel: aChildMetamodel [
 	<return: #Symbol or: nil>
 
@@ -52,14 +52,14 @@ GtRobocoderMetamodelChildrenDerive class >> childObjectFinderSelectorIn: aMetamo
 		ifNotNil: [ :aMethod | aMethod selector ]
 ]
 
-{ #category : 'accessing - methods' }
+{ #category : #'accessing - methods' }
 GtRobocoderMetamodelChildrenDerive class >> childObjectGetterMethodIn: aMetamodelWithDefinition childMetamodel: aChildMetamodel [
 	^ aMetamodelWithDefinition
 		anyMethodWithPragmaNamedOrNil: #childObjectGetter:
 		andValue: aChildMetamodel name
 ]
 
-{ #category : 'accessing - selectors' }
+{ #category : #'accessing - selectors' }
 GtRobocoderMetamodelChildrenDerive class >> childObjectGetterSelectorIn: aMetamodelWithDefinition childMetamodel: aChildMetamodel [
 	<return: #Symbol or: nil>
 
@@ -67,12 +67,12 @@ GtRobocoderMetamodelChildrenDerive class >> childObjectGetterSelectorIn: aMetamo
 		ifNotNil: [ :aMethod | aMethod selector ]
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtRobocoderMetamodelChildrenDerive class >> label [
 	^ 'children'
 ]
 
-{ #category : 'api - generation' }
+{ #category : #'api - generation' }
 GtRobocoderMetamodelChildrenDerive >> applyOnMetamodelsWithCodeDefinitions: aGtRobocoderMetamodelsWithCodeDefinitions [
 	aGtRobocoderMetamodelsWithCodeDefinitions metamodelsWithCodeDefinitionDo: [ :eachMetamodelWithCodeDefinition |
 		eachMetamodelWithCodeDefinition isForMany
@@ -80,19 +80,19 @@ GtRobocoderMetamodelChildrenDerive >> applyOnMetamodelsWithCodeDefinitions: aGtR
 			ifFalse: [ self generateChildrenAccessorForOne: eachMetamodelWithCodeDefinition ] ]
 ]
 
-{ #category : 'private - generation' }
+{ #category : #'private - generation' }
 GtRobocoderMetamodelChildrenDerive >> childObjectAccessorNameFor: aMetamodel childMetamodel: aChildMetamodel [
 	^ (self name ifNil: [ aMetamodel generateChildObjectGetterSelectorFor: aChildMetamodel ]) uncapitalized
 ]
 
-{ #category : 'private - generation' }
+{ #category : #'private - generation' }
 GtRobocoderMetamodelChildrenDerive >> generateChildrenAccessorForMany: aGtRobocoderMetamodelWithCodeDefinition [
 	(aGtRobocoderMetamodelWithCodeDefinition hasDeriveOfClass: GtRobocoderMetamodelModelDerive)
 		ifTrue: [ self generateChildrenAccessorForManyWithModel: aGtRobocoderMetamodelWithCodeDefinition ]
 		ifFalse: [ self generateChildrenAccessorForManyWithoutModel: aGtRobocoderMetamodelWithCodeDefinition ]
 ]
 
-{ #category : 'private - generation' }
+{ #category : #'private - generation' }
 GtRobocoderMetamodelChildrenDerive >> generateChildrenAccessorForManyWithModel: aGtRobocoderMetamodelWithCodeDefinition [
 	| aMetamodel aDefinition  |
 
@@ -134,7 +134,7 @@ GtRobocoderMetamodelChildrenDerive >> generateChildrenAccessorForManyWithModel: 
 		into: aGtRobocoderMetamodelWithCodeDefinition definition
 ]
 
-{ #category : 'private - generation' }
+{ #category : #'private - generation' }
 GtRobocoderMetamodelChildrenDerive >> generateChildrenAccessorForManyWithoutModel: aGtRobocoderMetamodelWithCodeDefinition [
 	| aMetamodel aDefinition  |
 
@@ -162,7 +162,7 @@ GtRobocoderMetamodelChildrenDerive >> generateChildrenAccessorForManyWithoutMode
 		into: aGtRobocoderMetamodelWithCodeDefinition definition
 ]
 
-{ #category : 'private - generation' }
+{ #category : #'private - generation' }
 GtRobocoderMetamodelChildrenDerive >> generateChildrenAccessorForOne: aGtRobocoderMetamodelWithCodeDefinition [
 	| aMetamodel |
 	aMetamodel := aGtRobocoderMetamodelWithCodeDefinition metamodel.
@@ -203,12 +203,12 @@ GtRobocoderMetamodelChildrenDerive >> generateChildrenAccessorForOne: aGtRobocod
 		aGtRobocoderMetamodelWithCodeDefinition mergeBehaviorDefinition: theChildrenAccessorsDefinition ]
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtRobocoderMetamodelChildrenDerive >> name [
 	^ name
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtRobocoderMetamodelChildrenDerive >> name: anObject [
 	name := anObject
 ]

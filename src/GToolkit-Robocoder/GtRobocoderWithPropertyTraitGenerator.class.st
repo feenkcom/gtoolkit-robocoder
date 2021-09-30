@@ -13,8 +13,8 @@ GtRobocoderWithPropertyTraitGenerator new
 ]]]
 "
 Class {
-	#name : 'GtRobocoderWithPropertyTraitGenerator',
-	#superclass : 'Object',
+	#name : #GtRobocoderWithPropertyTraitGenerator,
+	#superclass : #Object,
 	#instVars : [
 		'environment',
 		'propertyName',
@@ -31,31 +31,31 @@ Class {
 	#category : 'GToolkit-Robocoder-Generators'
 }
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtRobocoderWithPropertyTraitGenerator >> environment [
 	^ environment
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtRobocoderWithPropertyTraitGenerator >> environment: anObject [
 	environment := anObject
 ]
 
-{ #category : 'translating' }
+{ #category : #translating }
 GtRobocoderWithPropertyTraitGenerator >> generate [
 	<return: #Trait>
 
 	^ self generator generate
 ]
 
-{ #category : 'translating' }
+{ #category : #translating }
 GtRobocoderWithPropertyTraitGenerator >> generateChanges [
 	<return: #Trait>
 
 	^ self generator generateChanges
 ]
 
-{ #category : 'translating' }
+{ #category : #translating }
 GtRobocoderWithPropertyTraitGenerator >> generator [
 	<return: #GtTraitDefinition>
 
@@ -76,97 +76,97 @@ GtRobocoderWithPropertyTraitGenerator >> generator [
 			#__GENERATOR_SOURCE_CODE__ -> self storeString }
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtRobocoderWithPropertyTraitGenerator >> packageName [
 	^ packageName
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtRobocoderWithPropertyTraitGenerator >> packageName: anObject [
 	packageName := anObject
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtRobocoderWithPropertyTraitGenerator >> projectPrefix [
 	^ projectPrefix
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtRobocoderWithPropertyTraitGenerator >> projectPrefix: anObject [
 	projectPrefix := anObject
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtRobocoderWithPropertyTraitGenerator >> propertyAnnouncement [
 	^ propertyAnnouncement
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtRobocoderWithPropertyTraitGenerator >> propertyAnnouncement: anObject [
 	propertyAnnouncement := anObject
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtRobocoderWithPropertyTraitGenerator >> propertyComparator [
 	^ propertyComparator ifNil: [ #= ]
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtRobocoderWithPropertyTraitGenerator >> propertyComparator: anObject [
 	propertyComparator := anObject
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtRobocoderWithPropertyTraitGenerator >> propertyGetter [
 	^ propertyGetter ifNil: [ propertyName ]
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtRobocoderWithPropertyTraitGenerator >> propertyGetter: anObject [
 	propertyGetter := anObject
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtRobocoderWithPropertyTraitGenerator >> propertyName [
 	^ propertyName
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtRobocoderWithPropertyTraitGenerator >> propertyName: anObject [
 	propertyName := anObject
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtRobocoderWithPropertyTraitGenerator >> propertySetter [
 	^ propertySetter ifNil: [ propertyName ]
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtRobocoderWithPropertyTraitGenerator >> propertySetter: aSymbol [
 	propertySetter := aSymbol
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtRobocoderWithPropertyTraitGenerator >> propertyType [
 	^ propertyType
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtRobocoderWithPropertyTraitGenerator >> propertyType: anObject [
 	propertyType := anObject
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtRobocoderWithPropertyTraitGenerator >> propertyUnsetter [
 	^ propertyUnsetter ifNil: [ 'unset', propertyName capitalized ]
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtRobocoderWithPropertyTraitGenerator >> propertyUnsetter: aString [
 	propertyUnsetter := aString
 ]
 
-{ #category : 'printing' }
+{ #category : #printing }
 GtRobocoderWithPropertyTraitGenerator >> storeOn: aStream [
 	aStream
 		nextPutAll: self class name; space; nextPutAll: 'new'; cr;
@@ -186,17 +186,17 @@ GtRobocoderWithPropertyTraitGenerator >> storeOn: aStream [
 		tab; nextPutAll: 'generate'
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtRobocoderWithPropertyTraitGenerator >> tagName [
 	^ tagName
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtRobocoderWithPropertyTraitGenerator >> tagName: anObject [
 	tagName := anObject
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtRobocoderWithPropertyTraitGenerator >> traitName [
 	<return: #Symbol>
 

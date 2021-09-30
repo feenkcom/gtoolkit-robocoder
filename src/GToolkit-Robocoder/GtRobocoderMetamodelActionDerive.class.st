@@ -1,23 +1,23 @@
 Class {
-	#name : 'GtRobocoderMetamodelActionDerive',
-	#superclass : 'GtRobocoderMetamodelDerive',
+	#name : #GtRobocoderMetamodelActionDerive,
+	#superclass : #GtRobocoderMetamodelDerive,
 	#instVars : [
 		'name'
 	],
 	#category : 'GToolkit-Robocoder-Metamodel - Derives'
 }
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtRobocoderMetamodelActionDerive class >> label [
 	^ 'action'
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtRobocoderMetamodelActionDerive >> name [
 	^ name
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtRobocoderMetamodelActionDerive >> name: anObject [
 	name := anObject
 ]

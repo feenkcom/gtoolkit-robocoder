@@ -1,19 +1,19 @@
 Class {
-	#name : 'GtRobocoderMetamodelExpanderStyler',
-	#superclass : 'GtCoderAstStyler',
+	#name : #GtRobocoderMetamodelExpanderStyler,
+	#superclass : #GtCoderAstStyler,
 	#traits : 'TGtRobocoderMetamodelProgramNodeVisitor',
 	#classTraits : 'TGtRobocoderMetamodelProgramNodeVisitor classTrait',
 	#category : 'GToolkit-Robocoder-Coder - Metamodel'
 }
 
-{ #category : 'api - styling' }
+{ #category : #'api - styling' }
 GtRobocoderMetamodelExpanderStyler >> style: aText ast: theAst [
 	text := aText.
 	[ self accept: theAst ]
 		ensure: [ text := nil ]
 ]
 
-{ #category : 'generated' }
+{ #category : #generated }
 GtRobocoderMetamodelExpanderStyler >> visitSymbolPropertyValue: aSymbolPropertyValue [
 	| aDefinitionNode aModelName aBehavior aSelector |
 	self visitPropertyValue: aSymbolPropertyValue.

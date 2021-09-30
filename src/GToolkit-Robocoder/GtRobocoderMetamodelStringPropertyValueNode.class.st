@@ -1,15 +1,15 @@
 Class {
-	#name : 'GtRobocoderMetamodelStringPropertyValueNode',
-	#superclass : 'GtRobocoderMetamodelPropertyValueNode',
+	#name : #GtRobocoderMetamodelStringPropertyValueNode,
+	#superclass : #GtRobocoderMetamodelPropertyValueNode,
 	#category : 'GToolkit-Robocoder-Ast - Metamodel'
 }
 
-{ #category : 'generated' }
+{ #category : #generated }
 GtRobocoderMetamodelStringPropertyValueNode >> acceptVisitor: aProgramVisitor [
 	^ aProgramVisitor visitStringPropertyValue: self
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtRobocoderMetamodelStringPropertyValueNode >> literalValue [
 	| aString |
 	aString := self value value.

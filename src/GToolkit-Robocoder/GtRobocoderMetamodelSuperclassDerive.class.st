@@ -1,36 +1,36 @@
 Class {
-	#name : 'GtRobocoderMetamodelSuperclassDerive',
-	#superclass : 'GtRobocoderMetamodelDerive',
+	#name : #GtRobocoderMetamodelSuperclassDerive,
+	#superclass : #GtRobocoderMetamodelDerive,
 	#instVars : [
 		'name'
 	],
 	#category : 'GToolkit-Robocoder-Metamodel - Derives'
 }
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtRobocoderMetamodelSuperclassDerive class >> label [
 	^ 'superclass'
 ]
 
-{ #category : 'api - generation' }
+{ #category : #'api - generation' }
 GtRobocoderMetamodelSuperclassDerive >> applyOnMetamodelsWithCodeDefinitions: aGtRobocoderMetamodelsWithCodeDefinitions [
 	aGtRobocoderMetamodelsWithCodeDefinitions metamodelsWithCodeDefinitionDo: [ :eachMetamodelWithCodeDefinition |
 		eachMetamodelWithCodeDefinition definition instanceSideDefinition superclass name: self name ]
 ]
 
-{ #category : 'initialization' }
+{ #category : #initialization }
 GtRobocoderMetamodelSuperclassDerive >> initialize [
 	super initialize.
 	
 	name := #Object
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtRobocoderMetamodelSuperclassDerive >> name [
 	^ name
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtRobocoderMetamodelSuperclassDerive >> name: anObject [
 	name := anObject
 ]

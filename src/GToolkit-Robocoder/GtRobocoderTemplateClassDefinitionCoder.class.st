@@ -1,6 +1,6 @@
 Class {
-	#name : 'GtRobocoderTemplateClassDefinitionCoder',
-	#superclass : 'GtCoderModel',
+	#name : #GtRobocoderTemplateClassDefinitionCoder,
+	#superclass : #GtCoderModel,
 	#traits : 'TGtCoderTrait',
 	#classTraits : 'TGtCoderTrait classTrait',
 	#instVars : [
@@ -10,7 +10,7 @@ Class {
 	#category : 'GToolkit-Robocoder-Coder - Behavior template'
 }
 
-{ #category : 'private' }
+{ #category : #private }
 GtRobocoderTemplateClassDefinitionCoder class >> translateClassDefinition: aClassDefinition bindings: theBindings [
 	| aDefinition |
 	
@@ -53,7 +53,7 @@ GtRobocoderTemplateClassDefinitionCoder class >> translateClassDefinition: aClas
 	^ aDefinition
 ]
 
-{ #category : 'private' }
+{ #category : #private }
 GtRobocoderTemplateClassDefinitionCoder class >> translateFullClassDefinition: aFullClassDefinition bindings: theBindings [
 	| aDefinition |
 	
@@ -68,7 +68,7 @@ GtRobocoderTemplateClassDefinitionCoder class >> translateFullClassDefinition: a
 	^ aDefinition
 ]
 
-{ #category : 'private' }
+{ #category : #private }
 GtRobocoderTemplateClassDefinitionCoder class >> translateMetaclassDefinition: aMetaclassDefinition bindings: theBindings [
 	| aDefinition |
 	
@@ -92,12 +92,12 @@ GtRobocoderTemplateClassDefinitionCoder class >> translateMetaclassDefinition: a
 	^ aDefinition
 ]
 
-{ #category : 'converting' }
+{ #category : #converting }
 GtRobocoderTemplateClassDefinitionCoder >> asCoderUIModel [
 	^ GtRobocoderTemplateClassDefinitionCoderViewModel new templateClassBehaviorCoderModel: self
 ]
 
-{ #category : 'private' }
+{ #category : #private }
 GtRobocoderTemplateClassDefinitionCoder >> createCompileMethodChangeIn: aBehavior inContext: aGtPharoSourceCoderEvaluationContext [
 	<return: #RBAddMethodChange>
 	| aSourceString |
@@ -130,12 +130,12 @@ GtRobocoderTemplateClassDefinitionCoder >> createCompileMethodChangeIn: aBehavio
 				for: aGtPharoSourceCoderEvaluationContext ]
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtRobocoderTemplateClassDefinitionCoder >> definition [
 	^ templateClass definition
 ]
 
-{ #category : 'initialization' }
+{ #category : #initialization }
 GtRobocoderTemplateClassDefinitionCoder >> forMethod: aCompiledMethod [
 	| aTemplateClass |
 	aTemplateClass := aCompiledMethod methodClass isClassSide
@@ -148,7 +148,7 @@ GtRobocoderTemplateClassDefinitionCoder >> forMethod: aCompiledMethod [
 	self forTemplateClass: aTemplateClass
 ]
 
-{ #category : 'initialization' }
+{ #category : #initialization }
 GtRobocoderTemplateClassDefinitionCoder >> forTemplateBehavior: aBehavior selector: aTemplateSelector [
 	aBehavior
 		compiledMethodAt: aTemplateSelector
@@ -159,29 +159,29 @@ GtRobocoderTemplateClassDefinitionCoder >> forTemplateBehavior: aBehavior select
 		storageBehavior: aBehavior selector: aTemplateSelector)
 ]
 
-{ #category : 'initialization' }
+{ #category : #initialization }
 GtRobocoderTemplateClassDefinitionCoder >> forTemplateClass: aGtPharoTemplateClass [
 	templateClass := aGtPharoTemplateClass
 ]
 
-{ #category : 'initialization' }
+{ #category : #initialization }
 GtRobocoderTemplateClassDefinitionCoder >> initialize [
 	super initialize.
 	
 	bindings := GtLocalVariablesBindings new.
 ]
 
-{ #category : 'api - accessing' }
+{ #category : #'api - accessing' }
 GtRobocoderTemplateClassDefinitionCoder >> map: aVariableName to: anObject [
 	bindings localAt: aVariableName put: anObject
 ]
 
-{ #category : 'api - accessing' }
+{ #category : #'api - accessing' }
 GtRobocoderTemplateClassDefinitionCoder >> mappings: aCollectionOfAssociations [
 	aCollectionOfAssociations do: [ :each | self map: each key to: each value ]
 ]
 
-{ #category : 'initialization' }
+{ #category : #initialization }
 GtRobocoderTemplateClassDefinitionCoder >> newFullClassDefinition [
 	| aDefinition |
 	
@@ -191,7 +191,7 @@ GtRobocoderTemplateClassDefinitionCoder >> newFullClassDefinition [
 	^ aDefinition
 ]
 
-{ #category : 'api - actions' }
+{ #category : #'api - actions' }
 GtRobocoderTemplateClassDefinitionCoder >> save [
 	"Try to compile the current source code and return true if it was successful, false otherwise"
 	<return: #Boolean>
@@ -211,7 +211,7 @@ GtRobocoderTemplateClassDefinitionCoder >> save [
 		ifAbsent: [ false ]
 ]
 
-{ #category : 'api - actions' }
+{ #category : #'api - actions' }
 GtRobocoderTemplateClassDefinitionCoder >> translate [
 	^ self class translateFullClassDefinition: self definition bindings: bindings
 ]

@@ -1,22 +1,22 @@
 Class {
-	#name : 'GtRobocoderMetamodelParentDerive',
-	#superclass : 'GtRobocoderMetamodelDerive',
+	#name : #GtRobocoderMetamodelParentDerive,
+	#superclass : #GtRobocoderMetamodelDerive,
 	#category : 'GToolkit-Robocoder-Metamodel - Derives'
 }
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtRobocoderMetamodelParentDerive class >> label [
 	^ 'parent'
 ]
 
-{ #category : 'accessing - methods' }
+{ #category : #'accessing - methods' }
 GtRobocoderMetamodelParentDerive class >> parentObjectGetterMethodIn: aMetamodelWithDefinition parentMetamodel: aParentMetamodel [
 	^ aMetamodelWithDefinition
 		anyMethodWithPragmaNamedOrNil: #parentObjectGetter:
 		andValue: aParentMetamodel name
 ]
 
-{ #category : 'accessing - selectors' }
+{ #category : #'accessing - selectors' }
 GtRobocoderMetamodelParentDerive class >> parentObjectGetterSelectorIn: aMetamodelWithDefinition parentMetamodel: aParentMetamodel [
 	<return: #Symbol or: nil>
 
@@ -24,14 +24,14 @@ GtRobocoderMetamodelParentDerive class >> parentObjectGetterSelectorIn: aMetamod
 		ifNotNil: [ :aMethod | aMethod selector ]
 ]
 
-{ #category : 'accessing - methods' }
+{ #category : #'accessing - methods' }
 GtRobocoderMetamodelParentDerive class >> parentObjectSetterMethodIn: aMetamodelWithDefinition parentMetamodel: aParentMetamodel [
 	^ aMetamodelWithDefinition
 		anyMethodWithPragmaNamedOrNil: #parentObjectSetter:
 		andValue: aParentMetamodel name
 ]
 
-{ #category : 'accessing - selectors' }
+{ #category : #'accessing - selectors' }
 GtRobocoderMetamodelParentDerive class >> parentObjectSetterSelectorIn: aMetamodelWithDefinition parentMetamodel: aParentMetamodel [
 	<return: #Symbol or: nil>
 
@@ -39,14 +39,14 @@ GtRobocoderMetamodelParentDerive class >> parentObjectSetterSelectorIn: aMetamod
 		ifNotNil: [ :aMethod | aMethod selector ]
 ]
 
-{ #category : 'accessing - methods' }
+{ #category : #'accessing - methods' }
 GtRobocoderMetamodelParentDerive class >> parentObjectTesterMethodIn: aMetamodelWithDefinition parentMetamodel: aParentMetamodel [
 	^ aMetamodelWithDefinition
 		anyMethodWithPragmaNamedOrNil: #parentObjectTester:
 		andValue: aParentMetamodel name
 ]
 
-{ #category : 'accessing - selectors' }
+{ #category : #'accessing - selectors' }
 GtRobocoderMetamodelParentDerive class >> parentObjectTesterSelectorIn: aMetamodelWithDefinition parentMetamodel: aParentMetamodel [
 	<return: #Symbol or: nil>
 
@@ -54,13 +54,13 @@ GtRobocoderMetamodelParentDerive class >> parentObjectTesterSelectorIn: aMetamod
 		ifNotNil: [ :aMethod | aMethod selector ]
 ]
 
-{ #category : 'api - generation' }
+{ #category : #'api - generation' }
 GtRobocoderMetamodelParentDerive >> applyOnMetamodelsWithCodeDefinitions: aGtRobocoderMetamodelsWithCodeDefinitions [
 	aGtRobocoderMetamodelsWithCodeDefinitions metamodelsWithCodeDefinitionDo: [ :eachMetamodelWithCodeDefinition |
 		self generateParentAccessorsFor: eachMetamodelWithCodeDefinition ]
 ]
 
-{ #category : 'private - generation' }
+{ #category : #'private - generation' }
 GtRobocoderMetamodelParentDerive >> generateParentAccessorsFor: aMetamodelWithDefinition [
 	aMetamodelWithDefinition metamodel parents
 		select: #notNil
@@ -70,7 +70,7 @@ GtRobocoderMetamodelParentDerive >> generateParentAccessorsFor: aMetamodelWithDe
 				parentMetamodel: eachParentMetamodel ]
 ]
 
-{ #category : 'private - generation' }
+{ #category : #'private - generation' }
 GtRobocoderMetamodelParentDerive >> generateParentAccessorsFor: aMetamodelWithDefinition parentMetamodel: aParentMetamodel [
 	| aTemplateDefinition aMetamodel |
 
@@ -95,7 +95,7 @@ GtRobocoderMetamodelParentDerive >> generateParentAccessorsFor: aMetamodelWithDe
 		into: aMetamodelWithDefinition definition
 ]
 
-{ #category : 'private - generation' }
+{ #category : #'private - generation' }
 GtRobocoderMetamodelParentDerive >> generateParentObjectGetterSelectorFor: aMetamodel parentMetamodel: aParentMetamodel [
 	^ 'parent', aMetamodel project capitalized, aParentMetamodel name capitalized, aMetamodel suffix capitalized
 ]

@@ -1,13 +1,13 @@
 Class {
-	#name : 'GtRobocoderTemplateClass',
-	#superclass : 'GtRobocoderTemplateArtefact',
+	#name : #GtRobocoderTemplateClass,
+	#superclass : #GtRobocoderTemplateArtefact,
 	#instVars : [
 		'definition'
 	],
 	#category : 'GToolkit-Robocoder-Model'
 }
 
-{ #category : 'template' }
+{ #category : #template }
 GtRobocoderTemplateClass class >> storageMethodTemplate [
 	<gtMethodTemplate>
 	<generatedFrom: #'GtRobocoderTemplateMethod class>>#storageMethodTemplate'>
@@ -23,12 +23,12 @@ GtRobocoderTemplateClass class >> storageMethodTemplate [
 		storageMethod: thisContext method
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtRobocoderTemplateClass >> definition [
 	^ definition
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtRobocoderTemplateClass >> definition: anObject [
 	definition := anObject
 ]

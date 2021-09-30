@@ -1,12 +1,12 @@
 Trait {
-	#name : 'TGtPharoWithTemplateClassBehaviorCoderModel',
+	#name : #TGtPharoWithTemplateClassBehaviorCoderModel,
 	#instVars : [
 		'templateClassBehaviorCoderModel'
 	],
 	#category : 'GToolkit-Robocoder-Coder - Behavior template'
 }
 
-{ #category : 'api - template class behavior coder model' }
+{ #category : #'api - template class behavior coder model' }
 TGtPharoWithTemplateClassBehaviorCoderModel >> hasTemplateClassBehaviorCoderModel [
 	"Return a true if nil is assigned to the receiver, false otherwise"
 	<return: #Boolean>
@@ -16,7 +16,7 @@ TGtPharoWithTemplateClassBehaviorCoderModel >> hasTemplateClassBehaviorCoderMode
 	^ templateClassBehaviorCoderModel notNil
 ]
 
-{ #category : 'api - template class behavior coder model' }
+{ #category : #'api - template class behavior coder model' }
 TGtPharoWithTemplateClassBehaviorCoderModel >> onPostTemplateClassBehaviorCoderModelChanged [
 	"I am an optional hook method that is sent after #subscribeToTemplateClassBehaviorCoderModel.
 	I do nothing by default but allow users to perform update operations when a receiver object is already
@@ -24,7 +24,7 @@ TGtPharoWithTemplateClassBehaviorCoderModel >> onPostTemplateClassBehaviorCoderM
 	<generatedFrom: #'TGtRobocoderWithObjectTraitTemplate>>#onPostObjectChangedTemplate'>
 ]
 
-{ #category : 'api - template class behavior coder model' }
+{ #category : #'api - template class behavior coder model' }
 TGtPharoWithTemplateClassBehaviorCoderModel >> onTemplateClassBehaviorCoderModelChanged [
 	"Is sent when a new templateClassBehaviorCoderModel is assigned to the receiver.
 	Note: #onTemplateClassBehaviorCoderModelChanged is sent before #subscribeToTemplateClassBehaviorCoderModel
@@ -34,7 +34,7 @@ TGtPharoWithTemplateClassBehaviorCoderModel >> onTemplateClassBehaviorCoderModel
 	<generatedFrom: #'TGtRobocoderWithObjectTraitTemplate>>#onObjectChangedTemplate'>
 ]
 
-{ #category : 'api - template class behavior coder model' }
+{ #category : #'api - template class behavior coder model' }
 TGtPharoWithTemplateClassBehaviorCoderModel >> subscribeToTemplateClassBehaviorCoderModel [
 	"Is sent after a new templateClassBehaviorCoderModel is assigned to the receiver.
 	It is required to unsubscribe from the previously subscribed objects by implementing
@@ -42,7 +42,7 @@ TGtPharoWithTemplateClassBehaviorCoderModel >> subscribeToTemplateClassBehaviorC
 	<generatedFrom: #'TGtRobocoderWithObjectTraitTemplate>>#subscribeToObjectTemplate'>
 ]
 
-{ #category : 'api - template class behavior coder model' }
+{ #category : #'api - template class behavior coder model' }
 TGtPharoWithTemplateClassBehaviorCoderModel >> templateClassBehaviorCoderModel [
 	"Return a not-null templateClassBehaviorCoderModel assigned to the receiver"
 	<objectGetter: #templateClassBehaviorCoderModel>
@@ -54,7 +54,7 @@ TGtPharoWithTemplateClassBehaviorCoderModel >> templateClassBehaviorCoderModel [
 	^ templateClassBehaviorCoderModel
 ]
 
-{ #category : 'api - template class behavior coder model' }
+{ #category : #'api - template class behavior coder model' }
 TGtPharoWithTemplateClassBehaviorCoderModel >> templateClassBehaviorCoderModel: aTemplateClassBehaviorCoderModel [
 	"Set a not-null templateClassBehaviorCoderModel assigned to the receiver"
 	<objectSetter: #templateClassBehaviorCoderModel>
@@ -74,7 +74,7 @@ TGtPharoWithTemplateClassBehaviorCoderModel >> templateClassBehaviorCoderModel: 
 	self onPostTemplateClassBehaviorCoderModelChanged
 ]
 
-{ #category : 'api - template class behavior coder model' }
+{ #category : #'api - template class behavior coder model' }
 TGtPharoWithTemplateClassBehaviorCoderModel >> unsubscribeFromTemplateClassBehaviorCoderModel [
 	"Is sent before a new templateClassBehaviorCoderModel is assigned to the receiver.
 	Objects that subscribe to templateClassBehaviorCoderModel are required to implement this method."

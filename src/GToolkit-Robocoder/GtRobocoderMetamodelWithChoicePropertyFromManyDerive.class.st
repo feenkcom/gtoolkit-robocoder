@@ -1,15 +1,15 @@
 Class {
-	#name : 'GtRobocoderMetamodelWithChoicePropertyFromManyDerive',
-	#superclass : 'GtRobocoderMetamodelWithPropertyDerive',
+	#name : #GtRobocoderMetamodelWithChoicePropertyFromManyDerive,
+	#superclass : #GtRobocoderMetamodelWithPropertyDerive,
 	#category : 'GToolkit-Robocoder-Metamodel - Derives'
 }
 
-{ #category : 'testing' }
+{ #category : #testing }
 GtRobocoderMetamodelWithChoicePropertyFromManyDerive class >> isAbstract [
 	^ self = GtRobocoderMetamodelWithChoicePropertyFromManyDerive
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtRobocoderMetamodelWithChoicePropertyFromManyDerive class >> propertyTopMostParentsMethodIn: aGtRobocoderMetamodelWithCodeDefinition property: aPropertyName [
 	^ GtRobocoderMetamodelWithCodeDefinition
 		anyMethodWithPragmaNamedOrNil: #propertyTopMostParents:
@@ -17,13 +17,13 @@ GtRobocoderMetamodelWithChoicePropertyFromManyDerive class >> propertyTopMostPar
 		inFullClass: aGtRobocoderMetamodelWithCodeDefinition definition
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtRobocoderMetamodelWithChoicePropertyFromManyDerive class >> propertyTopMostParentsSelectorIn: aGtRobocoderMetamodelWithCodeDefinition property: aPropertyName [
 	^ (self propertyTopMostParentsMethodIn: aGtRobocoderMetamodelWithCodeDefinition property: aPropertyName)
 		ifNotNil: [ :aMethod | aMethod selector ]
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtRobocoderMetamodelWithChoicePropertyFromManyDerive class >> propertyUnsetChildrenMethodIn: aGtRobocoderMetamodelWithCodeDefinition property: aPropertyName [
 	^ GtRobocoderMetamodelWithCodeDefinition
 		anyMethodWithPragmaNamedOrNil: #propertyUnsetChildren:
@@ -31,13 +31,13 @@ GtRobocoderMetamodelWithChoicePropertyFromManyDerive class >> propertyUnsetChild
 		inFullClass: aGtRobocoderMetamodelWithCodeDefinition definition
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtRobocoderMetamodelWithChoicePropertyFromManyDerive class >> propertyUnsetChildrenOfOneSelectorIn: aGtRobocoderMetamodelWithCodeDefinition property: aPropertyName [
 	^ (self propertyUnsetChildrenMethodIn: aGtRobocoderMetamodelWithCodeDefinition property: aPropertyName)
 		ifNotNil: [ :aMethod | aMethod selector ]
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtRobocoderMetamodelWithChoicePropertyFromManyDerive class >> propertyUnsetFromParentMethodIn: aGtRobocoderMetamodelWithCodeDefinition property: aPropertyName [
 	^ GtRobocoderMetamodelWithCodeDefinition
 		anyMethodWithPragmaNamedOrNil: #propertyUnsetFromParent:
@@ -45,13 +45,13 @@ GtRobocoderMetamodelWithChoicePropertyFromManyDerive class >> propertyUnsetFromP
 		inFullClass: aGtRobocoderMetamodelWithCodeDefinition definition
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtRobocoderMetamodelWithChoicePropertyFromManyDerive class >> propertyUnsetFromParentSelectorIn: aGtRobocoderMetamodelWithCodeDefinition property: aPropertyName [
 	^ (self propertyUnsetFromParentMethodIn: aGtRobocoderMetamodelWithCodeDefinition property: aPropertyName)
 		ifNotNil: [ :aMethod | aMethod selector ]
 ]
 
-{ #category : 'api - generation' }
+{ #category : #'api - generation' }
 GtRobocoderMetamodelWithChoicePropertyFromManyDerive >> applyOnMetamodelsWithCodeDefinitions: aGtRobocoderMetamodelsWithCodeDefinitions [
 	"The generation of the single choice behavior requires three passes:
 	 - first we generate the template code which is independent for each view model
@@ -94,22 +94,22 @@ GtRobocoderMetamodelWithChoicePropertyFromManyDerive >> applyOnMetamodelsWithCod
 
 ]
 
-{ #category : 'private - accessors' }
+{ #category : #'private - accessors' }
 GtRobocoderMetamodelWithChoicePropertyFromManyDerive >> choiceNameNoun [
 	^ self subclassResponsibility
 ]
 
-{ #category : 'private - accessors' }
+{ #category : #'private - accessors' }
 GtRobocoderMetamodelWithChoicePropertyFromManyDerive >> choosingVerb [
 	^ self subclassResponsibility
 ]
 
-{ #category : 'private - accessors' }
+{ #category : #'private - accessors' }
 GtRobocoderMetamodelWithChoicePropertyFromManyDerive >> chosenAdjective [
 	^ self subclassResponsibility
 ]
 
-{ #category : 'private - generate' }
+{ #category : #'private - generate' }
 GtRobocoderMetamodelWithChoicePropertyFromManyDerive >> generateChoiceSetHookMethodTo: aViewModelModelWithCodeDefinition [
 	| aMethodDefinition methodSourceCode aArgumentName |
 
@@ -153,7 +153,7 @@ GtRobocoderMetamodelWithChoicePropertyFromManyDerive >> generateChoiceSetHookMet
 		protocol: aMethodDefinition protocol
 ]
 
-{ #category : 'private - generate' }
+{ #category : #'private - generate' }
 GtRobocoderMetamodelWithChoicePropertyFromManyDerive >> generateChoiceUnsetHookMethodTo: aViewModelModelWithCodeDefinition [
 	| aMethodDefinition methodSourceCode aArgumentName |
 
@@ -182,7 +182,7 @@ GtRobocoderMetamodelWithChoicePropertyFromManyDerive >> generateChoiceUnsetHookM
 		protocol: aMethodDefinition protocol
 ]
 
-{ #category : 'private - generate' }
+{ #category : #'private - generate' }
 GtRobocoderMetamodelWithChoicePropertyFromManyDerive >> generateChoosableChildAccessorsDefinitionFor: aGtRobocoderMetamodelWithCodeDefinition [
 	| aSelectedAnnouncementDefinition aDeselectedAnnouncementDefinition aDefinition |
 
@@ -231,7 +231,7 @@ GtRobocoderMetamodelWithChoicePropertyFromManyDerive >> generateChoosableChildAc
 		into: aGtRobocoderMetamodelWithCodeDefinition definition
 ]
 
-{ #category : 'private - generate' }
+{ #category : #'private - generate' }
 GtRobocoderMetamodelWithChoicePropertyFromManyDerive >> generateChoosableChildAccessorsFor: aViewModelModeWithCodeDefinition [
 	| aViewModelModel |
 
@@ -246,7 +246,7 @@ GtRobocoderMetamodelWithChoicePropertyFromManyDerive >> generateChoosableChildAc
 	self generateChoosableChildAccessorsDefinitionFor: aViewModelModeWithCodeDefinition
 ]
 
-{ #category : 'private - generate' }
+{ #category : #'private - generate' }
 GtRobocoderMetamodelWithChoicePropertyFromManyDerive >> generateChoosableParentAccessorsDefinitionFor: aGtRobocoderMetamodelWithCodeDefinition [
 	| aDefinition theParentPathsWithSelection |
 	
@@ -274,7 +274,7 @@ GtRobocoderMetamodelWithChoicePropertyFromManyDerive >> generateChoosableParentA
 		into: aGtRobocoderMetamodelWithCodeDefinition definition
 ]
 
-{ #category : 'private - generate' }
+{ #category : #'private - generate' }
 GtRobocoderMetamodelWithChoicePropertyFromManyDerive >> generateChosenAnnouncementFor: aRobocoderMetamodelWithCodeDefinition [
 	| aDefinition |
 	
@@ -299,7 +299,7 @@ GtRobocoderMetamodelWithChoicePropertyFromManyDerive >> generateChosenAnnounceme
 	^ aDefinition
 ]
 
-{ #category : 'private - generate' }
+{ #category : #'private - generate' }
 GtRobocoderMetamodelWithChoicePropertyFromManyDerive >> generateHasOtherChosenEntitiesMethodFor: aViewModelModelWithCodeDefinition [
 	| aViewModelModel theChildrenForMany aMethodDefinition methodSourceCode |
 
@@ -345,7 +345,7 @@ GtRobocoderMetamodelWithChoicePropertyFromManyDerive >> generateHasOtherChosenEn
 	aMethodDefinition sourceCode: methodSourceCode
 ]
 
-{ #category : 'private - generate' }
+{ #category : #'private - generate' }
 GtRobocoderMetamodelWithChoicePropertyFromManyDerive >> generateUnchosenAnnouncementFor: aRobocoderMetamodelWithCodeDefinition [
 	| aDefinition |
 	
@@ -370,7 +370,7 @@ GtRobocoderMetamodelWithChoicePropertyFromManyDerive >> generateUnchosenAnnounce
 	^ aDefinition
 ]
 
-{ #category : 'private - generate' }
+{ #category : #'private - generate' }
 GtRobocoderMetamodelWithChoicePropertyFromManyDerive >> generateUnsetChildrenOfManyMethodFor: aMetamodelWithCodeDefinition [
 	| aMethodDefinition aSourceCode |
 
@@ -392,7 +392,7 @@ GtRobocoderMetamodelWithChoicePropertyFromManyDerive >> generateUnsetChildrenOfM
 		id: aMetamodelWithCodeDefinition name
 ]
 
-{ #category : 'private - generate' }
+{ #category : #'private - generate' }
 GtRobocoderMetamodelWithChoicePropertyFromManyDerive >> generateUnsetChildrenOfOneMethodFor: aMetamodelWithCodeDefinition [
 	| aMethodDefinition theChildrenForMany |
 
@@ -422,7 +422,7 @@ GtRobocoderMetamodelWithChoicePropertyFromManyDerive >> generateUnsetChildrenOfO
 			id: eachMetamodelWithCodeDefinition name ]
 ]
 
-{ #category : 'private - generate' }
+{ #category : #'private - generate' }
 GtRobocoderMetamodelWithChoicePropertyFromManyDerive >> generateWithChoicePropertyTraitFor: aGtRobocoderMetamodelWithCodeDefinition [
 	| aMetamodel aCodeDefinition aPropertyTraitDefinition |
 
@@ -450,7 +450,7 @@ GtRobocoderMetamodelWithChoicePropertyFromManyDerive >> generateWithChoiceProper
 		addExtraDefinition: aPropertyTraitDefinition
 ]
 
-{ #category : 'private - methods' }
+{ #category : #'private - methods' }
 GtRobocoderMetamodelWithChoicePropertyFromManyDerive >> propertySetNotifierMethodOfOne: aViewModelModelWithCodeDefinition [
 	self
 		assert: [ aViewModelModelWithCodeDefinition isForOne ]
@@ -461,7 +461,7 @@ GtRobocoderMetamodelWithChoicePropertyFromManyDerive >> propertySetNotifierMetho
 		inViewModelModelWithCodeDefinition: aViewModelModelWithCodeDefinition
 ]
 
-{ #category : 'private - selectors' }
+{ #category : #'private - selectors' }
 GtRobocoderMetamodelWithChoicePropertyFromManyDerive >> propertySetNotifierSelectorOfOne: aViewModelModelWithCodeDefinition [
 	<return: #Symbol>
 
@@ -469,14 +469,14 @@ GtRobocoderMetamodelWithChoicePropertyFromManyDerive >> propertySetNotifierSelec
 		ifNotNil: [ :aMethod | aMethod selector ]
 ]
 
-{ #category : 'private - methods' }
+{ #category : #'private - methods' }
 GtRobocoderMetamodelWithChoicePropertyFromManyDerive >> propertyUnsetChildrenMethodIn: aGtRobocoderMetamodelWithCodeDefinition [		
 	^ self class
 		propertyUnsetChildrenMethodIn: aGtRobocoderMetamodelWithCodeDefinition
 		property: (self propertyNameFor: aGtRobocoderMetamodelWithCodeDefinition)
 ]
 
-{ #category : 'private - methods' }
+{ #category : #'private - methods' }
 GtRobocoderMetamodelWithChoicePropertyFromManyDerive >> propertyUnsetNotifierMethodOfOne: aViewModelModelWithCodeDefinition [
 	self
 		assert: [ aViewModelModelWithCodeDefinition isForOne ]
@@ -487,14 +487,14 @@ GtRobocoderMetamodelWithChoicePropertyFromManyDerive >> propertyUnsetNotifierMet
 		inViewModelModelWithCodeDefinition: aViewModelModelWithCodeDefinition
 ]
 
-{ #category : 'private - selectors' }
+{ #category : #'private - selectors' }
 GtRobocoderMetamodelWithChoicePropertyFromManyDerive >> propertyUnsetNotifierSelectorOfOne: aViewModelModelWithCodeDefinition [
 	<return: #Symbol>
 
 	^ (self propertyUnsetNotifierMethodOfOne: aViewModelModelWithCodeDefinition) selector
 ]
 
-{ #category : 'private - selectors' }
+{ #category : #'private - selectors' }
 GtRobocoderMetamodelWithChoicePropertyFromManyDerive >> propertyUnsetOthersSelectorOfOne: aGtRobocoderMetamodelWithCodeDefinition [
 	<return: #Symbol>
 
@@ -503,17 +503,17 @@ GtRobocoderMetamodelWithChoicePropertyFromManyDerive >> propertyUnsetOthersSelec
 		property: (self propertyNameFor: aGtRobocoderMetamodelWithCodeDefinition)
 ]
 
-{ #category : 'private - accessors' }
+{ #category : #'private - accessors' }
 GtRobocoderMetamodelWithChoicePropertyFromManyDerive >> unchoosingVerb [
 	^ self subclassResponsibility
 ]
 
-{ #category : 'private - accessors' }
+{ #category : #'private - accessors' }
 GtRobocoderMetamodelWithChoicePropertyFromManyDerive >> unchosenAdjective [
 	^ self subclassResponsibility
 ]
 
-{ #category : 'private - templates' }
+{ #category : #'private - templates' }
 GtRobocoderMetamodelWithChoicePropertyFromManyDerive >> unsetChildrenOfManyTemplate [
 	<gtMethodTemplate>
 	<generatedFrom: #'GtRobocoderTemplateMethod class>>#storageMethodTemplate'>
@@ -524,7 +524,7 @@ GtRobocoderMetamodelWithChoicePropertyFromManyDerive >> unsetChildrenOfManyTempl
 		storageMethod: thisContext method
 ]
 
-{ #category : 'private - templates' }
+{ #category : #'private - templates' }
 GtRobocoderMetamodelWithChoicePropertyFromManyDerive >> unsetChildrenOfOneTemplate [
 	<gtMethodTemplate>
 	<generatedFrom: #'GtRobocoderTemplateMethod class>>#storageMethodTemplate'>
@@ -535,7 +535,7 @@ GtRobocoderMetamodelWithChoicePropertyFromManyDerive >> unsetChildrenOfOneTempla
 		storageMethod: thisContext method
 ]
 
-{ #category : 'private - templates' }
+{ #category : #'private - templates' }
 GtRobocoderMetamodelWithChoicePropertyFromManyDerive >> unsetChildrenTemplate [
 	<gtMethodTemplate>
 	<generatedFrom: #'GtRobocoderTemplateMethod class>>#storageMethodTemplate'>
@@ -545,7 +545,7 @@ GtRobocoderMetamodelWithChoicePropertyFromManyDerive >> unsetChildrenTemplate [
 		storageMethod: thisContext method
 ]
 
-{ #category : 'private - class names' }
+{ #category : #'private - class names' }
 GtRobocoderMetamodelWithChoicePropertyFromManyDerive >> viewModelChosenEntityAnnouncementNameFor: aViewModelModel [
 	^ '{prefix}{project}{name}{suffix}{chosenAdjective}'
 		format: { 
@@ -557,7 +557,7 @@ GtRobocoderMetamodelWithChoicePropertyFromManyDerive >> viewModelChosenEntityAnn
 		} asDictionary
 ]
 
-{ #category : 'private - class names' }
+{ #category : #'private - class names' }
 GtRobocoderMetamodelWithChoicePropertyFromManyDerive >> viewModelUnchosenAnnouncementNameFor: aViewModelModel [
 	^ '{prefix}{project}{name}{suffix}{unchosenAdjective}'
 		format: { 

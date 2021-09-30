@@ -1,30 +1,30 @@
 Class {
-	#name : 'GtRobocoderMetamodelWithSelectionDerive',
-	#superclass : 'GtRobocoderMetamodelWithChoicePropertyFromManyDerive',
+	#name : #GtRobocoderMetamodelWithSelectionDerive,
+	#superclass : #GtRobocoderMetamodelWithChoicePropertyFromManyDerive,
 	#category : 'GToolkit-Robocoder-Metamodel - Derives'
 }
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtRobocoderMetamodelWithSelectionDerive class >> label [
 	^ 'selection'
 ]
 
-{ #category : 'private - accessors' }
+{ #category : #'private - accessors' }
 GtRobocoderMetamodelWithSelectionDerive >> choiceNameNoun [
 	^ 'selection'
 ]
 
-{ #category : 'private - accessors' }
+{ #category : #'private - accessors' }
 GtRobocoderMetamodelWithSelectionDerive >> choosingVerb [
 	^ 'select'
 ]
 
-{ #category : 'private - accessors' }
+{ #category : #'private - accessors' }
 GtRobocoderMetamodelWithSelectionDerive >> chosenAdjective [
 	^ 'selected'
 ]
 
-{ #category : 'private - accessors' }
+{ #category : #'private - accessors' }
 GtRobocoderMetamodelWithSelectionDerive >> propertyNameFor: aViewModelModel [
 	| aName |
 
@@ -35,12 +35,12 @@ GtRobocoderMetamodelWithSelectionDerive >> propertyNameFor: aViewModelModel [
 	^ 'selected', aName capitalized , aViewModelModel suffix capitalized
 ]
 
-{ #category : 'private - accessors' }
+{ #category : #'private - accessors' }
 GtRobocoderMetamodelWithSelectionDerive >> unchoosingVerb [
 	^ 'deselect'
 ]
 
-{ #category : 'private - accessors' }
+{ #category : #'private - accessors' }
 GtRobocoderMetamodelWithSelectionDerive >> unchosenAdjective [
 	^ 'deselected'
 ]

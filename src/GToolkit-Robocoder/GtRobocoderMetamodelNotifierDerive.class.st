@@ -1,15 +1,15 @@
 Class {
-	#name : 'GtRobocoderMetamodelNotifierDerive',
-	#superclass : 'GtRobocoderMetamodelDerive',
+	#name : #GtRobocoderMetamodelNotifierDerive,
+	#superclass : #GtRobocoderMetamodelDerive,
 	#category : 'GToolkit-Robocoder-Metamodel - Derives'
 }
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtRobocoderMetamodelNotifierDerive class >> label [
 	^ 'notifier'
 ]
 
-{ #category : 'templates' }
+{ #category : #templates }
 GtRobocoderMetamodelNotifierDerive >> announceTemplate [
 	<gtMethodTemplate>
 	<generatedFrom: #'GtRobocoderTemplateMethod class>>#storageMethodTemplate'>
@@ -23,13 +23,13 @@ GtRobocoderMetamodelNotifierDerive >> announceTemplate [
 		storageMethod: thisContext method
 ]
 
-{ #category : 'api - generation' }
+{ #category : #'api - generation' }
 GtRobocoderMetamodelNotifierDerive >> applyOnMetamodelsWithCodeDefinitions: aGtRobocoderMetamodelsWithCodeDefinitions [
 	aGtRobocoderMetamodelsWithCodeDefinitions metamodelsWithCodeDefinitionDo: [ :eachMetamodelWithCodeDefinition |
 		self generateAnnounceMethodFor: eachMetamodelWithCodeDefinition ]
 ]
 
-{ #category : 'private - generation' }
+{ #category : #'private - generation' }
 GtRobocoderMetamodelNotifierDerive >> generateAnnounceMethodFor: aMetamodelWithCodeDefinition [
 	| anAnnounceMethod theParents  anAnnounceMethodSourceCode |
 

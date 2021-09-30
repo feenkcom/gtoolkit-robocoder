@@ -12,14 +12,14 @@ GtWithDomainModelTraitGenerator new
 
 "
 Trait {
-	#name : 'TGtPharoWithTemplateTraitBehaviorCoderModel',
+	#name : #TGtPharoWithTemplateTraitBehaviorCoderModel,
 	#instVars : [
 		'templateTraitBehaviorCoderModel'
 	],
 	#category : 'GToolkit-Robocoder-Coder - Behavior template'
 }
 
-{ #category : 'api - template trait behavior coder model' }
+{ #category : #'api - template trait behavior coder model' }
 TGtPharoWithTemplateTraitBehaviorCoderModel >> hasTemplateTraitBehaviorCoder [
 	"Return a true if templateTraitBehaviorCoder model is assigned to the receiver, false otherwise"
 	<return: #Boolean>
@@ -28,19 +28,19 @@ TGtPharoWithTemplateTraitBehaviorCoderModel >> hasTemplateTraitBehaviorCoder [
 	^ templateTraitBehaviorCoderModel notNil
 ]
 
-{ #category : 'api - template trait behavior coder model' }
+{ #category : #'api - template trait behavior coder model' }
 TGtPharoWithTemplateTraitBehaviorCoderModel >> onTemplateTraitBehaviorCoderModelChanged [
 	"Is sent when a new templateTraitBehaviorCoder model is assigned to the view model"
 ]
 
-{ #category : 'api - template trait behavior coder model' }
+{ #category : #'api - template trait behavior coder model' }
 TGtPharoWithTemplateTraitBehaviorCoderModel >> subscribeToTemplateTraitBehaviorCoderModel [
 	"Is sent after a new templateTraitBehaviorCoder model is assigned to the view model.
 	It is required to unsubscribe from the domain model by implementing
 	#unsubscribeFromTemplateTraitBehaviorCoderModel if view model subscribes to them"
 ]
 
-{ #category : 'api - template trait behavior coder model' }
+{ #category : #'api - template trait behavior coder model' }
 TGtPharoWithTemplateTraitBehaviorCoderModel >> templateTraitBehaviorCoderModel [
 	"Return a not-null templateTraitBehaviorCoder model assigned to the receiver view model"
 	<modelGetter>
@@ -51,7 +51,7 @@ TGtPharoWithTemplateTraitBehaviorCoderModel >> templateTraitBehaviorCoderModel [
 	^ templateTraitBehaviorCoderModel
 ]
 
-{ #category : 'api - template trait behavior coder model' }
+{ #category : #'api - template trait behavior coder model' }
 TGtPharoWithTemplateTraitBehaviorCoderModel >> templateTraitBehaviorCoderModel: aTemplateTraitBehaviorCoderModel [
 	"Set a not-null templateTraitBehaviorCoder domain model assigned to the receiver view model"
 	<modelSetter>
@@ -69,7 +69,7 @@ TGtPharoWithTemplateTraitBehaviorCoderModel >> templateTraitBehaviorCoderModel: 
 	self subscribeToTemplateTraitBehaviorCoderModel
 ]
 
-{ #category : 'api - template trait behavior coder model' }
+{ #category : #'api - template trait behavior coder model' }
 TGtPharoWithTemplateTraitBehaviorCoderModel >> unsubscribeFromTemplateTraitBehaviorCoderModel [
 	"Is sent before a new templateTraitBehaviorCoder model is assigned to the view model.
 	View models that subscribe to templateTraitBehaviorCoder model are required to implement this methods"

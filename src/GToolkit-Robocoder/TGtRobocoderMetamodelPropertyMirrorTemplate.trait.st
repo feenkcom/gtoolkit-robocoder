@@ -1,9 +1,9 @@
 Trait {
-	#name : 'TGtRobocoderMetamodelPropertyMirrorTemplate',
+	#name : #TGtRobocoderMetamodelPropertyMirrorTemplate,
 	#category : 'GToolkit-Robocoder-Templates'
 }
 
-{ #category : 'templates' }
+{ #category : #templates }
 TGtRobocoderMetamodelPropertyMirrorTemplate >> getterDelegateTemplate [
 	<gtMethodTemplate>
 	<generatedFrom: #'GtRobocoderTemplateMethod class>>#storageMethodTemplate'>
@@ -18,7 +18,7 @@ TGtRobocoderMetamodelPropertyMirrorTemplate >> getterDelegateTemplate [
 		storageMethod: thisContext method
 ]
 
-{ #category : 'templates' }
+{ #category : #templates }
 TGtRobocoderMetamodelPropertyMirrorTemplate >> onPropertyChangedTemplate [
 	<gtMethodTemplate>
 	<generatedFrom: #'GtRobocoderTemplateMethod class>>#storageMethodTemplate'>
@@ -33,7 +33,7 @@ TGtRobocoderMetamodelPropertyMirrorTemplate >> onPropertyChangedTemplate [
 		storageMethod: thisContext method
 ]
 
-{ #category : 'templates' }
+{ #category : #templates }
 TGtRobocoderMetamodelPropertyMirrorTemplate >> setterDelegateTemplate [
 	<gtMethodTemplate>
 	<generatedFrom: #'GtRobocoderTemplateMethod class>>#storageMethodTemplate'>
@@ -49,7 +49,7 @@ TGtRobocoderMetamodelPropertyMirrorTemplate >> setterDelegateTemplate [
 		storageMethod: thisContext method
 ]
 
-{ #category : 'templates' }
+{ #category : #templates }
 TGtRobocoderMetamodelPropertyMirrorTemplate >> traitTemplate [
 	<gtTraitTemplate>
 	<generatedFrom: #'GtRobocoderTemplateTrait class>>#storageMethodTemplate'>

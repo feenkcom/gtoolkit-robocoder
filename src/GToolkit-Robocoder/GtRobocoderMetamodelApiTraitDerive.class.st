@@ -4,17 +4,17 @@ Generates an api trait for each view model that helps users to bind the view mod
 The generation happens based on the ${class:TGtWithViewModelTraitTemplate}$ using ${class:GtWithViewModelTraitGenerator}$
 "
 Class {
-	#name : 'GtRobocoderMetamodelApiTraitDerive',
-	#superclass : 'GtRobocoderMetamodelDerive',
+	#name : #GtRobocoderMetamodelApiTraitDerive,
+	#superclass : #GtRobocoderMetamodelDerive,
 	#category : 'GToolkit-Robocoder-Metamodel - Derives'
 }
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtRobocoderMetamodelApiTraitDerive class >> label [
 	^ 'api'
 ]
 
-{ #category : 'api - generation' }
+{ #category : #'api - generation' }
 GtRobocoderMetamodelApiTraitDerive >> applyOnMetamodelsWithCodeDefinitions: aGtRobocoderMetamodelsWithCodeDefinitions [
 	aGtRobocoderMetamodelsWithCodeDefinitions metamodelsWithCodeDefinitionDo: [ :eachMetamodelWithCodeDefinition |
 		| anApiTraitDefinition |
@@ -23,7 +23,7 @@ GtRobocoderMetamodelApiTraitDerive >> applyOnMetamodelsWithCodeDefinitions: aGtR
 		eachMetamodelWithCodeDefinition addExtraDefinition: anApiTraitDefinition ]
 ]
 
-{ #category : 'private - generation' }
+{ #category : #'private - generation' }
 GtRobocoderMetamodelApiTraitDerive >> generateMetamodelApiTraitFor: aRobocoderMetamodel [
 	^ GtRobocoderWithObjectTraitGenerator new
 		pragmaName: GtRobocoderMetamodelModelDerive pragmaName;

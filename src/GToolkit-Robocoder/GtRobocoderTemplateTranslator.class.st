@@ -1,6 +1,6 @@
 Class {
-	#name : 'GtRobocoderTemplateTranslator',
-	#superclass : 'Object',
+	#name : #GtRobocoderTemplateTranslator,
+	#superclass : #Object,
 	#traits : 'TGtRobocoderTemplateProgramNodeVisitor',
 	#classTraits : 'TGtRobocoderTemplateProgramNodeVisitor classTrait',
 	#instVars : [
@@ -9,12 +9,12 @@ Class {
 	#category : 'GToolkit-Robocoder-Generators'
 }
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtRobocoderTemplateTranslator >> bindings [
 	^ self evaluationContext bindingStrategy
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtRobocoderTemplateTranslator >> bindings: theBindings [
 	| aCopyOfBindings |
 	
@@ -27,12 +27,12 @@ GtRobocoderTemplateTranslator >> bindings: theBindings [
 	self evaluationContext bindingStrategy: aCopyOfBindings
 ]
 
-{ #category : 'translate' }
+{ #category : #translate }
 GtRobocoderTemplateTranslator >> evaluateBlock: aBlockClosure [
 	^ self evaluationResultToString: aBlockClosure value
 ]
 
-{ #category : 'translate' }
+{ #category : #translate }
 GtRobocoderTemplateTranslator >> evaluateExpression: aSourceString [
 	| aSnippetCoder aTemplateResult |
 	
@@ -45,18 +45,18 @@ GtRobocoderTemplateTranslator >> evaluateExpression: aSourceString [
 	^ self evaluationResultToString: aTemplateResult value
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtRobocoderTemplateTranslator >> evaluationContext [
 	^ evaluationContext
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtRobocoderTemplateTranslator >> evaluationContext: anObject [
 	evaluationContext := anObject.
 	self bindings: evaluationContext bindingStrategy
 ]
 
-{ #category : 'private - replacement' }
+{ #category : #'private - replacement' }
 GtRobocoderTemplateTranslator >> evaluationResultToString: anObject [
 	| aResult |
 
@@ -70,7 +70,7 @@ GtRobocoderTemplateTranslator >> evaluationResultToString: anObject [
 	^ aResult
 ]
 
-{ #category : 'private - replacement' }
+{ #category : #'private - replacement' }
 GtRobocoderTemplateTranslator >> generateCode: aSourceCode [
 	| theTemplates theResultingSourceCode |
 	aSourceCode
@@ -82,7 +82,7 @@ GtRobocoderTemplateTranslator >> generateCode: aSourceCode [
 	^ theResultingSourceCode
 ]
 
-{ #category : 'initialization' }
+{ #category : #initialization }
 GtRobocoderTemplateTranslator >> initialize [
 	super initialize.
 
@@ -90,17 +90,17 @@ GtRobocoderTemplateTranslator >> initialize [
 	self bindings: GtLocalVariablesBindings new
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtRobocoderTemplateTranslator >> map: aVariableName to: anObject [
 	self bindings at: aVariableName put: anObject
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtRobocoderTemplateTranslator >> mappings: aCollectionOfAssociations [
 	aCollectionOfAssociations do: [ :each | self map: each key to: each value ]
 ]
 
-{ #category : 'private - replacement' }
+{ #category : #'private - replacement' }
 GtRobocoderTemplateTranslator >> processString: aSourceCode [
 	| theResultingSourceCode aSnippetCoder aTemplateResult |
 	
@@ -118,7 +118,7 @@ GtRobocoderTemplateTranslator >> processString: aSourceCode [
 	^ aTemplateResult value
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtRobocoderTemplateTranslator >> runtimeContext: aContext [
 	self evaluationContext runtimeContext: aContext.
 
@@ -126,7 +126,7 @@ GtRobocoderTemplateTranslator >> runtimeContext: aContext [
 		self bindings at: eachTempName put: (aContext tempNamed: eachTempName) ]"
 ]
 
-{ #category : 'private - replacement' }
+{ #category : #'private - replacement' }
 GtRobocoderTemplateTranslator >> sourceForEmbeddedNestedTemplateSource: aString [
 	^ String streamContents: [ :aStream |
 		aStream
@@ -148,7 +148,7 @@ GtRobocoderTemplateTranslator >> sourceForEmbeddedNestedTemplateSource: aString 
 			nextPut: $) ]
 ]
 
-{ #category : 'private - replacement' }
+{ #category : #'private - replacement' }
 GtRobocoderTemplateTranslator >> sourceForEmbeddedString: aString [
 	^ String streamContents: [ :aStream |
 		aStream
@@ -170,7 +170,7 @@ GtRobocoderTemplateTranslator >> sourceForEmbeddedString: aString [
 			nextPut: $) ]
 ]
 
-{ #category : 'private - replacement' }
+{ #category : #'private - replacement' }
 GtRobocoderTemplateTranslator >> sourceForEmbeddedTemplateSource: aString [
 	^ String streamContents: [ :aStream |
 		aStream
@@ -189,12 +189,12 @@ GtRobocoderTemplateTranslator >> sourceForEmbeddedTemplateSource: aString [
 			nextPut: $) ]
 ]
 
-{ #category : 'translate' }
+{ #category : #translate }
 GtRobocoderTemplateTranslator >> translate: aString [
 	^ self processString: aString
 ]
 
-{ #category : 'generated' }
+{ #category : #generated }
 GtRobocoderTemplateTranslator >> visitContent: aContent [
 	^ String streamContents: [ :aStream |
 		(aContent templateParts
@@ -204,20 +204,20 @@ GtRobocoderTemplateTranslator >> visitContent: aContent [
 				separatedBy: [ aStream nextPut: $, ] ]
 ]
 
-{ #category : 'generated' }
+{ #category : #generated }
 GtRobocoderTemplateTranslator >> visitPlain: aPlain [
 	^ String streamContents: [ :aStream |
 		aStream nextPutAll: aPlain source asString printString ]
 ]
 
-{ #category : 'generated' }
+{ #category : #generated }
 GtRobocoderTemplateTranslator >> visitString: aString [
 	^ aString literalValue
 		ifEmpty: [ ^ '' printString ]
 		ifNotEmpty: [ :aStringValue | (self generateCode: aStringValue) ]
 ]
 
-{ #category : 'generated' }
+{ #category : #generated }
 GtRobocoderTemplateTranslator >> visitTemplate: aTemplate [
 	| isRootTemplate |
 	
@@ -241,13 +241,13 @@ GtRobocoderTemplateTranslator >> visitTemplate: aTemplate [
 					nextPut: $) ] ]
 ]
 
-{ #category : 'generated' }
+{ #category : #generated }
 GtRobocoderTemplateTranslator >> visitTemplateCode: aTemplateCode [
 	^ String streamContents: [ :aStream |
 		aStream nextPutAll: aTemplateCode source asString ]
 ]
 
-{ #category : 'generated' }
+{ #category : #generated }
 GtRobocoderTemplateTranslator >> visitTemplateContent: aTemplateContent [
 	^ String streamContents: [ :aStream |
 		aTemplateContent templateParts

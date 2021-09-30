@@ -2,12 +2,12 @@
 A collection of various useful method templates such as ==storeOn:==, ==postCopy== and more
 "
 Class {
-	#name : 'GtRobocoderMethodTemplates',
-	#superclass : 'Object',
+	#name : #GtRobocoderMethodTemplates,
+	#superclass : #Object,
 	#category : 'GToolkit-Robocoder-Templates'
 }
 
-{ #category : 'templates' }
+{ #category : #templates }
 GtRobocoderMethodTemplates >> postCopyTemplate [
 	<gtMethodTemplate>
 	<generatedFrom: #'GtRobocoderTemplateMethod class>>#storageMethodTemplate'>
@@ -22,7 +22,7 @@ GtRobocoderMethodTemplates >> postCopyTemplate [
 		storageMethod: thisContext method
 ]
 
-{ #category : 'templates' }
+{ #category : #templates }
 GtRobocoderMethodTemplates >> storeOnTemplate [
 	<gtMethodTemplate>
 	<generatedFrom: #'GtRobocoderTemplateMethod class>>#storageMethodTemplate'>

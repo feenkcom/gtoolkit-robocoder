@@ -1,19 +1,19 @@
 Class {
-	#name : 'GtRobocoderMetamodelBrowseStyler',
-	#superclass : 'GtCoderAstStyler',
+	#name : #GtRobocoderMetamodelBrowseStyler,
+	#superclass : #GtCoderAstStyler,
 	#traits : 'TGtRobocoderMetamodelProgramNodeVisitor',
 	#classTraits : 'TGtRobocoderMetamodelProgramNodeVisitor classTrait',
 	#category : 'GToolkit-Robocoder-Coder - Metamodel'
 }
 
-{ #category : 'api - styling' }
+{ #category : #'api - styling' }
 GtRobocoderMetamodelBrowseStyler >> style: aText ast: theAst [
 	text := aText.
 	[ self accept: theAst ]
 		ensure: [ text := nil ]
 ]
 
-{ #category : 'private' }
+{ #category : #private }
 GtRobocoderMetamodelBrowseStyler >> styleGlobalNamed: aSymbol token: aSmaCCToken [
 	| aGlobal |
 
@@ -42,7 +42,7 @@ GtRobocoderMetamodelBrowseStyler >> styleGlobalNamed: aSymbol token: aSmaCCToken
 		to: aSmaCCToken stopPosition
 ]
 
-{ #category : 'generated' }
+{ #category : #generated }
 GtRobocoderMetamodelBrowseStyler >> visitGlobalPropertyValue: aGlobalPropertyValue [
 	self visitPropertyValue: aGlobalPropertyValue.
 	
@@ -51,7 +51,7 @@ GtRobocoderMetamodelBrowseStyler >> visitGlobalPropertyValue: aGlobalPropertyVal
 		token: aGlobalPropertyValue value
 ]
 
-{ #category : 'generated' }
+{ #category : #generated }
 GtRobocoderMetamodelBrowseStyler >> visitSetting: aSetting [
 	aSetting nameString = 'derive'
 		ifFalse: [ ^ self ].

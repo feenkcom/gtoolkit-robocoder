@@ -20,8 +20,8 @@ GtRobocoderWithObjectTraitGenerator new
 ]]]
 "
 Class {
-	#name : 'GtRobocoderWithObjectTraitGenerator',
-	#superclass : 'Object',
+	#name : #GtRobocoderWithObjectTraitGenerator,
+	#superclass : #Object,
 	#instVars : [
 		'environment',
 		'objectName',
@@ -34,29 +34,29 @@ Class {
 	#category : 'GToolkit-Robocoder-Generators'
 }
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtRobocoderWithObjectTraitGenerator >> environment [
 	^ environment
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtRobocoderWithObjectTraitGenerator >> environment: anObject [
 	environment := anObject
 ]
 
-{ #category : 'translating' }
+{ #category : #translating }
 GtRobocoderWithObjectTraitGenerator >> generate [
 	<return: #GtTraitDefinition>
 
 	^ self generator generate
 ]
 
-{ #category : 'translating' }
+{ #category : #translating }
 GtRobocoderWithObjectTraitGenerator >> generateChanges [
 	^ self generator generateChanges
 ]
 
-{ #category : 'translating' }
+{ #category : #translating }
 GtRobocoderWithObjectTraitGenerator >> generator [
 	<return: #Trait>
 
@@ -72,57 +72,57 @@ GtRobocoderWithObjectTraitGenerator >> generator [
 			#tag -> self tagName }
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtRobocoderWithObjectTraitGenerator >> objectId [
 	^ objectId ifNil: [ self objectName ]
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtRobocoderWithObjectTraitGenerator >> objectId: anObject [
 	objectId := anObject
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtRobocoderWithObjectTraitGenerator >> objectName [
 	^ objectName
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtRobocoderWithObjectTraitGenerator >> objectName: anObject [
 	objectName := anObject
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtRobocoderWithObjectTraitGenerator >> packageName [
 	^ packageName
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtRobocoderWithObjectTraitGenerator >> packageName: anObject [
 	packageName := anObject
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtRobocoderWithObjectTraitGenerator >> pragmaName [
 	^ pragmaName ifNil: [ 'object' ]
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtRobocoderWithObjectTraitGenerator >> pragmaName: aString [
 	pragmaName := aString
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtRobocoderWithObjectTraitGenerator >> projectPrefix [
 	^ projectPrefix
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtRobocoderWithObjectTraitGenerator >> projectPrefix: anObject [
 	projectPrefix := anObject
 ]
 
-{ #category : 'printing' }
+{ #category : #printing }
 GtRobocoderWithObjectTraitGenerator >> storeOn: aStream [
 	aStream
 		nextPutAll: self class name; space; nextPutAll: 'new'; cr;
@@ -134,17 +134,17 @@ GtRobocoderWithObjectTraitGenerator >> storeOn: aStream [
 		tab; nextPutAll: 'generate'
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtRobocoderWithObjectTraitGenerator >> tagName [
 	^ tagName
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtRobocoderWithObjectTraitGenerator >> tagName: anObject [
 	tagName := anObject
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtRobocoderWithObjectTraitGenerator >> templateTrait [
 	^ TGtRobocoderWithObjectTraitTemplate
 ]

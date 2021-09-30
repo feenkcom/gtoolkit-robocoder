@@ -1,35 +1,35 @@
 Class {
-	#name : 'GtRobocoderMetamodelLevelForManyNode',
-	#superclass : 'GtRobocoderMetamodelSimpleLevelNode',
+	#name : #GtRobocoderMetamodelLevelForManyNode,
+	#superclass : #GtRobocoderMetamodelSimpleLevelNode,
 	#instVars : [
 		'suffix'
 	],
 	#category : 'GToolkit-Robocoder-Ast - Metamodel'
 }
 
-{ #category : 'generated' }
+{ #category : #generated }
 GtRobocoderMetamodelLevelForManyNode >> acceptVisitor: aProgramVisitor [
 	^ aProgramVisitor visitLevelForMany: self
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtRobocoderMetamodelLevelForManyNode >> fullNameString [
 	^ ((self nameString endsWith: 'y')
 		ifTrue: [ self nameString allButLast, 'ie' ]
 		ifFalse: [ self nameString ]) , self suffix source
 ]
 
-{ #category : 'generated' }
+{ #category : #generated }
 GtRobocoderMetamodelLevelForManyNode >> suffix [
 	^ suffix
 ]
 
-{ #category : 'generated' }
+{ #category : #generated }
 GtRobocoderMetamodelLevelForManyNode >> suffix: aSmaCCToken [
 	suffix := aSmaCCToken
 ]
 
-{ #category : 'generated' }
+{ #category : #generated }
 GtRobocoderMetamodelLevelForManyNode >> tokenVariables [
 	^ #(#suffix #name)
 ]

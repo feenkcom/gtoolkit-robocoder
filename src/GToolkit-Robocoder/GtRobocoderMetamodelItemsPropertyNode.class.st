@@ -1,18 +1,18 @@
 Class {
-	#name : 'GtRobocoderMetamodelItemsPropertyNode',
-	#superclass : 'GtRobocoderMetamodelPropertyNode',
+	#name : #GtRobocoderMetamodelItemsPropertyNode,
+	#superclass : #GtRobocoderMetamodelPropertyNode,
 	#instVars : [
 		'suffix'
 	],
 	#category : 'GToolkit-Robocoder-Ast - Metamodel'
 }
 
-{ #category : 'generated' }
+{ #category : #generated }
 GtRobocoderMetamodelItemsPropertyNode >> acceptVisitor: aProgramVisitor [
 	^ aProgramVisitor visitItemsProperty: self
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtRobocoderMetamodelItemsPropertyNode >> nameString [
 	^ String streamContents: [ :aStream |
 		aStream nextPutAll: self name source.
@@ -20,17 +20,17 @@ GtRobocoderMetamodelItemsPropertyNode >> nameString [
 			ifNotNil: [ :aSuffixNode | aStream nextPutAll: aSuffixNode source ] ]
 ]
 
-{ #category : 'generated' }
+{ #category : #generated }
 GtRobocoderMetamodelItemsPropertyNode >> suffix [
 	^ suffix
 ]
 
-{ #category : 'generated' }
+{ #category : #generated }
 GtRobocoderMetamodelItemsPropertyNode >> suffix: aSmaCCToken [
 	suffix := aSmaCCToken
 ]
 
-{ #category : 'generated' }
+{ #category : #generated }
 GtRobocoderMetamodelItemsPropertyNode >> tokenVariables [
 	^ #(#suffix)
 ]

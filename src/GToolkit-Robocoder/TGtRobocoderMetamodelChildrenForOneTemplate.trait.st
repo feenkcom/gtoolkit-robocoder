@@ -4,11 +4,11 @@ ${class:__Parent_view_model_class__}$ is a view model for a ==__model__== domain
 That child view model is instantiated lazily by ${method:__Parent_view_model_class__>>#create__Child_view_models__}$ and can be accessed with the help of ${method:__Parent_view_model_class__>>#__child_view_models__}$.
 "
 Trait {
-	#name : 'TGtRobocoderMetamodelChildrenForOneTemplate',
+	#name : #TGtRobocoderMetamodelChildrenForOneTemplate,
 	#category : 'GToolkit-Robocoder-Templates'
 }
 
-{ #category : 'templates' }
+{ #category : #templates }
 TGtRobocoderMetamodelChildrenForOneTemplate >> childObjectsTemplate [
 	<gtMethodTemplate>
 	<generatedFrom: #'GtRobocoderTemplateMethod class>>#storageMethodTemplate'>
@@ -25,7 +25,7 @@ TGtRobocoderMetamodelChildrenForOneTemplate >> childObjectsTemplate [
 		storageMethod: thisContext method
 ]
 
-{ #category : 'templates' }
+{ #category : #templates }
 TGtRobocoderMetamodelChildrenForOneTemplate >> createChildObjectsTemplate [
 	<gtMethodTemplate>
 	<generatedFrom: #'GtRobocoderTemplateMethod class>>#storageMethodTemplate'>
@@ -51,7 +51,7 @@ TGtRobocoderMetamodelChildrenForOneTemplate >> createChildObjectsTemplate [
 		storageMethod: thisContext method
 ]
 
-{ #category : 'templates' }
+{ #category : #templates }
 TGtRobocoderMetamodelChildrenForOneTemplate >> traitTemplate [
 	<gtTraitTemplate>
 	<generatedFrom: #'GtRobocoderTemplateTrait class>>#storageMethodTemplate'>

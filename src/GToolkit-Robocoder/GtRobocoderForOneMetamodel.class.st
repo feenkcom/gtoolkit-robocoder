@@ -1,6 +1,6 @@
 Class {
-	#name : 'GtRobocoderForOneMetamodel',
-	#superclass : 'GtRobocoderMetamodel',
+	#name : #GtRobocoderForOneMetamodel,
+	#superclass : #GtRobocoderMetamodel,
 	#instVars : [
 		'parent',
 		'children'
@@ -8,7 +8,7 @@ Class {
 	#category : 'GToolkit-Robocoder-Metamodel'
 }
 
-{ #category : 'adding' }
+{ #category : #adding }
 GtRobocoderForOneMetamodel >> addChild: aGtNavigationViewModelModel [
 	(self hasChild: aGtNavigationViewModelModel)
 		ifTrue: [ ^ self ].
@@ -20,22 +20,22 @@ GtRobocoderForOneMetamodel >> addChild: aGtNavigationViewModelModel [
 		ifFalse: [ aGtNavigationViewModelModel parent: self ]
 ]
 
-{ #category : 'api - accessing' }
+{ #category : #'api - accessing' }
 GtRobocoderForOneMetamodel >> childViewModelsName [
 	^ self generateChildObjectGetterSelectorFor: self
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtRobocoderForOneMetamodel >> children [
 	^ children
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtRobocoderForOneMetamodel >> children: anObject [
 	children := anObject
 ]
 
-{ #category : 'testing' }
+{ #category : #testing }
 GtRobocoderForOneMetamodel >> hasChild: aChild [
 	(children includes: aChild)
 		ifTrue: [ ^ true ].
@@ -43,39 +43,39 @@ GtRobocoderForOneMetamodel >> hasChild: aChild [
 	^ false
 ]
 
-{ #category : 'testing' }
+{ #category : #testing }
 GtRobocoderForOneMetamodel >> hasParent [
 	^ parent notNil
 ]
 
-{ #category : 'testing' }
+{ #category : #testing }
 GtRobocoderForOneMetamodel >> hasParents [
 	^ self hasParent
 ]
 
-{ #category : 'initialization' }
+{ #category : #initialization }
 GtRobocoderForOneMetamodel >> initialize [
 	super initialize.
 	
 	children := OrderedCollection new
 ]
 
-{ #category : 'testing' }
+{ #category : #testing }
 GtRobocoderForOneMetamodel >> isForOne [
 	^ true
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtRobocoderForOneMetamodel >> parent [
 	^ parent
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtRobocoderForOneMetamodel >> parent: anObject [
 	parent := anObject
 ]
 
-{ #category : 'api - accessing' }
+{ #category : #'api - accessing' }
 GtRobocoderForOneMetamodel >> parentViewModelSelectorName [
 	self
 		assert: [ self hasParent ]
@@ -84,7 +84,7 @@ GtRobocoderForOneMetamodel >> parentViewModelSelectorName [
 	^ self generateParentObjectGetterSelectorFor: self parent
 ]
 
-{ #category : 'api - accessing' }
+{ #category : #'api - accessing' }
 GtRobocoderForOneMetamodel >> parents [
 	^ self hasParent
 		ifTrue: [ { self parent } ]

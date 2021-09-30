@@ -1,6 +1,6 @@
-Extension { #name : 'GtPharoMethodCoder' }
+Extension { #name : #GtPharoMethodCoder }
 
-{ #category : '*GToolkit-Robocoder' }
+{ #category : #'*GToolkit-Robocoder' }
 GtPharoMethodCoder >> browseTemplateMethodSourceFor: anAST into: coderAddOns [
 	<gtAstCoderAddOns: 1>
 

@@ -1,18 +1,18 @@
 Class {
-	#name : 'GtRobocoderTemplateStringNode',
-	#superclass : 'GtRobocoderTemplatePartNode',
+	#name : #GtRobocoderTemplateStringNode,
+	#superclass : #GtRobocoderTemplatePartNode,
 	#instVars : [
 		'value'
 	],
 	#category : 'GToolkit-Robocoder-Ast - Template'
 }
 
-{ #category : 'generated' }
+{ #category : #generated }
 GtRobocoderTemplateStringNode >> acceptVisitor: aProgramVisitor [
 	^ aProgramVisitor visitString: self
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtRobocoderTemplateStringNode >> literalValue [
 	| aString |
 	aString := self source.
@@ -22,17 +22,17 @@ GtRobocoderTemplateStringNode >> literalValue [
 	^ aString
 ]
 
-{ #category : 'generated' }
+{ #category : #generated }
 GtRobocoderTemplateStringNode >> tokenVariables [
 	^ #(#value)
 ]
 
-{ #category : 'generated' }
+{ #category : #generated }
 GtRobocoderTemplateStringNode >> value [
 	^ value
 ]
 
-{ #category : 'generated' }
+{ #category : #generated }
 GtRobocoderTemplateStringNode >> value: aSmaCCToken [
 	value := aSmaCCToken
 ]

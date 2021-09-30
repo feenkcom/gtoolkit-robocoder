@@ -1,34 +1,34 @@
 Class {
-	#name : 'GtRobocoderTemplatePlainNode',
-	#superclass : 'GtRobocoderTemplatePartNode',
+	#name : #GtRobocoderTemplatePlainNode,
+	#superclass : #GtRobocoderTemplatePartNode,
 	#instVars : [
 		'strings'
 	],
 	#category : 'GToolkit-Robocoder-Ast - Template'
 }
 
-{ #category : 'generated' }
+{ #category : #generated }
 GtRobocoderTemplatePlainNode >> acceptVisitor: aProgramVisitor [
 	^ aProgramVisitor visitPlain: self
 ]
 
-{ #category : 'generated' }
+{ #category : #generated }
 GtRobocoderTemplatePlainNode >> compositeTokenVariables [
 	^ #(#strings)
 ]
 
-{ #category : 'generated-initialize-release' }
+{ #category : #'generated-initialize-release' }
 GtRobocoderTemplatePlainNode >> initialize [
 	super initialize.
 	strings := OrderedCollection new: 2.
 ]
 
-{ #category : 'generated' }
+{ #category : #generated }
 GtRobocoderTemplatePlainNode >> strings [
 	^ strings
 ]
 
-{ #category : 'generated' }
+{ #category : #generated }
 GtRobocoderTemplatePlainNode >> strings: anOrderedCollection [
 	strings := anOrderedCollection
 ]

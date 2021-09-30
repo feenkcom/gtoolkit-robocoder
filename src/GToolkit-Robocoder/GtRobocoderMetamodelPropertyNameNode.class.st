@@ -1,33 +1,33 @@
 Class {
-	#name : 'GtRobocoderMetamodelPropertyNameNode',
-	#superclass : 'GtRobocoderMetamodelProgramNode',
+	#name : #GtRobocoderMetamodelPropertyNameNode,
+	#superclass : #GtRobocoderMetamodelProgramNode,
 	#instVars : [
 		'name'
 	],
 	#category : 'GToolkit-Robocoder-Ast - Metamodel'
 }
 
-{ #category : 'generated' }
+{ #category : #generated }
 GtRobocoderMetamodelPropertyNameNode >> acceptVisitor: aProgramVisitor [
 	^ aProgramVisitor visitPropertyName: self
 ]
 
-{ #category : 'generated' }
+{ #category : #generated }
 GtRobocoderMetamodelPropertyNameNode >> name [
 	^ name
 ]
 
-{ #category : 'generated' }
+{ #category : #generated }
 GtRobocoderMetamodelPropertyNameNode >> name: aSmaCCToken [
 	name := aSmaCCToken
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtRobocoderMetamodelPropertyNameNode >> nameString [
 	^ self name source
 ]
 
-{ #category : 'generated' }
+{ #category : #generated }
 GtRobocoderMetamodelPropertyNameNode >> tokenVariables [
 	^ #(#name)
 ]

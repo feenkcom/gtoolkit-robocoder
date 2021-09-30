@@ -1,10 +1,10 @@
 Class {
-	#name : 'GtRobocoderForOneMetamodelExamples',
-	#superclass : 'Object',
+	#name : #GtRobocoderForOneMetamodelExamples,
+	#superclass : #Object,
 	#category : 'GToolkit-Robocoder-Examples'
 }
 
-{ #category : 'examples' }
+{ #category : #examples }
 GtRobocoderForOneMetamodelExamples >> metamodelWithName [
 	<gtExample>
 	| aMetamodel |
@@ -18,7 +18,7 @@ GtRobocoderForOneMetamodelExamples >> metamodelWithName [
 	^ aMetamodel
 ]
 
-{ #category : 'examples' }
+{ #category : #examples }
 GtRobocoderForOneMetamodelExamples >> metamodelWithNameGenerate [
 	<gtExample>
 	| aMetamodel aFullClassDefinition |
@@ -29,7 +29,7 @@ GtRobocoderForOneMetamodelExamples >> metamodelWithNameGenerate [
 	^ aFullClassDefinition
 ]
 
-{ #category : 'examples' }
+{ #category : #examples }
 GtRobocoderForOneMetamodelExamples >> newMetamodel [
 	<gtExample>
 	| aMetamodel |

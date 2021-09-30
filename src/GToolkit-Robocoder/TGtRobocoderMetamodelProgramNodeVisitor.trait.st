@@ -1,156 +1,156 @@
 Trait {
-	#name : 'TGtRobocoderMetamodelProgramNodeVisitor',
+	#name : #TGtRobocoderMetamodelProgramNodeVisitor,
 	#traits : 'TSmaCCParseNodeVisitor',
 	#classTraits : 'TSmaCCParseNodeVisitor classTrait',
 	#category : 'GToolkit-Robocoder-Ast - Metamodel'
 }
 
-{ #category : 'generated' }
+{ #category : #generated }
 TGtRobocoderMetamodelProgramNodeVisitor >> visitBooleanPropertyValue: aBooleanPropertyValue [
 	^ self visitPropertyValue: aBooleanPropertyValue
 ]
 
-{ #category : 'generated' }
+{ #category : #generated }
 TGtRobocoderMetamodelProgramNodeVisitor >> visitCompositeLevel: aCompositeLevel [
 	^ self visitLevel: aCompositeLevel
 ]
 
-{ #category : 'generated' }
+{ #category : #generated }
 TGtRobocoderMetamodelProgramNodeVisitor >> visitDefinition: aDefinition [
 	^ self visitProgram: aDefinition
 ]
 
-{ #category : 'generated' }
+{ #category : #generated }
 TGtRobocoderMetamodelProgramNodeVisitor >> visitDefinitions: aDefinitions [
 	^ self visitProgram: aDefinitions
 ]
 
-{ #category : 'generated' }
+{ #category : #generated }
 TGtRobocoderMetamodelProgramNodeVisitor >> visitFullDefinition: aFullDefinition [
 	^ self visitProgram: aFullDefinition
 ]
 
-{ #category : 'generated' }
+{ #category : #generated }
 TGtRobocoderMetamodelProgramNodeVisitor >> visitGenericProperty: aGenericProperty [
 	^ self visitProperty: aGenericProperty
 ]
 
-{ #category : 'generated' }
+{ #category : #generated }
 TGtRobocoderMetamodelProgramNodeVisitor >> visitGlobalPropertyValue: aGlobalPropertyValue [
 	^ self visitPropertyValue: aGlobalPropertyValue
 ]
 
-{ #category : 'generated' }
+{ #category : #generated }
 TGtRobocoderMetamodelProgramNodeVisitor >> visitGlobalSetting: aGlobalSetting [
 	^ self visitSetting: aGlobalSetting
 ]
 
-{ #category : 'generated' }
+{ #category : #generated }
 TGtRobocoderMetamodelProgramNodeVisitor >> visitHierarchies: aHierarchies [
 	^ self visitProgram: aHierarchies
 ]
 
-{ #category : 'generated' }
+{ #category : #generated }
 TGtRobocoderMetamodelProgramNodeVisitor >> visitHierarchy: aHierarchy [
 	^ self visitProgram: aHierarchy
 ]
 
-{ #category : 'generated' }
+{ #category : #generated }
 TGtRobocoderMetamodelProgramNodeVisitor >> visitHierarchyError: aHierarchyError [
 	^ self visitHierarchy: aHierarchyError
 ]
 
-{ #category : 'generated' }
+{ #category : #generated }
 TGtRobocoderMetamodelProgramNodeVisitor >> visitItemsProperty: anItemsProperty [
 	^ self visitProperty: anItemsProperty
 ]
 
-{ #category : 'generated' }
+{ #category : #generated }
 TGtRobocoderMetamodelProgramNodeVisitor >> visitLevel: aLevel [
 	^ self visitProgram: aLevel
 ]
 
-{ #category : 'generated' }
+{ #category : #generated }
 TGtRobocoderMetamodelProgramNodeVisitor >> visitLevelForMany: aLevelForMany [
 	^ self visitSimpleLevel: aLevelForMany
 ]
 
-{ #category : 'generated' }
+{ #category : #generated }
 TGtRobocoderMetamodelProgramNodeVisitor >> visitLevelForOne: aLevelForOne [
 	^ self visitSimpleLevel: aLevelForOne
 ]
 
-{ #category : 'generated' }
+{ #category : #generated }
 TGtRobocoderMetamodelProgramNodeVisitor >> visitLocalSetting: aLocalSetting [
 	^ self visitSetting: aLocalSetting
 ]
 
-{ #category : 'generated' }
+{ #category : #generated }
 TGtRobocoderMetamodelProgramNodeVisitor >> visitMethodPropertyValue: aMethodPropertyValue [
 	^ self visitPropertyValue: aMethodPropertyValue
 ]
 
-{ #category : 'generated' }
+{ #category : #generated }
 TGtRobocoderMetamodelProgramNodeVisitor >> visitNestedLevel: aNestedLevel [
 	^ self visitLevel: aNestedLevel
 ]
 
-{ #category : 'generated' }
+{ #category : #generated }
 TGtRobocoderMetamodelProgramNodeVisitor >> visitProgram: aProgram [
 	^ self visitSmaCCParseNode: aProgram
 ]
 
-{ #category : 'generated' }
+{ #category : #generated }
 TGtRobocoderMetamodelProgramNodeVisitor >> visitProperties: aProperties [
 	^ self visitProgram: aProperties
 ]
 
-{ #category : 'generated' }
+{ #category : #generated }
 TGtRobocoderMetamodelProgramNodeVisitor >> visitProperty: aProperty [
 	^ self visitProgram: aProperty
 ]
 
-{ #category : 'generated' }
+{ #category : #generated }
 TGtRobocoderMetamodelProgramNodeVisitor >> visitPropertyName: aPropertyName [
 	^ self visitProgram: aPropertyName
 ]
 
-{ #category : 'generated' }
+{ #category : #generated }
 TGtRobocoderMetamodelProgramNodeVisitor >> visitPropertyValue: aPropertyValue [
 	^ self visitProgram: aPropertyValue
 ]
 
-{ #category : 'generated' }
+{ #category : #generated }
 TGtRobocoderMetamodelProgramNodeVisitor >> visitSetting: aSetting [
 	^ self visitProgram: aSetting
 ]
 
-{ #category : 'generated' }
+{ #category : #generated }
 TGtRobocoderMetamodelProgramNodeVisitor >> visitSettingPropertiesList: aSettingPropertiesList [
 	^ self visitProgram: aSettingPropertiesList
 ]
 
-{ #category : 'generated' }
+{ #category : #generated }
 TGtRobocoderMetamodelProgramNodeVisitor >> visitSettingProperty: aSettingProperty [
 	^ self visitProperty: aSettingProperty
 ]
 
-{ #category : 'generated' }
+{ #category : #generated }
 TGtRobocoderMetamodelProgramNodeVisitor >> visitSettings: aSettings [
 	^ self visitProgram: aSettings
 ]
 
-{ #category : 'generated' }
+{ #category : #generated }
 TGtRobocoderMetamodelProgramNodeVisitor >> visitSimpleLevel: aSimpleLevel [
 	^ self visitLevel: aSimpleLevel
 ]
 
-{ #category : 'generated' }
+{ #category : #generated }
 TGtRobocoderMetamodelProgramNodeVisitor >> visitStringPropertyValue: aStringPropertyValue [
 	^ self visitPropertyValue: aStringPropertyValue
 ]
 
-{ #category : 'generated' }
+{ #category : #generated }
 TGtRobocoderMetamodelProgramNodeVisitor >> visitSymbolPropertyValue: aSymbolPropertyValue [
 	^ self visitPropertyValue: aSymbolPropertyValue
 ]

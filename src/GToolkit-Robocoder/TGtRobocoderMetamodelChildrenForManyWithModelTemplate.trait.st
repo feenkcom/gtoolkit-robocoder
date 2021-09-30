@@ -3,11 +3,11 @@
 A view model built for a domain model that represents a collection of some entities creates a view model (${class:__Child_view_model_class__}$) for each domain entity. To do so it accesses the children of the ${method:__View_model_class_name__>>#__model__}$ by sending it ==__children__== message. Users can access the child view models via ${method:__View_model_class_name__>>#__child_view_models__}$. In addition to the parent -> child view model navigation, each child view model knows its parent view model via ${method:__Child_view_model_class__>>#__child_parent_view_model_setter__}$
 "
 Trait {
-	#name : 'TGtRobocoderMetamodelChildrenForManyWithModelTemplate',
+	#name : #TGtRobocoderMetamodelChildrenForManyWithModelTemplate,
 	#category : 'GToolkit-Robocoder-Templates'
 }
 
-{ #category : 'templates' }
+{ #category : #templates }
 TGtRobocoderMetamodelChildrenForManyWithModelTemplate >> childObjectsTemplate [
 	<gtMethodTemplate>
 	<generatedFrom: #'GtRobocoderTemplateMethod class>>#storageMethodTemplate'>
@@ -24,7 +24,7 @@ TGtRobocoderMetamodelChildrenForManyWithModelTemplate >> childObjectsTemplate [
 		storageMethod: thisContext method
 ]
 
-{ #category : 'templates' }
+{ #category : #templates }
 TGtRobocoderMetamodelChildrenForManyWithModelTemplate >> createChildObjectsTemplate [
 	<gtMethodTemplate>
 	<generatedFrom: #'GtRobocoderTemplateMethod class>>#storageMethodTemplate'>
@@ -40,7 +40,7 @@ TGtRobocoderMetamodelChildrenForManyWithModelTemplate >> createChildObjectsTempl
 		storageMethod: thisContext method
 ]
 
-{ #category : 'templates' }
+{ #category : #templates }
 TGtRobocoderMetamodelChildrenForManyWithModelTemplate >> createChildTemplate [
 	<gtMethodTemplate>
 	<generatedFrom: #'GtRobocoderTemplateMethod class>>#storageMethodTemplate'>
@@ -63,7 +63,7 @@ TGtRobocoderMetamodelChildrenForManyWithModelTemplate >> createChildTemplate [
 		storageMethod: thisContext method
 ]
 
-{ #category : 'templates' }
+{ #category : #templates }
 TGtRobocoderMetamodelChildrenForManyWithModelTemplate >> findObjectIfFoundIfNoneTemplate [
 	<gtMethodTemplate>
 	<generatedFrom: #'GtRobocoderTemplateMethod class>>#storageMethodTemplate'>
@@ -83,7 +83,7 @@ TGtRobocoderMetamodelChildrenForManyWithModelTemplate >> findObjectIfFoundIfNone
 		storageMethod: thisContext method
 ]
 
-{ #category : 'templates' }
+{ #category : #templates }
 TGtRobocoderMetamodelChildrenForManyWithModelTemplate >> findObjectTemplate [
 	<gtMethodTemplate>
 	<generatedFrom: #'GtRobocoderTemplateMethod class>>#storageMethodTemplate'>
@@ -103,7 +103,7 @@ TGtRobocoderMetamodelChildrenForManyWithModelTemplate >> findObjectTemplate [
 		storageMethod: thisContext method
 ]
 
-{ #category : 'templates' }
+{ #category : #templates }
 TGtRobocoderMetamodelChildrenForManyWithModelTemplate >> includesObjectTemplate [
 	<gtMethodTemplate>
 	<generatedFrom: #'GtRobocoderTemplateMethod class>>#storageMethodTemplate'>
@@ -121,7 +121,7 @@ TGtRobocoderMetamodelChildrenForManyWithModelTemplate >> includesObjectTemplate 
 		storageMethod: thisContext method
 ]
 
-{ #category : 'templates' }
+{ #category : #templates }
 TGtRobocoderMetamodelChildrenForManyWithModelTemplate >> traitTemplate [
 	<gtTraitTemplate>
 	<generatedFrom: #'GtRobocoderTemplateTrait class>>#storageMethodTemplate'>

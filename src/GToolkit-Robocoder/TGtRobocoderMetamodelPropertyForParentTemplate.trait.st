@@ -1,9 +1,9 @@
 Trait {
-	#name : 'TGtRobocoderMetamodelPropertyForParentTemplate',
+	#name : #TGtRobocoderMetamodelPropertyForParentTemplate,
 	#category : 'GToolkit-Robocoder-Templates'
 }
 
-{ #category : 'templates' }
+{ #category : #templates }
 TGtRobocoderMetamodelPropertyForParentTemplate >> topMostParentsWithPropertyDoTemplate [
 	<gtMethodTemplate>
 	<generatedFrom: #'GtRobocoderTemplateMethod class>>#storageMethodTemplate'>
@@ -42,7 +42,7 @@ TGtRobocoderMetamodelPropertyForParentTemplate >> topMostParentsWithPropertyDoTe
 		storageMethod: thisContext method
 ]
 
-{ #category : 'templates' }
+{ #category : #templates }
 TGtRobocoderMetamodelPropertyForParentTemplate >> traitTemplate [
 	<gtTraitTemplate>
 	<generatedFrom: #'GtRobocoderTemplateTrait class>>#storageMethodTemplate'>
@@ -52,7 +52,7 @@ TGtRobocoderMetamodelPropertyForParentTemplate >> traitTemplate [
 		storageMethod: thisContext method
 ]
 
-{ #category : 'templates' }
+{ #category : #templates }
 TGtRobocoderMetamodelPropertyForParentTemplate >> unsetAllFromTopMostParentTemplate [
 	<gtMethodTemplate>
 	<generatedFrom: #'GtRobocoderTemplateMethod class>>#storageMethodTemplate'>
@@ -67,7 +67,7 @@ TGtRobocoderMetamodelPropertyForParentTemplate >> unsetAllFromTopMostParentTempl
 		storageMethod: thisContext method
 ]
 
-{ #category : 'templates' }
+{ #category : #templates }
 TGtRobocoderMetamodelPropertyForParentTemplate >> unsetChildrenTemplate [
 	<gtMethodTemplate>
 	<generatedFrom: #'GtRobocoderTemplateMethod class>>#storageMethodTemplate'>

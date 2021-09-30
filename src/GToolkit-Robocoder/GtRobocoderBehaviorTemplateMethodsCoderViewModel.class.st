@@ -1,10 +1,10 @@
 Class {
-	#name : 'GtRobocoderBehaviorTemplateMethodsCoderViewModel',
-	#superclass : 'GtPharoMethodsCoderViewModel',
+	#name : #GtRobocoderBehaviorTemplateMethodsCoderViewModel,
+	#superclass : #GtPharoMethodsCoderViewModel,
 	#category : 'GToolkit-Robocoder-Coder - Template method'
 }
 
-{ #category : 'adding' }
+{ #category : #adding }
 GtRobocoderBehaviorTemplateMethodsCoderViewModel >> addNewCoderSelector: aSelector protocol: aProtocol [
 	| aNewCoder |
 	

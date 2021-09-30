@@ -1,22 +1,22 @@
 Class {
-	#name : 'GtRobocoderTemplateTraitDefinitionCoderElement',
-	#superclass : 'GtPharoCreateBehaviorElement',
+	#name : #GtRobocoderTemplateTraitDefinitionCoderElement,
+	#superclass : #GtPharoCreateBehaviorElement,
 	#traits : 'TGtPharoWithTemplateTraitDefinitionCoderViewModel',
 	#classTraits : 'TGtPharoWithTemplateTraitDefinitionCoderViewModel classTrait',
 	#category : 'GToolkit-Robocoder-Coder - Behavior template'
 }
 
-{ #category : 'private' }
+{ #category : #private }
 GtRobocoderTemplateTraitDefinitionCoderElement >> compileBehavior [
 	self templateTraitDefinitionCoderViewModel save
 ]
 
-{ #category : 'private' }
+{ #category : #private }
 GtRobocoderTemplateTraitDefinitionCoderElement >> isValidForCreation [
 	^ true
 ]
 
-{ #category : 'api - template trait definition coder view model' }
+{ #category : #'api - template trait definition coder view model' }
 GtRobocoderTemplateTraitDefinitionCoderElement >> onTemplateTraitDefinitionCoderViewModelChanged [
 	"Is sent when a new templateTraitDefinitionCoder view model is assigned to the element.
 	Note: #onTemplateTraitDefinitionCoderViewModelChanged is sent before #subscribeToTemplateTraitDefinitionCoderViewModel

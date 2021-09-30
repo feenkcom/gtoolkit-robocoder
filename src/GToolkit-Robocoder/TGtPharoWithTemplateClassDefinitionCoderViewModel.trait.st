@@ -1,12 +1,12 @@
 Trait {
-	#name : 'TGtPharoWithTemplateClassDefinitionCoderViewModel',
+	#name : #TGtPharoWithTemplateClassDefinitionCoderViewModel,
 	#instVars : [
 		'templateClassDefinitionCoderViewModel'
 	],
 	#category : 'GToolkit-Robocoder-Coder - Behavior template'
 }
 
-{ #category : 'api - template class definition coder view model' }
+{ #category : #'api - template class definition coder view model' }
 TGtPharoWithTemplateClassDefinitionCoderViewModel >> hasTemplateClassDefinitionCoderViewModel [
 	"Return a true if nil is assigned to the receiver, false otherwise"
 	<return: #Boolean>
@@ -16,7 +16,7 @@ TGtPharoWithTemplateClassDefinitionCoderViewModel >> hasTemplateClassDefinitionC
 	^ templateClassDefinitionCoderViewModel notNil
 ]
 
-{ #category : 'api - template class definition coder view model' }
+{ #category : #'api - template class definition coder view model' }
 TGtPharoWithTemplateClassDefinitionCoderViewModel >> onPostTemplateClassDefinitionCoderViewModelChanged [
 	"I am an optional hook method that is sent after #subscribeToTemplateClassDefinitionCoderViewModel.
 	I do nothing by default but allow users to perform update operations when a receiver object is already
@@ -24,7 +24,7 @@ TGtPharoWithTemplateClassDefinitionCoderViewModel >> onPostTemplateClassDefiniti
 	<generatedFrom: #'TGtRobocoderWithObjectTraitTemplate>>#onPostObjectChangedTemplate'>
 ]
 
-{ #category : 'api - template class definition coder view model' }
+{ #category : #'api - template class definition coder view model' }
 TGtPharoWithTemplateClassDefinitionCoderViewModel >> onTemplateClassDefinitionCoderViewModelChanged [
 	"Is sent when a new templateClassDefinitionCoderViewModel is assigned to the receiver.
 	Note: #onTemplateClassDefinitionCoderViewModelChanged is sent before #subscribeToTemplateClassDefinitionCoderViewModel
@@ -34,7 +34,7 @@ TGtPharoWithTemplateClassDefinitionCoderViewModel >> onTemplateClassDefinitionCo
 	<generatedFrom: #'TGtRobocoderWithObjectTraitTemplate>>#onObjectChangedTemplate'>
 ]
 
-{ #category : 'api - template class definition coder view model' }
+{ #category : #'api - template class definition coder view model' }
 TGtPharoWithTemplateClassDefinitionCoderViewModel >> subscribeToTemplateClassDefinitionCoderViewModel [
 	"Is sent after a new templateClassDefinitionCoderViewModel is assigned to the receiver.
 	It is required to unsubscribe from the previously subscribed objects by implementing
@@ -42,7 +42,7 @@ TGtPharoWithTemplateClassDefinitionCoderViewModel >> subscribeToTemplateClassDef
 	<generatedFrom: #'TGtRobocoderWithObjectTraitTemplate>>#subscribeToObjectTemplate'>
 ]
 
-{ #category : 'api - template class definition coder view model' }
+{ #category : #'api - template class definition coder view model' }
 TGtPharoWithTemplateClassDefinitionCoderViewModel >> templateClassDefinitionCoderViewModel [
 	"Return a not-null templateClassDefinitionCoderViewModel assigned to the receiver"
 	<objectGetter: #templateClassDefinitionCoderViewModel>
@@ -54,7 +54,7 @@ TGtPharoWithTemplateClassDefinitionCoderViewModel >> templateClassDefinitionCode
 	^ templateClassDefinitionCoderViewModel
 ]
 
-{ #category : 'api - template class definition coder view model' }
+{ #category : #'api - template class definition coder view model' }
 TGtPharoWithTemplateClassDefinitionCoderViewModel >> templateClassDefinitionCoderViewModel: aTemplateClassDefinitionCoderViewModel [
 	"Set a not-null templateClassDefinitionCoderViewModel assigned to the receiver"
 	<objectSetter: #templateClassDefinitionCoderViewModel>
@@ -74,7 +74,7 @@ TGtPharoWithTemplateClassDefinitionCoderViewModel >> templateClassDefinitionCode
 	self onPostTemplateClassDefinitionCoderViewModelChanged
 ]
 
-{ #category : 'api - template class definition coder view model' }
+{ #category : #'api - template class definition coder view model' }
 TGtPharoWithTemplateClassDefinitionCoderViewModel >> unsubscribeFromTemplateClassDefinitionCoderViewModel [
 	"Is sent before a new templateClassDefinitionCoderViewModel is assigned to the receiver.
 	Objects that subscribe to templateClassDefinitionCoderViewModel are required to implement this method."

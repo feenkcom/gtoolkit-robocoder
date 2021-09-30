@@ -1,6 +1,6 @@
 Class {
-	#name : 'GtRobocoderMetamodelNestedLevelNode',
-	#superclass : 'GtRobocoderMetamodelLevelNode',
+	#name : #GtRobocoderMetamodelNestedLevelNode,
+	#superclass : #GtRobocoderMetamodelLevelNode,
 	#instVars : [
 		'parentLevel',
 		'follows',
@@ -9,17 +9,17 @@ Class {
 	#category : 'GToolkit-Robocoder-Ast - Metamodel'
 }
 
-{ #category : 'generated' }
+{ #category : #generated }
 GtRobocoderMetamodelNestedLevelNode >> acceptVisitor: aProgramVisitor [
 	^ aProgramVisitor visitNestedLevel: self
 ]
 
-{ #category : 'generated' }
+{ #category : #generated }
 GtRobocoderMetamodelNestedLevelNode >> childLevel [
 	^ childLevel
 ]
 
-{ #category : 'generated' }
+{ #category : #generated }
 GtRobocoderMetamodelNestedLevelNode >> childLevel: aGtRobocoderMetamodelLevelNode [
 	self childLevel notNil
 		ifTrue: [ self childLevel parent: nil ].
@@ -28,37 +28,37 @@ GtRobocoderMetamodelNestedLevelNode >> childLevel: aGtRobocoderMetamodelLevelNod
 		ifTrue: [ self childLevel parent: self ]
 ]
 
-{ #category : 'generated' }
+{ #category : #generated }
 GtRobocoderMetamodelNestedLevelNode >> follows [
 	^ follows
 ]
 
-{ #category : 'generated' }
+{ #category : #generated }
 GtRobocoderMetamodelNestedLevelNode >> follows: aSmaCCToken [
 	follows := aSmaCCToken
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtRobocoderMetamodelNestedLevelNode >> fullNameString [
 	^ self parentLevel fullNameString
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtRobocoderMetamodelNestedLevelNode >> nameString [
 	^ self parentLevel nameString
 ]
 
-{ #category : 'generated' }
+{ #category : #generated }
 GtRobocoderMetamodelNestedLevelNode >> nodeVariables [
 	^ #(#parentLevel #childLevel)
 ]
 
-{ #category : 'generated' }
+{ #category : #generated }
 GtRobocoderMetamodelNestedLevelNode >> parentLevel [
 	^ parentLevel
 ]
 
-{ #category : 'generated' }
+{ #category : #generated }
 GtRobocoderMetamodelNestedLevelNode >> parentLevel: aGtRobocoderMetamodelSimpleLevelNode [
 	self parentLevel notNil
 		ifTrue: [ self parentLevel parent: nil ].
@@ -67,7 +67,7 @@ GtRobocoderMetamodelNestedLevelNode >> parentLevel: aGtRobocoderMetamodelSimpleL
 		ifTrue: [ self parentLevel parent: self ]
 ]
 
-{ #category : 'generated' }
+{ #category : #generated }
 GtRobocoderMetamodelNestedLevelNode >> tokenVariables [
 	^ #(#follows)
 ]

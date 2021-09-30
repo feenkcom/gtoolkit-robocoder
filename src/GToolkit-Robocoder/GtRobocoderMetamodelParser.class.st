@@ -1,10 +1,10 @@
 Class {
-	#name : 'GtRobocoderMetamodelParser',
-	#superclass : 'SmaCCGLRParser',
+	#name : #GtRobocoderMetamodelParser,
+	#superclass : #SmaCCGLRParser,
 	#category : 'GToolkit-Robocoder-Ast - Metamodel'
 }
 
-{ #category : 'generated' }
+{ #category : #generated }
 GtRobocoderMetamodelParser class >> ambiguousTransitions [
 ^#(
 #[ 0 34 0 38 0 129] 
@@ -12,12 +12,12 @@ GtRobocoderMetamodelParser class >> ambiguousTransitions [
 	).
 ]
 
-{ #category : 'generated-accessing' }
+{ #category : #'generated-accessing' }
 GtRobocoderMetamodelParser class >> cacheId [
 	^'2021-05-18T21:55:48.36069+02:00'
 ]
 
-{ #category : 'generated' }
+{ #category : #generated }
 GtRobocoderMetamodelParser class >> definitionComment [
 "%glr;
 %root Program;
@@ -204,7 +204,7 @@ MethodPropertyValue
 	;"
 ]
 
-{ #category : 'generated' }
+{ #category : #generated }
 GtRobocoderMetamodelParser class >> reduceTable [
 ^#(
 	#(37 0 #reduceActionForFullDefinition3: 2756611 false ) 
@@ -275,42 +275,42 @@ GtRobocoderMetamodelParser class >> reduceTable [
 	).
 ]
 
-{ #category : 'generated-accessing' }
+{ #category : #'generated-accessing' }
 GtRobocoderMetamodelParser class >> scannerClass [
 	^GtRobocoderMetamodelScanner
 ]
 
-{ #category : 'generated' }
+{ #category : #generated }
 GtRobocoderMetamodelParser class >> startingStateForFullDefinition [
 	^ 3
 ]
 
-{ #category : 'generated' }
+{ #category : #generated }
 GtRobocoderMetamodelParser class >> startingStateForHierarchy [
 	^ 2
 ]
 
-{ #category : 'generated' }
+{ #category : #generated }
 GtRobocoderMetamodelParser class >> startingStateForLevelForOne [
 	^ 1
 ]
 
-{ #category : 'generated' }
+{ #category : #generated }
 GtRobocoderMetamodelParser class >> startingStateForMethodPropertyValue [
 	^ 4
 ]
 
-{ #category : 'generated' }
+{ #category : #generated }
 GtRobocoderMetamodelParser class >> symbolNames [
 	^ #('<leftBrace>' '<rightBrace>' '<name>' '<follows>' '<whitespace>' '<rightParen>' '<leftParen>' '<period>' '<colon>' '<comma>' '<symbol>' '<string>' '<and>' '<itemsToken>' '<at>' '<true>' '<false>' '<compiledMethod>' 'B e g i n' 'LevelForOne' 'LevelForMany' 'SimpleLevel' 'CompositeLevel' '(<and>''and'' SimpleLevel ''item'')' '(<and>''and'' SimpleLevel ''item'')+' 'NestedLevel' 'Level' 'Hierarchy' 'PropertyValue' 'SymbolPropertyValue' 'Property' 'PropertiesList' 'Properties' 'Definition' 'DefinitionList' 'Definitions' 'FullDefinition' 'PropertyName' 'GenericProperty' 'GlobalPropertyValue' 'ItemsProperty' 'Settings' 'StringPropertyValue' 'Hierarchies' 'LocalSetting' 'GlobalSetting' 'SettingPropertiesList' 'SettingProperty' 'BooleanPropertyValue' 'MethodPropertyValue' 'E O F' 'error')
 ]
 
-{ #category : 'generated' }
+{ #category : #generated }
 GtRobocoderMetamodelParser class >> symbolTypes [
 	^ #(#SmaCCToken #SmaCCToken #SmaCCToken #SmaCCToken #SmaCCToken #SmaCCToken #SmaCCToken #SmaCCToken #SmaCCToken #SmaCCToken #SmaCCToken #SmaCCToken #SmaCCToken #SmaCCToken #SmaCCToken #SmaCCToken #SmaCCToken #SmaCCToken #GtRobocoderMetamodelLevelForOneNode #GtRobocoderMetamodelLevelForOneNode #GtRobocoderMetamodelLevelForManyNode #GtRobocoderMetamodelSimpleLevelNode #GtRobocoderMetamodelCompositeLevelNode #OrderedCollection #OrderedCollection #GtRobocoderMetamodelNestedLevelNode #GtRobocoderMetamodelLevelNode #GtRobocoderMetamodelHierarchyNode #GtRobocoderMetamodelPropertyValueNode #GtRobocoderMetamodelSymbolPropertyValueNode #GtRobocoderMetamodelPropertyNode #OrderedCollection #GtRobocoderMetamodelPropertiesNode #GtRobocoderMetamodelDefinitionNode #OrderedCollection #GtRobocoderMetamodelDefinitionsNode #GtRobocoderMetamodelFullDefinitionNode #GtRobocoderMetamodelPropertyNameNode #GtRobocoderMetamodelGenericPropertyNode #GtRobocoderMetamodelGlobalPropertyValueNode #GtRobocoderMetamodelItemsPropertyNode #GtRobocoderMetamodelSettingsNode #GtRobocoderMetamodelStringPropertyValueNode #GtRobocoderMetamodelHierarchiesNode #GtRobocoderMetamodelLocalSettingNode #GtRobocoderMetamodelGlobalSettingNode #GtRobocoderMetamodelSettingPropertiesListNode #GtRobocoderMetamodelSettingPropertyNode #GtRobocoderMetamodelBooleanPropertyValueNode #GtRobocoderMetamodelMethodPropertyValueNode #SmaCCToken #SmaCCErrorNode)
 ]
 
-{ #category : 'generated' }
+{ #category : #generated }
 GtRobocoderMetamodelParser class >> transitionTable [
 ^#(
 #[1 0 21 0 3 0 25 0 20] 
@@ -418,7 +418,7 @@ GtRobocoderMetamodelParser class >> transitionTable [
 	).
 ]
 
-{ #category : 'generated-reduction actions' }
+{ #category : #'generated-reduction actions' }
 GtRobocoderMetamodelParser >> reduceActionForBooleanPropertyValue1: nodes [
 	| result |
 	result := GtRobocoderMetamodelBooleanPropertyValueNode new.
@@ -426,7 +426,7 @@ GtRobocoderMetamodelParser >> reduceActionForBooleanPropertyValue1: nodes [
 	^ result
 ]
 
-{ #category : 'generated-reduction actions' }
+{ #category : #'generated-reduction actions' }
 GtRobocoderMetamodelParser >> reduceActionForCompositeLevel1: nodes [
 	| result |
 	result := GtRobocoderMetamodelCompositeLevelNode new.
@@ -436,7 +436,7 @@ GtRobocoderMetamodelParser >> reduceActionForCompositeLevel1: nodes [
 	^ result
 ]
 
-{ #category : 'generated-reduction actions' }
+{ #category : #'generated-reduction actions' }
 GtRobocoderMetamodelParser >> reduceActionForDefinition1: nodes [
 	| result |
 	result := GtRobocoderMetamodelDefinitionNode new.
@@ -444,7 +444,7 @@ GtRobocoderMetamodelParser >> reduceActionForDefinition1: nodes [
 	^ result
 ]
 
-{ #category : 'generated-reduction actions' }
+{ #category : #'generated-reduction actions' }
 GtRobocoderMetamodelParser >> reduceActionForDefinition3: nodes [
 	| result |
 	result := GtRobocoderMetamodelDefinitionNode new.
@@ -453,7 +453,7 @@ GtRobocoderMetamodelParser >> reduceActionForDefinition3: nodes [
 	^ result
 ]
 
-{ #category : 'generated-reduction actions' }
+{ #category : #'generated-reduction actions' }
 GtRobocoderMetamodelParser >> reduceActionForDefinitionList1: nodes [
 	| result |
 	result := OrderedCollection new: 2.
@@ -461,7 +461,7 @@ GtRobocoderMetamodelParser >> reduceActionForDefinitionList1: nodes [
 	^ result
 ]
 
-{ #category : 'generated-reduction actions' }
+{ #category : #'generated-reduction actions' }
 GtRobocoderMetamodelParser >> reduceActionForDefinitionList2: nodes [
 	| result |
 	result := nodes at: 1.
@@ -469,7 +469,7 @@ GtRobocoderMetamodelParser >> reduceActionForDefinitionList2: nodes [
 	^ result
 ]
 
-{ #category : 'generated-reduction actions' }
+{ #category : #'generated-reduction actions' }
 GtRobocoderMetamodelParser >> reduceActionForDefinitions1: nodes [
 	| result |
 	result := GtRobocoderMetamodelDefinitionsNode new.
@@ -477,7 +477,7 @@ GtRobocoderMetamodelParser >> reduceActionForDefinitions1: nodes [
 	^ result
 ]
 
-{ #category : 'generated-reduction actions' }
+{ #category : #'generated-reduction actions' }
 GtRobocoderMetamodelParser >> reduceActionForFullDefinition1: nodes [
 	| result |
 	result := GtRobocoderMetamodelFullDefinitionNode new.
@@ -485,7 +485,7 @@ GtRobocoderMetamodelParser >> reduceActionForFullDefinition1: nodes [
 	^ result
 ]
 
-{ #category : 'generated-reduction actions' }
+{ #category : #'generated-reduction actions' }
 GtRobocoderMetamodelParser >> reduceActionForFullDefinition2: nodes [
 	| result |
 	result := GtRobocoderMetamodelFullDefinitionNode new.
@@ -494,14 +494,14 @@ GtRobocoderMetamodelParser >> reduceActionForFullDefinition2: nodes [
 	^ result
 ]
 
-{ #category : 'generated-reduction actions' }
+{ #category : #'generated-reduction actions' }
 GtRobocoderMetamodelParser >> reduceActionForFullDefinition3: nodes [
 	| result |
 	result := GtRobocoderMetamodelFullDefinitionNode new.
 	^ result
 ]
 
-{ #category : 'generated-reduction actions' }
+{ #category : #'generated-reduction actions' }
 GtRobocoderMetamodelParser >> reduceActionForFullDefinition4: nodes [
 	| result |
 	result := GtRobocoderMetamodelFullDefinitionNode new.
@@ -509,7 +509,7 @@ GtRobocoderMetamodelParser >> reduceActionForFullDefinition4: nodes [
 	^ result
 ]
 
-{ #category : 'generated-reduction actions' }
+{ #category : #'generated-reduction actions' }
 GtRobocoderMetamodelParser >> reduceActionForFullDefinition5: nodes [
 	| result |
 	result := GtRobocoderMetamodelFullDefinitionNode new.
@@ -517,7 +517,7 @@ GtRobocoderMetamodelParser >> reduceActionForFullDefinition5: nodes [
 	^ result
 ]
 
-{ #category : 'generated-reduction actions' }
+{ #category : #'generated-reduction actions' }
 GtRobocoderMetamodelParser >> reduceActionForFullDefinition6: nodes [
 	| result |
 	result := GtRobocoderMetamodelFullDefinitionNode new.
@@ -526,7 +526,7 @@ GtRobocoderMetamodelParser >> reduceActionForFullDefinition6: nodes [
 	^ result
 ]
 
-{ #category : 'generated-reduction actions' }
+{ #category : #'generated-reduction actions' }
 GtRobocoderMetamodelParser >> reduceActionForFullDefinition7: nodes [
 	| result |
 	result := GtRobocoderMetamodelFullDefinitionNode new.
@@ -535,7 +535,7 @@ GtRobocoderMetamodelParser >> reduceActionForFullDefinition7: nodes [
 	^ result
 ]
 
-{ #category : 'generated-reduction actions' }
+{ #category : #'generated-reduction actions' }
 GtRobocoderMetamodelParser >> reduceActionForFullDefinition8: nodes [
 	| result |
 	result := GtRobocoderMetamodelFullDefinitionNode new.
@@ -545,7 +545,7 @@ GtRobocoderMetamodelParser >> reduceActionForFullDefinition8: nodes [
 	^ result
 ]
 
-{ #category : 'generated-reduction actions' }
+{ #category : #'generated-reduction actions' }
 GtRobocoderMetamodelParser >> reduceActionForGenericProperty1: nodes [
 	| result |
 	result := GtRobocoderMetamodelGenericPropertyNode new.
@@ -554,7 +554,7 @@ GtRobocoderMetamodelParser >> reduceActionForGenericProperty1: nodes [
 	^ result
 ]
 
-{ #category : 'generated-reduction actions' }
+{ #category : #'generated-reduction actions' }
 GtRobocoderMetamodelParser >> reduceActionForGlobalPropertyValue1: nodes [
 	| result |
 	result := GtRobocoderMetamodelGlobalPropertyValueNode new.
@@ -562,7 +562,7 @@ GtRobocoderMetamodelParser >> reduceActionForGlobalPropertyValue1: nodes [
 	^ result
 ]
 
-{ #category : 'generated-reduction actions' }
+{ #category : #'generated-reduction actions' }
 GtRobocoderMetamodelParser >> reduceActionForGlobalSetting1: nodes [
 	| result |
 	result := GtRobocoderMetamodelGlobalSettingNode new.
@@ -572,7 +572,7 @@ GtRobocoderMetamodelParser >> reduceActionForGlobalSetting1: nodes [
 	^ result
 ]
 
-{ #category : 'generated-reduction actions' }
+{ #category : #'generated-reduction actions' }
 GtRobocoderMetamodelParser >> reduceActionForGlobalSetting2: nodes [
 	| result |
 	result := GtRobocoderMetamodelGlobalSettingNode new.
@@ -583,7 +583,7 @@ GtRobocoderMetamodelParser >> reduceActionForGlobalSetting2: nodes [
 	^ result
 ]
 
-{ #category : 'generated-reduction actions' }
+{ #category : #'generated-reduction actions' }
 GtRobocoderMetamodelParser >> reduceActionForHierarchies1: nodes [
 	| result |
 	result := GtRobocoderMetamodelHierarchiesNode new.
@@ -591,7 +591,7 @@ GtRobocoderMetamodelParser >> reduceActionForHierarchies1: nodes [
 	^ result
 ]
 
-{ #category : 'generated-reduction actions' }
+{ #category : #'generated-reduction actions' }
 GtRobocoderMetamodelParser >> reduceActionForHierarchies2: nodes [
 	| result |
 	result := nodes at: 1.
@@ -599,7 +599,7 @@ GtRobocoderMetamodelParser >> reduceActionForHierarchies2: nodes [
 	^ result
 ]
 
-{ #category : 'generated-reduction actions' }
+{ #category : #'generated-reduction actions' }
 GtRobocoderMetamodelParser >> reduceActionForHierarchy1: nodes [
 	| result |
 	result := GtRobocoderMetamodelHierarchyNode new.
@@ -607,7 +607,7 @@ GtRobocoderMetamodelParser >> reduceActionForHierarchy1: nodes [
 	^ result
 ]
 
-{ #category : 'generated-reduction actions' }
+{ #category : #'generated-reduction actions' }
 GtRobocoderMetamodelParser >> reduceActionForItemsProperty1: nodes [
 	| result |
 	result := GtRobocoderMetamodelItemsPropertyNode new.
@@ -616,7 +616,7 @@ GtRobocoderMetamodelParser >> reduceActionForItemsProperty1: nodes [
 	^ result
 ]
 
-{ #category : 'generated-reduction actions' }
+{ #category : #'generated-reduction actions' }
 GtRobocoderMetamodelParser >> reduceActionForItemsProperty2: nodes [
 	| result |
 	result := GtRobocoderMetamodelItemsPropertyNode new.
@@ -626,7 +626,7 @@ GtRobocoderMetamodelParser >> reduceActionForItemsProperty2: nodes [
 	^ result
 ]
 
-{ #category : 'generated-reduction actions' }
+{ #category : #'generated-reduction actions' }
 GtRobocoderMetamodelParser >> reduceActionForLevelForMany1: nodes [
 	| result |
 	result := GtRobocoderMetamodelLevelForManyNode new.
@@ -635,7 +635,7 @@ GtRobocoderMetamodelParser >> reduceActionForLevelForMany1: nodes [
 	^ result
 ]
 
-{ #category : 'generated-reduction actions' }
+{ #category : #'generated-reduction actions' }
 GtRobocoderMetamodelParser >> reduceActionForLevelForOne1: nodes [
 	| result |
 	result := GtRobocoderMetamodelLevelForOneNode new.
@@ -643,7 +643,7 @@ GtRobocoderMetamodelParser >> reduceActionForLevelForOne1: nodes [
 	^ result
 ]
 
-{ #category : 'generated-reduction actions' }
+{ #category : #'generated-reduction actions' }
 GtRobocoderMetamodelParser >> reduceActionForLocalSetting1: nodes [
 	| result |
 	result := GtRobocoderMetamodelLocalSettingNode new.
@@ -653,7 +653,7 @@ GtRobocoderMetamodelParser >> reduceActionForLocalSetting1: nodes [
 	^ result
 ]
 
-{ #category : 'generated-reduction actions' }
+{ #category : #'generated-reduction actions' }
 GtRobocoderMetamodelParser >> reduceActionForLocalSetting2: nodes [
 	| result |
 	result := GtRobocoderMetamodelLocalSettingNode new.
@@ -664,7 +664,7 @@ GtRobocoderMetamodelParser >> reduceActionForLocalSetting2: nodes [
 	^ result
 ]
 
-{ #category : 'generated-reduction actions' }
+{ #category : #'generated-reduction actions' }
 GtRobocoderMetamodelParser >> reduceActionForMethodPropertyValue1: nodes [
 	| result |
 	result := GtRobocoderMetamodelMethodPropertyValueNode new.
@@ -672,7 +672,7 @@ GtRobocoderMetamodelParser >> reduceActionForMethodPropertyValue1: nodes [
 	^ result
 ]
 
-{ #category : 'generated-reduction actions' }
+{ #category : #'generated-reduction actions' }
 GtRobocoderMetamodelParser >> reduceActionForNestedLevel2: nodes [
 	| result |
 	result := GtRobocoderMetamodelNestedLevelNode new.
@@ -682,7 +682,7 @@ GtRobocoderMetamodelParser >> reduceActionForNestedLevel2: nodes [
 	^ result
 ]
 
-{ #category : 'generated-reduction actions' }
+{ #category : #'generated-reduction actions' }
 GtRobocoderMetamodelParser >> reduceActionForProperties1: nodes [
 	| result |
 	result := GtRobocoderMetamodelPropertiesNode new.
@@ -690,7 +690,7 @@ GtRobocoderMetamodelParser >> reduceActionForProperties1: nodes [
 	^ result
 ]
 
-{ #category : 'generated-reduction actions' }
+{ #category : #'generated-reduction actions' }
 GtRobocoderMetamodelParser >> reduceActionForPropertyName1: nodes [
 	| result |
 	result := GtRobocoderMetamodelPropertyNameNode new.
@@ -698,7 +698,7 @@ GtRobocoderMetamodelParser >> reduceActionForPropertyName1: nodes [
 	^ result
 ]
 
-{ #category : 'generated-reduction actions' }
+{ #category : #'generated-reduction actions' }
 GtRobocoderMetamodelParser >> reduceActionForSettingPropertiesList1: nodes [
 	| result |
 	result := GtRobocoderMetamodelSettingPropertiesListNode new.
@@ -706,7 +706,7 @@ GtRobocoderMetamodelParser >> reduceActionForSettingPropertiesList1: nodes [
 	^ result
 ]
 
-{ #category : 'generated-reduction actions' }
+{ #category : #'generated-reduction actions' }
 GtRobocoderMetamodelParser >> reduceActionForSettingPropertiesList2: nodes [
 	| result |
 	result := nodes at: 1.
@@ -714,7 +714,7 @@ GtRobocoderMetamodelParser >> reduceActionForSettingPropertiesList2: nodes [
 	^ result
 ]
 
-{ #category : 'generated-reduction actions' }
+{ #category : #'generated-reduction actions' }
 GtRobocoderMetamodelParser >> reduceActionForSettingProperty1: nodes [
 	| result |
 	result := GtRobocoderMetamodelSettingPropertyNode new.
@@ -723,7 +723,7 @@ GtRobocoderMetamodelParser >> reduceActionForSettingProperty1: nodes [
 	^ result
 ]
 
-{ #category : 'generated-reduction actions' }
+{ #category : #'generated-reduction actions' }
 GtRobocoderMetamodelParser >> reduceActionForSettings1: nodes [
 	| result |
 	result := GtRobocoderMetamodelSettingsNode new.
@@ -731,7 +731,7 @@ GtRobocoderMetamodelParser >> reduceActionForSettings1: nodes [
 	^ result
 ]
 
-{ #category : 'generated-reduction actions' }
+{ #category : #'generated-reduction actions' }
 GtRobocoderMetamodelParser >> reduceActionForSettings2: nodes [
 	| result |
 	result := nodes at: 1.
@@ -739,7 +739,7 @@ GtRobocoderMetamodelParser >> reduceActionForSettings2: nodes [
 	^ result
 ]
 
-{ #category : 'generated-reduction actions' }
+{ #category : #'generated-reduction actions' }
 GtRobocoderMetamodelParser >> reduceActionForStringPropertyValue1: nodes [
 	| result |
 	result := GtRobocoderMetamodelStringPropertyValueNode new.
@@ -747,7 +747,7 @@ GtRobocoderMetamodelParser >> reduceActionForStringPropertyValue1: nodes [
 	^ result
 ]
 
-{ #category : 'generated-reduction actions' }
+{ #category : #'generated-reduction actions' }
 GtRobocoderMetamodelParser >> reduceActionForSymbolPropertyValue1: nodes [
 	| result |
 	result := GtRobocoderMetamodelSymbolPropertyValueNode new.
@@ -755,7 +755,7 @@ GtRobocoderMetamodelParser >> reduceActionForSymbolPropertyValue1: nodes [
 	^ result
 ]
 
-{ #category : 'generated-reduction actions' }
+{ #category : #'generated-reduction actions' }
 GtRobocoderMetamodelParser >> reduceActionFor__and__and__SimpleLevel__item__1: nodes [
 	| result |
 	result := Array new: 2.
@@ -764,7 +764,7 @@ GtRobocoderMetamodelParser >> reduceActionFor__and__and__SimpleLevel__item__1: n
 	^ result
 ]
 
-{ #category : 'generated-reduction actions' }
+{ #category : #'generated-reduction actions' }
 GtRobocoderMetamodelParser >> reduceActionFor__and__and__SimpleLevel__item___1: nodes [
 	| result |
 	result := Array new: 2.
@@ -775,7 +775,7 @@ GtRobocoderMetamodelParser >> reduceActionFor__and__and__SimpleLevel__item___1: 
 	^ result
 ]
 
-{ #category : 'generated-reduction actions' }
+{ #category : #'generated-reduction actions' }
 GtRobocoderMetamodelParser >> reduceActionFor__and__and__SimpleLevel__item___2: nodes [
 	| result |
 	result := nodes at: 1.

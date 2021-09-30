@@ -1,6 +1,6 @@
 Class {
-	#name : 'GtRobocoderMetamodels',
-	#superclass : 'Object',
+	#name : #GtRobocoderMetamodels,
+	#superclass : #Object,
 	#instVars : [
 		'ast',
 		'models',
@@ -10,27 +10,27 @@ Class {
 	#category : 'GToolkit-Robocoder-Metamodel'
 }
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtRobocoderMetamodels >> ast [
 	^ ast
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtRobocoderMetamodels >> ast: anObject [
 	ast := anObject
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtRobocoderMetamodels >> derives [
 	^ derives
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtRobocoderMetamodels >> derives: anObject [
 	derives := anObject
 ]
 
-{ #category : 'api - generation' }
+{ #category : #'api - generation' }
 GtRobocoderMetamodels >> generateCodeDefinitions [
 	<return: #GtRobocoderMetamodelsWithCodeDefinitions>
 	| anEnvironment aGtRobocoderMetamodelsWithCodeDefinitions counter |
@@ -60,7 +60,7 @@ GtRobocoderMetamodels >> generateCodeDefinitions [
 	^ aGtRobocoderMetamodelsWithCodeDefinitions
 ]
 
-{ #category : 'api - generation' }
+{ #category : #'api - generation' }
 GtRobocoderMetamodels >> generateSubscribeToFor: eachViewModelModelWithDefinition [
 	| isSubscriberInSuperclass |
 	
@@ -92,7 +92,7 @@ GtRobocoderMetamodels >> generateSubscribeToFor: eachViewModelModelWithDefinitio
 						id: eachSubscription ] ]
 ]
 
-{ #category : 'api - generation' }
+{ #category : #'api - generation' }
 GtRobocoderMetamodels >> generateUnsubscribeFromFor: eachViewModelModelWithDefinition [
 	| isUnsubscriberInSuperclass |
 	
@@ -125,7 +125,7 @@ GtRobocoderMetamodels >> generateUnsubscribeFromFor: eachViewModelModelWithDefin
 						id: anAnnouncerSelector ] ]
 ]
 
-{ #category : 'initialization' }
+{ #category : #initialization }
 GtRobocoderMetamodels >> initialize [
 	super initialize.
 	
@@ -134,17 +134,17 @@ GtRobocoderMetamodels >> initialize [
 	settings := Dictionary new
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtRobocoderMetamodels >> models [
 	^ models
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtRobocoderMetamodels >> models: anObject [
 	models := anObject
 ]
 
-{ #category : 'api - generation' }
+{ #category : #'api - generation' }
 GtRobocoderMetamodels >> processDerivesOf: aGtRobocoderMetamodelsWithCodeDefinitions [
 	"Return true if the definition changed"
 	<return: #Boolean>
@@ -179,12 +179,12 @@ GtRobocoderMetamodels >> processDerivesOf: aGtRobocoderMetamodelsWithCodeDefinit
 	^ false
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtRobocoderMetamodels >> settings [
 	^ settings
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtRobocoderMetamodels >> settings: anObject [
 	settings := anObject
 ]

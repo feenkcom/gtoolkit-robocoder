@@ -7,11 +7,11 @@ A view model that knows its parent view model implements the following api:
  - ${method:__View_model_class__>>#has__View_model__}$ can be used to test if a parent view model (${class:__Parent_view_model_class__}$) is assigned. In situations when there is no guarantee that there is a parent view model, users should always check it using ${method:__View_model_class__>>#has__View_model__}$ before trying to access ${method:__View_model_class__>>#__view_model__}$
 "
 Trait {
-	#name : 'TGtRobocoderMetamodelParentAccessorTemplate',
+	#name : #TGtRobocoderMetamodelParentAccessorTemplate,
 	#category : 'GToolkit-Robocoder-Templates'
 }
 
-{ #category : 'templates' }
+{ #category : #templates }
 TGtRobocoderMetamodelParentAccessorTemplate >> allParentObjectsDoTemplate [
 	<gtMethodTemplate>
 	<generatedFrom: #'GtRobocoderTemplateMethod class>>#storageMethodTemplate'>
@@ -34,7 +34,7 @@ TGtRobocoderMetamodelParentAccessorTemplate >> allParentObjectsDoTemplate [
 		storageMethod: thisContext method
 ]
 
-{ #category : 'templates' }
+{ #category : #templates }
 TGtRobocoderMetamodelParentAccessorTemplate >> parentObjectGetterTemplate [
 	<gtMethodTemplate>
 	<generatedFrom: #'GtRobocoderTemplateMethod class>>#storageMethodTemplate'>
@@ -56,7 +56,7 @@ TGtRobocoderMetamodelParentAccessorTemplate >> parentObjectGetterTemplate [
 		storageMethod: thisContext method
 ]
 
-{ #category : 'templates' }
+{ #category : #templates }
 TGtRobocoderMetamodelParentAccessorTemplate >> parentObjectSetterTemplate [
 	<gtMethodTemplate>
 	<generatedFrom: #'GtRobocoderTemplateMethod class>>#storageMethodTemplate'>
@@ -77,7 +77,7 @@ TGtRobocoderMetamodelParentAccessorTemplate >> parentObjectSetterTemplate [
 		storageMethod: thisContext method
 ]
 
-{ #category : 'templates' }
+{ #category : #templates }
 TGtRobocoderMetamodelParentAccessorTemplate >> parentObjectTesterTemplate [
 	<gtMethodTemplate>
 	<generatedFrom: #'GtRobocoderTemplateMethod class>>#storageMethodTemplate'>
@@ -93,7 +93,7 @@ TGtRobocoderMetamodelParentAccessorTemplate >> parentObjectTesterTemplate [
 		storageMethod: thisContext method
 ]
 
-{ #category : 'templates' }
+{ #category : #templates }
 TGtRobocoderMetamodelParentAccessorTemplate >> traitTemplate [
 	<gtTraitTemplate>
 	<generatedFrom: #'GtRobocoderTemplateTrait class>>#storageMethodTemplate'>
@@ -103,7 +103,7 @@ TGtRobocoderMetamodelParentAccessorTemplate >> traitTemplate [
 		storageMethod: thisContext method
 ]
 
-{ #category : 'templates' }
+{ #category : #templates }
 TGtRobocoderMetamodelParentAccessorTemplate >> withAllParentObjectsDoTemplate [
 	<gtMethodTemplate>
 	<generatedFrom: #'GtRobocoderTemplateMethod class>>#storageMethodTemplate'>
@@ -119,7 +119,7 @@ TGtRobocoderMetamodelParentAccessorTemplate >> withAllParentObjectsDoTemplate [
 		storageMethod: thisContext method
 ]
 
-{ #category : 'templates' }
+{ #category : #templates }
 TGtRobocoderMetamodelParentAccessorTemplate >> withAllParentObjectsTemplate [
 	<gtMethodTemplate>
 	<generatedFrom: #'GtRobocoderTemplateMethod class>>#storageMethodTemplate'>

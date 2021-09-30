@@ -12,8 +12,8 @@ Usage example:
 
 "
 Class {
-	#name : 'GtRobocoderClassGenerator',
-	#superclass : 'Object',
+	#name : #GtRobocoderClassGenerator,
+	#superclass : #Object,
 	#instVars : [
 		'environment',
 		'mappings',
@@ -22,17 +22,17 @@ Class {
 	#category : 'GToolkit-Robocoder-Generators'
 }
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtRobocoderClassGenerator >> environment [
 	^ environment
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtRobocoderClassGenerator >> environment: anEnvironment [
 	environment := anEnvironment
 ]
 
-{ #category : 'generation' }
+{ #category : #generation }
 GtRobocoderClassGenerator >> generate [
 	|  aClassHeaderMethod theClassMethods generatedClass |
 	<return: #Trait>
@@ -67,34 +67,34 @@ GtRobocoderClassGenerator >> generate [
 	^ generatedClass
 ]
 
-{ #category : 'generation' }
+{ #category : #generation }
 GtRobocoderClassGenerator >> generateChanges [
 	^ self generate createChange
 ]
 
-{ #category : 'initialization' }
+{ #category : #initialization }
 GtRobocoderClassGenerator >> initialize [
 	super initialize.
 	
 	mappings := {  }
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtRobocoderClassGenerator >> mappings [
 	^ mappings
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtRobocoderClassGenerator >> mappings: aCollectionOfAssociations [
 	mappings := aCollectionOfAssociations
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtRobocoderClassGenerator >> templateClass [
 	^ templateClass
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtRobocoderClassGenerator >> templateClass: aClass [
 	templateClass := aClass
 ]

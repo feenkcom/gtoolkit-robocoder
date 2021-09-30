@@ -1,6 +1,6 @@
 Class {
-	#name : 'GtRobocoderTemplateTraitDefinitionCoder',
-	#superclass : 'GtCoderModel',
+	#name : #GtRobocoderTemplateTraitDefinitionCoder,
+	#superclass : #GtCoderModel,
 	#traits : 'TGtCoderTrait',
 	#classTraits : 'TGtCoderTrait classTrait',
 	#instVars : [
@@ -10,7 +10,7 @@ Class {
 	#category : 'GToolkit-Robocoder-Coder - Behavior template'
 }
 
-{ #category : 'private' }
+{ #category : #private }
 GtRobocoderTemplateTraitDefinitionCoder class >> translateTraitDefinition: aTraitDefinition bindings: theBindings [
 	| aDefinition |
 	
@@ -40,12 +40,12 @@ GtRobocoderTemplateTraitDefinitionCoder class >> translateTraitDefinition: aTrai
 	^ aDefinition
 ]
 
-{ #category : 'converting' }
+{ #category : #converting }
 GtRobocoderTemplateTraitDefinitionCoder >> asCoderUIModel [
 	^ GtRobocoderTemplateTraitDefinitionCoderViewModel new templateTraitBehaviorCoderModel: self
 ]
 
-{ #category : 'private' }
+{ #category : #private }
 GtRobocoderTemplateTraitDefinitionCoder >> createCompileMethodChangeIn: aBehavior inContext: aGtPharoSourceCoderEvaluationContext [
 	<return: #RBAddMethodChange>
 	| aSourceString |
@@ -78,12 +78,12 @@ GtRobocoderTemplateTraitDefinitionCoder >> createCompileMethodChangeIn: aBehavio
 				for: aGtPharoSourceCoderEvaluationContext ]
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtRobocoderTemplateTraitDefinitionCoder >> definition [
 	^ templateTrait definition
 ]
 
-{ #category : 'initialization' }
+{ #category : #initialization }
 GtRobocoderTemplateTraitDefinitionCoder >> forMethod: aCompiledMethod [
 	| aTemplateTrait |
 	aTemplateTrait := aCompiledMethod methodClass isClassSide
@@ -96,7 +96,7 @@ GtRobocoderTemplateTraitDefinitionCoder >> forMethod: aCompiledMethod [
 	self forTemplateTrait: aTemplateTrait
 ]
 
-{ #category : 'initialization' }
+{ #category : #initialization }
 GtRobocoderTemplateTraitDefinitionCoder >> forTemplateBehavior: aBehavior selector: aTemplateSelector [
 	aBehavior
 		compiledMethodAt: aTemplateSelector
@@ -107,29 +107,29 @@ GtRobocoderTemplateTraitDefinitionCoder >> forTemplateBehavior: aBehavior select
 		storageBehavior: aBehavior selector: aTemplateSelector)
 ]
 
-{ #category : 'initialization' }
+{ #category : #initialization }
 GtRobocoderTemplateTraitDefinitionCoder >> forTemplateTrait: aGtPharoTemplateTrait [
 	templateTrait := aGtPharoTemplateTrait
 ]
 
-{ #category : 'initialization' }
+{ #category : #initialization }
 GtRobocoderTemplateTraitDefinitionCoder >> initialize [
 	super initialize.
 	
 	bindings := GtLocalVariablesBindings new.
 ]
 
-{ #category : 'api - accessing' }
+{ #category : #'api - accessing' }
 GtRobocoderTemplateTraitDefinitionCoder >> map: aVariableName to: anObject [
 	bindings localAt: aVariableName put: anObject
 ]
 
-{ #category : 'api - accessing' }
+{ #category : #'api - accessing' }
 GtRobocoderTemplateTraitDefinitionCoder >> mappings: aCollectionOfAssociations [
 	aCollectionOfAssociations do: [ :each | self map: each key to: each value ]
 ]
 
-{ #category : 'api - actions' }
+{ #category : #'api - actions' }
 GtRobocoderTemplateTraitDefinitionCoder >> save [
 	"Try to compile the current source code and return true if it was successful, false otherwise"
 	<return: #Boolean>
@@ -149,7 +149,7 @@ GtRobocoderTemplateTraitDefinitionCoder >> save [
 		ifAbsent: [ false ]
 ]
 
-{ #category : 'api - actions' }
+{ #category : #'api - actions' }
 GtRobocoderTemplateTraitDefinitionCoder >> translate [
 	^ self class translateTraitDefinition: self definition bindings: bindings
 ]

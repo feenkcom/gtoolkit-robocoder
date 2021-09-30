@@ -1,10 +1,10 @@
 Class {
-	#name : 'GtRobocoderTemplateMethodsFilter',
-	#superclass : 'GtSearchMethodsContainedInClassFilter',
+	#name : #GtRobocoderTemplateMethodsFilter,
+	#superclass : #GtSearchMethodsContainedInClassFilter,
 	#category : 'GToolkit-Robocoder-Coder - Template method'
 }
 
-{ #category : 'testing' }
+{ #category : #testing }
 GtRobocoderTemplateMethodsFilter >> includesMethod: aCompiledMethod [
 	| methodClass |
 	
@@ -16,7 +16,7 @@ GtRobocoderTemplateMethodsFilter >> includesMethod: aCompiledMethod [
 		methodClass = class classSide ]
 ]
 
-{ #category : 'enumerating' }
+{ #category : #enumerating }
 GtRobocoderTemplateMethodsFilter >> methodsDo: aBlock [
 	class instanceSide methods do: aBlock.
 

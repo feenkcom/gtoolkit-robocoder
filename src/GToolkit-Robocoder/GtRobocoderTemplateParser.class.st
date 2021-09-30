@@ -1,10 +1,10 @@
 Class {
-	#name : 'GtRobocoderTemplateParser',
-	#superclass : 'SmaCCGLRParser',
+	#name : #GtRobocoderTemplateParser,
+	#superclass : #SmaCCGLRParser,
 	#category : 'GToolkit-Robocoder-Ast - Template'
 }
 
-{ #category : 'generated' }
+{ #category : #generated }
 GtRobocoderTemplateParser class >> ambiguousTransitions [
 ^#(
 #[ 0 26 0 49] 
@@ -12,12 +12,12 @@ GtRobocoderTemplateParser class >> ambiguousTransitions [
 	).
 ]
 
-{ #category : 'generated-accessing' }
+{ #category : #'generated-accessing' }
 GtRobocoderTemplateParser class >> cacheId [
 	^'2021-04-19T21:12:15.153286+02:00'
 ]
 
-{ #category : 'generated' }
+{ #category : #generated }
 GtRobocoderTemplateParser class >> definitionComment [
 "%glr;
 %root Program;
@@ -69,7 +69,7 @@ TextSegment
 	;"
 ]
 
-{ #category : 'generated' }
+{ #category : #generated }
 GtRobocoderTemplateParser class >> reduceTable [
 ^#(
 	#(19 0 #reduceActionFor_stringSegment__string__1: 950273 false ) 
@@ -95,27 +95,27 @@ GtRobocoderTemplateParser class >> reduceTable [
 	).
 ]
 
-{ #category : 'generated' }
+{ #category : #generated }
 GtRobocoderTemplateParser class >> scannerClass [
 	^GtRobocoderTemplateScanner
 ]
 
-{ #category : 'generated' }
+{ #category : #generated }
 GtRobocoderTemplateParser class >> startingStateForStart [
 	^ 1
 ]
 
-{ #category : 'generated' }
+{ #category : #generated }
 GtRobocoderTemplateParser class >> symbolNames [
 	^ #('<leftBrace>' '<rightBrace>' '<stringSegment>' '<templateSegment>' '<string>' 'B e g i n' 'Start' 'TemplateContent' '(TemplateCode''templatePart''(Template''templatePart''|String''templatePart'')TemplateCode ''templatePart'')' '(TemplateCode''templatePart''(Template''templatePart''|String''templatePart'')TemplateCode ''templatePart'')+' 'Template' 'TemplateCode' '<templateSegment>''string''*' 'String' 'Text' '(TextSegment''templatePart'' Template''templatePart'' TextSegment ''templatePart'')' '(TextSegment''templatePart'' Template''templatePart'' TextSegment ''templatePart'')+' 'TextSegment' '<stringSegment>''string''*' 'E O F' 'error')
 ]
 
-{ #category : 'generated' }
+{ #category : #generated }
 GtRobocoderTemplateParser class >> symbolTypes [
 	^ #(#SmaCCToken #SmaCCToken #SmaCCToken #SmaCCToken #SmaCCToken #GtRobocoderTemplateTextNode #GtRobocoderTemplateTextNode #GtRobocoderTemplateTemplateContentNode #OrderedCollection #OrderedCollection #GtRobocoderTemplateTemplateNode #GtRobocoderTemplateTemplateCodeNode #OrderedCollection #GtRobocoderTemplateStringNode #GtRobocoderTemplateTextNode #OrderedCollection #OrderedCollection #GtRobocoderTemplateTextSegmentNode #OrderedCollection #SmaCCToken #SmaCCErrorNode)
 ]
 
-{ #category : 'generated' }
+{ #category : #generated }
 GtRobocoderTemplateParser class >> transitionTable [
 ^#(
 #[1 0 6 0 1 0 6 0 3 0 9 0 7 0 9 0 15 0 17 0 16 0 21 0 17 0 25 0 18 0 29 0 19 0 6 0 20] 
@@ -148,7 +148,7 @@ GtRobocoderTemplateParser class >> transitionTable [
 	).
 ]
 
-{ #category : 'generated-reduction actions' }
+{ #category : #'generated-reduction actions' }
 GtRobocoderTemplateParser >> reduceActionForString1: nodes [
 	| result |
 	result := GtRobocoderTemplateStringNode new.
@@ -156,7 +156,7 @@ GtRobocoderTemplateParser >> reduceActionForString1: nodes [
 	^ result
 ]
 
-{ #category : 'generated-reduction actions' }
+{ #category : #'generated-reduction actions' }
 GtRobocoderTemplateParser >> reduceActionForTemplate1: nodes [
 	| result |
 	result := GtRobocoderTemplateTemplateNode new.
@@ -166,7 +166,7 @@ GtRobocoderTemplateParser >> reduceActionForTemplate1: nodes [
 	^ result
 ]
 
-{ #category : 'generated-reduction actions' }
+{ #category : #'generated-reduction actions' }
 GtRobocoderTemplateParser >> reduceActionForTemplateCode1: nodes [
 	| result |
 	result := GtRobocoderTemplateTemplateCodeNode new.
@@ -174,7 +174,7 @@ GtRobocoderTemplateParser >> reduceActionForTemplateCode1: nodes [
 	^ result
 ]
 
-{ #category : 'generated-reduction actions' }
+{ #category : #'generated-reduction actions' }
 GtRobocoderTemplateParser >> reduceActionForTemplateContent1: nodes [
 	| result |
 	result := GtRobocoderTemplateTemplateContentNode new.
@@ -182,7 +182,7 @@ GtRobocoderTemplateParser >> reduceActionForTemplateContent1: nodes [
 	^ result
 ]
 
-{ #category : 'generated-reduction actions' }
+{ #category : #'generated-reduction actions' }
 GtRobocoderTemplateParser >> reduceActionForTemplateContent2: nodes [
 	| result |
 	result := GtRobocoderTemplateTemplateContentNode new.
@@ -190,7 +190,7 @@ GtRobocoderTemplateParser >> reduceActionForTemplateContent2: nodes [
 	^ result
 ]
 
-{ #category : 'generated-reduction actions' }
+{ #category : #'generated-reduction actions' }
 GtRobocoderTemplateParser >> reduceActionForText1: nodes [
 	| result |
 	result := GtRobocoderTemplateTextNode new.
@@ -198,7 +198,7 @@ GtRobocoderTemplateParser >> reduceActionForText1: nodes [
 	^ result
 ]
 
-{ #category : 'generated-reduction actions' }
+{ #category : #'generated-reduction actions' }
 GtRobocoderTemplateParser >> reduceActionForText2: nodes [
 	| result |
 	result := GtRobocoderTemplateTextNode new.
@@ -206,7 +206,7 @@ GtRobocoderTemplateParser >> reduceActionForText2: nodes [
 	^ result
 ]
 
-{ #category : 'generated-reduction actions' }
+{ #category : #'generated-reduction actions' }
 GtRobocoderTemplateParser >> reduceActionForTextSegment1: nodes [
 	| result |
 	result := GtRobocoderTemplateTextSegmentNode new.
@@ -214,7 +214,7 @@ GtRobocoderTemplateParser >> reduceActionForTextSegment1: nodes [
 	^ result
 ]
 
-{ #category : 'generated-reduction actions' }
+{ #category : #'generated-reduction actions' }
 GtRobocoderTemplateParser >> reduceActionFor_TextSegment_templatePart__Template_templatePart__TextSegment__templatePart__1: nodes [
 	| result |
 	result := OrderedCollection new: 2.
@@ -224,14 +224,14 @@ GtRobocoderTemplateParser >> reduceActionFor_TextSegment_templatePart__Template_
 	^ result
 ]
 
-{ #category : 'generated-reduction actions' }
+{ #category : #'generated-reduction actions' }
 GtRobocoderTemplateParser >> reduceActionFor_TextSegment_templatePart__Template_templatePart__TextSegment__templatePart___1: nodes [
 	| result |
 	result := nodes at: 1.
 	^ result
 ]
 
-{ #category : 'generated-reduction actions' }
+{ #category : #'generated-reduction actions' }
 GtRobocoderTemplateParser >> reduceActionFor_TextSegment_templatePart__Template_templatePart__TextSegment__templatePart___2: nodes [
 	| result |
 	result := nodes at: 1.
@@ -239,14 +239,14 @@ GtRobocoderTemplateParser >> reduceActionFor_TextSegment_templatePart__Template_
 	^ result
 ]
 
-{ #category : 'generated-reduction actions' }
+{ #category : #'generated-reduction actions' }
 GtRobocoderTemplateParser >> reduceActionFor_stringSegment__string__1: nodes [
 	| result |
 	result := OrderedCollection new: 2.
 	^ result
 ]
 
-{ #category : 'generated-reduction actions' }
+{ #category : #'generated-reduction actions' }
 GtRobocoderTemplateParser >> reduceActionFor_stringSegment__string__2: nodes [
 	| result |
 	result := nodes at: 1.

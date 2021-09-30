@@ -28,29 +28,29 @@ tag { class(es): #classes }.
 class { protocol(s): #protocols }
 "
 Class {
-	#name : 'GtRobocoderMetamodelCoder',
-	#superclass : 'GtSourceCoder',
+	#name : #GtRobocoderMetamodelCoder,
+	#superclass : #GtSourceCoder,
 	#category : 'GToolkit-Robocoder-Coder - Metamodel'
 }
 
-{ #category : 'converting' }
+{ #category : #converting }
 GtRobocoderMetamodelCoder >> asCoderUIModel [
 	^ GtSourceCoderViewModel new coderModel: self
 ]
 
-{ #category : 'api - ast' }
+{ #category : #'api - ast' }
 GtRobocoderMetamodelCoder >> computeAst: theSourceString [
 	^ GtRobocoderMetamodelParser
 		parseWithErrors: theSourceString
 		startingAt: GtRobocoderMetamodelParser startingStateForFullDefinition
 ]
 
-{ #category : 'initialize-release' }
+{ #category : #'initialize-release' }
 GtRobocoderMetamodelCoder >> forSource: aString [
 	self sourceCode: (GtCoderExplicitSourceCode new source: aString)
 ]
 
-{ #category : 'initialization' }
+{ #category : #initialization }
 GtRobocoderMetamodelCoder >> initializeAddOns: addOns [
 	super initializeAddOns: addOns.
 	
@@ -80,24 +80,24 @@ GtRobocoderMetamodelCoder >> initializeAddOns: addOns [
 		action: [ :aCoderUIModel :anElement | self notifyObjectSpawn: aCoderUIModel ].
 ]
 
-{ #category : 'instance creation' }
+{ #category : #'instance creation' }
 GtRobocoderMetamodelCoder >> newCompletionStrategy [
 	^ GtCompletionStrategy new
 ]
 
-{ #category : 'private - actions' }
+{ #category : #'private - actions' }
 GtRobocoderMetamodelCoder >> primitiveDebug: aSourceString inContext: aGtSourceCoderEvaluationContext onFailDo: anEvaluationFailBlock [
 	
 ]
 
-{ #category : 'private - actions' }
+{ #category : #'private - actions' }
 GtRobocoderMetamodelCoder >> primitiveEvaluate: aSourceString inContext: aGtSourceCoderEvaluationContext onFailDo: anEvaluationFailBlock [
 	^ (GtRobocoderMetamodelGenerator new
 		sourceCode: aSourceString;
 		generate) generateCodeDefinitions
 ]
 
-{ #category : 'api - actions' }
+{ #category : #'api - actions' }
 GtRobocoderMetamodelCoder >> profileWithMessageTally [
 	^ MessageTally on: [ self doItAll ]
 ]

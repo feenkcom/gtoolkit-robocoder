@@ -18,11 +18,11 @@ __GENERATOR_SOURCE_CODE__
 
 "
 Trait {
-	#name : 'TGtRobocoderWithPropertyTraitTemplate',
+	#name : #TGtRobocoderWithPropertyTraitTemplate,
 	#category : 'GToolkit-Robocoder-Templates'
 }
 
-{ #category : 'templates' }
+{ #category : #templates }
 TGtRobocoderWithPropertyTraitTemplate >> notifyPropertyChangedTemplate [
 	<gtMethodTemplate>
 	<generatedFrom: #'GtRobocoderTemplateMethod class>>#storageMethodTemplate'>
@@ -35,7 +35,7 @@ TGtRobocoderWithPropertyTraitTemplate >> notifyPropertyChangedTemplate [
 		storageMethod: thisContext method
 ]
 
-{ #category : 'templates' }
+{ #category : #templates }
 TGtRobocoderWithPropertyTraitTemplate >> onNewPropertySetHookTemplate [
 	<gtMethodTemplate>
 	<generatedFrom: #'GtRobocoderTemplateMethod class>>#storageMethodTemplate'>
@@ -48,7 +48,7 @@ TGtRobocoderWithPropertyTraitTemplate >> onNewPropertySetHookTemplate [
 		storageMethod: thisContext method
 ]
 
-{ #category : 'templates' }
+{ #category : #templates }
 TGtRobocoderWithPropertyTraitTemplate >> onPreviousPropertyUnsetHookTemplate [
 	<gtMethodTemplate>
 	<generatedFrom: #'GtRobocoderTemplateMethod class>>#storageMethodTemplate'>
@@ -61,7 +61,7 @@ TGtRobocoderWithPropertyTraitTemplate >> onPreviousPropertyUnsetHookTemplate [
 		storageMethod: thisContext method
 ]
 
-{ #category : 'templates' }
+{ #category : #templates }
 TGtRobocoderWithPropertyTraitTemplate >> propertyGetterTemplate [
 	<gtMethodTemplate>
 	<generatedFrom: #'GtRobocoderTemplateMethod class>>#storageMethodTemplate'>
@@ -76,7 +76,7 @@ TGtRobocoderWithPropertyTraitTemplate >> propertyGetterTemplate [
 		storageMethod: thisContext method
 ]
 
-{ #category : 'templates' }
+{ #category : #templates }
 TGtRobocoderWithPropertyTraitTemplate >> propertySetterTemplate [
 	<gtMethodTemplate>
 	<generatedFrom: #'GtRobocoderTemplateMethod class>>#storageMethodTemplate'>
@@ -103,7 +103,7 @@ TGtRobocoderWithPropertyTraitTemplate >> propertySetterTemplate [
 		storageMethod: thisContext method
 ]
 
-{ #category : 'templates' }
+{ #category : #templates }
 TGtRobocoderWithPropertyTraitTemplate >> propertyTesterTemplate [
 	<gtMethodTemplate>
 	<generatedFrom: #'GtRobocoderTemplateMethod class>>#storageMethodTemplate'>
@@ -118,7 +118,7 @@ TGtRobocoderWithPropertyTraitTemplate >> propertyTesterTemplate [
 		storageMethod: thisContext method
 ]
 
-{ #category : 'templates' }
+{ #category : #templates }
 TGtRobocoderWithPropertyTraitTemplate >> propertyUnsetterTemplate [
 	<gtMethodTemplate>
 	<generatedFrom: #'GtRobocoderTemplateMethod class>>#storageMethodTemplate'>
@@ -139,7 +139,7 @@ TGtRobocoderWithPropertyTraitTemplate >> propertyUnsetterTemplate [
 		storageMethod: thisContext method
 ]
 
-{ #category : 'templates' }
+{ #category : #templates }
 TGtRobocoderWithPropertyTraitTemplate >> traitTemplate [
 	<gtTraitTemplate>
 	<generatedFrom: #'GtRobocoderTemplateTrait class>>#storageMethodTemplate'>

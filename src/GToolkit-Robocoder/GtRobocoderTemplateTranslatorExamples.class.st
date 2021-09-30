@@ -1,10 +1,10 @@
 Class {
-	#name : 'GtRobocoderTemplateTranslatorExamples',
-	#superclass : 'Object',
+	#name : #GtRobocoderTemplateTranslatorExamples,
+	#superclass : #Object,
 	#category : 'GToolkit-Robocoder-Examples'
 }
 
-{ #category : 'examples - code generation' }
+{ #category : #'examples - code generation' }
 GtRobocoderTemplateTranslatorExamples >> codeArrayCollectEmptyStrings [
 	<gtExample>
 	| aTemplate aTranslator aResult |
@@ -21,7 +21,7 @@ GtRobocoderTemplateTranslatorExamples >> codeArrayCollectEmptyStrings [
 	^ aResult
 ]
 
-{ #category : 'examples - code generation' }
+{ #category : #'examples - code generation' }
 GtRobocoderTemplateTranslatorExamples >> codeArrayCollectWithEmbeddedStrings [
 	<gtExample>
 	| aTemplate aTranslator aResult |
@@ -38,7 +38,7 @@ GtRobocoderTemplateTranslatorExamples >> codeArrayCollectWithEmbeddedStrings [
 	^ aResult
 ]
 
-{ #category : 'examples - code generation' }
+{ #category : #'examples - code generation' }
 GtRobocoderTemplateTranslatorExamples >> codeDoubleNestedTemplate [
 	<gtExample>
 	| aTemplate aTranslator aResult |
@@ -57,7 +57,7 @@ GtRobocoderTemplateTranslatorExamples >> codeDoubleNestedTemplate [
 	^ aResult
 ]
 
-{ #category : 'examples - code generation' }
+{ #category : #'examples - code generation' }
 GtRobocoderTemplateTranslatorExamples >> codeTemplateInEmbeddedString [
 	<gtExample>
 	| aTemplate aTranslator aResult |
@@ -74,7 +74,7 @@ GtRobocoderTemplateTranslatorExamples >> codeTemplateInEmbeddedString [
 	^ aResult
 ]
 
-{ #category : 'examples' }
+{ #category : #examples }
 GtRobocoderTemplateTranslatorExamples >> translateArrayCollectAsStrings [
 	<gtExample>
 	| aTemplate aTranslator aResult |
@@ -89,7 +89,7 @@ GtRobocoderTemplateTranslatorExamples >> translateArrayCollectAsStrings [
 	^ aResult
 ]
 
-{ #category : 'examples' }
+{ #category : #examples }
 GtRobocoderTemplateTranslatorExamples >> translateArrayCollectEmptyStrings [
 	<gtExample>
 	| aTemplate aTranslator aResult |
@@ -104,7 +104,7 @@ GtRobocoderTemplateTranslatorExamples >> translateArrayCollectEmptyStrings [
 	^ aResult
 ]
 
-{ #category : 'examples' }
+{ #category : #examples }
 GtRobocoderTemplateTranslatorExamples >> translateArrayCollectWithEmbeddedStrings [
 	<gtExample>
 	| aTemplate aTranslator aResult |
@@ -119,7 +119,7 @@ GtRobocoderTemplateTranslatorExamples >> translateArrayCollectWithEmbeddedString
 	^ aResult
 ]
 
-{ #category : 'examples' }
+{ #category : #examples }
 GtRobocoderTemplateTranslatorExamples >> translateArrayCollectWithTemplateEmbeddedInStrings [
 	<gtExample>
 	| aTemplate aTranslator aResult |
@@ -134,7 +134,7 @@ GtRobocoderTemplateTranslatorExamples >> translateArrayCollectWithTemplateEmbedd
 	^ aResult
 ]
 
-{ #category : 'examples' }
+{ #category : #examples }
 GtRobocoderTemplateTranslatorExamples >> translateArrayCollectWithTemplateEmbeddedInStringsConcactenate [
 	<gtExample>
 	| aTemplate aTranslator aResult |
@@ -149,7 +149,7 @@ GtRobocoderTemplateTranslatorExamples >> translateArrayCollectWithTemplateEmbedd
 	^ aResult
 ]
 
-{ #category : 'examples' }
+{ #category : #examples }
 GtRobocoderTemplateTranslatorExamples >> translateArrayCollectWithTemplateEmbeddedInStringsTwice [
 	<gtExample>
 	| aTemplate aTranslator aResult |
@@ -164,7 +164,7 @@ GtRobocoderTemplateTranslatorExamples >> translateArrayCollectWithTemplateEmbedd
 	^ aResult
 ]
 
-{ #category : 'examples' }
+{ #category : #examples }
 GtRobocoderTemplateTranslatorExamples >> translateArrayCollectWithTemplateEmbeddedInStringsWithinBlock [
 	<gtExample>
 	| aTemplate aTranslator aResult |
@@ -179,7 +179,7 @@ GtRobocoderTemplateTranslatorExamples >> translateArrayCollectWithTemplateEmbedd
 	^ aResult
 ]
 
-{ #category : 'examples' }
+{ #category : #examples }
 GtRobocoderTemplateTranslatorExamples >> translateArrayOfChars [
 	<gtExample>
 	| aTemplate aTranslator aResult |
@@ -194,7 +194,7 @@ GtRobocoderTemplateTranslatorExamples >> translateArrayOfChars [
 	^ aResult
 ]
 
-{ #category : 'examples' }
+{ #category : #examples }
 GtRobocoderTemplateTranslatorExamples >> translateArrayOfCharsAsUppercase [
 	<gtExample>
 	| aTemplate aTranslator aResult |
@@ -209,7 +209,7 @@ GtRobocoderTemplateTranslatorExamples >> translateArrayOfCharsAsUppercase [
 	^ aResult
 ]
 
-{ #category : 'examples' }
+{ #category : #examples }
 GtRobocoderTemplateTranslatorExamples >> translateDoubleNestedTemplate [
 	<gtExample>
 	| aTemplate aTranslator aResult |
@@ -225,7 +225,7 @@ GtRobocoderTemplateTranslatorExamples >> translateDoubleNestedTemplate [
 	^ aResult
 ]
 
-{ #category : 'examples' }
+{ #category : #examples }
 GtRobocoderTemplateTranslatorExamples >> translateSimpleTemplate [
 	<gtExample>
 	| aTemplate aTranslator aResult |
@@ -240,7 +240,7 @@ GtRobocoderTemplateTranslatorExamples >> translateSimpleTemplate [
 	^ aResult
 ]
 
-{ #category : 'examples' }
+{ #category : #examples }
 GtRobocoderTemplateTranslatorExamples >> translateSimpleTemplateWithText [
 	<gtExample>
 	| aTemplate aTranslator aResult |
@@ -255,7 +255,7 @@ GtRobocoderTemplateTranslatorExamples >> translateSimpleTemplateWithText [
 	^ aResult
 ]
 
-{ #category : 'examples' }
+{ #category : #examples }
 GtRobocoderTemplateTranslatorExamples >> translateTemplateInDoubleEmbeddedString [
 	<gtExample>
 	| aTemplate aTranslator aResult |
@@ -270,7 +270,7 @@ GtRobocoderTemplateTranslatorExamples >> translateTemplateInDoubleEmbeddedString
 	^ aResult
 ]
 
-{ #category : 'examples' }
+{ #category : #examples }
 GtRobocoderTemplateTranslatorExamples >> translateTemplateInDoubleEmbeddedStringWithText [
 	<gtExample>
 	| aTemplate aTranslator aResult |
@@ -285,7 +285,7 @@ GtRobocoderTemplateTranslatorExamples >> translateTemplateInDoubleEmbeddedString
 	^ aResult
 ]
 
-{ #category : 'examples' }
+{ #category : #examples }
 GtRobocoderTemplateTranslatorExamples >> translateTemplateInEmbeddedString [
 	<gtExample>
 	| aTemplate aTranslator aResult |
@@ -300,7 +300,7 @@ GtRobocoderTemplateTranslatorExamples >> translateTemplateInEmbeddedString [
 	^ aResult
 ]
 
-{ #category : 'examples' }
+{ #category : #examples }
 GtRobocoderTemplateTranslatorExamples >> translateTemplateInEmbeddedStringWithText [
 	<gtExample>
 	| aTemplate aTranslator aResult |
@@ -315,7 +315,7 @@ GtRobocoderTemplateTranslatorExamples >> translateTemplateInEmbeddedStringWithTe
 	^ aResult
 ]
 
-{ #category : 'examples' }
+{ #category : #examples }
 GtRobocoderTemplateTranslatorExamples >> translateTemplateInString [
 	<gtExample>
 	| aTemplate aTranslator aResult |
@@ -330,7 +330,7 @@ GtRobocoderTemplateTranslatorExamples >> translateTemplateInString [
 	^ aResult
 ]
 
-{ #category : 'examples' }
+{ #category : #examples }
 GtRobocoderTemplateTranslatorExamples >> translateTemplateInStringWithText [
 	<gtExample>
 	| aTemplate aTranslator aResult |
@@ -345,7 +345,7 @@ GtRobocoderTemplateTranslatorExamples >> translateTemplateInStringWithText [
 	^ aResult
 ]
 
-{ #category : 'examples' }
+{ #category : #examples }
 GtRobocoderTemplateTranslatorExamples >> translateTrippleNestedTemplate [
 	<gtExample>
 	| aTemplate aTranslator aResult |
