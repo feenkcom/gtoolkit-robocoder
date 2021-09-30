@@ -63,5 +63,8 @@ GtRobocoderForManyMetamodel >> parents [
 
 { #category : 'accessing' }
 GtRobocoderForManyMetamodel >> parents: anObject [
+	self
+		assert: [ anObject notNil ]
+		description: [ 'Parents must not be nil' ].
 	parents := anObject asOrderedCollection
 ]

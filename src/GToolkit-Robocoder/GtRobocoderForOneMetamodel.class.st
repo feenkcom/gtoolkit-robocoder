@@ -86,5 +86,7 @@ GtRobocoderForOneMetamodel >> parentViewModelSelectorName [
 
 { #category : 'api - accessing' }
 GtRobocoderForOneMetamodel >> parents [
-	^ { self parent }
+	^ self hasParent
+		ifTrue: [ { self parent } ]
+		ifFalse: [ #() ]
 ]

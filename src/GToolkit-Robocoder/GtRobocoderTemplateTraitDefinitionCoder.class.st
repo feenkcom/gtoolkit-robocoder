@@ -121,7 +121,7 @@ GtRobocoderTemplateTraitDefinitionCoder >> initialize [
 
 { #category : 'api - accessing' }
 GtRobocoderTemplateTraitDefinitionCoder >> map: aVariableName to: anObject [
-	bindings at: aVariableName put: anObject
+	bindings localAt: aVariableName put: anObject
 ]
 
 { #category : 'api - accessing' }
