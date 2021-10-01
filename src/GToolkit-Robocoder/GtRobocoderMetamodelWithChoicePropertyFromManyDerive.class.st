@@ -1,7 +1,7 @@
 Class {
 	#name : #GtRobocoderMetamodelWithChoicePropertyFromManyDerive,
 	#superclass : #GtRobocoderMetamodelWithPropertyDerive,
-	#category : 'GToolkit-Robocoder-Metamodel - Derives'
+	#category : #'GToolkit-Robocoder-Metamodel - Derives'
 }
 
 { #category : #testing }
@@ -88,8 +88,7 @@ GtRobocoderMetamodelWithChoicePropertyFromManyDerive >> applyOnMetamodelsWithCod
 			ifTrue: [
 				self generatePropertyChangedNotifierMethodFor: eachMetamodelWithCodeDefinition.
 				self generateChoiceSetHookMethodTo: eachMetamodelWithCodeDefinition.
-				self generateChoiceUnsetHookMethodTo: eachMetamodelWithCodeDefinition
-			] ].
+				self generateChoiceUnsetHookMethodTo: eachMetamodelWithCodeDefinition ] ].
 	
 
 ]

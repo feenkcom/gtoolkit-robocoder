@@ -5,7 +5,7 @@ Class {
 		'announcement',
 		'notifier'
 	],
-	#category : 'GToolkit-Robocoder-Metamodel - Derives'
+	#category : #'GToolkit-Robocoder-Metamodel - Derives'
 }
 
 { #category : #testing }
@@ -109,6 +109,11 @@ GtRobocoderMetamodelWithPropertyDerive >> generatePropertyChangedNotifierMethodF
 				inFullClass: anAnnouncementDefinition).
 			#propertyGetter -> (self propertyGetterSelectorOf: aGtRobocoderMetamodelWithCodeDefinition) };
 		translate.
+
+	aMethodDefinition parent isForTrait
+		ifTrue: [
+			aMethodDefinition := aMethodDefinition copy.
+			aGtRobocoderMetamodelWithCodeDefinition definition instanceSideDefinition methods addMethod: aMethodDefinition ].
 
 	aMethodDefinition
 		addMethodPartSource: methodSourceCode
