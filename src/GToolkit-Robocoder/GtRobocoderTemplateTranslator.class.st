@@ -4,9 +4,10 @@ Class {
 	#traits : 'TGtRobocoderTemplateProgramNodeVisitor',
 	#classTraits : 'TGtRobocoderTemplateProgramNodeVisitor classTrait',
 	#instVars : [
-		'evaluationContext'
+		'evaluationContext',
+		'localBindings'
 	],
-	#category : 'GToolkit-Robocoder-Generators'
+	#category : #'GToolkit-Robocoder-Generators'
 }
 
 { #category : #accessing }
@@ -87,12 +88,13 @@ GtRobocoderTemplateTranslator >> initialize [
 	super initialize.
 
 	evaluationContext := GtPharoSourceCoderEvaluationContext new.
-	self bindings: GtLocalVariablesBindings new
+	localBindings := GtLocalVariablesBindings new.
+	self bindings: localBindings
 ]
 
 { #category : #accessing }
 GtRobocoderTemplateTranslator >> map: aVariableName to: anObject [
-	self bindings at: aVariableName put: anObject
+	localBindings localAt: aVariableName put: anObject
 ]
 
 { #category : #accessing }
