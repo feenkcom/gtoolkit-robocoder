@@ -1,23 +1,24 @@
 "
-! With object trait generator
+#With object trait generator
 
 Usage example to generate an api trait for a view model:
-[[[
+```
 GtRobocoderWithObjectTraitGenerator new
 	objectName: 'testViewModel';
 	projectPrefix: 'Pr';
 	packageName: 'GToolkit-MVVM-Test';
 	generate
-]]]
+```
 
 Usage example to generate an api trait for a domain model:
-[[[
+```
 GtRobocoderWithObjectTraitGenerator new
 	modelName: 'testModel';
 	projectPrefix: 'Pr';
 	packageName: 'GToolkit-MVVM-Test';
 	generate
-]]]
+```
+
 "
 Class {
 	#name : #GtRobocoderWithObjectTraitGenerator,
@@ -31,7 +32,7 @@ Class {
 		'objectId',
 		'pragmaName'
 	],
-	#category : 'GToolkit-Robocoder-Generators'
+	#category : #'GToolkit-Robocoder-Generators'
 }
 
 { #category : #accessing }

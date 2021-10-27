@@ -2,7 +2,7 @@
 ! Property Trait generator
 
 Usage example:
-[[[
+```
 GtRobocoderWithPropertyTraitGenerator new
 	propertyName: 'size';
 	propertyType: 'Point';
@@ -10,7 +10,8 @@ GtRobocoderWithPropertyTraitGenerator new
 	projectPrefix: 'Pr';
 	packageName: 'GToolkit-MVVM-Test';
 	generate.
-]]]
+```
+
 "
 Class {
 	#name : #GtRobocoderWithPropertyTraitGenerator,
@@ -28,7 +29,7 @@ Class {
 		'packageName',
 		'tagName'
 	],
-	#category : 'GToolkit-Robocoder-Generators'
+	#category : #'GToolkit-Robocoder-Generators'
 }
 
 { #category : #accessing }

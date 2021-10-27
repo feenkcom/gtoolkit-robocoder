@@ -2,13 +2,13 @@
 ! Trait from a template generator
 
 Usage example:
-[[[
+```
 (GtRobocoderTraitGenerator new
 	templateTrait: TMyTemplateTrait;
 	mappings: {
 		#key -> 'value'
 	}) generate
-]]]
+```
 
 "
 Class {
@@ -19,7 +19,7 @@ Class {
 		'templateTrait',
 		'mappings'
 	],
-	#category : 'GToolkit-Robocoder-Generators'
+	#category : #'GToolkit-Robocoder-Generators'
 }
 
 { #category : #accessing }
