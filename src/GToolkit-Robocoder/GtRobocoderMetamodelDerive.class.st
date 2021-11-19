@@ -12,6 +12,21 @@ GtRobocoderMetamodelDerive class >> deriveNamed: aDeriveName ifFound: aBlock [
 			ifFound: aBlock
 ]
 
+{ #category : #'gt - extensions' }
+GtRobocoderMetamodelDerive class >> gtDerivesFor: aView [
+
+	<gtView>
+	<gtClassView>
+	^ aView columnedList
+		  title: 'Derives';
+		  items: [ 
+			  (GtRobocoderMetamodelDerive allSubclasses reject: #isAbstract) 
+				  sort: [ :a :b | a label < b label ] ];
+		  column: 'Label' text: #label;
+		  column: 'Class' text: #name weight: 3;
+		  sendTool: [ :aClass | GtClassCoderTool forClass: aClass ]
+]
+
 { #category : #accessing }
 GtRobocoderMetamodelDerive class >> label [
 	^ self subclassResponsibility
