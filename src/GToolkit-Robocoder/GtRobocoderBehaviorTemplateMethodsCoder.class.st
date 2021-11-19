@@ -6,7 +6,7 @@ Class {
 		'object',
 		'filteredClasses'
 	],
-	#category : 'GToolkit-Robocoder-Coder - Template method'
+	#category : #'GToolkit-Robocoder-Coder - Template method'
 }
 
 { #category : #'instance creation' }
@@ -95,10 +95,12 @@ GtRobocoderBehaviorTemplateMethodsCoder >> filteredClass: aBehavior [
 
 { #category : #initialize }
 GtRobocoderBehaviorTemplateMethodsCoder >> forClass: aBehavior [
+
 	class := aBehavior.
 	filteredClasses := Set with: aBehavior.
-	self forItems: (GtSearchMethodGroupResult 
-		forFilter: (GtRobocoderTemplateMethodsFilter forClass: class))
+	self forItems:
+		((GtRobocoderTemplateMethodsFilter forClass: class) asAsyncStream 
+		 to: OrderedCollection) wait
 ]
 
 { #category : #initialize }
