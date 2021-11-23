@@ -5,7 +5,7 @@ Class {
 		'viewModelModels',
 		'metamodelsWithCodeDefinition'
 	],
-	#category : 'GToolkit-Robocoder-Metamodel'
+	#category : #'GToolkit-Robocoder-Metamodel'
 }
 
 { #category : #enumerating }
@@ -25,13 +25,40 @@ GtRobocoderMetamodelsWithCodeDefinitions >> generateChanges [
 	^ theChanges
 ]
 
+{ #category : #accessing }
+GtRobocoderMetamodelsWithCodeDefinitions >> gtAllDefinitionsFor: aView [
+
+	<gtView>
+	self metamodelsWithCodeDefinition ifNil: [ ^ aView empty ].
+
+	^ aView columnedList
+		  title: 'Definitions';
+		  priority: 2;
+		  items: [ 
+			  Array streamContents: [ :aStream | 
+					  self metamodelsWithCodeDefinition do: [ :eachMetamodel | 
+							  aStream nextPut: eachMetamodel -> eachMetamodel definition.
+							  eachMetamodel extraDefinitions ifNotNil: [ :aCollection | 
+									  aCollection do: [ :eachDefinition | 
+											  aStream nextPut: eachMetamodel -> eachDefinition ] ] ] ] ];
+		  column: 'Index' text: [ :anItem :anIndex | anIndex ] width: 40;
+		  column: 'Name' text: [ :anAssoc | anAssoc value name ] weight: 3;
+		  column: 'Flags' text: [ :anAssoc | 
+			  anAssoc value = anAssoc key definition
+				  ifTrue: [ 'primary' ]
+				  ifFalse: [ 
+					  'extra' asRopedText foreground:
+							  BrGlamorousColors disabledButtonTextColor ] ];
+		  send: #value
+]
+
 { #category : #'gt-extensions' }
 GtRobocoderMetamodelsWithCodeDefinitions >> gtChangesFor: aView [
 	<gtView>
 	
 	^ aView forward
 		title: 'Changes';
-		priority: 1;
+		priority: 3;
 		object: [ self generateChanges ];
 		view: #gtChangesFor:
 ]
@@ -42,7 +69,7 @@ GtRobocoderMetamodelsWithCodeDefinitions >> gtModelsFor: aView [
 	
 	^ aView list
 		title: 'Models';
-		priority: 2;
+		priority: 1;
 		items: [ self viewModelModels models ]
 ]
 

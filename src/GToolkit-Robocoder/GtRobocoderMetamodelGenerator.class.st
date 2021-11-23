@@ -1,6 +1,6 @@
 "
-! Model Generator
-Given a metamodel declaration source code, the metamodel generator parses (using ${class:GtViewModelParser}$) and creates models (${class:GtViewModelModels}$) of the declated view-models.
+#Model Generator
+Given a metamodel declaration source code, the metamodel generator parses (using {{gtClass:GtViewModelParser}}) and creates models ({{gtClass:GtViewModelModels}}) of the declated view-models.
 "
 Class {
 	#name : #GtRobocoderMetamodelGenerator,
@@ -13,7 +13,7 @@ Class {
 		'derives',
 		'metamodels'
 	],
-	#category : 'GToolkit-Robocoder-Coder - Metamodel'
+	#category : #'GToolkit-Robocoder-Coder - Metamodel'
 }
 
 { #category : #generation }
@@ -26,6 +26,15 @@ GtRobocoderMetamodelGenerator class >> generateFrom: aSourceCode [
 	^ self new
 		sourceCode: aSourceCode;
 		generate
+]
+
+{ #category : #private }
+GtRobocoderMetamodelGenerator >> ast [
+
+	^ GtRobocoderMetamodelParser
+		  parse: self sourceCode
+		  startingAt:
+		  GtRobocoderMetamodelParser startingStateForFullDefinition
 ]
 
 { #category : #private }
@@ -75,12 +84,10 @@ GtRobocoderMetamodelGenerator >> ensureViewModelForOneExists: aNameString [
 
 { #category : #translating }
 GtRobocoderMetamodelGenerator >> generate [
+
 	<return: #GtRobocoderMetamodels>
 	| anAst |
-
-	anAst := GtRobocoderMetamodelParser
-		parse: self sourceCode
-		startingAt: GtRobocoderMetamodelParser startingStateForFullDefinition.
+	anAst := self ast.
 
 	metamodels := OrderedCollection new.
 	settings := Dictionary new.
@@ -91,24 +98,102 @@ GtRobocoderMetamodelGenerator >> generate [
 	metamodels do: [ :eachModel | eachModel settings: settings ].
 
 	^ GtRobocoderMetamodels new
-		ast: anAst;
-		models: metamodels asArray;
-		settings: settings;
-		derives: derives asArray;
-		yourself
+		  ast: anAst;
+		  models: metamodels asArray;
+		  settings: settings;
+		  derives: derives asArray;
+		  yourself
 ]
 
 { #category : #'gt-extension' }
-GtRobocoderMetamodelGenerator >> gtTreeFor: aView [
+GtRobocoderMetamodelGenerator >> gtAstFor: aView [
 	<gtView>
 	
-	metamodels ifEmpty: [ ^ aView empty ].
+	self sourceCode ifNil: [ ^ aView empty ].
 	
 	^ aView forward
-		title: 'View Models';
-		priority: 5;
-		object: [ metamodels first ];
-		view: #gtTreeFor:
+		title: 'AST';
+		priority: 2;
+		object: [ self ast ];
+		view: #gtExploreFor:
+]
+
+{ #category : #'gt-extension' }
+GtRobocoderMetamodelGenerator >> gtChangesFor: aView [
+
+	<gtView>
+	self sourceCode ifNil: [ ^ aView empty ].
+
+	^ aView forward
+		  title: 'Changes';
+		  priority: 5;
+		  object: [ self generate ];
+		  view: #gtChangesFor:
+]
+
+{ #category : #'gt-extension' }
+GtRobocoderMetamodelGenerator >> gtMetaModelsWithCodeDefinitionsFor: aView [
+
+	<gtView>
+	self sourceCode ifNil: [ ^ aView empty ].
+
+	^ aView forward
+		  title: 'Definitions';
+		  priority: 4;
+		  object: [ self generate ];
+		  view: #gtMetaModelsWithCodeDefinitionsFor:
+]
+
+{ #category : #'gt-extension' }
+GtRobocoderMetamodelGenerator >> gtSettingsFor: aView [
+
+	<gtView>
+	self sourceCode ifNil: [ ^ aView empty ].
+
+	^ aView forward
+		  title: 'Settings';
+		  priority: 10;
+		  object: [ 
+			  settings ifNil: [ self generate ].
+			  settings ];
+		  view: #gtTreeFor:
+]
+
+{ #category : #'gt-extension' }
+GtRobocoderMetamodelGenerator >> gtSourceCodeFor: aView [
+
+	<gtView>
+	self sourceCode ifNil: [ ^ aView empty ].
+
+	^ aView textEditor
+		  title: 'Source code';
+		  priority: 1;
+		  styler: [ 
+			  GtCoderAstCompositeStyler new
+				  coderViewModel:
+					  (GtRobocoderMetamodelCoder new forSource: self sourceCode)
+						  asCoderUIModel;
+				  stylers: { 
+						  GtRobocoderMetamodelStyler new.
+						  GtRobocoderMetamodelBrowseStyler new.
+						  GtRobocoderMetamodelExpanderStyler new } ];
+		  glamorousCodeFontAndSize;
+		  text: [ self sourceCode ]
+]
+
+{ #category : #'gt-extension' }
+GtRobocoderMetamodelGenerator >> gtViewModelsFor: aView [
+
+	<gtView>
+	self sourceCode ifNil: [ ^ aView empty ].
+
+	^ aView forward
+		  title: 'View Models';
+		  priority: 3;
+		  object: [ 
+			  metamodels ifNil: [ self generate ].
+			  metamodels first ];
+		  view: #gtTreeFor:
 ]
 
 { #category : #accessing }

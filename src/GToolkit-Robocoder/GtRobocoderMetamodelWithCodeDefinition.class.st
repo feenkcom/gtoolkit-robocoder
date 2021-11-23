@@ -8,7 +8,7 @@ Class {
 		'allViewModelModelDefinitions',
 		'subscriptions'
 	],
-	#category : 'GToolkit-Robocoder-Metamodel'
+	#category : #'GToolkit-Robocoder-Metamodel'
 }
 
 { #category : #'api - enumeration' }
@@ -389,6 +389,64 @@ GtRobocoderMetamodelWithCodeDefinition >> forOneModel [
 { #category : #'api - accessing' }
 GtRobocoderMetamodelWithCodeDefinition >> fullName [
 	^ self metamodel fullName
+]
+
+{ #category : #'gt-extensions' }
+GtRobocoderMetamodelWithCodeDefinition >> gtAllDefinitionsFor: aView [
+
+	<gtView>
+	self definition ifNil: [ ^ aView empty ].
+
+	^ aView columnedList
+		  title: 'All Definitions';
+		  priority: 4;
+		  items: [ 
+			  { self definition } , (self extraDefinitions ifNil: [ #(  ) ]) ];
+		  column: 'Index' text: [ :anItem :anIndex | anIndex ] width: 40;
+		  column: 'Name' text: #name weight: 3;
+		  column: 'Flags' text: [ :anItem | 
+			  anItem = self definition
+				  ifTrue: [ 'primary' ]
+				  ifFalse: [ 
+					  'extra' asRopedText foreground:
+							  BrGlamorousColors disabledButtonTextColor ] ]
+]
+
+{ #category : #'gt-extensions' }
+GtRobocoderMetamodelWithCodeDefinition >> gtChangesFor: aView [
+
+	<gtView>
+	^ aView forward
+		  title: 'Changes';
+		  priority: 5;
+		  object: [ self allViewModelModelDefinitions ];
+		  view: #gtChangesFor:
+]
+
+{ #category : #'gt-extensions' }
+GtRobocoderMetamodelWithCodeDefinition >> gtDefinitionFor: aView [
+
+	<gtView>
+	self definition ifNil: [ ^ aView empty ].
+
+	^ aView forward
+		  title: 'Primary Definition';
+		  priority: 1;
+		  object: [ self definition ];
+		  view: #gtDefinitionFor:
+]
+
+{ #category : #'gt-extensions' }
+GtRobocoderMetamodelWithCodeDefinition >> gtDefinitionMethodsFor: aView [
+
+	<gtView>
+	self definition ifNil: [ ^ aView empty ].
+
+	^ aView forward
+		  title: 'Primary Methods';
+		  priority: 2;
+		  object: [ self definition ];
+		  view: #gtMethodsFor:
 ]
 
 { #category : #'api - accessing' }

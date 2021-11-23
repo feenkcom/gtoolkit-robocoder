@@ -1,3 +1,10 @@
+"
+I am a {{gtClass:GtRobocoderMetamodelDerive}}.
+I can generate propeties.
+#Example
+For the following metamodel definition: {{gtExample:GtRobocoderMetamodelWithSimplePropertyDeriveExamples >> #generator | codeExpanded=false | previewExpanded=true | previewShow=#gtSourceCodeFor: | previewHeight=175 }}
+I generage the following class definitions: {{gtExample:GtRobocoderMetamodelWithSimplePropertyDeriveExamples >> #generator | codeExpanded=false | previewExpanded=true | previewShow=#gtMetaModelsWithCodeDefinitionsFor: | previewHeight=125 }}
+"
 Class {
 	#name : #GtRobocoderMetamodelWithSimplePropertyDerive,
 	#superclass : #GtRobocoderMetamodelWithPropertyDerive,
@@ -9,7 +16,7 @@ Class {
 		'type',
 		'comparator'
 	],
-	#category : 'GToolkit-Robocoder-Metamodel - Derives'
+	#category : #'GToolkit-Robocoder-Metamodel - Derives'
 }
 
 { #category : #accessing }

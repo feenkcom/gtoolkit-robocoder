@@ -7,7 +7,7 @@ Class {
 		'derives',
 		'settings'
 	],
-	#category : 'GToolkit-Robocoder-Metamodel'
+	#category : #'GToolkit-Robocoder-Metamodel'
 }
 
 { #category : #accessing }
@@ -123,6 +123,70 @@ GtRobocoderMetamodels >> generateUnsubscribeFromFor: eachViewModelModelWithDefin
 					anUnsubscriberMethod
 						addMethodPartSource: ('self ', anAnnouncerSelector, ' unsubscribe: self.')
 						id: anAnnouncerSelector ] ]
+]
+
+{ #category : #'gt-extensions' }
+GtRobocoderMetamodels >> gtAstFor: aView [
+
+	<gtView>
+	self ast ifNil: [ ^ aView empty ].
+
+	^ aView forward
+		  title: 'AST';
+		  priority: 1;
+		  object: [ self ast ];
+		  view: #gtExploreFor:
+]
+
+{ #category : #'gt-extensions' }
+GtRobocoderMetamodels >> gtChangesFor: aView [
+
+	<gtView>
+	^ aView forward
+		  title: 'Changes';
+		  priority: 4;
+		  object: [ self generateCodeDefinitions ];
+		  view: #gtChangesFor:
+]
+
+{ #category : #'gt-extensions' }
+GtRobocoderMetamodels >> gtMetaModelsWithCodeDefinitionsFor: aView [
+
+	<gtView>
+	self models ifNil: [ ^ aView empty ].
+
+	^ aView forward
+		  title: 'Definitions';
+		  priority: 3;
+		  object: [ self generateCodeDefinitions ];
+		  view: #gtAllDefinitionsFor:
+]
+
+{ #category : #'gt-extensions' }
+GtRobocoderMetamodels >> gtModelsFor: aView [
+
+	<gtView>
+	self models ifNil: [ ^ aView empty ].
+
+	^ aView columnedList
+		  title: 'Models';
+		  priority: 2;
+		  items: [ self models ];
+		  column: 'Index' text: [ :anItem :anIndex | anIndex ] width: 40;
+		  column: 'Model' text: #yourself
+]
+
+{ #category : #'gt-extensions' }
+GtRobocoderMetamodels >> gtSettingsFor: aView [
+
+	<gtView>
+	settings ifNil: [ ^ aView empty ].
+
+	^ aView forward
+		  title: 'Settings';
+		  priority: 10;
+		  object: [ settings ];
+		  view: #gtTreeFor:
 ]
 
 { #category : #initialization }
