@@ -1,0 +1,185 @@
+{
+	"__schema" : "4.1",
+	"__type" : "page",
+	"children" : {
+		"__type" : "snippets",
+		"items" : [
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "juraj.kubelka@icloud.com"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2021-11-23T15:08:37.495805-03:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "juraj.kubelka@icloud.com"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2021-11-23T15:09:31.115786-03:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "HOP5XdqNDQCDuC0ZB3snPQ=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "The following Rodocoder metamodel generates an address book in which one person can have several addresses and an address can have several tags, e.g., home, work."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "juraj.kubelka@icloud.com"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2021-11-23T15:06:40.172845-03:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "juraj.kubelka@icloud.com"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2021-11-23T15:08:30.518299-03:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "kx4/VtqNDQCDt/i0B3snPQ=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Packages and Package tags are generated using the `@package-@tag-(@objectTag | extraTag)` pattern. The `extraTag` is not configurable and is used by Robocoder do generates tags as `Events` and `Support`."
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "juraj.kubelka@icloud.com"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-11-23T15:05:24.206735-03:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "juraj.kubelka@icloud.com"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-11-23T15:05:25.116347-03:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "G9hMUtqNDQCDsz9qB3snPQ=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "#Model"
+			},
+			{
+				"__type" : "robocoderMetamodelSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "juraj.kubelka@icloud.com"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-11-23T15:05:27.70154-03:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "juraj.kubelka@icloud.com"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-11-23T15:10:46.797319-03:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "TFy8UtqNDQCDtZUpB3snPQ=="
+				},
+				"code" : "@package 'Tutorial-AddressBook'\r@tag 'Model'\r@objectTag 'Models'\r\r@prefix Book\r@project FileBrowser\r@suffix Model\r\r@derive children\r@derive parent\r@derive phlowList\r@derive announcer\r@derive notifier\r@derive api\r@derive print\r@derive typeTest\r\rfolder(s) => file(s) and folder(s).\r\rfolder(s) {\r\t@derive add(primitive: true),\r\t@derive remove(primitive: true),\r\t@derive model(name: fileReferences)\r}.\r\rfile(s) {\r\t@derive add(primitive: true),\r\t@derive remove(primitive: true),\r\t@derive model(name: fileReferences)\r}.\r\rfolder {\r\tfile(s): #files,\r\tfolder(s): #directories,\r\t@derive model(name: fileReference)\r}.\r\rfile {\r\t@derive model(name: fileReference)\r}"
+			}
+		]
+	},
+	"createEmail" : {
+		"__type" : "email",
+		"emailString" : "juraj.kubelka@icloud.com"
+	},
+	"createTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2021-11-23T15:05:20.344593-03:00"
+		}
+	},
+	"editEmail" : {
+		"__type" : "email",
+		"emailString" : "<unknown>"
+	},
+	"editTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2021-11-23T18:13:51.064138-03:00"
+		}
+	},
+	"pageType" : {
+		"__type" : "namedPage",
+		"title" : "Robocoder Addressbook Tutorial"
+	},
+	"uid" : {
+		"__type" : "uuid",
+		"uuid" : "bd194c52-da8d-0d00-83b2-150d077b273d"
+	}
+}
