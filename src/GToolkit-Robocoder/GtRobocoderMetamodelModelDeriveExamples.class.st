@@ -1,35 +1,16 @@
 Class {
 	#name : #GtRobocoderMetamodelModelDeriveExamples,
 	#superclass : #GtRobocoderMetamodelWithPropertyDeriveExamples,
+	#traits : 'TGtRobocoderMetamodelWithPropertyDeriveExamples',
+	#classTraits : 'TGtRobocoderMetamodelWithPropertyDeriveExamples classTrait',
 	#category : #'GToolkit-Robocoder-Examples'
 }
-
-{ #category : #examples }
-GtRobocoderMetamodelModelDeriveExamples >> generator [
-
-	<gtExample>
-	| aGenerator |
-	aGenerator := GtRobocoderMetamodelGenerator new sourceCode:
-		              self sourceCode.
-
-	^ aGenerator
-]
-
-{ #category : #examples }
-GtRobocoderMetamodelModelDeriveExamples >> metamodels [
-
-	<gtExample>
-	| aGenerator |
-	aGenerator := self generator generate.
-
-	^ aGenerator
-]
 
 { #category : #examples }
 GtRobocoderMetamodelModelDeriveExamples >> sourceCode [
 	<gtExample>
 	
-	^ '@package ''Robocoder-Tutorial''
+	^ '@package ''RobocoderTutorial''
 @prefix Book
 @objectTag ''Models''
 @suffix Model

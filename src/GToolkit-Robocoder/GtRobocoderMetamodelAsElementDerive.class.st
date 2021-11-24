@@ -1,10 +1,17 @@
+"
+I am a {{gtClass:GtRobocoderMetamodelDerive}}.
+I generate ??.
+#Example
+For the following metamodel definition: {{gtExample:GtRobocoderMetamodelAsElementDeriveExamples >> #generator | codeExpanded=false | previewExpanded=true | previewShow=#gtSourceCodeFor: | previewHeight=175 }}
+I generate the following definitions: {{gtExample:GtRobocoderMetamodelAsElementDeriveExamples >> #generator | codeExpanded=false | previewExpanded=true | previewShow=#gtMetaModelsWithCodeDefinitionsFor: | previewHeight=225 }}
+"
 Class {
 	#name : #GtRobocoderMetamodelAsElementDerive,
 	#superclass : #GtRobocoderMetamodelDerive,
 	#instVars : [
 		'name'
 	],
-	#category : 'GToolkit-Robocoder-Metamodel - Derives'
+	#category : #'GToolkit-Robocoder-Metamodel - Derives'
 }
 
 { #category : #accessing }

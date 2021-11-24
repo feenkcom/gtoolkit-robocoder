@@ -31,7 +31,7 @@ GtRobocoderMetamodelsWithCodeDefinitions >> gtAllDefinitionsFor: aView [
 	<gtView>
 	self metamodelsWithCodeDefinition ifNil: [ ^ aView empty ].
 
-	^ aView columnedList
+	^ aView columnedTree
 		  title: 'Definitions';
 		  priority: 2;
 		  items: [ 
@@ -41,14 +41,22 @@ GtRobocoderMetamodelsWithCodeDefinitions >> gtAllDefinitionsFor: aView [
 							  eachMetamodel extraDefinitions ifNotNil: [ :aCollection | 
 									  aCollection do: [ :eachDefinition | 
 											  aStream nextPut: eachMetamodel -> eachDefinition ] ] ] ] ];
-		  column: 'Index' text: [ :anItem :anIndex | anIndex ] width: 40;
+		  children: [ :anItem | anItem value gtAllDefinitionsChildren ];
 		  column: 'Name' text: [ :anAssoc | anAssoc value name ] weight: 3;
 		  column: 'Flags' text: [ :anAssoc | 
-			  anAssoc value = anAssoc key definition
-				  ifTrue: [ 'primary' ]
+			  (anAssoc value isKindOf: GtBehaviorDefinition)
+				  ifTrue: [ 
+					  anAssoc value = anAssoc key definition
+						  ifTrue: [ 'primary' ]
+						  ifFalse: [ 
+							  'extra' asRopedText foreground:
+									  BrGlamorousColors disabledButtonTextColor ] ]
 				  ifFalse: [ 
-					  'extra' asRopedText foreground:
-							  BrGlamorousColors disabledButtonTextColor ] ];
+					  (anAssoc isKindOf: GtPharoMethodDefinition)
+						  ifTrue: [ 
+							  anAssoc protocol asString asRopedText foreground:
+									  BrGlamorousColors disabledButtonTextColor ]
+						  ifFalse: [ '' ] ] ];
 		  send: #value
 ]
 
@@ -58,7 +66,7 @@ GtRobocoderMetamodelsWithCodeDefinitions >> gtChangesFor: aView [
 	
 	^ aView forward
 		title: 'Changes';
-		priority: 3;
+		priority: 1;
 		object: [ self generateChanges ];
 		view: #gtChangesFor:
 ]
@@ -69,7 +77,7 @@ GtRobocoderMetamodelsWithCodeDefinitions >> gtModelsFor: aView [
 	
 	^ aView list
 		title: 'Models';
-		priority: 1;
+		priority: 3;
 		items: [ self viewModelModels models ]
 ]
 

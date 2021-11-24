@@ -1,7 +1,14 @@
+"
+I am a {{gtClass:GtRobocoderMetamodelDerive}}.
+I generate code to deactivate children in a tree-structure model.
+#Example
+For the following metamodel definition: {{gtExample:GtRobocoderMetamodelWithActivationDeriveExamples >> #generator | codeExpanded=false | previewExpanded=true | previewShow=#gtSourceCodeFor: | previewHeight=175 }}
+I generate the following definitions: {{gtExample:GtRobocoderMetamodelWithActivationDeriveExamples >> #generator | codeExpanded=false | previewExpanded=true | previewShow=#gtMetaModelsWithCodeDefinitionsFor: | previewHeight=225 }}
+"
 Class {
 	#name : #GtRobocoderMetamodelWithActivationDerive,
 	#superclass : #GtRobocoderMetamodelWithChoicePropertyFromManyDerive,
-	#category : 'GToolkit-Robocoder-Metamodel - Derives'
+	#category : #'GToolkit-Robocoder-Metamodel - Derives'
 }
 
 { #category : #accessing }

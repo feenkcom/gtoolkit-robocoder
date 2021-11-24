@@ -9,9 +9,3 @@ GtRobocoderMetamodelWithPropertyDeriveExamples class >> isAbstract [
 
 	^ self name = #GtRobocoderMetamodelWithPropertyDeriveExamples
 ]
-
-{ #category : #accessing }
-GtRobocoderMetamodelWithPropertyDeriveExamples >> sourceCode [
-
-	^ self subclassResponsibility
-]

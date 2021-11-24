@@ -1,5 +1,5 @@
 Class {
-	#name : #GtRobocoderMetamodelWithSimplePropertyDeriveExamples,
+	#name : #GtRobocoderMetamodelPrintDeriveExamples,
 	#superclass : #GtRobocoderMetamodelWithPropertyDeriveExamples,
 	#traits : 'TGtRobocoderMetamodelWithPropertyDeriveExamples',
 	#classTraits : 'TGtRobocoderMetamodelWithPropertyDeriveExamples classTrait',
@@ -7,7 +7,7 @@ Class {
 }
 
 { #category : #examples }
-GtRobocoderMetamodelWithSimplePropertyDeriveExamples >> sourceCode [
+GtRobocoderMetamodelPrintDeriveExamples >> sourceCode [
 	<gtExample>
 	
 	^ '@package ''RobocoderTutorial''
@@ -15,8 +15,8 @@ GtRobocoderMetamodelWithSimplePropertyDeriveExamples >> sourceCode [
 @objectTag ''Models''
 @suffix Model
 
-address {
-	@derive property(name: streetName),
-	@derive property(name: city),
+person {
+	@derive print,
+	@derive model(name: name)
 }'
 ]

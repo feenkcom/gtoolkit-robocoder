@@ -1,13 +1,13 @@
 Class {
-	#name : #GtRobocoderMetamodelWithSimplePropertyDeriveExamples,
+	#name : #GtRobocoderMetamodelActionDeriveExamples,
 	#superclass : #GtRobocoderMetamodelWithPropertyDeriveExamples,
 	#traits : 'TGtRobocoderMetamodelWithPropertyDeriveExamples',
 	#classTraits : 'TGtRobocoderMetamodelWithPropertyDeriveExamples classTrait',
 	#category : #'GToolkit-Robocoder-Examples'
 }
 
-{ #category : #examples }
-GtRobocoderMetamodelWithSimplePropertyDeriveExamples >> sourceCode [
+{ #category : #accessing }
+GtRobocoderMetamodelActionDeriveExamples >> sourceCode [
 	<gtExample>
 	
 	^ '@package ''RobocoderTutorial''
@@ -16,7 +16,6 @@ GtRobocoderMetamodelWithSimplePropertyDeriveExamples >> sourceCode [
 @suffix Model
 
 address {
-	@derive property(name: streetName),
-	@derive property(name: city),
+	@derive action
 }'
 ]

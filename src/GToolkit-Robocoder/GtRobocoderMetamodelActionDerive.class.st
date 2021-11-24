@@ -1,10 +1,15 @@
+"
+I am a {{gtClass:GtRobocoderMetamodelDerive}}.
+I am currently broken.
+
+"
 Class {
 	#name : #GtRobocoderMetamodelActionDerive,
 	#superclass : #GtRobocoderMetamodelDerive,
 	#instVars : [
 		'name'
 	],
-	#category : 'GToolkit-Robocoder-Metamodel - Derives'
+	#category : #'GToolkit-Robocoder-Metamodel - Derives'
 }
 
 { #category : #accessing }

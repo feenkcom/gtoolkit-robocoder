@@ -1,7 +1,14 @@
+"
+I am a {{gtClass:GtRobocoderMetamodelDerive}}.
+I generate `isMethod` that returns `true` if the receiver represents object type, false otherwise.
+#Example
+For the following metamodel definition: {{gtExample:GtRobocoderMetamodelTypeTestDeriveExamples >> #generator | codeExpanded=false | previewExpanded=true | previewShow=#gtSourceCodeFor: | previewHeight=175 }}
+I generate the following definitions: {{gtExample:GtRobocoderMetamodelTypeTestDeriveExamples >> #generator | codeExpanded=false | previewExpanded=true | previewShow=#gtMetaModelsWithCodeDefinitionsFor: | previewHeight=225 }}
+"
 Class {
 	#name : #GtRobocoderMetamodelTypeTestDerive,
 	#superclass : #GtRobocoderMetamodelDerive,
-	#category : 'GToolkit-Robocoder-Metamodel - Derives'
+	#category : #'GToolkit-Robocoder-Metamodel - Derives'
 }
 
 { #category : #accessing }

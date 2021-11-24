@@ -1,7 +1,14 @@
+"
+I am a {{gtClass:GtRobocoderMetamodelDerive}}.
+I generate `printOn:` methods based the first {{gtClass: GtRobocoderMetamodelModelDerive | label=#label}} defined derived.
+#Example
+For the following metamodel definition: {{gtExample:GtRobocoderMetamodelPrintDeriveExamples >> #generator | codeExpanded=false | previewExpanded=true | previewShow=#gtSourceCodeFor: | previewHeight=175 }}
+I generate the following definitions: {{gtExample:GtRobocoderMetamodelPrintDeriveExamples >> #generator | codeExpanded=false | previewExpanded=true | previewShow=#gtMetaModelsWithCodeDefinitionsFor: | previewHeight=225 }}
+"
 Class {
 	#name : #GtRobocoderMetamodelPrintDerive,
 	#superclass : #GtRobocoderMetamodelDerive,
-	#category : 'GToolkit-Robocoder-Metamodel - Derives'
+	#category : #'GToolkit-Robocoder-Metamodel - Derives'
 }
 
 { #category : #accessing }

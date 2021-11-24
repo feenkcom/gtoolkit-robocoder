@@ -1,10 +1,11 @@
 "
 I am a {{gtClass:GtRobocoderMetamodelDerive}}.
-I can generate models (instance variables).
+I generate models (instance variables).
 Models are objects to which you need to subscribe for announcements. If you do *not* need to subscribe use a {{gtClass:GtRobocoderMetamodelWithSimplePropertyDerive | label=#label}} derive. 
 #Example
 For the following metamodel definition: {{gtExample:GtRobocoderMetamodelModelDeriveExamples >> #generator | codeExpanded=false | previewExpanded=true | previewShow=#gtSourceCodeFor: | previewHeight=175 }}
-I generage the following class definitions: {{gtExample:GtRobocoderMetamodelModelDeriveExamples >> #generator | codeExpanded=false | previewExpanded=true | previewShow=#gtMetaModelsWithCodeDefinitionsFor: | previewHeight=125 }}
+I generate the following definitions: {{gtExample:GtRobocoderMetamodelModelDeriveExamples >> #generator | codeExpanded=false | previewExpanded=true | previewShow=#gtMetaModelsWithCodeDefinitionsFor: | previewHeight=125 }}
+I gene
 "
 Class {
 	#name : #GtRobocoderMetamodelModelDerive,

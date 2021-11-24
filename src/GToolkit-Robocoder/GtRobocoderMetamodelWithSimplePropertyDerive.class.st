@@ -1,10 +1,10 @@
 "
 I am a {{gtClass:GtRobocoderMetamodelDerive}}.
-I can generate propeties (instance variables).
+I generate propeties (instance variables).
 Properties are objects to which you do *not* need to subscribe for announcements. If you need to subscribe use a {{gtClass:GtRobocoderMetamodelModelDerive | label=#label}} derive. 
 #Example
 For the following metamodel definition: {{gtExample:GtRobocoderMetamodelWithSimplePropertyDeriveExamples >> #generator | codeExpanded=false | previewExpanded=true | previewShow=#gtSourceCodeFor: | previewHeight=175 }}
-I generage the following class definitions: {{gtExample:GtRobocoderMetamodelWithSimplePropertyDeriveExamples >> #generator | codeExpanded=false | previewExpanded=true | previewShow=#gtMetaModelsWithCodeDefinitionsFor: | previewHeight=125 }}
+I generate the following definitions: {{gtExample:GtRobocoderMetamodelWithSimplePropertyDeriveExamples >> #generator | codeExpanded=false | previewExpanded=true | previewShow=#gtMetaModelsWithCodeDefinitionsFor: | previewHeight=225 }}
 "
 Class {
 	#name : #GtRobocoderMetamodelWithSimplePropertyDerive,
