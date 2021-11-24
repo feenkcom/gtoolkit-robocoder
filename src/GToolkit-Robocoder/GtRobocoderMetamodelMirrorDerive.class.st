@@ -1,3 +1,10 @@
+"
+I am a {{gtClass:GtRobocoderMetamodelDerive}}.
+I generate ??.
+#Example
+For the following metamodel definition: {{gtExample:GtRobocoderMetamodelMirrorDeriveExamples >> #generator | codeExpanded=false | previewExpanded=true | previewShow=#gtSourceCodeFor: | previewHeight=175 }}
+I generate the following definitions: {{gtExample:GtRobocoderMetamodelMirrorDeriveExamples >> #generator | codeExpanded=false | previewExpanded=true | previewShow=#gtMetaModelsWithCodeDefinitionsFor: | previewHeight=225 }}
+"
 Class {
 	#name : #GtRobocoderMetamodelMirrorDerive,
 	#superclass : #GtRobocoderMetamodelDerive,
@@ -6,7 +13,7 @@ Class {
 		'delegate',
 		'behavior'
 	],
-	#category : 'GToolkit-Robocoder-Metamodel - Derives'
+	#category : #'GToolkit-Robocoder-Metamodel - Derives'
 }
 
 { #category : #accessing }
@@ -27,6 +34,7 @@ GtRobocoderMetamodelMirrorDerive >> behavior [
 
 { #category : #accessing }
 GtRobocoderMetamodelMirrorDerive >> behavior: aBehaviorName [
+	"An existing behavior (class) name to which we delegate"
 	behavior := aBehaviorName asSymbol
 ]
 
@@ -37,6 +45,7 @@ GtRobocoderMetamodelMirrorDerive >> delegate [
 
 { #category : #accessing }
 GtRobocoderMetamodelMirrorDerive >> delegate: anObject [
+	"Type of a property, e.g., String, Integer"
 	delegate := anObject
 ]
 
@@ -105,5 +114,6 @@ GtRobocoderMetamodelMirrorDerive >> name [
 
 { #category : #accessing }
 GtRobocoderMetamodelMirrorDerive >> name: anObject [
+	"String that represent a property name that we mirror"
 	name := anObject
 ]

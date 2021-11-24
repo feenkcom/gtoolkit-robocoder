@@ -15,7 +15,13 @@ GtRobocoderMetamodelPhlowListViewDeriveExamples >> sourceCode [
 @objectTag ''Models''
 @suffix Model
 
+@derive children
+
 person => address(es).
+
+address(es) {
+	@derive phlowList
+}.
 
 address {
 	@derive property(name: street),
@@ -23,8 +29,6 @@ address {
 }.
 
 person { 
-	@derive children,
-	@derive phlowList,
 	address(es): #addresses
 }
 '

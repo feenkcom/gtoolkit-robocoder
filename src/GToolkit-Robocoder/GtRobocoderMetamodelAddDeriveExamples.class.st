@@ -15,10 +15,13 @@ GtRobocoderMetamodelAddDeriveExamples >> sourceCode [
 @objectTag ''Models''
 @suffix Model
 
+@derive children
+
 person => addess(es).
 
 address(es) {
-	@derive add
+	@derive add,
+	@derive announcer
 }.
 
 person { 

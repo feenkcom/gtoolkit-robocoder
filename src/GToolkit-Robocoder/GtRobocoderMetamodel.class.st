@@ -9,7 +9,7 @@ Class {
 		'properties',
 		'derives'
 	],
-	#category : 'GToolkit-Robocoder-Metamodel'
+	#category : #'GToolkit-Robocoder-Metamodel'
 }
 
 { #category : #'api - derives' }
@@ -101,7 +101,7 @@ GtRobocoderMetamodel >> existingViewModelClass [
 
 { #category : #'api - accessing' }
 GtRobocoderMetamodel >> existingViewModelName [
-	^ (self properties at: #viewModel) asSymbol
+	^ (self properties at: #class) asSymbol
 ]
 
 { #category : #'api - accessing' }

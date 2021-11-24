@@ -7,6 +7,15 @@ Class {
 }
 
 { #category : #accessing }
+GtRobocoderMetamodelWithActivationDeriveExamples >> model [
+	<gtExample>
+	| aModel |
+	aModel := BookAddressesModel new addressModels: { BookAddressModel new .  BookAddressModel new}.
+
+	aModel activateAddressModel: (aModel addressModels first)
+]
+
+{ #category : #accessing }
 GtRobocoderMetamodelWithActivationDeriveExamples >> sourceCode [
 	<gtExample>
 	
@@ -15,7 +24,10 @@ GtRobocoderMetamodelWithActivationDeriveExamples >> sourceCode [
 @objectTag ''Models''
 @suffix Model
 
-address {
-	@derive activation
-}'
+@derive children
+@derive announcer
+@derive activation
+
+address(es)
+'
 ]

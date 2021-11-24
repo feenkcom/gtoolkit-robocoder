@@ -17,6 +17,9 @@ GtRobocoderMetamodelApiTraitDeriveExamples >> sourceCode [
 
 address {
 	@derive api
-}.
-'
+}.'
+
+"addressView { 
+	@derive model(api: TBookWithAddressModel) 
+}"
 ]

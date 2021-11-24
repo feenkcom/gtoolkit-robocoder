@@ -15,16 +15,8 @@ GtRobocoderMetamodelChildrenDeriveExamples >> sourceCode [
 @objectTag ''Models''
 @suffix Model
 
+@derive children
+
 person => address(es).
-
-address {
-	@derive property(name: street),
-	@derive property(name: city)
-}.
-
-person { 
-	@derive children,
-	address(es): #addresses
-}
 '
 ]

@@ -1,6 +1,6 @@
 Trait {
 	#name : #TGtRobocoderMetamodelPropertyMirrorTemplate,
-	#category : 'GToolkit-Robocoder-Templates'
+	#category : #'GToolkit-Robocoder-Templates'
 }
 
 { #category : #templates }
@@ -10,6 +10,7 @@ TGtRobocoderMetamodelPropertyMirrorTemplate >> getterDelegateTemplate [
 	
 	^ GtRobocoderTemplateMethod new
 		sourceCode: '{{propertyGetter}}
+	<propertyGetter: #{{propertyName}}>
 	<return: #{{propertyType}}>
 
 	^ self {{modelGetter}} {{propertyGetter}}';

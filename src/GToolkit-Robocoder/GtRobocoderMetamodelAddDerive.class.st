@@ -61,6 +61,9 @@ GtRobocoderMetamodelAddDerive >> delegate [
 
 { #category : #accessing }
 GtRobocoderMetamodelAddDerive >> delegate: aSymbol [
+	"Delegate add model action into another object. 
+	For example, a ViewModel wants to delegate to its Model which 
+	is responsible to keep the collection."
 	delegate := aSymbol
 ]
 
@@ -162,8 +165,9 @@ GtRobocoderMetamodelAddDerive >> primitive [
 ]
 
 { #category : #accessing }
-GtRobocoderMetamodelAddDerive >> primitive: anObject [
-	primitive := anObject
+GtRobocoderMetamodelAddDerive >> primitive: aBoolean [
+	"Generate #primitiveModel methods"
+	primitive := aBoolean
 ]
 
 { #category : #accessing }

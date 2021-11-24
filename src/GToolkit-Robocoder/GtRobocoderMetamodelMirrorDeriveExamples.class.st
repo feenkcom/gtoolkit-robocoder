@@ -9,13 +9,21 @@ Class {
 { #category : #accessing }
 GtRobocoderMetamodelMirrorDeriveExamples >> sourceCode [
 	<gtExample>
-	
+	"Delegate call from one object to another object."
 	^ '@package ''RobocoderTutorial''
 @prefix Book
 @objectTag ''Models''
 @suffix Model
 
+person => address.
+
 address {
-	@derive mirror
-}'
+	@derive property(name: street)
+}.
+
+person { 
+	@derive mirror(delegate: #addressModel, name: street, behavior: String),
+	@address: #address
+}
+'
 ]
