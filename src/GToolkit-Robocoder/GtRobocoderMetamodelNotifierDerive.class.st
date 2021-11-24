@@ -1,6 +1,7 @@
 "
 I am a {{gtClass:GtRobocoderMetamodelDerive}}.
-I generate ??.
+I generate code to subscribe directly in a parent to listen to children changes, e.g., person for address changes.
+I use the {{gtClass:GtRobocoderMetamodelParentDerive | label=#label}} derive to propage children announcements to parents.
 #Example
 For the following metamodel definition: {{gtExample:GtRobocoderMetamodelNotifierDeriveExamples >> #generator | codeExpanded=false | previewExpanded=true | previewShow=#gtSourceCodeFor: | previewHeight=175 }}
 I generate the following definitions: {{gtExample:GtRobocoderMetamodelNotifierDeriveExamples >> #generator | codeExpanded=false | previewExpanded=true | previewShow=#gtMetaModelsWithCodeDefinitionsFor: | previewHeight=225 }}
