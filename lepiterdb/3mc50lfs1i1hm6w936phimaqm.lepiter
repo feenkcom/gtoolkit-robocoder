@@ -399,14 +399,123 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2021-11-23T18:23:37.916419-03:00"
+									"dateAndTimeString" : "2021-11-24T07:59:09.401217-03:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "WICUm9qNDQCD60cdB3snPQ=="
 							},
-							"code" : "@package 'Tutorial-AddressBook'\r@prefix Book\r@objectTag 'Models'\r@suffix Model\r\rperson {\r\t@derive property(name: name),\r\t@derive model(name: address)\r}"
+							"code" : "@package 'RobocoderTutorial-AddressBook'\r@prefix Book\r@objectTag 'Models'\r@suffix Model\r\rperson {\r\t@derive property(name: name),\r\t@derive model(name: address)\r}"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2021-11-24T07:28:00.093445-03:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2021-11-24T07:30:45.428864-03:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "+iBNDOiNDQC9SzB4CHrXgQ=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "In the example above, we use two {{gtClass:GtRobocoderMetamodelDerive|label=derives}}:  {{gtClass:GtRobocoderMetamodelWithSimplePropertyDerive | label=#label}} and {{gtClass:GtRobocoderMetamodelModelDerive | label=#label}}. Read their class comments for more details."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [
+									{
+										"__type" : "robocoderMetamodelSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2021-11-24T08:03:00.663754-03:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2021-11-24T08:03:30.161845-03:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "86HGieiNDQCx/mvlA34Saw=="
+										},
+										"code" : "@package 'RobocoderTutorial-AddressBook'\r@prefix Book\r@objectTag 'Models'\r@suffix Model\r\rperson {\r\t@derive announcer,\r\t@derive property(name: name),\r\t@derive model(name: address)\r}"
+									}
+								]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2021-11-24T07:58:28.284856-03:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2021-11-24T08:22:35.26597-03:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "bUR6deiNDQCx/KBEA34Saw=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "**Announcer.** If you generates the code above, you will notice that there is a method `#notifyNameChanged` that calls an `#announce:` method. To automatically generate common {{gtClass:Announcer}} methods, we can use {{gtClass: GtRobocoderMetamodelAnnouncerDerive | label=#label}} derive:"
 						}
 					]
 				},
