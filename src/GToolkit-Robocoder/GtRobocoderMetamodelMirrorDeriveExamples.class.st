@@ -23,7 +23,7 @@ address {
 
 person { 
 	@derive mirror(delegate: #addressModel, name: street, behavior: String),
-	@address: #address
+	address: #address
 }
 '
 ]

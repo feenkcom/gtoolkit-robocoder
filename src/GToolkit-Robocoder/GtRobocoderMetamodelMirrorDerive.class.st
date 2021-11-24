@@ -2,7 +2,7 @@
 I am a {{gtClass:GtRobocoderMetamodelDerive}}.
 I generate ??.
 #Example
-For the following metamodel definition: {{gtExample:GtRobocoderMetamodelMirrorDeriveExamples >> #generator | codeExpanded=false | previewExpanded=true | previewShow=#gtSourceCodeFor: | previewHeight=175 }}
+For the following metamodel definition: {{gtExample:GtRobocoderMetamodelMirrorDeriveExamples >> #generator | codeExpanded=false | previewExpanded=true | previewShow=#gtSourceCodeFor: | previewHeight=295 }}
 I generate the following definitions: {{gtExample:GtRobocoderMetamodelMirrorDeriveExamples >> #generator | codeExpanded=false | previewExpanded=true | previewShow=#gtMetaModelsWithCodeDefinitionsFor: | previewHeight=225 }}
 "
 Class {

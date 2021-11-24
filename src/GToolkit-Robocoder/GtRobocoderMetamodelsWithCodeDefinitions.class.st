@@ -75,10 +75,11 @@ GtRobocoderMetamodelsWithCodeDefinitions >> gtChangesFor: aView [
 GtRobocoderMetamodelsWithCodeDefinitions >> gtModelsFor: aView [
 	<gtView>
 	
-	^ aView list
+	^ aView tree
 		title: 'Models';
 		priority: 3;
-		items: [ self viewModelModels models ]
+		items: [ self viewModelModels models ];
+		children: [ :anItem | anItem children ]
 ]
 
 { #category : #accessing }
