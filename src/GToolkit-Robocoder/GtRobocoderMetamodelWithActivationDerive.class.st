@@ -1,9 +1,24 @@
 "
 I am a {{gtClass:GtRobocoderMetamodelDerive}}.
-I generate code to deactivate children in a tree-structure model.
+I generate code to activate children in a tree-structure model.
 #Example
-For the following metamodel definition: {{gtExample:GtRobocoderMetamodelWithActivationDeriveExamples >> #generator | codeExpanded=false | previewExpanded=true | previewShow=#gtSourceCodeFor: | previewHeight=175 }}
-I generate the following definitions: {{gtExample:GtRobocoderMetamodelWithActivationDeriveExamples >> #generator | codeExpanded=false | previewExpanded=true | previewShow=#gtMetaModelsWithCodeDefinitionsFor: | previewHeight=225 }}
+For the following metamodel definition: {{gtExample:GtRobocoderMetamodelWithActivationDeriveExamples >> #generator | codeExpanded=false | previewExpanded=true | previewShow=#gtSourceCodeFor: | previewHeight=215 }}
+I generate the following definitions: {{gtExample:GtRobocoderMetamodelWithActivationDeriveExamples >> #generator | codeExpanded=false | previewExpanded=true | previewShow=#gtMetaModelsWithCodeDefinitionsFor: | previewHeight=275 }}
+Once the model is {{gtExample:GtRobocoderMetamodelAddDeriveExamples>>#generator | label=generated}}, the following code can be used:
+```Smalltalk
+| aCollectionModel |
+
+""initialization""
+aCollectionModel := BookAddressesModel new 
+	addressModels: { BookAddressModel new . BookAddressModel new }.
+""activating the first address""
+aCollectionModel activateAddressModel: (aCollectionModel addressModels first).
+
+""activating the second address""
+aCollectionModel addressModels second activateAddress
+```
+
+
 "
 Class {
 	#name : #GtRobocoderMetamodelWithActivationDerive,

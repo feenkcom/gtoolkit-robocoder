@@ -1,9 +1,22 @@
 "
 I am a {{gtClass:GtRobocoderMetamodelDerive}}.
-I generate ?.
+I generate methods to add models into collections.
 #Example
-For the following metamodel definition: {{gtExample:GtRobocoderMetamodelRemoveDeriveExamples >> #generator | codeExpanded=false | previewExpanded=true | previewShow=#gtSourceCodeFor: | previewHeight=175 }}
+For the following metamodel definition: {{gtExample:GtRobocoderMetamodelRemoveDeriveExamples >> #generator | codeExpanded=false | previewExpanded=true | previewShow=#gtSourceCodeFor: | previewHeight=325  }}
 I generate the following definitions: {{gtExample:GtRobocoderMetamodelRemoveDeriveExamples >> #generator | codeExpanded=false | previewExpanded=true | previewShow=#gtMetaModelsWithCodeDefinitionsFor: | previewHeight=225 }}
+When the code is {{gtExample:GtRobocoderMetamodelAddDeriveExamples>>#generator|label=generated}}, it can be used the following way:
+```Smalltalk
+| aPerson aFirstModel |
+aPerson := BookPersonModel new.
+aPerson addressesModel addressModels: { 
+	aFirstModel := BookAddressModel new. 
+	BookAddressModel new}.
+	
+aPerson addressesModel removeAddressModel: aFirstModel.
+```
+
+
+
 "
 Class {
 	#name : #GtRobocoderMetamodelRemoveDerive,

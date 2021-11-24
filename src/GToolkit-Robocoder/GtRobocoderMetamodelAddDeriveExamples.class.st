@@ -17,7 +17,7 @@ GtRobocoderMetamodelAddDeriveExamples >> sourceCode [
 
 @derive children
 
-person => addess(es).
+person => address(es).
 
 address(es) {
 	@derive add,
