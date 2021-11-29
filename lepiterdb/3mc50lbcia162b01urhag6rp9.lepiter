@@ -28,13 +28,13 @@
 							},
 							"editEmail" : {
 								"__type" : "email",
-								"emailString" : "juraj.kubelka@icloud.com"
+								"emailString" : "<unknown>"
 							},
 							"editTime" : {
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2021-11-23T15:09:31.115786-03:00"
+									"dateAndTimeString" : "2021-11-29T15:04:33.004601-03:00"
 								}
 							},
 							"uid" : {
@@ -44,10 +44,10 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "The following Rodocoder metamodel generates an address book in which one person can have several addresses and an address can have several tags, e.g., home, work."
+							"string" : "The following Rodocoder metamodel generates an address book in which one person can have several addresses."
 						},
 						{
-							"__type" : "textSnippet",
+							"__type" : "robocoderMetamodelSnippet",
 							"children" : {
 								"__type" : "snippets",
 								"items" : [ ]
@@ -60,28 +60,25 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2021-11-23T15:06:40.172845-03:00"
+									"dateAndTimeString" : "2021-11-23T15:05:27.70154-03:00"
 								}
 							},
 							"editEmail" : {
 								"__type" : "email",
-								"emailString" : "juraj.kubelka@icloud.com"
+								"emailString" : "<unknown>"
 							},
 							"editTime" : {
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2021-11-23T15:08:30.518299-03:00"
+									"dateAndTimeString" : "2021-11-29T15:26:06.266661-03:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "kx4/VtqNDQCDt/i0B3snPQ=="
+								"uidString" : "TFy8UtqNDQCDtZUpB3snPQ=="
 							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "Packages and Package tags are generated using the `@package-@tag-(@objectTag | extraTag)` pattern. The `extraTag` is not configurable and is used by Robocoder do generates tags as `Events` and `Support`."
+							"code" : "@package 'RobocoderTutorial-AddressBook'\r@tag 'Model'\r@objectTag 'Models'\r\r@prefix RobocoderTutorial\r@suffix Model\r\r@derive children\r@derive parent\r@derive add\r@derive remove\r@derive phlowList\r@derive announcer\r@derive notifier\r@derive api\r@derive print\r@derive typeTest\r\rbook => person(s) => address(es).\r\rperson {\r\t@derive property(name: name),\r\taddress(es): #addresses\r}.\r\raddress {\r\t@derive property(name: street),\r\t@derive property(name: city),\r\t@derive property(name: postalCode)\t\r}."
 						}
 					]
 				},
@@ -115,40 +112,6 @@
 					"__type" : "textStyle"
 				},
 				"string" : "#Model"
-			},
-			{
-				"__type" : "robocoderMetamodelSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "juraj.kubelka@icloud.com"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-11-23T15:05:27.70154-03:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "juraj.kubelka@icloud.com"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-11-23T15:10:46.797319-03:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "TFy8UtqNDQCDtZUpB3snPQ=="
-				},
-				"code" : "@package 'Tutorial-AddressBook'\r@tag 'Model'\r@objectTag 'Models'\r\r@prefix Book\r@project FileBrowser\r@suffix Model\r\r@derive children\r@derive parent\r@derive phlowList\r@derive announcer\r@derive notifier\r@derive api\r@derive print\r@derive typeTest\r\rfolder(s) => file(s) and folder(s).\r\rfolder(s) {\r\t@derive add(primitive: true),\r\t@derive remove(primitive: true),\r\t@derive model(name: fileReferences)\r}.\r\rfile(s) {\r\t@derive add(primitive: true),\r\t@derive remove(primitive: true),\r\t@derive model(name: fileReferences)\r}.\r\rfolder {\r\tfile(s): #files,\r\tfolder(s): #directories,\r\t@derive model(name: fileReference)\r}.\r\rfile {\r\t@derive model(name: fileReference)\r}"
 			}
 		]
 	},
@@ -171,12 +134,12 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2021-11-23T18:13:51.064138-03:00"
+			"dateAndTimeString" : "2021-11-29T16:01:59.44385-03:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "Robocoder Addressbook Tutorial"
+		"title" : "Robocoder Address Book Tutorial"
 	},
 	"uid" : {
 		"__type" : "uuid",

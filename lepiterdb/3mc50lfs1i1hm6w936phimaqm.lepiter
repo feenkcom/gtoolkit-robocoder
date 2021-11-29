@@ -8,6 +8,43 @@
 				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-11-29T10:09:13.753809-03:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-11-29T10:09:25.14127-03:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "1YxS4k6ODQCQBF+8AVCgvg=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "This section explains the Robocoder language."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
 					"items" : [
 						{
 							"__type" : "textSnippet",
@@ -65,20 +102,20 @@
 							},
 							"editEmail" : {
 								"__type" : "email",
-								"emailString" : "juraj.kubelka@icloud.com"
+								"emailString" : "<unknown>"
 							},
 							"editTime" : {
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2021-11-23T15:12:59.736369-03:00"
+									"dateAndTimeString" : "2021-11-29T15:04:50.712244-03:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "n3BUbdqNDQCDzm12B3snPQ=="
 							},
-							"code" : "@package 'Tutorial-AddressBook'\r@tag 'Model'\r@objectTag 'Models'"
+							"code" : "@package 'RobocoderTutorial-AddressBook'\r@tag 'Model'\r@objectTag 'Models'"
 						},
 						{
 							"__type" : "textSnippet",
@@ -125,6 +162,43 @@
 							},
 							"createEmail" : {
 								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2021-11-29T10:10:02.507168-03:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2021-11-29T10:10:02.507168-03:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "hZVH5U6ODQCQBTFxAVCgvg=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "**Package tag** names are generated using the `@tag-@objectTag` pattern for generated model classes. "
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
 								"emailString" : "juraj.kubelka@icloud.com"
 							},
 							"createTime" : {
@@ -136,13 +210,13 @@
 							},
 							"editEmail" : {
 								"__type" : "email",
-								"emailString" : "juraj.kubelka@icloud.com"
+								"emailString" : "<unknown>"
 							},
 							"editTime" : {
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2021-11-23T15:21:03.480526-03:00"
+									"dateAndTimeString" : "2021-11-29T10:10:17.712595-03:00"
 								}
 							},
 							"uid" : {
@@ -152,7 +226,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "**Package tag** names are generated using the `@tag-@objectTag` pattern for generated model classes. Robocoder also generate other package tags, e.g., Events and Support. In this case the `@tag-@extraTag` pattern is used. The `@extraTag` is not configurable and is managed internaly by Robocoder."
+							"string" : "**Extra tags.** Robocoder also generate other package tags, e.g., Events and Support. In this case the `@tag-@extraTag` pattern is used. The `@extraTag` is not configurable and is managed internaly by Robocoder."
 						}
 					]
 				},
@@ -282,13 +356,13 @@
 							},
 							"editEmail" : {
 								"__type" : "email",
-								"emailString" : "juraj.kubelka@icloud.com"
+								"emailString" : "<unknown>"
 							},
 							"editTime" : {
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2021-11-23T15:25:00.02419-03:00"
+									"dateAndTimeString" : "2021-11-29T10:11:46.983664-03:00"
 								}
 							},
 							"uid" : {
@@ -298,7 +372,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "**Modeled class** names are then composed using the `@prefix@extraPrefix@project@objectName@suffix` pattern. "
+							"string" : "**Class names** are then composed using the `@prefix@extraPrefix@project@objectName@suffix` pattern. "
 						},
 						{
 							"__type" : "textSnippet",
@@ -362,7 +436,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2021-11-23T18:15:50.242134-03:00"
+									"dateAndTimeString" : "2021-11-29T10:13:17.1041-03:00"
 								}
 							},
 							"uid" : {
@@ -372,7 +446,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "The `@objectName` is a concrete class (model) name that we want to generate. The `@objectName` is not used directly, but rather as the following example shows. In this example, the `@objectName` value is `address`."
+							"string" : "The `@objectName` is a concrete class (model) name that we want to generate. The `@objectName` is not used directly, but rather as the following example shows. In this example, the `@objectName` value is `person`."
 						},
 						{
 							"__type" : "robocoderMetamodelSnippet",
@@ -549,6 +623,632 @@
 					"__type" : "textStyle"
 				},
 				"string" : "#Defining Classes"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [
+									{
+										"__type" : "textSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2021-11-29T14:51:19.075525-03:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2021-11-29T14:55:03.186599-03:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "2GXb0lKODQCD7QxtCQw52A=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "The following metamodel define two models called `person` and `address`:"
+									},
+									{
+										"__type" : "robocoderMetamodelSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2021-11-29T14:50:23.658517-03:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2021-11-29T14:54:32.095239-03:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "PALmz1KODQCD6D8ECQw52A=="
+										},
+										"code" : "@package 'RobocoderTutorial-AddressBook'\r@prefix Book\r@objectTag 'Models'\r@suffix Model\r\rperson.\r\raddress."
+									}
+								]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2021-11-29T14:50:57.114957-03:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2021-11-29T14:54:44.347779-03:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "Yfei0VKODQCD6zgCCQw52A=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "##Individual Models"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [
+									{
+										"__type" : "textSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2021-11-29T14:53:09.487665-03:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2021-11-29T14:54:27.782406-03:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "cr6t2VKODQCD+sPcCQw52A=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "The following metamodel define two models, `person` and `address` in which person holds one address."
+									},
+									{
+										"__type" : "robocoderMetamodelSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2021-11-29T14:53:02.007093-03:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2021-11-29T14:55:30.367373-03:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "XTdW2VKODQCD96gfCQw52A=="
+										},
+										"code" : "@package 'RobocoderTutorial-AddressBook'\r@prefix Book\r@objectTag 'Models'\r@suffix Model\r\rperson => address."
+									},
+									{
+										"__type" : "textSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2021-11-29T15:00:36.2456-03:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2021-11-29T15:02:31.864713-03:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "tiY481KODQCQSrFNCDXNxw=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "Execute the metamodel and check the `Models` view in the result. Then compare it with `Models` views of the metamodel snippet above and below."
+									}
+								]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2021-11-29T14:52:45.38026-03:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2021-11-29T14:53:44.718837-03:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "n5lp11KODQCD80h5CQw52A=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "##Model One-to-One Relations"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [
+									{
+										"__type" : "textSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2021-11-29T14:56:18.010288-03:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2021-11-29T15:08:37.802304-03:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "tn355FKODQCQRqOvCDXNxw=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "The following metamodel define two models called `person` and `address` in which person holds many addresses. Collections are defined by `(s)` or `(es)` suffixes, e.g., `address(es)`. "
+									},
+									{
+										"__type" : "robocoderMetamodelSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2021-11-29T14:56:23.007059-03:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2021-11-29T14:56:38.427122-03:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "ejtR5VKODQCQSOnmCDXNxw=="
+										},
+										"code" : "@package 'RobocoderTutorial-AddressBook'\r@prefix Book\r@objectTag 'Models'\r@suffix Model\r\rperson => address(es)."
+									}
+								]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2021-11-29T14:56:09.732461-03:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2021-11-29T14:56:12.97914-03:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "TjNl5FKODQCQRPOcCDXNxw=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "##Model One-to-Many Relations"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [
+									{
+										"__type" : "textSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2021-11-29T15:07:38.168995-03:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2021-11-29T15:10:55.675477-03:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "y9uGDVOODQCrQyySD8RQzw=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "The following metamodel define three models called `person`, `address`, phone. It defines model where `person` holds addresses and phones."
+									},
+									{
+										"__type" : "robocoderMetamodelSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2021-11-29T15:07:32.127266-03:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2021-11-29T15:08:09.811995-03:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "SzIzDVOODQCrQDlrD8RQzw=="
+										},
+										"code" : "@package 'RobocoderTutorial-AddressBook'\r@prefix Book\r@objectTag 'Models'\r@suffix Model\r\rperson => address(es) and phone(s)."
+									}
+								]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2021-11-29T15:06:57.439612-03:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2021-11-29T15:07:29.668404-03:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "zozhClOODQCrPJjcD8RQzw=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "##Model With Several One-To-Many Relations"
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-11-29T14:49:33.070446-03:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-11-29T14:52:51.691368-03:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "StmVzFKODQCD5uGoCQw52A=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "#Defining Models And Model Relations"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2021-11-29T15:46:28.783065-03:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2021-11-29T15:54:42.719161-03:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "K9+AllOODQCrcNsAD8RQzw=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Robocoder provides several {{gtClass: GtRobocoderMetamodelDerive | label=derives}} that you can browse and read individual documentations in class comments:"
+						},
+						{
+							"__type" : "exampleSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2021-11-29T15:51:50.740947-03:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2021-11-29T15:51:50.740947-03:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "/Guqq1OODQCrchQBD8RQzw=="
+							},
+							"exampleSelector" : "derives",
+							"previewHeight" : 500,
+							"previewShowSelector" : "gtDerivesFor:",
+							"exampleBehaviorName" : "GtRobocoderDocumentationExamples",
+							"codeExpanded" : true,
+							"previewExpanded" : true,
+							"noCode" : true
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-11-29T15:45:52.186011-03:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-11-29T15:45:53.276523-03:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "v4cGllOODQCrbmo9D8RQzw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "#Derives"
 			}
 		]
 	},

@@ -1,0 +1,294 @@
+{
+	"__schema" : "4.1",
+	"__type" : "page",
+	"children" : {
+		"__type" : "snippets",
+		"items" : [
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-11-29T15:42:25.63577-03:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-11-29T15:45:17.430701-03:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "Mhfoh1OODQCradpaD8RQzw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "This section defines a file browser model and view model that can be used to implement file browser tools, using  [model-view-viewmodel](https://en.wikipedia.org/wiki/Model-view-viewmodel). The model is taken from {{gtClass:ManifestGToolkitFileBrowser}}, where you can find a complete file browser implementation."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2021-11-29T15:24:34.385383-03:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2021-11-29T15:29:16.202549-03:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "cznhRVOODQCrV2/HD8RQzw=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "The following Rodocoder metamodel generates a file browser model where folders hold subfolders and files."
+						},
+						{
+							"__type" : "robocoderMetamodelSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2021-11-29T15:23:54.570478-03:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2021-11-29T15:36:38.517652-03:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "GxfCR1OODQCrWbwAD8RQzw=="
+							},
+							"code" : "@package 'RobocoderTutorial-FileBrowser'\r@tag 'Models'\r@objectTag 'Core'\r\r@prefix RobocoderTutorial\r@project FileBrowser\r@suffix Model\r\r@derive children\r@derive parent\r@derive phlowList\r@derive announcer\r@derive notifier\r@derive api\r@derive print\r@derive typeTest\r\rfolder(s) => file(s) and folder(s).\r\rfolder(s) {\r\t@derive add(primitive: true),\r\t@derive remove(primitive: true),\r\t@derive model(name: fileReferences)\r}.\r\rfile(s) {\r\t@derive add(primitive: true),\r\t@derive remove(primitive: true),\r\t@derive model(name: fileReferences)\r}.\r\rfolder {\r\tfile(s): #files,\r\tfolder(s): #directories,\r\t@derive model(name: fileReference)\r}.\r\rfile {\r\t@derive model(name: fileReference)\r}"
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-11-29T15:24:24.483531-03:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-11-29T15:24:24.483531-03:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "JrYBRFOODQCrSsHxD8RQzw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "#Model"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2021-11-29T15:32:35.21629-03:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2021-11-29T15:35:27.357324-03:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "k+n2XVOODQCrZKYJD8RQzw=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "The following metamodel generates view model that can be used to use in [model-view-viewmodel](https://en.wikipedia.org/wiki/Model-view-viewmodel)."
+						},
+						{
+							"__type" : "robocoderMetamodelSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2021-11-29T15:30:10.146359-03:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2021-11-29T15:41:05.369317-03:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "XuwkXlOODQCrZmifD8RQzw=="
+							},
+							"code" : "@package 'RobocoderTutorial-FileBrowser'\r@tag 'ViewModels'\r@objectTag 'Core'\r\r@prefix RobocoderTutorial\r@project FileBrowser\r@suffix ViewModel\r\r@derive children\r@derive parent\r@derive name\r@derive print\r@derive announcer\r@derive notifier\r@derive typeTest\r@derive phlowList\r@derive api\r@derive selection\r\rfolder(s) => file(s) and folder(s).\r\rfolder(s) {\r\t@derive model(api: TRobocoderTutorialWithFileBrowserFoldersModel),\r\t@derive add(\r\t\tdelegate: #addFileBrowserFolderModel:,\r\t\tsubscribe: RobocoderTutorialFileBrowserFolderModelAddedAnnouncement),\r\t@derive remove(\r\t\tdelegate: #removeFileBrowserFolderModel:,\r\t\tsubscribe: RobocoderTutorialFileBrowserFolderModelRemovedAnnouncement),\r\titems: #fileBrowserFolderModels,\r}.\r\rfolder {\r\t@derive model(api: TRobocoderTutorialWithFileBrowserFolderModel),\r\tfile(s): #fileBrowserFilesModel,\r\tfolder(s): #fileBrowserFoldersModel\r}.\r\rfile(s) {\r\t@derive model(api: TRobocoderTutorialWithFileBrowserFilesModel),\r\t@derive add(\r\t\tdelegate: #addFileBrowserFileModel:,\r\t\tsubscribe: RobocoderTutorialFileBrowserFileModelAddedAnnouncement),\r\t@derive remove(\r\t\tdelegate: #removeFileBrowserFileModel:,\r\t\tsubscribe: RobocoderTutorialFileBrowserFileModelRemovedAnnouncement),\r\titems: #fileBrowserFileModels\r}.\r\rfile {\r\t@derive model(api: TRobocoderTutorialWithFileBrowserFileModel),\r}."
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-11-29T15:29:54.377639-03:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-11-29T15:29:56.817995-03:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "pG4EXVOODQCrYuPuD8RQzw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "##View Model"
+			}
+		]
+	},
+	"createEmail" : {
+		"__type" : "email",
+		"emailString" : "<unknown>"
+	},
+	"createTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2021-11-29T15:22:51.592188-03:00"
+		}
+	},
+	"editEmail" : {
+		"__type" : "email",
+		"emailString" : "<unknown>"
+	},
+	"editTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2021-11-29T15:22:51.592188-03:00"
+		}
+	},
+	"pageType" : {
+		"__type" : "namedPage",
+		"title" : "Robocoder File Browser Tutorial"
+	},
+	"uid" : {
+		"__type" : "uuid",
+		"uuid" : "981d0144-538e-0d00-ab49-38520fc450cf"
+	}
+}
