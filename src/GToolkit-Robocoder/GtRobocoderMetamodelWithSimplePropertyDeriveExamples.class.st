@@ -16,6 +16,7 @@ GtRobocoderMetamodelWithSimplePropertyDeriveExamples >> sourceCode [
 @suffix Model
 
 address {
+	@derive announcer,
 	@derive property(name: streetName),
 	@derive property(name: city),
 }'

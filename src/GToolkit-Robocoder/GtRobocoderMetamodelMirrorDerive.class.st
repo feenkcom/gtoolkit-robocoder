@@ -1,6 +1,7 @@
 "
 I am a {{gtClass:GtRobocoderMetamodelDerive}}.
-I generate ??.
+I generate a code that generates methods that pass calls to children.
+TODO: The example below does not generate person methods as it is supposed.
 #Example
 For the following metamodel definition: {{gtExample:GtRobocoderMetamodelMirrorDeriveExamples >> #generator | codeExpanded=false | previewExpanded=true | previewShow=#gtSourceCodeFor: | previewHeight=295 }}
 I generate the following definitions: {{gtExample:GtRobocoderMetamodelMirrorDeriveExamples >> #generator | codeExpanded=false | previewExpanded=true | previewShow=#gtMetaModelsWithCodeDefinitionsFor: | previewHeight=225 }}

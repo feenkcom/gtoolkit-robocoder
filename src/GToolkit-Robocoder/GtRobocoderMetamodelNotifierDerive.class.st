@@ -2,8 +2,9 @@
 I am a {{gtClass:GtRobocoderMetamodelDerive}}.
 I generate code to subscribe directly in a parent to listen to children changes, e.g., person for address changes.
 I use the {{gtClass:GtRobocoderMetamodelParentDerive | label=#label}} derive to propage children announcements to parents.
+TODO: The example does not generate expected code.
 #Example
-For the following metamodel definition: {{gtExample:GtRobocoderMetamodelNotifierDeriveExamples >> #generator | codeExpanded=false | previewExpanded=true | previewShow=#gtSourceCodeFor: | previewHeight=175 }}
+For the following metamodel definition: {{gtExample:GtRobocoderMetamodelNotifierDeriveExamples >> #generator | codeExpanded=false | previewExpanded=true | previewShow=#gtSourceCodeFor: | previewHeight=295 }}
 I generate the following definitions: {{gtExample:GtRobocoderMetamodelNotifierDeriveExamples >> #generator | codeExpanded=false | previewExpanded=true | previewShow=#gtMetaModelsWithCodeDefinitionsFor: | previewHeight=225 }}
 "
 Class {

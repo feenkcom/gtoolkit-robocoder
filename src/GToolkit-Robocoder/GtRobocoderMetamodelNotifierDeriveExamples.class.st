@@ -15,7 +15,14 @@ GtRobocoderMetamodelNotifierDeriveExamples >> sourceCode [
 @objectTag ''Models''
 @suffix Model
 
+@derive announcer
+@derive notifier
+@derive parent
+@derive children
+
+person => address.
+
 address {
-	@derive notifier
+	@derive property(name: city)
 }'
 ]

@@ -1,8 +1,8 @@
 "
 I am a {{gtClass:GtRobocoderMetamodelDerive}}.
-I generate ?.
+I generate model in which children can be selected and deselected.
 #Example
-For the following metamodel definition: {{gtExample:GtRobocoderMetamodelWithSelectionDeriveExamples >> #generator | codeExpanded=false | previewExpanded=true | previewShow=#gtSourceCodeFor: | previewHeight=175 }}
+For the following metamodel definition: {{gtExample:GtRobocoderMetamodelWithSelectionDeriveExamples >> #generator | codeExpanded=false | previewExpanded=true | previewShow=#gtSourceCodeFor: | previewHeight=195 }}
 I generate the following definitions: {{gtExample:GtRobocoderMetamodelWithSelectionDeriveExamples >> #generator | codeExpanded=false | previewExpanded=true | previewShow=#gtMetaModelsWithCodeDefinitionsFor: | previewHeight=225 }}
 "
 Class {

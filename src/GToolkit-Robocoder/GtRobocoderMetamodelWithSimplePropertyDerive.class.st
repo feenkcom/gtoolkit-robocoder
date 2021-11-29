@@ -1,10 +1,29 @@
 "
 I am a {{gtClass:GtRobocoderMetamodelDerive}}.
-I generate propeties (instance variables).
+I generate propeties (instance variables) and notifications. I should be used together with the {{gtClass:GtRobocoderMetamodelAnnouncerDerive | label=#label}} derive.
 Properties are objects to which you do *not* need to subscribe for announcements. If you need to subscribe use a {{gtClass:GtRobocoderMetamodelModelDerive | label=#label}} derive. 
 #Example
-For the following metamodel definition: {{gtExample:GtRobocoderMetamodelWithSimplePropertyDeriveExamples >> #generator | codeExpanded=false | previewExpanded=true | previewShow=#gtSourceCodeFor: | previewHeight=175 }}
+For the following metamodel definition: {{gtExample:GtRobocoderMetamodelWithSimplePropertyDeriveExamples >> #generator | codeExpanded=false | previewExpanded=true | previewShow=#gtSourceCodeFor: | previewHeight=195 }}
 I generate the following definitions: {{gtExample:GtRobocoderMetamodelWithSimplePropertyDeriveExamples >> #generator | codeExpanded=false | previewExpanded=true | previewShow=#gtMetaModelsWithCodeDefinitionsFor: | previewHeight=225 }}
+
+When the code is {{gtExample:GtRobocoderMetamodelWithSimplePropertyDeriveExamples >> #generator | label=generated}}, it can be used the following way:
+```Smalltalk
+| anAddress |
+
+""initialization""
+anAddress := BookAddressModel new.
+self assert: anAddress hasStreetName not.
+""subscription""
+anAddress 
+	when: BookAddressModelStreetNameChanged 
+	send: #show: 
+	to: NonInteractiveTranscript stdout.
+""changing instance values""
+anAddress streetName: 'Central Park Street 42'
+```
+
+
+
 "
 Class {
 	#name : #GtRobocoderMetamodelWithSimplePropertyDerive,

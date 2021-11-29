@@ -1,9 +1,35 @@
 "
 I am a {{gtClass:GtRobocoderMetamodelDerive}}.
-I generate ??.
+I generate code to hold children.
 #Example
+##Separate Use
 For the following metamodel definition: {{gtExample:GtRobocoderMetamodelChildrenDeriveExamples >> #generator | codeExpanded=false | previewExpanded=true | previewShow=#gtSourceCodeFor: | previewHeight=175 }}
-I generate the following definitions: {{gtExample:GtRobocoderMetamodelChildrenDeriveExamples >> #generator | codeExpanded=false | previewExpanded=true | previewShow=#gtMetaModelsWithCodeDefinitionsFor: | previewHeight=225 }}
+I generate the following model relations: {{gtExample:GtRobocoderMetamodelChildrenDeriveExamples >> #generator | codeExpanded=false | previewExpanded=true | previewShow=#gtViewModelsFor: | previewHeight=108 }}
+I generate the following definitions: {{gtExample:GtRobocoderMetamodelChildrenDeriveExamples >> #generator | codeExpanded=false | previewExpanded=true | previewShow=#gtMetaModelsWithCodeDefinitionsFor: | previewHeight=245 }}
+##Common Use
+It is common to use the {{gtClass: GtRobocoderMetamodelChildrenDerive | label=#label}} derive together with {{gtClass: GtRobocoderMetamodelAddDerive | label=#label}}, {{gtClass: GtRobocoderMetamodelRemoveDerive | label=#label}}, and {{gtClass: GtRobocoderMetamodelAnnouncerDerive | label=#label}}. 
+For the following example: {{gtExample: GtRobocoderMetamodelChildrenDeriveExamples >> #completeGenerator | codeExpanded=false | previewExpanded=true | previewShow = #gtSourceCodeFor: | previewHeight=230 }}
+The following code is generated: {{gtExample: GtRobocoderMetamodelChildrenDeriveExamples >> #completeGenerator | codeExpanded=false | previewExpanded=true | previewShow = #gtMetaModelsWithCodeDefinitionsFor: | previewHeight=230 }}
+When the code {{gtExample: GtRobocoderMetamodelChildrenDeriveExamples >> #completeGenerator | label=generated }}, it can be used as follows:
+```Smalltalk
+| aPerson anAddress |
+aPerson := BookPersonModel new.
+
+aPerson addressesModel
+	when: BookAddressModelAddedAnnouncement,
+		BookAddressModelRemovedAnnouncement
+	send: #show: 
+	to: NonInteractiveTranscript stdout.
+
+anAddress := BookAddressModel new.
+
+aPerson addressesModel addAddressModel: anAddress.
+aPerson addressesModel removeAddressModel: anAddress.
+```
+
+
+
+
 "
 Class {
 	#name : #GtRobocoderMetamodelChildrenDerive,

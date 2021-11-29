@@ -15,7 +15,9 @@ GtRobocoderMetamodelWithSelectionDeriveExamples >> sourceCode [
 @objectTag ''Models''
 @suffix Model
 
-address {
+@derive announcer
+
+address(es) {
 	@derive selection
 }'
 ]

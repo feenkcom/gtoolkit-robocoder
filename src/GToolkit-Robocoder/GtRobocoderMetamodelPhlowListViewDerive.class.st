@@ -1,6 +1,6 @@
 "
 I am a {{gtClass:GtRobocoderMetamodelDerive}}.
-I generate ??.
+I generate {{gtClass: GtPhlowListView | label = list}} phlow views in collections, e.g., addresses model in the example below.
 #Example
 For the following metamodel definition: {{gtExample:GtRobocoderMetamodelPhlowListViewDeriveExamples >> #generator | codeExpanded=false | previewExpanded=true | previewShow=#gtSourceCodeFor: | previewHeight=175 }}
 I generate the following definitions: {{gtExample:GtRobocoderMetamodelPhlowListViewDeriveExamples >> #generator | codeExpanded=false | previewExpanded=true | previewShow=#gtMetaModelsWithCodeDefinitionsFor: | previewHeight=225 }}

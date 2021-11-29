@@ -1,8 +1,8 @@
 "
 I am a {{gtClass:GtRobocoderMetamodelDerive}}.
-I generate ??.
+I generate parent instance variables in children.
 #Example
-For the following metamodel definition: {{gtExample:GtRobocoderMetamodelParentDeriveExamples >> #generator | codeExpanded=false | previewExpanded=true | previewShow=#gtSourceCodeFor: | previewHeight=175 }}
+For the following metamodel definition: {{gtExample:GtRobocoderMetamodelParentDeriveExamples >> #generator | codeExpanded=false | previewExpanded=true | previewShow=#gtSourceCodeFor: | previewHeight=333 }}
 I generate the following definitions: {{gtExample:GtRobocoderMetamodelParentDeriveExamples >> #generator | codeExpanded=false | previewExpanded=true | previewShow=#gtMetaModelsWithCodeDefinitionsFor: | previewHeight=225 }}
 "
 Class {

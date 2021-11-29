@@ -16,6 +16,7 @@ GtRobocoderMetamodelModelDeriveExamples >> sourceCode [
 @suffix Model
 
 person {
+	@derive announcer,
 	@derive property(name: name),
 	@derive model(name: address)
 }'

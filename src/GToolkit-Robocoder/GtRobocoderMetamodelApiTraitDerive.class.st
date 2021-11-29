@@ -1,7 +1,7 @@
 "
 I am a {{gtClass:GtRobocoderMetamodelDerive}}.
 I generate an API {{gtClass:Trait}} for each view model that helps users to bind the view model to a UI element.
-The generation happens based on the {{gtClass:TGtWithViewModelTraitTemplate}} using {{gtClass:GtRobocoderWithObjectTraitGenerator}}.
+The generation happens using {{gtClass:GtRobocoderWithObjectTraitGenerator}}.
 #Example
 For the following metamodel definition: {{gtExample:GtRobocoderMetamodelApiTraitDeriveExamples >> #generator | codeExpanded=false | previewExpanded=true | previewShow=#gtSourceCodeFor: | previewHeight=175 }}
 I generate the following definitions: {{gtExample:GtRobocoderMetamodelApiTraitDeriveExamples >> #generator | codeExpanded=false | previewExpanded=true | previewShow=#gtMetaModelsWithCodeDefinitionsFor: | previewHeight=225 }}
