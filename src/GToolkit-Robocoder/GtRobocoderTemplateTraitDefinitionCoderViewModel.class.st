@@ -1,6 +1,6 @@
 Class {
 	#name : #GtRobocoderTemplateTraitDefinitionCoderViewModel,
-	#superclass : #GtBehaviorDefinitionCoderUIModel,
+	#superclass : #GtBehaviorDefinitionCoderViewModel,
 	#traits : 'TGtPharoWithTemplateTraitBehaviorCoderModel',
 	#classTraits : 'TGtPharoWithTemplateTraitBehaviorCoderModel classTrait',
 	#category : 'GToolkit-Robocoder-Coder - Behavior template'
