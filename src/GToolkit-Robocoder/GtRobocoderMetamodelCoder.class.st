@@ -30,11 +30,11 @@ class { protocol(s): #protocols }
 Class {
 	#name : #GtRobocoderMetamodelCoder,
 	#superclass : #GtSourceCoder,
-	#category : 'GToolkit-Robocoder-Coder - Metamodel'
+	#category : #'GToolkit-Robocoder-Coder - Metamodel'
 }
 
 { #category : #converting }
-GtRobocoderMetamodelCoder >> asCoderUIModel [
+GtRobocoderMetamodelCoder >> asCoderViewModel [
 	^ GtSourceCoderViewModel new coderModel: self
 ]
 
