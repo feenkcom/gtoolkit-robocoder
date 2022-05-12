@@ -63,7 +63,7 @@ GtRobocoderMetamodelCoder >> initializeAddOns: addOns [
 		icon: BrGlamorousVectorIcons playinspect
 		action: [ :aCoderUIModel :anElement | 
 			GtCoderCodeExecutor doItAndGo
-				coderUIModel: aCoderUIModel;
+				coderViewModel: aCoderUIModel;
 				element: anElement;
 				execute ]
 		id: GtSourceCoderDoItAndGoActionId.
