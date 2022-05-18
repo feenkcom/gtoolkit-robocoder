@@ -130,14 +130,14 @@ GtRobocoderMetamodelChildrenDerive >> generateChildrenAccessorForManyWithModel: 
 	| aMetamodel aDefinition  |
 
 	aMetamodel := aGtRobocoderMetamodelWithCodeDefinition metamodel.
-	
+
 	aDefinition := GtRobocoderTraitGenerator new
 		templateTrait: TGtRobocoderMetamodelChildrenForManyWithModelTemplate;
 		mappings: { 
 			#viewModelClass -> aMetamodel objectClassName.
 
 			#childName -> aMetamodel forOneModel name.
-			#childObject -> (self childObjectAccessorNameFor: aMetamodel childMetamodel: aMetamodel forOneModel).
+			#childObject -> (self childObjectAccessorNameFor: aMetamodel forOneModel childMetamodel: aMetamodel forOneModel).
 			#childObjects -> aMetamodel childViewModelsName uncapitalized.
 			#childObjectsClass -> aMetamodel forOneModel objectClassName capitalized.
 
@@ -172,14 +172,13 @@ GtRobocoderMetamodelChildrenDerive >> generateChildrenAccessorForManyWithoutMode
 	| aMetamodel aDefinition  |
 
 	aMetamodel := aGtRobocoderMetamodelWithCodeDefinition metamodel.
-	
 	aDefinition := GtRobocoderTraitGenerator new
 		templateTrait: TGtRobocoderMetamodelChildrenForManyWithoutModelTemplate;
 		mappings: { 
 			#modelSetterPragma -> GtRobocoderMetamodelModelDerive modelSetterPragma.
 			#childName -> aMetamodel forOneModel name.
 			#childrenName -> aMetamodel name.
-			#childObject -> (self childObjectAccessorNameFor: aMetamodel childMetamodel: aMetamodel forOneModel).
+			#childObject -> (self childObjectAccessorNameFor: aMetamodel forOneModel childMetamodel: aMetamodel forOneModel).
 			#childObjects -> aMetamodel childViewModelsName uncapitalized.
 			#childObjectsClass -> aMetamodel forOneModel objectClassName capitalized.
 			

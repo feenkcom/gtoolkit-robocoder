@@ -19,7 +19,7 @@ __GENERATOR_SOURCE_CODE__
 "
 Trait {
 	#name : #TGtRobocoderWithPropertyTraitTemplate,
-	#category : 'GToolkit-Robocoder-Templates'
+	#category : #'GToolkit-Robocoder-Templates'
 }
 
 { #category : #templates }
@@ -45,6 +45,7 @@ TGtRobocoderWithPropertyTraitTemplate >> onNewPropertySetHookTemplate [
 	"Is sent after a new value of the {{propertyName}} is assigned"
 	<propertySetHook: #{{propertyName}}>';
 		protocol: 'api - {{propertyName gtPiecesCutWhereCamelCase collect: #asLowercase separatedBy: [ Character space ]}}';
+		condition: 'withHooks';
 		storageMethod: thisContext method
 ]
 
@@ -58,6 +59,7 @@ TGtRobocoderWithPropertyTraitTemplate >> onPreviousPropertyUnsetHookTemplate [
 	"Is sent after a previous value of the {{propertyName}} is de-assigned"
 	<propertyUnsetHook: #{{propertyName}}>';
 		protocol: 'api - {{propertyName gtPiecesCutWhereCamelCase collect: #asLowercase separatedBy: [ Character space ]}}';
+		condition: 'withHooks and: [ canBeNil ]';
 		storageMethod: thisContext method
 ]
 
@@ -77,7 +79,7 @@ TGtRobocoderWithPropertyTraitTemplate >> propertyGetterTemplate [
 ]
 
 { #category : #templates }
-TGtRobocoderWithPropertyTraitTemplate >> propertySetterTemplate [
+TGtRobocoderWithPropertyTraitTemplate >> propertySetterCanBeNilWithHooksTemplate [
 	<gtMethodTemplate>
 	<generatedFrom: #'GtRobocoderTemplateMethod class>>#storageMethodTemplate'>
 	
@@ -100,6 +102,49 @@ TGtRobocoderWithPropertyTraitTemplate >> propertySetterTemplate [
 	self onNew{{propertyName capitalized}}Set: aNew{{propertyName capitalized}}.
 	self notify{{propertyName capitalized}}Changed';
 		protocol: 'api - {{propertyName gtPiecesCutWhereCamelCase collect: #asLowercase separatedBy: [ Character space ]}}';
+		condition: 'canBeNil and: [ withHooks ]';
+		storageMethod: thisContext method
+]
+
+{ #category : #templates }
+TGtRobocoderWithPropertyTraitTemplate >> propertySetterCanBeNilWithoutHooksTemplate [
+	<gtMethodTemplate>
+	<generatedFrom: #'GtRobocoderTemplateMethod class>>#storageMethodTemplate'>
+	
+	^ GtRobocoderTemplateMethod new
+		sourceCode: '{{propertySetter}}: aNew{{propertyName capitalized}}
+	<propertySetter: #{{propertyName}}>{{propertyAnnouncement ifNotNil: [ ''
+	<propertyAnnouncement: #{{propertyAnnouncement}}>'' ] ifNil: [ '''' ]}}
+
+	(self has{{propertyName capitalized}}
+		and: [ self {{propertyGetter}} {{propertyComparator}} aNew{{propertyName capitalized}} ])
+			ifTrue: [ ^ self ].
+
+	{{propertyName}} := aNew{{propertyName capitalized}}.
+	self notify{{propertyName capitalized}}Changed';
+		protocol: 'api - {{propertyName gtPiecesCutWhereCamelCase collect: #asLowercase separatedBy: [ Character space ]}}';
+		condition: 'canBeNil and: [ withHooks not ]';
+		storageMethod: thisContext method
+]
+
+{ #category : #templates }
+TGtRobocoderWithPropertyTraitTemplate >> propertySetterCanNeverBeNilTemplate [
+	<gtMethodTemplate>
+	<generatedFrom: #'GtRobocoderTemplateMethod class>>#storageMethodTemplate'>
+	
+	^ GtRobocoderTemplateMethod new
+		sourceCode: '{{propertySetter}}: aNew{{propertyName capitalized}}
+	<propertySetter: #{{propertyName}}>{{propertyAnnouncement ifNotNil: [ ''
+	<propertyAnnouncement: #{{propertyAnnouncement}}>'' ] ifNil: [ '''' ]}}
+
+	(self {{propertyGetter}} {{propertyComparator}} aNew{{propertyName capitalized}})
+		ifTrue: [ ^ self ].
+
+	{{propertyName}} := aNew{{propertyName capitalized}}.
+	{{withHooks ifTrue: [ ''self onNew{{propertyName capitalized}}Set: aNew{{propertyName capitalized}}.'' ] ifFalse: [ '''' ]}}
+	self notify{{propertyName capitalized}}Changed';
+		protocol: 'api - {{propertyName gtPiecesCutWhereCamelCase collect: #asLowercase separatedBy: [ Character space ]}}';
+		condition: 'canBeNil not';
 		storageMethod: thisContext method
 ]
 
@@ -115,11 +160,12 @@ TGtRobocoderWithPropertyTraitTemplate >> propertyTesterTemplate [
 
 	^ {{propertyName}} notNil';
 		protocol: 'api - {{propertyName gtPiecesCutWhereCamelCase collect: #asLowercase separatedBy: [ Character space ]}}';
+		condition: 'canBeNil';
 		storageMethod: thisContext method
 ]
 
 { #category : #templates }
-TGtRobocoderWithPropertyTraitTemplate >> propertyUnsetterTemplate [
+TGtRobocoderWithPropertyTraitTemplate >> propertyUnsetterWithHooksTemplate [
 	<gtMethodTemplate>
 	<generatedFrom: #'GtRobocoderTemplateMethod class>>#storageMethodTemplate'>
 	
@@ -136,6 +182,26 @@ TGtRobocoderWithPropertyTraitTemplate >> propertyUnsetterTemplate [
 	self onPrevious{{propertyName capitalized}}Unset: aPrevious{{propertyName capitalized}}.
 	self notify{{propertyName capitalized}}Changed';
 		protocol: 'api - {{propertyName gtPiecesCutWhereCamelCase collect: #asLowercase separatedBy: [ Character space ]}}';
+		condition: 'canBeNil and: [ withHooks ]';
+		storageMethod: thisContext method
+]
+
+{ #category : #templates }
+TGtRobocoderWithPropertyTraitTemplate >> propertyUnsetterWithoutHooksTemplate [
+	<gtMethodTemplate>
+	<generatedFrom: #'GtRobocoderTemplateMethod class>>#storageMethodTemplate'>
+	
+	^ GtRobocoderTemplateMethod new
+		sourceCode: '{{propertyUnsetter}}
+	<propertyUnsetter: #{{propertyName}}>
+
+	self has{{propertyName capitalized}}
+		ifFalse: [ ^ self ].
+
+	{{propertyName}} := nil.
+	self notify{{propertyName capitalized}}Changed';
+		protocol: 'api - {{propertyName gtPiecesCutWhereCamelCase collect: #asLowercase separatedBy: [ Character space ]}}';
+		condition: 'canBeNil and: [ withHooks not ]';
 		storageMethod: thisContext method
 ]
 

@@ -34,7 +34,9 @@ Class {
 		'setter',
 		'unsetter',
 		'type',
-		'comparator'
+		'comparator',
+		'canBeNil',
+		'withHooks'
 	],
 	#category : #'GToolkit-Robocoder-Metamodel - Derives'
 }
@@ -60,12 +62,24 @@ GtRobocoderMetamodelWithSimplePropertyDerive >> applyOnMetamodelsWithCodeDefinit
 			projectPrefix: (eachMetamodelWithCodeDefinition prefix, eachMetamodelWithCodeDefinition project capitalized);
 			packageName: eachMetamodelWithCodeDefinition package;
 			tagName: eachMetamodelWithCodeDefinition metamodel fullTagForTraits;
+			canBeNil: self canBeNil;
+			withHooks: self withHooks;
 			generate.
 
 		eachMetamodelWithCodeDefinition mergeBehaviorDefinition: aDefinition.
 
 		self generatePropertyChangedAnnouncementFor: eachMetamodelWithCodeDefinition.
 		self generatePropertyChangedNotifierMethodFor: eachMetamodelWithCodeDefinition ]
+]
+
+{ #category : #accessing }
+GtRobocoderMetamodelWithSimplePropertyDerive >> canBeNil [
+	^ canBeNil ifNil: [ false ]
+]
+
+{ #category : #accessing }
+GtRobocoderMetamodelWithSimplePropertyDerive >> canBeNil: aBoolean [
+	canBeNil := aBoolean
 ]
 
 { #category : #accessing }
@@ -143,4 +157,14 @@ GtRobocoderMetamodelWithSimplePropertyDerive >> unsetter [
 { #category : #accessing }
 GtRobocoderMetamodelWithSimplePropertyDerive >> unsetter: anObject [
 	unsetter := anObject
+]
+
+{ #category : #accessing }
+GtRobocoderMetamodelWithSimplePropertyDerive >> withHooks [
+	^ withHooks ifNil: [ false ]
+]
+
+{ #category : #accessing }
+GtRobocoderMetamodelWithSimplePropertyDerive >> withHooks: aBoolean [
+	withHooks := aBoolean
 ]

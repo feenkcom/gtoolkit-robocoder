@@ -5,7 +5,7 @@ Behavior >> gtCoderTemplateMethodsFor: aView context: aPhlowContext [
 	<gtClassView>
 	| aMethodsCoderUIModel |
 	
-	aMethodsCoderUIModel := (GtRobocoderBehaviorTemplateMethodsCoder forClass: self) asCoderUIModel.
+	aMethodsCoderUIModel := (GtRobocoderBehaviorTemplateMethodsCoder forClass: self) asCoderViewModel.
 	(aMethodsCoderUIModel coderUIModels isEmpty and: [ (self name endsWith: 'Template') not and: [ (self name endsWith: 'Templates') not ] ])
 		ifTrue: [ ^ aView empty ].
 

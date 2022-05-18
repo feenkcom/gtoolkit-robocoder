@@ -1,6 +1,6 @@
 Trait {
 	#name : #TGtRobocoderMetamodelChildrenForManyWithoutModelTemplate,
-	#category : 'GToolkit-Robocoder-Templates'
+	#category : #'GToolkit-Robocoder-Templates'
 }
 
 { #category : #templates }
@@ -15,7 +15,7 @@ TGtRobocoderMetamodelChildrenForManyWithoutModelTemplate >> childObjectsGetterTe
 	<return: #Collection of: #{{childObjectsClass}}>
 	<childObjectGetter: #{{childName}}>
 
-	^  {{childObjects}} ifNil: [ {{childObjects}} := OrderedCollection new ]';
+	^ {{childObjects}} ifNil: [ {{childObjects}} := OrderedCollection new ]';
 		protocol: 'api - accessing';
 		storageMethod: thisContext method
 ]

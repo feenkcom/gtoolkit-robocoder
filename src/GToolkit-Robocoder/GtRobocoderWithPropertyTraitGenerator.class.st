@@ -27,10 +27,24 @@ Class {
 		'propertyAnnouncement',
 		'projectPrefix',
 		'packageName',
-		'tagName'
+		'tagName',
+		'canBeNil',
+		'withHooks'
 	],
 	#category : #'GToolkit-Robocoder-Generators'
 }
+
+{ #category : #accessing }
+GtRobocoderWithPropertyTraitGenerator >> canBeNil [
+
+	^ canBeNil
+]
+
+{ #category : #accessing }
+GtRobocoderWithPropertyTraitGenerator >> canBeNil: anObject [
+
+	canBeNil := anObject
+]
 
 { #category : #accessing }
 GtRobocoderWithPropertyTraitGenerator >> environment [
@@ -74,6 +88,8 @@ GtRobocoderWithPropertyTraitGenerator >> generator [
 			#traitName -> self traitName.
 			#package -> self packageName.
 			#tag -> self tagName.
+			#canBeNil -> self canBeNil.
+			#withHooks -> self withHooks.
 			#__GENERATOR_SOURCE_CODE__ -> self storeString }
 ]
 
@@ -184,6 +200,8 @@ GtRobocoderWithPropertyTraitGenerator >> storeOn: aStream [
 		tab; nextPutAll: 'projectPrefix:'; space; print: self projectPrefix; nextPut: $;; cr;
 		tab; nextPutAll: 'packageName:'; space; print: self packageName; nextPut: $;; cr;
 		tab; nextPutAll: 'tagName:'; space; print: (self tagName ifNil: [ '' ]); nextPut: $;; cr;
+		tab; nextPutAll: 'canBeNil:'; space; print: self canBeNil; nextPut: $;; cr;
+		tab; nextPutAll: 'withHooks:'; space; print: self withHooks; nextPut: $;; cr;
 		tab; nextPutAll: 'generate'
 ]
 
@@ -207,4 +225,14 @@ GtRobocoderWithPropertyTraitGenerator >> traitName [
 			nextPutAll: self projectPrefix;
 			nextPutAll: 'With';
 			nextPutAll: self propertyName capitalized ]
+]
+
+{ #category : #accessing }
+GtRobocoderWithPropertyTraitGenerator >> withHooks [
+	^ withHooks
+]
+
+{ #category : #accessing }
+GtRobocoderWithPropertyTraitGenerator >> withHooks: aBoolean [
+	withHooks := aBoolean
 ]

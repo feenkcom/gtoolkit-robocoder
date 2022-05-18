@@ -172,7 +172,7 @@ GtRobocoderMetamodelGenerator >> gtSourceCodeFor: aView [
 			  GtCoderAstCompositeStyler new
 				  coderViewModel:
 					  (GtRobocoderMetamodelCoder new forSource: self sourceCode)
-						  asCoderUIModel;
+						  asCoderViewModel;
 				  stylers: { 
 						  GtRobocoderMetamodelStyler new.
 						  GtRobocoderMetamodelBrowseStyler new.

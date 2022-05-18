@@ -47,7 +47,7 @@ GtRobocoderBehaviorTemplateMethodsCoder >> addNewCoderSelector: aSelector protoc
 ]
 
 { #category : #converting }
-GtRobocoderBehaviorTemplateMethodsCoder >> asCoderUIModel [
+GtRobocoderBehaviorTemplateMethodsCoder >> asCoderViewModel [
 	^ GtRobocoderBehaviorTemplateMethodsCoderViewModel new coder: self
 ]
 

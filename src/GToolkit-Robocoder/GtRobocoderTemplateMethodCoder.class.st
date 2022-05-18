@@ -6,11 +6,11 @@ Class {
 		'bindings',
 		'shouldEmbedGeneratedFromPragma'
 	],
-	#category : 'GToolkit-Robocoder-Coder - Template method'
+	#category : #'GToolkit-Robocoder-Coder - Template method'
 }
 
 { #category : #converting }
-GtRobocoderTemplateMethodCoder >> asCoderUIModel [
+GtRobocoderTemplateMethodCoder >> asCoderViewModel [
 	^ GtRobocoderTemplateMethodCoderViewModel new coderModel: self
 ]
 

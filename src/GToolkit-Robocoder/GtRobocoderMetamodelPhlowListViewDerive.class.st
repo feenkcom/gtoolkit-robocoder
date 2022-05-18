@@ -41,7 +41,7 @@ GtRobocoderMetamodelPhlowListViewDerive >> generatePhlowListViewForManyMethodFor
 
 					aMetamodelWithCodeDefinition definition instanceSideDefinition methods
 						addMethod: aMethodSource
-						protocol: 'gt-extentions' ] ]
+						protocol: 'gt-extensions' ] ]
 ]
 
 { #category : #'private - generation' }
@@ -68,7 +68,7 @@ GtRobocoderMetamodelPhlowListViewDerive >> generatePhlowListViewForOneMethodFor:
 
 								aMetamodelWithCodeDefinition definition instanceSideDefinition methods
 									addMethod: aMethodSource
-									protocol: 'gt-extentions' ] ] ]
+									protocol: 'gt-extensions' ] ] ]
 ]
 
 { #category : #templates }

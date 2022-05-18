@@ -442,6 +442,8 @@ GtRobocoderMetamodelWithChoicePropertyFromManyDerive >> generateWithChoiceProper
 		projectPrefix: aMetamodel prefix;
 		packageName: aMetamodel package;
 		tagName: aMetamodel fullTagForTraits;
+		canBeNil: true;
+		withHooks: true;
 		generate.
 
 	aGtRobocoderMetamodelWithCodeDefinition
