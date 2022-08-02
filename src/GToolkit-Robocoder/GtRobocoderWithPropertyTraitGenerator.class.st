@@ -1,5 +1,5 @@
 "
-! Property Trait generator
+# Property Trait generator
 
 Usage example:
 ```
@@ -11,6 +11,7 @@ GtRobocoderWithPropertyTraitGenerator new
 	packageName: 'GToolkit-MVVM-Test';
 	generate.
 ```
+
 
 "
 Class {

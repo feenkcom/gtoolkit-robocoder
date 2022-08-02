@@ -1,10 +1,6 @@
 "
-!! Simple file browser:
+## Simple file browser:
 
-@project Gt2
-@package MyPackageFiles
-@derive print
-@derive phlowList
 
 folder => folder(s) and file(s).
 folder {
@@ -13,12 +9,8 @@ folder {
 }.
 
 
-!! Simple system browser:
+## Simple system browser:
 
-@project Gt2
-@package MyPackageSystem
-@derive print
-@derive phlowList
 
 smalltalk => package(s) => tag(s) => class(es) => protocol(s).
 
@@ -26,6 +18,7 @@ smalltalk { package(s): #packages }.
 package { tag(s): #classTags }.
 tag { class(es): #classes }.
 class { protocol(s): #protocols }
+
 "
 Class {
 	#name : #GtRobocoderMetamodelCoder,

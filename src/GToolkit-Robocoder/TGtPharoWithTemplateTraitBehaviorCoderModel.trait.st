@@ -1,14 +1,14 @@
 "
-!! Generation
-${class:TGtPharoWithTemplateTraitBehaviorCoderModel}$ was automatically generated with the following code:
-[[[
+## Generation
+{{gtClass:TGtPharoWithTemplateTraitBehaviorCoderModel}} was automatically generated with the following code:
+```
 GtWithDomainModelTraitGenerator new
 	modelName: 'templateTraitBehaviorCoder';
 	projectPrefix: 'GtPharo';
 	packageName: 'GToolkit-MVVM-Template-Coder';
 	tagName: '';
 	generate
-]]] 
+]```
 
 "
 Trait {
@@ -16,7 +16,7 @@ Trait {
 	#instVars : [
 		'templateTraitBehaviorCoderModel'
 	],
-	#category : 'GToolkit-Robocoder-Coder - Behavior template'
+	#category : #'GToolkit-Robocoder-Coder - Behavior template'
 }
 
 { #category : #'api - template trait behavior coder model' }
