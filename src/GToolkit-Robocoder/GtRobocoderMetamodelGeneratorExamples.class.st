@@ -1,7 +1,7 @@
 Class {
 	#name : #GtRobocoderMetamodelGeneratorExamples,
 	#superclass : #Object,
-	#category : 'GToolkit-Robocoder-Examples'
+	#category : #'GToolkit-Robocoder-Examples'
 }
 
 { #category : #examples }
@@ -47,7 +47,6 @@ GtRobocoderMetamodelGeneratorExamples >> forManyWithChildParent [
 { #category : #examples }
 GtRobocoderMetamodelGeneratorExamples >> forManyWithParentChildren [
 	<gtExample>
-	<noTest>
 	| theCodeDefinitions foldersMetamodelWithDefinition folderMetamodelWithDefinition |
 
 	theCodeDefinitions := GtRobocoderMetamodelGenerator generateDefinitionsFrom: 'folder(s){ @derive children }'.
