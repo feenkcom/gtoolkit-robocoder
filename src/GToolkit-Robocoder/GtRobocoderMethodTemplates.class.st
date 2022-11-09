@@ -14,7 +14,6 @@ GtRobocoderMethodTemplates >> accessorTemplate [
 	
 	^ GtRobocoderTemplateMethod new
 		sourceCode: '{{variableName}}
-
 	^ {{variableName}}';
 		storageMethod: thisContext method
 ]
@@ -68,7 +67,6 @@ GtRobocoderMethodTemplates >> mutatorTemplate [
 	
 	^ GtRobocoderTemplateMethod new
 		sourceCode: '{{variableName}}: anObject
-
 	{{variableName}} := anObject';
 		storageMethod: thisContext method
 ]
