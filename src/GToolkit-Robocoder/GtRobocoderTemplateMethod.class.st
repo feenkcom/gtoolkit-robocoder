@@ -14,11 +14,11 @@ GtRobocoderTemplateMethod class >> storageMethodTemplate [
 	<gtMethodTemplate>
 	<generatedFrom: #'GtRobocoderTemplateMethod class>>#storageMethodTemplate'>
 	
-	^ GtRobocoderTemplateMethod new
+	^ #GtRobocoderTemplateMethod asClass new
 		sourceCode: '{{storageSelector}}
 	<gtMethodTemplate>
 	
-	^ GtRobocoderTemplateMethod new
+	^ #GtRobocoderTemplateMethod asClass new
 		sourceCode: {{sourceCode printString}};{{protocol
 			ifNil: [ '''' ]
 			ifNotNil: [ ''

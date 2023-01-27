@@ -7,7 +7,7 @@ Class {
 		'bindings',
 		'templateTrait'
 	],
-	#category : 'GToolkit-Robocoder-Coder - Behavior template'
+	#category : #'GToolkit-Robocoder-Coder - Behavior template'
 }
 
 { #category : #private }
@@ -57,7 +57,7 @@ GtRobocoderTemplateTraitDefinitionCoder >> createCompileMethodChangeIn: aBehavio
 			#storageProtocol -> templateTrait storageProtocol.
 			#definition -> self definition
 		};
-		translate.	
+		translate.
 
 	aGtPharoSourceCoderEvaluationContext
 		sourceString: aSourceString;

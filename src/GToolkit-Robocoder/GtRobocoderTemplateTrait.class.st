@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'definition'
 	],
-	#category : 'GToolkit-Robocoder-Model'
+	#category : #'GToolkit-Robocoder-Model'
 }
 
 { #category : #template }
@@ -16,8 +16,8 @@ GtRobocoderTemplateTrait class >> storageMethodTemplate [
 		sourceCode: '{{storageSelector}}
 	<gtTraitTemplate>
 	
-	^ GtRobocoderTemplateTrait new
-		definition: {{definition storeString}};
+	^ #GtRobocoderTemplateTrait asClass new
+		json: {{ (STONJSON toStringPretty: definition storeHeaderAsDictionary) printString gtTabAllButFirst: 2 }};
 		storageMethod: thisContext method';
 		protocol: 'template';
 		storageMethod: thisContext method
@@ -31,4 +31,14 @@ GtRobocoderTemplateTrait >> definition [
 { #category : #accessing }
 GtRobocoderTemplateTrait >> definition: anObject [
 	definition := anObject
+]
+
+{ #category : #accessing }
+GtRobocoderTemplateTrait >> definitionDictionary: aDictionary [
+	definition := GtTraitDefinition fromHeaderDictionary: aDictionary
+]
+
+{ #category : #accessing }
+GtRobocoderTemplateTrait >> json: aString [
+	self definitionDictionary: (STONJSON fromString: aString)
 ]

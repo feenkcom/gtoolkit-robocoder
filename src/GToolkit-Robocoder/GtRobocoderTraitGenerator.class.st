@@ -17,10 +17,16 @@ Class {
 	#instVars : [
 		'environment',
 		'templateTrait',
-		'mappings'
+		'mappings',
+		'shouldEmbedGeneratedFromPragma'
 	],
 	#category : #'GToolkit-Robocoder-Generators'
 }
+
+{ #category : #accessing }
+GtRobocoderTraitGenerator >> doNotEmbedGeneratedFromPragma [
+	shouldEmbedGeneratedFromPragma := false
+]
 
 { #category : #accessing }
 GtRobocoderTraitGenerator >> environment [
@@ -60,6 +66,9 @@ GtRobocoderTraitGenerator >> generate [
 			mappings: mappings;
 			forMethod: eachTemplateMethod.
 			
+		shouldEmbedGeneratedFromPragma
+			ifFalse: [ aTemplateMethodCoder doNotEmbedGeneratedFromPragma ].
+			
 		aTemplateMethodCoder shouldBeAddedToBehavior
 			ifTrue: [
 				generatedTrait methods
@@ -78,7 +87,8 @@ GtRobocoderTraitGenerator >> generateChanges [
 GtRobocoderTraitGenerator >> initialize [
 	super initialize.
 	
-	mappings := {  }
+	mappings := {  }.
+	shouldEmbedGeneratedFromPragma := true
 ]
 
 { #category : #accessing }
