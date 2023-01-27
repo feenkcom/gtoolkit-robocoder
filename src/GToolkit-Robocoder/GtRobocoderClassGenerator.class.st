@@ -17,10 +17,16 @@ Class {
 	#instVars : [
 		'environment',
 		'mappings',
-		'templateClass'
+		'templateClass',
+		'shouldEmbedGeneratedFromPragma'
 	],
 	#category : #'GToolkit-Robocoder-Generators'
 }
+
+{ #category : #accessing }
+GtRobocoderClassGenerator >> doNotEmbedGeneratedFromPragma [
+	shouldEmbedGeneratedFromPragma := false
+]
 
 { #category : #accessing }
 GtRobocoderClassGenerator >> environment [
@@ -34,31 +40,34 @@ GtRobocoderClassGenerator >> environment: anEnvironment [
 
 { #category : #generation }
 GtRobocoderClassGenerator >> generate [
-	|  aClassHeaderMethod theClassMethods generatedClass |
-	<return: #Trait>
+	|  aClassHeaderMethod theInstanceMethods generatedClass |
+	<return: #Class>
 	
 	aClassHeaderMethod := self templateClass methods
 		detect: [ :eachMethod | eachMethod hasPragmaNamed: #gtClassTemplate ]
 		ifNone: [ self error: 'Was not able to find a method marked as #gtClassTemplate' ].
-
-	theClassMethods := self templateClass methods select: [ :eachMethod | eachMethod hasPragmaNamed: #gtMethodTemplate ].
 
 	generatedClass := GtRobocoderTemplateClassDefinitionCoder new
 		forMethod: aClassHeaderMethod;
 		mappings: mappings;
 		translate.
 	
+	theInstanceMethods := self templateClass methods select: [ :eachMethod | eachMethod hasPragmaNamed: #gtMethodTemplate ].
+	
 	self environment
 		ifNotNil: [ :anEnvironment |
 			generatedClass environment: anEnvironment.
 			anEnvironment registerBehavior: generatedClass ].
 	
-	theClassMethods do: [ :eachTemplateMethod |
+	theInstanceMethods do: [ :eachTemplateMethod |
 		| aTemplateMethodCoder |
 		
 		aTemplateMethodCoder := GtRobocoderTemplateMethodCoder new
 			mappings: mappings;
 			forMethod: eachTemplateMethod.
+
+		shouldEmbedGeneratedFromPragma
+			ifFalse: [ aTemplateMethodCoder doNotEmbedGeneratedFromPragma ].
 
 		generatedClass instanceSideDefinition methods
 			addMethod: aTemplateMethodCoder translate
@@ -76,7 +85,8 @@ GtRobocoderClassGenerator >> generateChanges [
 GtRobocoderClassGenerator >> initialize [
 	super initialize.
 	
-	mappings := {  }
+	mappings := {  }.
+	shouldEmbedGeneratedFromPragma := true
 ]
 
 { #category : #accessing }
