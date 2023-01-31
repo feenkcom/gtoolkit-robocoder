@@ -40,38 +40,36 @@ GtRobocoderTraitGenerator >> environment: anEnvironment [
 
 { #category : #generation }
 GtRobocoderTraitGenerator >> generate [
-	|  aTraitHeaderMethod theTraitMethods generatedTrait |
+	| aTraitHeaderMethod theTraitMethods generatedTrait |
 	<return: #Trait>
 	
 	aTraitHeaderMethod := self templateTrait methods
 		detect: [ :eachMethod | eachMethod hasPragmaNamed: #gtTraitTemplate ]
 		ifNone: [ self error: 'Was not able to find a method marked as #gtTraitTemplate' ].
-
-	theTraitMethods := self templateTrait methods select: [ :eachMethod | eachMethod hasPragmaNamed: #gtMethodTemplate ].
 	
 	generatedTrait := GtRobocoderTemplateTraitDefinitionCoder new
 		forMethod: aTraitHeaderMethod;
 		mappings: mappings;
 		translate.
-	
+
 	self environment
 		ifNotNil: [ :anEnvironment |
 			generatedTrait environment: anEnvironment.
 			anEnvironment registerBehavior: generatedTrait ].
 	
-	theTraitMethods do: [ :eachTemplateMethod |
-		| aTemplateMethodCoder |
-		
-		aTemplateMethodCoder := GtRobocoderTemplateMethodCoder new
-			mappings: mappings;
-			forMethod: eachTemplateMethod.
-			
-		shouldEmbedGeneratedFromPragma
-			ifFalse: [ aTemplateMethodCoder doNotEmbedGeneratedFromPragma ].
-			
-		aTemplateMethodCoder shouldBeAddedToBehavior
-			ifTrue: [
-				generatedTrait methods
+	"instance side methods"
+	theTraitMethods := self templateTrait localMethods select: [ :eachMethod | eachMethod hasPragmaNamed: #gtMethodTemplate ].
+	theTraitMethods do: [ :eachTemplateMethod |		
+		self generateMethod: eachTemplateMethod thenDo: [ :aTemplateMethodCoder |
+			generatedTrait methods
+					addMethod: aTemplateMethodCoder translate
+					protocol: aTemplateMethodCoder protocol ] ].
+
+	"class side methods"
+	theTraitMethods := self templateTrait class localMethods select: [ :eachMethod | eachMethod hasPragmaNamed: #gtMethodTemplate ].
+	theTraitMethods do: [ :eachTemplateMethod |		
+		self generateMethod: eachTemplateMethod thenDo: [ :aTemplateMethodCoder |
+			generatedTrait classMethods
 					addMethod: aTemplateMethodCoder translate
 					protocol: aTemplateMethodCoder protocol ] ].
 
@@ -81,6 +79,21 @@ GtRobocoderTraitGenerator >> generate [
 { #category : #generation }
 GtRobocoderTraitGenerator >> generateChanges [
 	^ self generate createChange
+]
+
+{ #category : #generation }
+GtRobocoderTraitGenerator >> generateMethod: aCompiledMethod thenDo: aBlock [
+	| aTemplateMethodCoder |
+
+	aTemplateMethodCoder := GtRobocoderTemplateMethodCoder new
+		mappings: mappings;
+		forMethod: aCompiledMethod.
+
+	shouldEmbedGeneratedFromPragma
+		ifFalse: [ aTemplateMethodCoder doNotEmbedGeneratedFromPragma ].
+
+	aTemplateMethodCoder shouldBeAddedToBehavior
+		ifTrue: [ aBlock value: aTemplateMethodCoder ]
 ]
 
 { #category : #initialization }
