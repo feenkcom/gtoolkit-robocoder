@@ -17,7 +17,6 @@ Behavior >> gtCoderTemplateMethodsFor: aView context: aPhlowContext [
 			aButtonAction
 				icon: BrGlamorousVectorIcons add;
 				tooltip: 'Add new method';
-				name: GtPharoBehaviorCoder addNewMethodButtonName;
 				content: [
 					| aMethodNameEditor aProtocolNameEditor |
 
