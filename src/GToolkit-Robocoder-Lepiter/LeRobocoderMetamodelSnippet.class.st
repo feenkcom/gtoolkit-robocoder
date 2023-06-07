@@ -1,10 +1,10 @@
 Class {
-	#name : 'LeRobocoderMetamodelSnippet',
-	#superclass : 'LeCodeSnippet',
-	#category : 'GToolkit-Robocoder-Lepiter-Snippet'
+	#name : #LeRobocoderMetamodelSnippet,
+	#superclass : #LeCodeSnippet,
+	#category : #'GToolkit-Robocoder-Lepiter-Snippet'
 }
 
-{ #category : 'api - accessing menu' }
+{ #category : #'api - accessing menu' }
 LeRobocoderMetamodelSnippet class >> contextMenuItemSpecification [
 	<leSnippetSpecification>
 
@@ -14,26 +14,32 @@ LeRobocoderMetamodelSnippet class >> contextMenuItemSpecification [
 		title: 'Robocoder metamodel'
 ]
 
-{ #category : 'lepiter-store' }
+{ #category : #'lepiter-store' }
 LeRobocoderMetamodelSnippet class >> leJsonV3Name [
 
 	^ 'robocoderMetamodelSnippet'
 ]
 
-{ #category : 'lepiter-store' }
+{ #category : #'lepiter-store' }
 LeRobocoderMetamodelSnippet class >> leJsonV4Name [
 
 	^ 'robocoderMetamodelSnippet'
 ]
 
-{ #category : 'converting' }
+{ #category : #visiting }
+LeRobocoderMetamodelSnippet >> acceptVisitor: aVisitor [
+
+	^ aVisitor visitRobocoderMetamodelSnippet: self
+]
+
+{ #category : #converting }
 LeRobocoderMetamodelSnippet >> asSnippetViewModel [
 	<return: #LeSnippetViewModel>
 
 	^ LeRobocoderMetamodelSnippetViewModel new snippetModel: self
 ]
 
-{ #category : 'instance creation' }
+{ #category : #'instance creation' }
 LeRobocoderMetamodelSnippet >> newCoder [
 	^ GtRobocoderMetamodelCoder new
 ]

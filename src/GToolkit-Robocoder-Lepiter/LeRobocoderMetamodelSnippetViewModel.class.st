@@ -1,10 +1,10 @@
 Class {
-	#name : 'LeRobocoderMetamodelSnippetViewModel',
-	#superclass : 'LeCodeSnippetViewModel',
+	#name : #LeRobocoderMetamodelSnippetViewModel,
+	#superclass : #LeCodeSnippetViewModel,
 	#category : 'GToolkit-Robocoder-Lepiter-Snippet'
 }
 
-{ #category : 'initialization' }
+{ #category : #initialization }
 LeRobocoderMetamodelSnippetViewModel >> initializeCoderAddOns: aCoderViewModel [
 	"Initialise the keyboard shortcuts in the code editor"
 
@@ -23,7 +23,7 @@ LeRobocoderMetamodelSnippetViewModel >> initializeCoderAddOns: aCoderViewModel [
 		addShortcut: (LeSnippetMoveSnippetDownShortcut new combination: (self keyboardShortcut: #MoveSnippetDown))
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 LeRobocoderMetamodelSnippetViewModel >> snippetElementClass [
 	^ LeRobocoderMetamodelSnippetElement
 ]

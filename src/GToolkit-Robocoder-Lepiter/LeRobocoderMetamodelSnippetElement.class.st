@@ -1,17 +1,17 @@
 Class {
-	#name : 'LeRobocoderMetamodelSnippetElement',
-	#superclass : 'LeExternalEvaluatedSnippetElement',
+	#name : #LeRobocoderMetamodelSnippetElement,
+	#superclass : #LeExternalEvaluatedSnippetElement,
 	#category : 'GToolkit-Robocoder-Lepiter-Snippet'
 }
 
-{ #category : 'api - snippet view model' }
+{ #category : #'api - snippet view model' }
 LeRobocoderMetamodelSnippetElement >> onSnippetViewModelChanged [
 	super onSnippetViewModelChanged.
 
 	self updateLanguageLabel
 ]
 
-{ #category : 'private' }
+{ #category : #private }
 LeRobocoderMetamodelSnippetElement >> updateLanguageLabel [
 	| label |
 

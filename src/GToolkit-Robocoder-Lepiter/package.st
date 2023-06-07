@@ -1,1 +1,1 @@
-Package { #name : 'GToolkit-Robocoder-Lepiter' }
+Package { #name : #'GToolkit-Robocoder-Lepiter' }
