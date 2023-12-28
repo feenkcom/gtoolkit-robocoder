@@ -110,8 +110,10 @@ GtRobocoderBehaviorTemplateMethodsCoder >> forObject: anObject [
 ]
 
 { #category : #printing }
-GtRobocoderBehaviorTemplateMethodsCoder >> gtDisplayString [
-	^ class name , ' methods'
+GtRobocoderBehaviorTemplateMethodsCoder >> gtDisplayOn: aStream [
+	aStream
+		nextPutAll: class name asString;
+		nextPutAll: ' methods'
 ]
 
 { #category : #'gt-extensions' }
