@@ -46,7 +46,7 @@ GtRobocoderMetamodelCoder >> forSource: aString [
 { #category : #initialization }
 GtRobocoderMetamodelCoder >> initializeAddOns: addOns [
 	super initializeAddOns: addOns.
-	
+
 	addOns addStyler: GtRobocoderMetamodelStyler new.
 	addOns addStyler: GtRobocoderMetamodelBrowseStyler new.
 	addOns addStyler: GtRobocoderMetamodelExpanderStyler new.
@@ -60,17 +60,17 @@ GtRobocoderMetamodelCoder >> initializeAddOns: addOns [
 				element: anElement;
 				execute ]
 		id: GtSourceCoderDoItAndGoActionId.
-	
+
 	addOns
 		addMainAction: 'Profile' translated
 		icon: BrGlamorousVectorIcons performance
-		action: [ :aCoderUIModel :anElement | self notifyObjectSpawn: (self profileWithMessageTally) ]
+		action: [ :aCoderUIModel :anElement | self notifyObjectSpawn: self profileWithMessageTally requesterObject: aCoderUIModel ]
 		id: GtSourceCoderProfileActionId.
-	
+
 	addOns
 		addMainAction: 'Inspect UI Model' translated
 		icon: BrGlamorousVectorIcons inspect
-		action: [ :aCoderUIModel :anElement | self notifyObjectSpawn: aCoderUIModel ].
+		action: [ :aCoderUIModel :anElement | self notifyObjectSpawn: aCoderUIModel requesterObject: aCoderUIModel ]
 ]
 
 { #category : #'instance creation' }

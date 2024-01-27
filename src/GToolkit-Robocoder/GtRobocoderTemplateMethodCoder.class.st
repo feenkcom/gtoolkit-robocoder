@@ -174,11 +174,11 @@ GtRobocoderTemplateMethodCoder >> initializeAddOns: addOns [
 
 	addOns
 		addMainAction: (GtCoderActivatableAction new
-			id: GtMethodCoderSaveActionId;
-			title: 'Save' translated;
-			icon: BrGlamorousVectorIcons accept;
-			action: [ :aCoderUIModel :anEvent | aCoderUIModel save ];
-			updateWhen: GtMethodCoderSaveAbilityChanged).
+				id: GtMethodCoderSaveActionId;
+				title: 'Save' translated;
+				icon: BrGlamorousVectorIcons accept;
+				action: [ :aCoderUIModel :anEvent | aCoderUIModel save ];
+				updateWhen: GtMethodCoderSaveAbilityChanged).
 
 	addOns
 		addMainAction: 'Inspect' translated
@@ -193,16 +193,13 @@ GtRobocoderTemplateMethodCoder >> initializeAddOns: addOns [
 	addOns
 		addDropDownAction: 'Bindings'
 		icon: BrGlamorousVectorIcons hamburger
-		stencil: [
-			| aContainer |
+		stencil: [ | aContainer |
 			aContainer := BrVerticalPane new
-				hExact: 300;
-				vFitContent.
+					hExact: 300;
+					vFitContent.
 			GtPhlowColumnedListView new
-				column: 'Name'
-					text: [ :each | each key asSymbol printString asRopedText ];
-				column: 'Value'
-					text: [ :each | each value printString ];
+				column: 'Name' text: [ :each | each key asSymbol printString asRopedText ];
+				column: 'Value' text: [ :each | each value printString ];
 				items: [ bindings asDictionary associations sorted: [ :a :b | a key < b key ] ];
 				asElementDo: [ :aList | aContainer addChild: aList ].
 			aContainer ].
@@ -210,7 +207,7 @@ GtRobocoderTemplateMethodCoder >> initializeAddOns: addOns [
 	addOns
 		addMainAction: 'Inspect UI Model' translated
 		icon: BrGlamorousVectorIcons inspect
-		action: [ :aCoderUIModel :anEvent | self notifyObjectSpawn: aCoderUIModel ].
+		action: [ :aCoderUIModel :anEvent | self notifyObjectSpawn: aCoderUIModel requesterObject: aCoderUIModel ]
 ]
 
 { #category : #testing }
