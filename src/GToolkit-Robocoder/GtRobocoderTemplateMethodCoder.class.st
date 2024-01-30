@@ -139,14 +139,14 @@ GtRobocoderTemplateMethodCoder >> forTemplateMethod: aGtPharoTemplateMethod [
 
 { #category : #'private - actions' }
 GtRobocoderTemplateMethodCoder >> handleCompilerErrorsDuring: aBlock [
-	^ [
-			aBlock value.
-			true ]
+	^ [ aBlock value.
+	true ]
 		on: OCSemanticWarning
-		do: [ :ex |
+		do: [ :ex | 
 			self
 				notifyParseError: ex errorMessage
-				at: ex location.
+				at: ex location
+				requesterObject: nil.
 			ex return: false ]
 ]
 
