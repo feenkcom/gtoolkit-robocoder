@@ -17,21 +17,22 @@ GtRobocoderTemplateMethodCoder >> asCoderViewModel [
 { #category : #'api - actions' }
 GtRobocoderTemplateMethodCoder >> compileInContext: aGtPharoSourceCoderEvaluationContext [
 	"Try to compile the current source code and return true if it was successful, false otherwise"
-	<return: #Boolean>
-	
+
 	"can not save is selector is nil"
-	templateMethod storageSelector
-		ifNil: [ ^ false ].
+
+	<return: #Boolean>
+	templateMethod storageSelector ifNil: [ ^ false ].
 
 	^ templateMethod storageBehavior
-		realBehaviorDo: [ :aBehavior |
+		realBehaviorDo: [ :aBehavior | 
 			| aChange |
-			aChange := self createCompileMethodChangeIn: aBehavior inContext: aGtPharoSourceCoderEvaluationContext.
+			aChange := self
+					createCompileMethodChangeIn: aBehavior
+					inContext: aGtPharoSourceCoderEvaluationContext.
 			(self
-				handleCompilerErrorsDuring: [ GtPharoCodeModifier current performRefactoryChange: aChange ])
-				ifFalse: [ ^ false ].
+				handleCompilerErrorsDuring: [ GtPharoCodeModifier current performRefactoryChange: aChange ]
+				inContext: aGtPharoSourceCoderEvaluationContext) ifFalse: [ ^ false ].
 			true ]
-
 		ifAbsent: [ false ]
 ]
 
@@ -138,7 +139,7 @@ GtRobocoderTemplateMethodCoder >> forTemplateMethod: aGtPharoTemplateMethod [
 ]
 
 { #category : #'private - actions' }
-GtRobocoderTemplateMethodCoder >> handleCompilerErrorsDuring: aBlock [
+GtRobocoderTemplateMethodCoder >> handleCompilerErrorsDuring: aBlock inContext: aGtPharoSourceCoderEvaluationContext [
 	^ [ aBlock value.
 	true ]
 		on: OCSemanticWarning
@@ -146,7 +147,7 @@ GtRobocoderTemplateMethodCoder >> handleCompilerErrorsDuring: aBlock [
 			self
 				notifyParseError: ex errorMessage
 				at: ex location
-				requesterObject: nil.
+				requesterObject: aGtPharoSourceCoderEvaluationContext requesterObject.
 			ex return: false ]
 ]
 
