@@ -1,7 +1,7 @@
 Class {
 	#name : #GtRobocoderTemplateMethodsFilter,
 	#superclass : #GtSearchMethodsContainedInClassFilter,
-	#category : 'GToolkit-Robocoder-Coder - Template method'
+	#category : #'GToolkit-Robocoder-Coder - Template method'
 }
 
 { #category : #testing }
@@ -12,14 +12,14 @@ GtRobocoderTemplateMethodsFilter >> includesMethod: aCompiledMethod [
 		ifNil: [ ^ false ].
 	
 	methodClass := aCompiledMethod methodClass.
-	^ (methodClass = class instanceSide) or: [ 
-		methodClass = class classSide ]
+	^ (methodClass = filterClass instanceSide) or: [ 
+		methodClass = filterClass classSide ]
 ]
 
 { #category : #enumerating }
 GtRobocoderTemplateMethodsFilter >> methodsDo: aBlock [
-	class instanceSide methods do: aBlock.
+	filterClass instanceSide methods do: aBlock.
 
 	"#methods includes ones from TraitedClass"
-	class classSide visibleMethods do: aBlock
+	filterClass classSide visibleMethods do: aBlock
 ]
